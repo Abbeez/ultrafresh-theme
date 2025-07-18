@@ -1,1 +1,2 @@
-[environments.development] store = "https://ultrafresh-store.myshopify.com/"
+[environments.development]
+store = "https://ultrafresh-store.myshopify.com/"
