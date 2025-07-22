@@ -39,6 +39,76 @@
       "type": "url",
       "id": "button_url",
       "label": "Button Link"
+    },
+    // --- HERO SECONDARY CONTENT (3 BUTTONS) ---
+    {
+      "type": "checkbox",
+      "id": "show_secondary_content",
+      "label": "Show Secondary Heading Section",
+      "default": true
+    },
+    {
+      "type": "number",
+      "id": "secondary_padding_top",
+      "label": "Secondary Padding Top (px)",
+      "default": 42
+    },
+    {
+      "type": "number",
+      "id": "secondary_padding_bottom",
+      "label": "Secondary Padding Bottom (px)",
+      "default": 24
+    },
+    {
+      "type": "text",
+      "id": "secondary_heading",
+      "label": "Secondary Heading",
+      "default": "Purposefully Made. Elegantly Designed."
+    },
+    {
+      "type": "text",
+      "id": "secondary_subheading",
+      "label": "Secondary Subheading",
+      "default": "UltraFresh protects with care and performs with grace — a reflection of love in every detail"
+    },
+    {
+      "type": "text",
+      "id": "sec_btn1_label",
+      "label": "First Button Label",
+      "default": "Pull Up Diapers"
+    },
+    {
+      "type": "url",
+      "id": "sec_btn1_url",
+      "label": "First Button Link"
+    },
+    {
+      "type": "text",
+      "id": "sec_btn2_label",
+      "label": "Second Button Label",
+      "default": "Taped Up Diapers"
+    },
+    {
+      "type": "url",
+      "id": "sec_btn2_url",
+      "label": "Second Button Link"
+    },
+    {
+      "type": "text",
+      "id": "sec_btn3_label",
+      "label": "Third Button Label",
+      "default": "Size Guide"
+    },
+    {
+      "type": "url",
+      "id": "sec_btn3_url",
+      "label": "Third Button Link"
+    },
+    // --- SCROLL FEEL IMAGE ---
+    {
+      "type": "image_picker",
+      "id": "scroll_feel_image",
+      "label": "Scroll to feel the story Image"
     }
   ],
   "presets": [
@@ -52,7 +122,7 @@
 <div class="uf-simple-banner uf-simple-banner--{{ section.settings.text_color }}"
   {% if section.settings.banner_image != blank %}
     style="background-image:
-      linear-gradient(to top, var(--custom-secondary) 20%, transparent 100%),
+      linear-gradient(to top, var(--custom-secondary) 5%, transparent 100%),
       url('{{ section.settings.banner_image | image_url: width: 2000 }}');
     "
   {% endif %}
@@ -68,10 +138,37 @@
         </a>
       {% endif %}
     </div>
-    <div class="uf-simple-banner__scroll-indicator">
-      <span>Scroll to feel the story</span>
-      <svg viewBox="0 0 40 40" width="32" height="32"><path d="M10 15 Q20 30 30 15" stroke="var(--custom-primary, #ECDAC0)" stroke-width="3" fill="none" /><polyline points="27,16 30,15 28,12" fill="none" stroke="var(--custom-primary, #ECDAC0)" stroke-width="3" /></svg>
-    </div>
+
+    {% if section.settings.scroll_feel_image != blank %}
+      <div class="uf-simple-banner__scroll-feel">
+        <img
+          src="{{ section.settings.scroll_feel_image | image_url }}"
+          alt="Scroll to feel the story"
+          loading="lazy"
+          width="130"
+          height="40"
+        >
+      </div>
+    {% endif %}
+
+    {% if section.settings.show_secondary_content %}
+      <div class="uf-simple-banner__secondary"
+        style="padding-top: {{ section.settings.secondary_padding_top | default: 42 }}px; padding-bottom: {{ section.settings.secondary_padding_bottom | default: 24 }}px;">
+        <h2 class="h1 uf-simple-banner__secondary-heading">{{ section.settings.secondary_heading }}</h2>
+        <div class="uf-simple-banner__secondary-subheading">{{ section.settings.secondary_subheading }}</div>
+        <div class="uf-simple-banner__secondary-btns">
+          {% if section.settings.sec_btn1_label != blank and section.settings.sec_btn1_url != blank %}
+            <a href="{{ section.settings.sec_btn1_url }}" class="uf-simple-banner__outline-btn">{{ section.settings.sec_btn1_label }} <span>›</span></a>
+          {% endif %}
+          {% if section.settings.sec_btn2_label != blank and section.settings.sec_btn2_url != blank %}
+            <a href="{{ section.settings.sec_btn2_url }}" class="uf-simple-banner__outline-btn">{{ section.settings.sec_btn2_label }} <span>›</span></a>
+          {% endif %}
+          {% if section.settings.sec_btn3_label != blank and section.settings.sec_btn3_url != blank %}
+            <a href="{{ section.settings.sec_btn3_url }}" class="uf-simple-banner__outline-btn">{{ section.settings.sec_btn3_label }} <span>›</span></a>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
   </div>
 </div>
 
@@ -98,8 +195,6 @@
   padding: 200px 0 200px 0;
   transition: padding 0.2s;
 }
-
-/* Centered content */
 .uf-simple-banner__center {
   position: relative;
   z-index: 2;
@@ -119,7 +214,6 @@
   flex-direction: column;
   align-items: center;
 }
-/* Headline */
 .uf-simple-banner__headline {
   margin-bottom: 2.2rem;
   color: var(--custom-light);
@@ -127,7 +221,6 @@
 .uf-simple-banner--dark .uf-simple-banner__headline {
   color: var(--custom-dark);
 }
-/* Subheadline */
 .uf-simple-banner__subheadline {
   opacity: 0.98;
   margin-bottom: 2.2rem;
@@ -136,7 +229,6 @@
 .uf-simple-banner--dark .uf-simple-banner__subheadline {
   color: var(--custom-dark);
 }
-/* Button (square) */
 .uf-simple-banner__btn {
   display: inline-flex;
   align-items: center;
@@ -173,34 +265,101 @@
   background: var(--custom-secondary);
   color: var(--custom-light);
 }
-/* Scroll indicator */
-.uf-simple-banner__scroll-indicator {
+
+/* === Scroll to Feel the Story IMAGE === */
+.uf-simple-banner__scroll-feel {
   position: absolute;
-  right: 6vw;
-  bottom: 3vw;
+  right: 4vw;
+  top: 54%;
+  transform: translateY(-50%);
   z-index: 4;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.3rem;
-  font-size: 1.1rem;
-  font-weight: 400;
-  opacity: 0.97;
-  color: var(--custom-light);
+  opacity: 0.98;
+  pointer-events: none;
 }
-.uf-simple-banner__scroll-indicator svg {
+.uf-simple-banner__scroll-feel img {
+  max-width: 140px;
+  width: 100%;
+  height: auto;
   display: block;
-}
-.uf-simple-banner--dark .uf-simple-banner__scroll-indicator {
-  color: var(--custom-dark);
+  filter: drop-shadow(0 1px 8px rgba(0,0,0,0.04));
 }
 
-/* Responsive padding + tweaks */
+/* Hide scroll indicator on mobile */
 @media (max-width: 700px) {
-  .uf-simple-banner {
-    padding: 60px 0 60px 0;
-    background-attachment: scroll;
+  .uf-simple-banner__scroll-feel {
+    display: none;
   }
+}
+
+/* === Secondary Heading Section === */
+.uf-simple-banner__secondary {
+  margin: 2.6rem 0 0 0;
+  text-align: center;
+  width: 100%;
+  transition: padding 0.22s;
+}
+.uf-simple-banner__secondary-heading {
+  margin: 0 0 1.2rem 0;
+  color: var(--custom-light);
+}
+.uf-simple-banner--dark .uf-simple-banner__secondary-heading {
+  color: var(--custom-dark);
+}
+.uf-simple-banner__secondary-subheading {
+  color: var(--custom-light);
+  margin-bottom: 2.2rem;
+  opacity: 0.94;
+}
+.uf-simple-banner--dark .uf-simple-banner__secondary-subheading {
+  color: var(--custom-dark);
+}
+.uf-simple-banner__secondary-btns {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.uf-simple-banner__outline-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 2.1rem;
+  background: none;
+  border: 1.5px solid var(--custom-primary);
+  color: var(--custom-light);
+  border-radius: 0;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.16s, color 0.16s, border-color 0.16s;
+  min-width: 160px;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+}
+.uf-simple-banner__outline-btn span {
+  margin-left: 0.7em;
+  font-size: 1.1em;
+  line-height: 1;
+}
+.uf-simple-banner__outline-btn:hover,
+.uf-simple-banner__outline-btn:focus {
+  background: var(--custom-primary);
+  color: var(--custom-dark);
+  border-color: var(--custom-primary);
+}
+.uf-simple-banner--dark .uf-simple-banner__outline-btn {
+  border: 1.5px solid var(--custom-dark);
+  color: var(--custom-dark);
+}
+.uf-simple-banner--dark .uf-simple-banner__outline-btn:hover,
+.uf-simple-banner--dark .uf-simple-banner__outline-btn:focus {
+  background: var(--custom-secondary);
+  color: var(--custom-light);
+  border-color: var(--custom-secondary);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
   .uf-simple-banner__headline {
     margin-bottom: 1.5rem;
   }
@@ -208,10 +367,20 @@
     min-width: 130px;
     padding: 0.9rem 1.7rem 0.9rem 1.7rem;
   }
-  .uf-simple-banner__scroll-indicator {
-    font-size: 1rem;
-    right: 4vw;
-    bottom: 2vw;
+}
+@media (max-width: 700px) {
+  .uf-simple-banner {
+    padding: 60px 0 60px 0;
+    background-attachment: scroll;
+  }
+  .uf-simple-banner__secondary-btns {
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+  }
+  .uf-simple-banner__secondary {
+    padding-top: 24px !important;
+    padding-bottom: 12px !important;
   }
 }
 @media (max-width: 500px) {
@@ -228,11 +397,9 @@
     min-width: 100px;
     padding: 0.7rem 1.2rem 0.7rem 1.2rem;
   }
-  .uf-simple-banner__scroll-indicator {
-    font-size: 0.98rem;
-    right: 50%;
-    transform: translateX(50%);
-    bottom: 1.3rem;
+  .uf-simple-banner__secondary {
+    padding-top: 10px !important;
+    padding-bottom: 4px !important;
   }
 }
 </style>
