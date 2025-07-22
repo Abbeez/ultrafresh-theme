@@ -9,6 +9,17 @@
  */
 {
   "sections": {
+    "custom_hero_banner_Bk7cHp": {
+      "type": "custom-hero-banner",
+      "name": "UF Home Banner",
+      "settings": {
+        "banner_image": "shopify://shop_images/ultrafresh-banner.ai.png",
+        "headline": "What does it mean to feel loved...even before you understand the word?",
+        "subheadline": "A diaper so soft, so light, they hardly feel it – but always feel our love.",
+        "button_label": "See What Makes Us Different",
+        "button_url": "shopify://collections/all"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -31,7 +42,11 @@
           }
         }
       },
-      "block_order": ["heading", "button"],
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "disabled": true,
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
@@ -47,6 +62,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "all",
         "products_to_show": 8,
@@ -74,5 +90,9 @@
       }
     }
   },
-  "order": ["image_banner", "featured_collection"]
+  "order": [
+    "custom_hero_banner_Bk7cHp",
+    "image_banner",
+    "featured_collection"
+  ]
 }
