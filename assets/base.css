@@ -7,14 +7,10 @@
   --focused-base-outline-offset: 0.3rem;
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-  --color-1: #f7f7f5; /* Lightest background, e.g., white/cream */
-  --color-2: #14160e; /* Deep green-black, for text or heading */
-  --color-3: #e2c164; /* Warm gold/yellow accent */
-  --color-4: #dde9df; /* Pale mint/green background */
-  --color-5: #949e89; /* Medium olive/grey, for borders, subtle elements */
-  --color-6: #2b351a; /* Rich dark green */
-  --color-7: #cebba2; /* Soft beige/tan accent */
-  --color-8: #657b3f; /* Olive green accent/button */
+  --custom-primary: #ecdac0;
+  --custom-secondary: #cea478;
+  --custom-dark: #384148;
+  --custom-light: #fdfcf9;
 }
 
 .product-card-wrapper .card,
