@@ -51,7 +51,10 @@
 
 <div class="uf-simple-banner uf-simple-banner--{{ section.settings.text_color }}"
   {% if section.settings.banner_image != blank %}
-    style="background-image: url('{{ section.settings.banner_image | image_url: width: 2000 }}');"
+    style="background-image:
+      linear-gradient(to top, var(--custom-secondary) 20%, transparent 100%),
+      url('{{ section.settings.banner_image | image_url: width: 2000 }}');
+    "
   {% endif %}
 >
   <div class="uf-simple-banner__center">
@@ -92,7 +95,8 @@
   justify-content: center;
   box-sizing: border-box;
   overflow: hidden;
-  padding: 200px 0 200px 0; /* Use Dawn-like vertical spacing */
+  padding: 200px 0 200px 0;
+  transition: padding 0.2s;
 }
 
 /* Centered content */
@@ -105,8 +109,6 @@
   align-items: center;
   justify-content: center;
 }
-
-/* Content box */
 .uf-simple-banner__inner {
   width: 100vw;
   max-width: 1200px;
@@ -117,7 +119,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 /* Headline */
 .uf-simple-banner__headline {
   margin-bottom: 2.2rem;
@@ -126,7 +127,6 @@
 .uf-simple-banner--dark .uf-simple-banner__headline {
   color: var(--custom-dark);
 }
-
 /* Subheadline */
 .uf-simple-banner__subheadline {
   opacity: 0.98;
@@ -136,7 +136,6 @@
 .uf-simple-banner--dark .uf-simple-banner__subheadline {
   color: var(--custom-dark);
 }
-
 /* Button (square) */
 .uf-simple-banner__btn {
   display: inline-flex;
@@ -174,7 +173,6 @@
   background: var(--custom-secondary);
   color: var(--custom-light);
 }
-
 /* Scroll indicator */
 .uf-simple-banner__scroll-indicator {
   position: absolute;
@@ -197,8 +195,12 @@
   color: var(--custom-dark);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* Responsive padding + tweaks */
+@media (max-width: 700px) {
+  .uf-simple-banner {
+    padding: 60px 0 60px 0;
+    background-attachment: scroll;
+  }
   .uf-simple-banner__headline {
     margin-bottom: 1.5rem;
   }
@@ -212,7 +214,10 @@
     bottom: 2vw;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+  .uf-simple-banner {
+    padding: 30px 0 30px 0;
+  }
   .uf-simple-banner__inner {
     padding: 0 0.5rem;
   }
@@ -228,9 +233,6 @@
     right: 50%;
     transform: translateX(50%);
     bottom: 1.3rem;
-  }
-  .uf-simple-banner {
-    background-attachment: scroll;
   }
 }
 </style>
