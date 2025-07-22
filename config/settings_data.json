@@ -9,12 +9,14 @@
  */
 {
   "current": {
-    "logo_width": 90,
+    "logo": "shopify://shop_images/UF_LOGO_37d35d4f-a33c-44ab-bdf0-6b671a4a47c1.png",
+    "logo_width": 140,
+    "favicon": "shopify://shop_images/Ultrafresh_Favicon_72af4075-c383-4a0b-8235-dd782eaa38b4.png",
     "type_header_font": "merriweather_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
-    "body_scale": 110,
-    "page_width": 1200,
+    "body_scale": 100,
+    "page_width": 1600,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
