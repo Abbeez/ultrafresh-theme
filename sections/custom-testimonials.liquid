@@ -61,7 +61,7 @@
 
 <div class="uf-testimonials__outer uf-colors"
   style="padding-top: {{ section.settings.padding_top | default: 60 }}px; padding-bottom: {{ section.settings.padding_bottom | default: 60 }}px;">
-  <div class="page-width uf-testimonials__container">
+  <div class="uf-testimonials__container">
     <!-- Left Column -->
     <div class="uf-testimonials__left">
       <h2 class="h1 uf-testimonials__heading">
@@ -129,22 +129,31 @@
   background: var(--custom-bg);
   transition: padding 0.2s;
 }
+
 .uf-testimonials__container {
+  max-width: var(--page-width, 1200px);
+  margin: 0 auto;
   display: flex;
   gap: 3rem;
-  padding: 0;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 0;
+  padding-bottom: 0;
   align-items: flex-start;
 }
+
 .uf-testimonials__left {
   flex: 0 0 30%;
   max-width: 30%;
   padding-right: 1vw;
 }
+
 .uf-testimonials__right {
   flex: 0 0 70%;
   max-width: 70%;
   min-width: 0;
 }
+
 .uf-testimonials__heading {
   font-family: var(--font-heading-family, var(--font-body-family, 'Inter', sans-serif));
   margin-bottom: 1.1rem;
@@ -249,7 +258,9 @@
   .uf-testimonials__container {
     flex-direction: column;
     gap: 2.4rem;
-    padding: 0;
+    max-width: 97vw;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   .uf-testimonials__left,
   .uf-testimonials__right {
@@ -258,12 +269,25 @@
     width: 100%;
   }
 }
+@media (max-width: 600px) {
+  .uf-testimonials__outer {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+  .uf-testimonials__container {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  .uf-testimonials__card-content {
+    padding: 1rem 0.7rem 0.9rem 0.7rem;
+  }
+}
 @media (max-width: 700px) {
   .uf-testimonials__card {
     min-height: 270px;
   }
   .uf-testimonials__card-content {
-    padding: 1.4rem 1rem 1rem 1rem;
+    padding: 1.4rem 1.3rem 1rem 1.3rem;
     align-items: center;
     text-align: center;
   }
@@ -282,15 +306,6 @@
   .uf-testimonials__left {
     text-align: center;
     padding-right: 0;
-  }
-}
-@media (max-width: 600px) {
-  .uf-testimonials__outer {
-    padding-top: 16px !important;
-    padding-bottom: 16px !important;
-  }
-  .uf-testimonials__card-content {
-    padding: 1rem 0.7rem 0.9rem 0.7rem;
   }
 }
 </style>
