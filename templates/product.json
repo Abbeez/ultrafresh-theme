@@ -23,6 +23,10 @@
           "type": "title",
           "settings": {}
         },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
         "price": {
           "type": "price",
           "settings": {}
@@ -45,9 +49,23 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
+        "collapsible_tab_MP7pxE": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Features",
+            "icon": "clipboard",
+            "content": "<p>{{ block.settings.page.metafields.custom.features | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_kf9h9P": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Sizes",
+            "icon": "ruler",
+            "content": "{{ product.metafields.custom.sizes | metafield_tag }}",
+            "page": ""
+          }
         },
         "share": {
           "type": "share",
@@ -59,26 +77,28 @@
       "block_order": [
         "vendor",
         "title",
+        "description",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
+        "collapsible_tab_MP7pxE",
+        "collapsible_tab_kf9h9P",
         "share"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "large",
+        "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "lightbox",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
+        "padding_top": 72,
         "padding_bottom": 12
       }
     },
@@ -99,10 +119,25 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "custom_text_image_6th7FK": {
+      "type": "custom-text-image",
+      "name": "UF Text Image Split",
+      "settings": {
+        "section_image": "shopify://shop_images/Row_1.png",
+        "image_position": "right",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "heading": "Comfort that cares. Protection that lasts.",
+        "description": "Every baby deserves a diaper that feels gentle, stays dry, and moves with them through every giggle and wiggle. Ultrafresh diapers are thoughtfully made for modern parents who want the best for their little one without the bulk or compromise.",
+        "button_label": "See why mommies choose UltraFresh",
+        "button_url": "shopify://pages/reviews"
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "custom_text_image_6th7FK"
   ]
 }
