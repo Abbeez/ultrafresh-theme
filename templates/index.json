@@ -151,6 +151,19 @@
         "button_label": "Talk to Us Here",
         "button_url": "shopify://pages/reviews"
       }
+    },
+    "custom_calltoaction_4UnEqf": {
+      "type": "custom-calltoaction",
+      "name": "UF Call to Action",
+      "settings": {
+        "cta_image": "shopify://shop_images/background.png",
+        "headline": "More than a Diaper, Love, made visible",
+        "subheadline": "Simple. True. This is your signature whisper to close the journey with meaning",
+        "button_label": "Explore Our Collection",
+        "button_url": "shopify://collections/all",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "order": [
@@ -162,6 +175,7 @@
     "custom_text_image_FbNJTP",
     "custom_text_image_BnkNRV",
     "custom_text_image_G9Tn9j",
-    "custom_talktous_Cm3Wpw"
+    "custom_talktous_Cm3Wpw",
+    "custom_calltoaction_4UnEqf"
   ]
 }

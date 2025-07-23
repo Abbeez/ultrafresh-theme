@@ -13,8 +13,44 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "link_list_yMQxbR": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Accounts",
+            "menu": "account"
+          }
+        },
+        "link_list_MdqRae": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "main-menu"
+          }
+        },
+        "link_list_KLwHBj": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Policies",
+            "menu": "policies"
+          }
+        },
+        "text_f7aBM6": {
+          "type": "text",
+          "settings": {
+            "heading": "About Us",
+            "subtext": "<p><strong>Ultrafresh Inc.</strong> is a Filipino company dedicated to delivering quality and affordable baby care products. Our flagship <strong>Ultrafresh Diapers</strong> combine premium comfort with value, bringing peace of mind to parents and joy to babies.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_yMQxbR",
+        "link_list_MdqRae",
+        "link_list_KLwHBj",
+        "text_f7aBM6"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-5",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
@@ -24,7 +60,7 @@
         "payment_enable": true,
         "show_policy": true,
         "margin_top": 0,
-        "padding_top": 36,
+        "padding_top": 100,
         "padding_bottom": 36
       }
     }
