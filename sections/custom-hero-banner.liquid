@@ -40,7 +40,6 @@
       "id": "button_url",
       "label": "Button Link"
     },
-    // --- HERO SECONDARY CONTENT (3 BUTTONS) ---
     {
       "type": "checkbox",
       "id": "show_secondary_content",
@@ -104,7 +103,6 @@
       "id": "sec_btn3_url",
       "label": "Third Button Link"
     },
-    // --- SCROLL FEEL IMAGE ---
     {
       "type": "image_picker",
       "id": "scroll_feel_image",
@@ -173,13 +171,6 @@
 </div>
 
 <style>
-:root {
-  --custom-primary: #ECDAC0;
-  --custom-secondary: #CEA478;
-  --custom-dark: #384148;
-  --custom-light: #FDFCF9;
-}
-
 .uf-simple-banner {
   position: relative;
   width: 100vw;
@@ -203,20 +194,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.uf-simple-banner__inner {
-  width: 100vw;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
+.uf-simple-banner__inner,
+.uf-simple-banner__secondary {
+  max-width: 1050px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  word-break: break-word;
+  text-align: center;
+}
+
 .uf-simple-banner__headline {
   margin-bottom: 2.2rem;
   color: var(--custom-light);
+  word-break: break-word;
+  /* No font-size by default, uses Dawn */
 }
 .uf-simple-banner--dark .uf-simple-banner__headline {
   color: var(--custom-dark);
@@ -225,6 +221,7 @@
   opacity: 0.98;
   margin-bottom: 2.2rem;
   color: var(--custom-light);
+  word-break: break-word;
 }
 .uf-simple-banner--dark .uf-simple-banner__subheadline {
   color: var(--custom-dark);
@@ -248,7 +245,6 @@
 }
 .uf-simple-banner__btn-arrow {
   margin-left: 0.8em;
-  font-size: 1.3em;
   line-height: 1;
 }
 .uf-simple-banner__btn:hover,
@@ -285,8 +281,6 @@
   display: block;
   filter: drop-shadow(0 1px 8px rgba(0,0,0,0.04));
 }
-
-/* Hide scroll indicator on mobile */
 @media (max-width: 700px) {
   .uf-simple-banner__scroll-feel {
     display: none;
@@ -299,10 +293,12 @@
   text-align: center;
   width: 100%;
   transition: padding 0.22s;
+  word-break: break-word;
 }
 .uf-simple-banner__secondary-heading {
   margin: 0 0 1.2rem 0;
   color: var(--custom-light);
+  word-break: break-word;
 }
 .uf-simple-banner--dark .uf-simple-banner__secondary-heading {
   color: var(--custom-dark);
@@ -311,6 +307,7 @@
   color: var(--custom-light);
   margin-bottom: 2.2rem;
   opacity: 0.94;
+  word-break: break-word;
 }
 .uf-simple-banner--dark .uf-simple-banner__secondary-subheading {
   color: var(--custom-dark);
@@ -338,7 +335,6 @@
 }
 .uf-simple-banner__outline-btn span {
   margin-left: 0.7em;
-  font-size: 1.1em;
   line-height: 1;
 }
 .uf-simple-banner__outline-btn:hover,
@@ -358,48 +354,43 @@
   border-color: var(--custom-secondary);
 }
 
-/* Responsive */
+/* Responsive container spacing only, no font-size */
 @media (max-width: 900px) {
-  .uf-simple-banner__headline {
-    margin-bottom: 1.5rem;
-  }
-  .uf-simple-banner__btn {
-    min-width: 130px;
-    padding: 0.9rem 1.7rem 0.9rem 1.7rem;
-  }
-}
-@media (max-width: 700px) {
   .uf-simple-banner {
-    padding: 60px 0 60px 0;
+    padding: 36px 0 36px 0;
     background-attachment: scroll;
   }
-  .uf-simple-banner__secondary-btns {
-    flex-direction: column;
-    gap: 0.6rem;
-    align-items: center;
+  .uf-simple-banner__inner,
+  .uf-simple-banner__secondary {
+    padding-left: 1.7rem !important;
+    padding-right: 1.7rem !important;
+    max-width: 99vw;
   }
   .uf-simple-banner__secondary {
-    padding-top: 24px !important;
-    padding-bottom: 12px !important;
+    margin-top: 1.6rem !important;
+    padding-top: 10px !important;
+    padding-bottom: 4px !important;
+  }
+  /* Headline font-size clamp for mobile - max 3rem */
+  .uf-simple-banner__headline {
+    font-size: clamp(1.3rem, 7vw, 3rem) !important;
   }
 }
 @media (max-width: 500px) {
   .uf-simple-banner {
-    padding: 30px 0 30px 0;
+    padding: 20px 0 20px 0;
   }
-  .uf-simple-banner__inner {
-    padding: 0 0.5rem;
-  }
-  .uf-simple-banner__headline {
-    margin-bottom: 1.1rem;
-  }
-  .uf-simple-banner__btn {
-    min-width: 100px;
-    padding: 0.7rem 1.2rem 0.7rem 1.2rem;
-  }
+  .uf-simple-banner__inner,
   .uf-simple-banner__secondary {
-    padding-top: 10px !important;
-    padding-bottom: 4px !important;
+    padding-left: 1.1rem !important;
+    padding-right: 1.1rem !important;
+  }
+}
+@media (max-width: 400px) {
+  .uf-simple-banner__inner,
+  .uf-simple-banner__secondary {
+    padding-left: 0.6rem !important;
+    padding-right: 0.6rem !important;
   }
 }
 </style>
