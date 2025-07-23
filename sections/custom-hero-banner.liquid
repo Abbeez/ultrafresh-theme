@@ -183,7 +183,7 @@
   justify-content: center;
   box-sizing: border-box;
   overflow: hidden;
-  padding: 200px 0 200px 0;
+  padding: 250px 0 150px 0;
   transition: padding 0.2s;
 }
 .uf-simple-banner__center {
@@ -355,10 +355,11 @@
 }
 
 /* Responsive container spacing only, no font-size */
-@media (max-width: 900px) {
+@media (max-width: 990px) {
   .uf-simple-banner {
-    padding: 36px 0 36px 0;
+    {% comment %} padding: 36px 0 36px 0; {% endcomment %}
     background-attachment: scroll;
+    padding: 130px 0 80px 0;
   }
   .uf-simple-banner__inner,
   .uf-simple-banner__secondary {
@@ -376,17 +377,14 @@
     font-size: clamp(1.3rem, 7vw, 3rem) !important;
   }
 }
-@media (max-width: 500px) {
-  .uf-simple-banner {
-    padding: 20px 0 20px 0;
-  }
+@media (max-width: 749px) {
   .uf-simple-banner__inner,
   .uf-simple-banner__secondary {
     padding-left: 1.1rem !important;
     padding-right: 1.1rem !important;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 479px) {
   .uf-simple-banner__inner,
   .uf-simple-banner__secondary {
     padding-left: 0.6rem !important;
