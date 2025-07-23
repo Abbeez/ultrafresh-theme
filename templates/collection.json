@@ -9,8 +9,22 @@
  */
 {
   "sections": {
+    "custom_calltoaction_Cm7VWf": {
+      "type": "custom-calltoaction",
+      "name": "UF Call to Action",
+      "settings": {
+        "cta_image": "shopify://shop_images/header-1_1.png",
+        "headline": "Explore Ultrafresh More Than a Diaper",
+        "subheadline": "Love in every layer, designed to care for your baby’s every move. Discover the full range of Ultrafresh diapers made to support their journey with comfort and protection.",
+        "button_label": "Explore Our Collection",
+        "button_url": "",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
@@ -19,9 +33,11 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
+        "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -32,14 +48,156 @@
         "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
-        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_PnTiFT": {
+      "type": "featured-product",
+      "blocks": {
+        "text_qPEEn4": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_MeYhQA": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_eVDFtP": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_XJDTzK": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_9jiUnR": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_Q3kjyD": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_W3PWfw": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_qPEEn4",
+        "title_MeYhQA",
+        "price_eVDFtP",
+        "variant_picker_XJDTzK",
+        "quantity_selector_9jiUnR",
+        "buy_buttons_Q3kjyD",
+        "share_W3PWfw"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "ultrafresh-ultra-thin-pull-up-diaper-large-30s",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "right",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_7XTKVM": {
+      "type": "featured-product",
+      "blocks": {
+        "text_axGFw3": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_txC9EL": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_BXtWqe": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_AgpJLq": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_i87fR4": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_aqnb4h": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_m4k7f3": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_axGFw3",
+        "title_txC9EL",
+        "price_BXtWqe",
+        "variant_picker_AgpJLq",
+        "quantity_selector_i87fR4",
+        "buy_buttons_aqnb4h",
+        "share_m4k7f3"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "ultrafresh-ultra-thin-tape-diaper-small-30s",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
+    "custom_calltoaction_Cm7VWf",
     "banner",
-    "product-grid"
+    "product-grid",
+    "featured_product_PnTiFT",
+    "featured_product_7XTKVM"
   ]
 }

@@ -145,7 +145,7 @@
       "settings": {
         "padding_top": 120,
         "padding_bottom": 120,
-        "heading": "Got Questions? Let’s Talk!",
+        "heading": "Got Questions? <span>Let’s Talk!</span>",
         "subheading": "We’re here to help, anytime.",
         "description": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need.",
         "button_label": "Talk to Us Here",
