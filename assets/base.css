@@ -3705,8 +3705,15 @@ details[open] > .header__menu-item {
 
 .scrolled-past-header header {
   background: var(--custom-bg);
+  transition: background 300ms ease-in-out;
 }
 
 .scrolled-past-header .header__menu-item {
   color: var(--custom-dark);
+  transition: color 300ms ease-in-out;
+}
+
+.scrolled-past-header .header__icon {
+  color: var(--custom-dark);
+  transition: color 300ms ease-in-out;
 }
