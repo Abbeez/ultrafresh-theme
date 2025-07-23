@@ -3698,3 +3698,15 @@ details[open] > .header__menu-item {
 .header__submenu .header__menu-item:hover {
   text-decoration-line: none;
 }
+
+.scrolled-past-header {
+  background: transparent;
+}
+
+.scrolled-past-header header {
+  background: var(--custom-bg);
+}
+
+.scrolled-past-header .header__menu-item {
+  color: var(--custom-dark);
+}

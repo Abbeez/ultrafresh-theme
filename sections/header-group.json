@@ -43,7 +43,8 @@
         ".header__menu-item:hover,.header__active-menu-item {color: #00a1e9;}",
         ".header__menu-item:hover span,.header__active-menu-item {text-decoration: none;}",
         "nav.header__inline-menu li a,nav.header__inline-menu li header-menu span {font-family: var(--font-heading-family);}",
-        " {font-weight: 500; font-family: var(--font-heading-family);}"
+        " {font-weight: 500; font-family: var(--font-heading-family);}",
+        "sticky-header header {margin-bottom: -105px;}"
       ],
       "settings": {
         "logo_position": "middle-left",
@@ -52,7 +53,7 @@
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "reduce-logo-size",
         "show_line_separator": true,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-cfce202b-b4a2-463a-bfb9-87a3ed179eda",
         "menu_color_scheme": "scheme-1",
         "enable_country_selector": false,
         "enable_language_selector": false,
