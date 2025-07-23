@@ -16,15 +16,9 @@
     },
     {
       "type": "text",
-      "id": "heading_accent",
-      "label": "Heading Accent",
-      "default": "Every story"
-    },
-    {
-      "type": "text",
       "id": "heading",
-      "label": "Heading",
-      "default": "deserves gentle care"
+      "label": "Heading (use <span> for accent)",
+      "default": "Every story <span>deserves gentle care</span>"
     },
     {
       "type": "textarea",
@@ -64,7 +58,6 @@
   <div class="uf-testimonials__container">
     <div class="uf-testimonials__left">
       <h2 class="h1 uf-testimonials__heading">
-        <span class="uf-testimonials__accent">{{ section.settings.heading_accent }}</span>
         {{ section.settings.heading }}
       </h2>
       <div class="uf-testimonials__desc">{{ section.settings.description }}</div>
@@ -76,7 +69,7 @@
       {% endif %}
     </div>
     <div class="uf-testimonials__right">
-      <div class="uf-testimonials__slider swiper uf-swiper-{{ section.id }}">
+      <div class="swiper uf-swiper-{{ section.id }} uf-testimonials__slider">
         <div class="swiper-wrapper">
           {% for testimonial in section.settings.testimonials %}
             <div class="swiper-slide">
@@ -107,10 +100,6 @@
       new Swiper('.uf-swiper-{{ section.id }}', {
         slidesPerView: 2,
         spaceBetween: 24,
-        navigation: {
-          nextEl: '.uf-swiper-{{ section.id }} .swiper-button-next',
-          prevEl: '.uf-swiper-{{ section.id }} .swiper-button-prev'
-        },
         breakpoints: {
           0: { slidesPerView: 1 },
           700: { slidesPerView: 2 }
@@ -124,31 +113,26 @@
 .uf-testimonials__outer {
   width: 100%;
   background: var(--custom-bg);
-  transition: padding 0.2s;
 }
-
 .uf-testimonials__container {
   display: flex;
   gap: 3rem;
   padding: 0 5rem;
   align-items: flex-start;
 }
-
 .uf-testimonials__left {
   flex: 0 0 30%;
 }
-
 .uf-testimonials__right {
-  flex: 0 0 70%;
+  flex: 1;
   min-width: 0;
 }
-
 .uf-testimonials__heading {
   margin-bottom: 1.1rem;
   color: var(--custom-dark);
   line-height: 1.12;
 }
-.uf-testimonials__accent {
+.uf-testimonials__heading span {
   color: var(--custom-secondary);
 }
 .uf-testimonials__desc {
@@ -161,15 +145,13 @@
   display: inline-flex;
   align-items: center;
   color: var(--custom-dark);
-  font-weight: 500;
   background: none;
   border: none;
   text-decoration: underline;
+  font-weight: 500;
   cursor: pointer;
-  transition: color 0.2s;
 }
-.uf-testimonials__btn:hover,
-.uf-testimonials__btn:focus {
+.uf-testimonials__btn:hover {
   color: var(--custom-secondary);
 }
 .uf-testimonials__arrow {
@@ -185,9 +167,6 @@
   flex-direction: column;
   justify-content: flex-end;
   min-height: 400px;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
   box-shadow: 0 2px 8px rgba(20,22,14,0.06);
   transition: background-size 0.45s cubic-bezier(.4,0,.2,1);
 }
@@ -201,11 +180,9 @@
 .uf-testimonials__name {
   font-weight: 700;
   margin-bottom: 0.8rem;
-  color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 .uf-testimonials__quote {
-  color: #fff;
   opacity: 0.97;
   text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
