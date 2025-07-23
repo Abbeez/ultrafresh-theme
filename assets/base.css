@@ -3689,3 +3689,12 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+/* Custom CSS  */
+
+details[open] > .header__menu-item {
+  text-decoration: none;
+}
+.header__submenu .header__menu-item:hover {
+  text-decoration-line: underline;
+}
