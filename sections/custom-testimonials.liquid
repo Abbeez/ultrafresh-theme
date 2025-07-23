@@ -60,36 +60,34 @@
 {% endschema %}
 
 <div class="uf-testimonials__outer uf-colors"
-  style="padding-top: {{ section.settings.padding_top | default: 60 }}px; padding-bottom: {{ section.settings.padding_bottom | default: 60 }}px;">
+     style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
   <div class="uf-testimonials__container">
-    <!-- Left Column -->
     <div class="uf-testimonials__left">
       <h2 class="h1 uf-testimonials__heading">
         <span class="uf-testimonials__accent">{{ section.settings.heading_accent }}</span>
         {{ section.settings.heading }}
       </h2>
       <div class="uf-testimonials__desc">{{ section.settings.description }}</div>
-      {% if section.settings.button_label != blank and section.settings.button_url != blank %}
+      {% if section.settings.button_label and section.settings.button_url %}
         <a href="{{ section.settings.button_url }}" class="uf-testimonials__btn">
           {{ section.settings.button_label }}
           <span class="uf-testimonials__arrow">›</span>
         </a>
       {% endif %}
     </div>
-    <!-- Right Column (Slider) -->
     <div class="uf-testimonials__right">
       <div class="uf-testimonials__slider swiper uf-swiper-{{ section.id }}">
         <div class="swiper-wrapper">
           {% for testimonial in section.settings.testimonials %}
             <div class="swiper-slide">
               <div class="uf-testimonials__card"
-                style="
-                  background-image:
-                    linear-gradient(to top, var(--custom-secondary) 10%, transparent 100%),
-                    url('{{ testimonial.photo | image_url: width: 600, height: 800, crop: "center" }}');
-                  background-size: cover;
-                  background-position: center;
-                ">
+                   style="
+                     background-image:
+                       linear-gradient(to top, var(--custom-secondary) 10%, transparent 100%),
+                       url('{{ testimonial.photo | image_url: width: 600, height: 800, crop: 'center' }}');
+                     background-size: cover;
+                     background-position: center;
+                   ">
                 <div class="uf-testimonials__card-content">
                   <div class="uf-testimonials__name">{{ testimonial.name }}</div>
                   <div class="uf-testimonials__quote">“{{ testimonial.message }}”</div>
@@ -98,7 +96,6 @@
             </div>
           {% endfor %}
         </div>
-        <!-- No pagination -->
       </div>
     </div>
   </div>
@@ -131,47 +128,34 @@
 }
 
 .uf-testimonials__container {
-  max-width: var(--page-width, 1200px);
-  margin: 0 auto;
   display: flex;
   gap: 3rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 5rem;
   align-items: flex-start;
 }
 
 .uf-testimonials__left {
   flex: 0 0 30%;
-  max-width: 30%;
-  padding-right: 1vw;
 }
 
 .uf-testimonials__right {
   flex: 0 0 70%;
-  max-width: 70%;
   min-width: 0;
 }
 
 .uf-testimonials__heading {
-  font-family: var(--font-heading-family, var(--font-body-family, 'Inter', sans-serif));
   margin-bottom: 1.1rem;
   color: var(--custom-dark);
-  text-align: left;
   line-height: 1.12;
 }
 .uf-testimonials__accent {
   color: var(--custom-secondary);
 }
 .uf-testimonials__desc {
-  font-size: inherit;
-  color: var(--custom-dark);
   margin-bottom: 1.6rem;
+  color: var(--custom-dark);
   opacity: 0.97;
   line-height: 1.7;
-  text-align: left;
-  font-family: var(--font-body-family, 'Inter', sans-serif);
 }
 .uf-testimonials__btn {
   display: inline-flex;
@@ -182,10 +166,7 @@
   border: none;
   text-decoration: underline;
   cursor: pointer;
-  font-size: inherit;
-  padding: 0;
   transition: color 0.2s;
-  font-family: var(--font-body-family, 'Inter', sans-serif);
 }
 .uf-testimonials__btn:hover,
 .uf-testimonials__btn:focus {
@@ -194,7 +175,6 @@
 .uf-testimonials__arrow {
   margin-left: 0.6em;
   font-size: 1.3em;
-  line-height: 1;
 }
 .uf-testimonials__slider {
   width: 100%;
@@ -205,51 +185,32 @@
   flex-direction: column;
   justify-content: flex-end;
   min-height: 400px;
-  height: 100%;
-  width: 100%;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 2px 8px 0 rgba(20,22,14,0.06);
+  box-shadow: 0 2px 8px rgba(20,22,14,0.06);
   transition: background-size 0.45s cubic-bezier(.4,0,.2,1);
 }
-.uf-testimonials__card:hover,
-.uf-testimonials__card:focus-within {
+.uf-testimonials__card:hover {
   background-size: 110%;
 }
 .uf-testimonials__card-content {
-  position: relative;
-  z-index: 2;
-  padding: 2.3rem 2.1rem 1.7rem 2.1rem;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  padding: 2.3rem 2.1rem 1.7rem;
   color: #fff;
 }
 .uf-testimonials__name {
   font-weight: 700;
   margin-bottom: 0.8rem;
-  line-height: 1.25;
-  letter-spacing: 0.01em;
   color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 .uf-testimonials__quote {
-  opacity: 0.97;
-  font-style: normal;
-  margin-bottom: 0;
-  word-break: break-word;
   color: #fff;
+  opacity: 0.97;
   text-shadow: 0 2px 8px rgba(0,0,0,0.18);
-  font-family: inherit;
 }
 
-/* Responsive dynamic padding & centering */
+/* Tablet */
 @media (max-width: 900px) {
   .uf-testimonials__outer {
     padding-top: 36px !important;
@@ -258,54 +219,35 @@
   .uf-testimonials__container {
     flex-direction: column;
     gap: 2.4rem;
-    max-width: 97vw;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding: 0 5rem;
   }
   .uf-testimonials__left,
   .uf-testimonials__right {
-    max-width: 100%;
     flex: 0 0 100%;
-    width: 100%;
   }
 }
+
+/* Mobile */
 @media (max-width: 600px) {
   .uf-testimonials__outer {
     padding-top: 16px !important;
     padding-bottom: 16px !important;
   }
   .uf-testimonials__container {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
+    padding: 0 3rem;
   }
-  .uf-testimonials__card-content {
-    padding: 1rem 0.7rem 0.9rem 0.7rem;
-  }
-}
-@media (max-width: 700px) {
   .uf-testimonials__card {
     min-height: 270px;
   }
   .uf-testimonials__card-content {
-    padding: 1.4rem 1.3rem 1rem 1.3rem;
-    align-items: center;
+    padding: 1.4rem 1.3rem 1rem;
     text-align: center;
   }
+  .uf-testimonials__heading,
+  .uf-testimonials__desc,
   .uf-testimonials__name,
   .uf-testimonials__quote {
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    display: block;
-  }
-  .uf-testimonials__heading,
-  .uf-testimonials__desc {
-    text-align: center;
-  }
-  .uf-testimonials__left {
-    text-align: center;
-    padding-right: 0;
   }
 }
 </style>

@@ -83,7 +83,8 @@
 /* base */
 
 .page-width {
-  max-width: var(--page-width);
+  /* max-width: var(--page-width); */
+  max-width: 100%; /*Changing Page Width for Full width layout */
   margin: 0 auto;
   padding: 0 1.5rem;
 }
