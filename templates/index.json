@@ -86,7 +86,7 @@
       "settings": {
         "padding_top": 120,
         "padding_bottom": 120,
-        "section_title": "How UltraFresh stands apart",
+        "section_title": "How UltraFresh <span>stands apart</span>",
         "section_subheading": "Every detail is designed for what your baby needs most–comfort that feels like air, protection that feels like love.",
         "left_title": "Brand X",
         "left_bullets": "Thicker and heavier build that may restrict movement\nModerate breathability that can result in heat buildup\nNot specifically designed for tropical or humid conditions\nStrong absorbency performance, but with occasional bulkiness\nBasic, functional design with less attention to aesthetic appeal",
@@ -105,7 +105,7 @@
         "image_position": "left",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "Cool, dry, and comfy even in the heat",
+        "heading": "Cool, dry, and comfy <span>even in the heat</span>",
         "description": "UltraFresh is made for tropical climates with breathable layers, ultra-thin absorbent cores, and a non-sticky soft outer cover to keep your baby feeling fresh.",
         "button_label": "See Why It’s Perfect for Tropical Heat",
         "button_url": "shopify://collections"
@@ -119,7 +119,7 @@
         "image_position": "right",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "Know when it’s time to change.",
+        "heading": "Know when it’s time <span>to change.</span>",
         "description": "Change every 3–4 hours or whenever the diaper feels wet. Our ultra-absorbent core keeps baby dry through the night for better rest for both of you.",
         "button_label": "View Change Time Tips",
         "button_url": "shopify://collections"
@@ -133,7 +133,7 @@
         "image_position": "left",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "UltraFresh around the World",
+        "heading": "UltraFresh around the <span>World</span>",
         "description": "From one family to another, UltraFresh is part of bedtime routines and first steps all over the world \n— keeping little ones comfy, wherever they are.",
         "button_label": "Join Our Family of Dealers",
         "button_url": "shopify://collections"
