@@ -3721,3 +3721,11 @@ details[open] > .header__menu-item {
   color: var(--custom-dark);
   transition: color 300ms ease-in-out;
 } */
+
+.product-form__buttons {
+  max-width: 100% !important;
+}
+
+.product__info-container {
+  max-width: 100% !important;
+}

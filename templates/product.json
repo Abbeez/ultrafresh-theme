@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "custom_page_header_mp8qWi": {
+      "type": "custom-page-header",
+      "disabled": true,
+      "name": "UF Page Header",
+      "settings": {
+        "header_image": "shopify://shop_images/Frame_287.png"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -136,6 +144,7 @@
     }
   },
   "order": [
+    "custom_page_header_mp8qWi",
     "main",
     "related-products",
     "custom_text_image_6th7FK"
