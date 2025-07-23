@@ -3696,5 +3696,5 @@ details[open] > .header__menu-item {
   text-decoration: none;
 }
 .header__submenu .header__menu-item:hover {
-  text-decoration-line: underline;
+  text-decoration-line: none;
 }
