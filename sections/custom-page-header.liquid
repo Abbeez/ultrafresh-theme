@@ -1,0 +1,168 @@
+{% schema %}
+{
+  "name": "UF Page Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "header_image",
+      "label": "Header Background Image"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "More than a Diaper, Love, made visible"
+    },
+    {
+      "type": "text",
+      "id": "subheadline",
+      "label": "Subheadline",
+      "default": "Simple. True. This is your signature whisper to close the journey with meaning."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Explore Our Collection"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Section Padding Top (px)",
+      "default": 80
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Section Padding Bottom (px)",
+      "default": 80
+    }
+  ],
+  "presets": [
+    {
+      "name": "UF Page Header"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="uf-page-header"
+  style="padding-top:{{ section.settings.padding_top | default: 80 }}px; padding-bottom:{{ section.settings.padding_bottom | default: 80 }}px;
+    {% if section.settings.header_image != blank %}
+      background-image: linear-gradient(90deg, var(--custom-primary) 0%, transparent 80%), url('{{ section.settings.header_image | image_url: width: 1800 }}');
+    {% endif %}">
+  <div class="uf-page-header__content page-width">
+    <div class="uf-page-header__inner">
+      <h1 class="h1 uf-page-header__headline">{{ section.settings.headline }}</h1>
+      <div class="uf-page-header__subheadline">{{ section.settings.subheadline }}</div>
+      {% if section.settings.button_label != blank and section.settings.button_url != blank %}
+        <a href="{{ section.settings.button_url }}" class="uf-page-header__btn">
+          {{ section.settings.button_label }} <span>›</span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+.uf-page-header {
+  width: 100vw;
+  min-height: 430px;
+  background-color: var(--custom-light);
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.uf-page-header__content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 350px;
+  z-index: 2;
+}
+.uf-page-header__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 700px;
+  padding-left: 1vw;
+}
+.uf-page-header__headline {
+  color: var(--custom-light);
+  margin-bottom: 1.2rem;
+}
+.uf-page-header__subheadline {
+  color: var(--custom-light);
+  margin-bottom: 2.1rem;
+  opacity: 0.97;
+}
+.uf-page-header__btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 1.1rem 2.3rem;
+  border: 1.5px solid var(--custom-light);
+  background: none;
+  color: var(--custom-light);
+  font-weight: 700;
+  border-radius: 0;
+  min-width: 220px;
+  text-decoration: none;
+  font-family: inherit;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  font-size: inherit;
+}
+.uf-page-header__btn span {
+  margin-left: 0.8em;
+  font-size: 1.3em;
+  line-height: 1;
+}
+.uf-page-header__btn:hover,
+.uf-page-header__btn:focus {
+  background: var(--custom-primary);
+  border-color: var(--custom-primary);
+  color: var(--custom-dark);
+}
+@media (max-width: 900px) {
+  .uf-page-header__content {
+    min-height: 200px;
+  }
+  .uf-page-header__inner {
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .uf-page-header__headline,
+  .uf-page-header__subheadline,
+  .uf-page-header__btn {
+    color: var(--custom-dark);
+    border-color: var(--custom-dark);
+  }
+  .uf-page-header {
+    background-image: none !important;
+    background-color: var(--custom-light);
+  }
+}
+@media (max-width: 600px) {
+  .uf-page-header {
+    padding-top: 36px !important;
+    padding-bottom: 36px !important;
+    min-height: 1px;
+  }
+  .uf-page-header__inner {
+    padding: 0 ;
+  }
+}
+</style>
