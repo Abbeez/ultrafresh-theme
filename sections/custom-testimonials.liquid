@@ -78,8 +78,6 @@
                      background-image:
                        linear-gradient(to top, var(--custom-secondary) 10%, transparent 100%),
                        url('{{ testimonial.photo | image_url: width: 600, height: 800, crop: 'center' }}');
-                     background-size: cover;
-                     background-position: center;
                    ">
                 <div class="uf-testimonials__card-content">
                   <div class="uf-testimonials__name">{{ testimonial.name }}</div>
@@ -89,6 +87,8 @@
             </div>
           {% endfor %}
         </div>
+        <!-- Progressbar Pagination -->
+        <div class="swiper-pagination swiper-pagination-progressbar"></div>
       </div>
     </div>
   </div>
@@ -100,9 +100,13 @@
       new Swiper('.uf-swiper-{{ section.id }}', {
         slidesPerView: 2,
         spaceBetween: 24,
+        pagination: {
+          el: '.uf-swiper-{{ section.id }} .swiper-pagination',
+          type: 'progressbar'
+        },
         breakpoints: {
-          0: { slidesPerView: 1 },
-          700: { slidesPerView: 2 }
+          0:   { slidesPerView: 1, spaceBetween: 12 },
+          989: { slidesPerView: 2, spaceBetween: 24 }
         }
       });
     }
@@ -125,7 +129,6 @@
 }
 .uf-testimonials__right {
   flex: 1;
-  min-width: 0;
 }
 .uf-testimonials__heading {
   margin-bottom: 1.1rem;
@@ -161,17 +164,17 @@
 .uf-testimonials__slider {
   width: 100%;
 }
+.uf-testimonials__slider .swiper-slide {
+  width: calc((100% - 24px) / 2) !important;
+}
 .uf-testimonials__card {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 400px;
-  box-shadow: 0 2px 8px rgba(20,22,14,0.06);
-  transition: background-size 0.45s cubic-bezier(.4,0,.2,1);
-}
-.uf-testimonials__card:hover {
-  background-size: 110%;
+  min-height: 540px;
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 .uf-testimonials__card-content {
   padding: 2.3rem 2.1rem 1.7rem;
@@ -185,6 +188,29 @@
 .uf-testimonials__quote {
   opacity: 0.97;
   text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+/* Pagination styling */
+.uf-testimonials__container .swiper-wrapper {
+  padding-bottom: 20px;
+}
+
+.uf-testimonials__container .swiper-pagination-progressbar {
+  background: rgba(0,0,0,0.1);
+  height: 4px !important;
+  border-radius: 2px;
+  margin: 1.5rem 0 0;
+}
+.uf-testimonials__container .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: var(--custom-secondary) !important;
+  border-radius: 2px;
+}
+
+.uf-testimonials__container .swiper-horizontal > .swiper-pagination-progressbar,
+.uf-testimonials__container .swiper-pagination-progressbar.swiper-pagination-horizontal {
+  top: inherit;
+  bottom: 0;
+  z-index: 10 !important;
 }
 
 /* Tablet */
@@ -202,6 +228,9 @@
   .uf-testimonials__right {
     flex: 0 0 100%;
   }
+  {% comment %} .uf-testimonials__slider .swiper-slide {
+    width: 100% !important;
+  } {% endcomment %}
 }
 
 /* Mobile */
@@ -213,8 +242,11 @@
   .uf-testimonials__container {
     padding: 0 3rem;
   }
+  uf-testimonials__slider .swiper-slide {
+    width: 100% !important;
+  }
   .uf-testimonials__card {
-    min-height: 270px;
+    min-height: 500px;
   }
   .uf-testimonials__card-content {
     padding: 1.4rem 1.3rem 1rem;
