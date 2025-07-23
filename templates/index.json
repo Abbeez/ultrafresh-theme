@@ -39,8 +39,7 @@
       "settings": {
         "padding_top": 120,
         "padding_bottom": 120,
-        "heading_accent": "Every story",
-        "heading": "deserves gentle care",
+        "heading": "<span>Every story </span> deserves gentle care",
         "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
         "button_label": "Click here to see parent stories",
         "button_url": "shopify://collections",
@@ -143,6 +142,8 @@
       "type": "custom-journey",
       "name": "UF Journey",
       "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60,
         "heading": "More than a Diaper, <span>Love, made visible</span>",
         "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
         "row1_image_1": "shopify://shop_images/491455768_18499522900009539_4830294737759522855_n..jpg",
