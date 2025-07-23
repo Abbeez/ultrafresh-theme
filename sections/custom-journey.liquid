@@ -6,7 +6,7 @@
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "More than a Diaper, Love, made visible"
+      "default": "More than a Diaper, <span>Love</span>, made visible"
     },
     {
       "type": "textarea",
@@ -14,56 +14,26 @@
       "label": "Subheading",
       "default": "Simple. True. This is your signature whisper to close the journey with meaning."
     },
-    {
-      "type": "image_picker",
-      "id": "row1_image_1",
-      "label": "Row 1 Image 1"
-    },
-    {
-      "type": "image_picker",
-      "id": "row1_image_2",
-      "label": "Row 1 Image 2"
-    },
-    {
-      "type": "image_picker",
-      "id": "row1_image_3",
-      "label": "Row 1 Image 3"
-    },
-    {
-      "type": "image_picker",
-      "id": "row1_image_4",
-      "label": "Row 1 Image 4"
-    },
-    {
-      "type": "image_picker",
-      "id": "row1_image_5",
-      "label": "Row 1 Image 5"
-    },
-    {
-      "type": "image_picker",
-      "id": "row2_image_1",
-      "label": "Row 2 Image 1"
-    },
-    {
-      "type": "image_picker",
-      "id": "row2_image_2",
-      "label": "Row 2 Image 2"
-    },
-    {
-      "type": "image_picker",
-      "id": "row2_image_3",
-      "label": "Row 2 Image 3"
-    },
-    {
-      "type": "image_picker",
-      "id": "row2_image_4",
-      "label": "Row 2 Image 4"
-    },
-    {
-      "type": "image_picker",
-      "id": "row2_image_5",
-      "label": "Row 2 Image 5"
-    }
+    { "type": "image_picker", "id": "row1_image_1", "label": "Row 1 Image 1" },
+    { "type": "image_picker", "id": "row1_image_2", "label": "Row 1 Image 2" },
+    { "type": "image_picker", "id": "row1_image_3", "label": "Row 1 Image 3" },
+    { "type": "image_picker", "id": "row1_image_4", "label": "Row 1 Image 4" },
+    { "type": "image_picker", "id": "row1_image_5", "label": "Row 1 Image 5" },
+    { "type": "image_picker", "id": "row1_image_6", "label": "Row 1 Image 6" },
+    { "type": "image_picker", "id": "row1_image_7", "label": "Row 1 Image 7" },
+    { "type": "image_picker", "id": "row1_image_8", "label": "Row 1 Image 8" },
+    { "type": "image_picker", "id": "row1_image_9", "label": "Row 1 Image 9" },
+    { "type": "image_picker", "id": "row1_image_10", "label": "Row 1 Image 10" },
+    { "type": "image_picker", "id": "row2_image_1", "label": "Row 2 Image 1" },
+    { "type": "image_picker", "id": "row2_image_2", "label": "Row 2 Image 2" },
+    { "type": "image_picker", "id": "row2_image_3", "label": "Row 2 Image 3" },
+    { "type": "image_picker", "id": "row2_image_4", "label": "Row 2 Image 4" },
+    { "type": "image_picker", "id": "row2_image_5", "label": "Row 2 Image 5" },
+    { "type": "image_picker", "id": "row2_image_6", "label": "Row 2 Image 6" },
+    { "type": "image_picker", "id": "row2_image_7", "label": "Row 2 Image 7" },
+    { "type": "image_picker", "id": "row2_image_8", "label": "Row 2 Image 8" },
+    { "type": "image_picker", "id": "row2_image_9", "label": "Row 2 Image 9" },
+    { "type": "image_picker", "id": "row2_image_10", "label": "Row 2 Image 10" }
   ],
   "presets": [
     { "name": "UF Journey" }
@@ -72,78 +42,64 @@
 {% endschema %}
 
 <div class="uf-journey__section">
-  <div class="uf-journey__container">
-    <h2 class="h1 uf-journey__heading">{{ section.settings.heading }}</h2>
+  <div class="uf-journey__heading-wrap page-width">
+    <h2 class="h1 uf-journey__heading">
+      {{ section.settings.heading | raw }}
+    </h2>
     <div class="uf-journey__subheading">{{ section.settings.subheading }}</div>
+  </div>
 
-    <!-- Row 1: scrolls left -->
+  <div class="uf-journey__images-wrap">
+    {% assign images_row1 = "" %}
+    {% assign images_row2 = "" %}
+    {% for i in (1..10) %}
+      {% assign key1 = "row1_image_" | append: i %}
+      {% assign img1 = section.settings[key1] %}
+      {% if img1 != blank %}
+        {% assign images_row1 = images_row1 | append: key1 | append: "," %}
+      {% endif %}
+      {% assign key2 = "row2_image_" | append: i %}
+      {% assign img2 = section.settings[key2] %}
+      {% if img2 != blank %}
+        {% assign images_row2 = images_row2 | append: key2 | append: "," %}
+      {% endif %}
+    {% endfor %}
+    {% assign images_row1_arr = images_row1 | split: "," %}
+    {% assign images_row2_arr = images_row2 | split: "," %}
+
+    <!-- Row 1 -->
     <div class="uf-journey__row uf-journey__row--left">
       <div class="uf-journey__marquee">
-        {% for i in (1..5) %}
-          {% assign key = "row1_image_" | append: i %}
-          {% assign img = section.settings[key] %}
-          {% if img != blank %}
+        {% for x in images_row1_arr %}
+          {% if x != "" %}
             <div class="uf-journey__img-wrap">
-              <img
-                src="{{ img | image_url: width: 600 }}"
-                alt="Journey photo {{ i }}"
-                loading="lazy"
-                width="300"
-                height="300"
-              >
+              <img src="{{ section.settings[x] | image_url: width: 700 }}" alt="Journey photo" loading="lazy" draggable="false">
             </div>
           {% endif %}
         {% endfor %}
-        <!-- Duplicate for seamless loop -->
-        {% for i in (1..5) %}
-          {% assign key = "row1_image_" | append: i %}
-          {% assign img = section.settings[key] %}
-          {% if img != blank %}
+        {% for x in images_row1_arr %}
+          {% if x != "" %}
             <div class="uf-journey__img-wrap">
-              <img
-                src="{{ img | image_url: width: 600 }}"
-                alt="Journey photo duplicate {{ i }}"
-                loading="lazy"
-                width="300"
-                height="300"
-              >
+              <img src="{{ section.settings[x] | image_url: width: 700 }}" alt="Journey photo" loading="lazy" draggable="false">
             </div>
           {% endif %}
         {% endfor %}
       </div>
     </div>
-
-    <!-- Row 2: scrolls right -->
+    <!-- Row 2 -->
     <div class="uf-journey__row uf-journey__row--right">
       <div class="uf-journey__marquee uf-journey__marquee--reverse">
-        {% for i in (1..5) %}
-          {% assign key = "row2_image_" | append: i %}
-          {% assign img = section.settings[key] %}
-          {% if img != blank %}
+        {% for x in images_row2_arr %}
+          {% if x != "" %}
             <div class="uf-journey__img-wrap">
-              <img
-                src="{{ img | image_url: width: 600 }}"
-                alt="Journey photo {{ i }}"
-                loading="lazy"
-                width="300"
-                height="300"
-              >
+              <img src="{{ section.settings[x] | image_url: width: 700 }}" alt="Journey photo" loading="lazy" draggable="false">
             </div>
           {% endif %}
         {% endfor %}
-        <!-- Duplicate for seamless loop -->
-        {% for i in (1..5) %}
-          {% assign key = "row2_image_" | append: i %}
-          {% assign img = section.settings[key] %}
-          {% if img != blank %}
+        {% for x in images_row2_arr %}
+          {% if x != "" %}
             <div class="uf-journey__img-wrap">
-              <img
-                src="{{ img | image_url: width: 600 }}"
-                alt="Journey photo duplicate {{ i }}"
-                loading="lazy"
-                width="300"
-                height="300"
-              >
+              <img src="{{ section.settings[x] | image_url: width: 700 }}" alt="Journey photo" loading="lazy" draggable="false">
             </div>
           {% endif %}
         {% endfor %}
@@ -154,93 +110,119 @@
 
 <style>
 .uf-journey__section {
-  background: var(--custom-light, #FDFCF9);
+  background: var(--custom-bg);
   padding: 0 0 2rem 0;
-  width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
 }
-
-.uf-journey__container {
-  max-width: var(--page-width, 1200px);
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem 0 1.5rem;
+.uf-journey__heading-wrap {
+  padding-top: 2.5rem;
+  padding-bottom: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
-
 .uf-journey__heading {
   color: var(--custom-dark, #384148);
   margin-bottom: 0.6rem;
+  line-height: 1.1;
+  /* No font-size, uses Dawn's .h1 */
 }
-
+.uf-journey__heading span {
+  color: var(--custom-secondary, #CEA478);
+}
 .uf-journey__subheading {
   color: var(--custom-dark, #384148);
   opacity: 0.75;
   margin-bottom: 2.2rem;
 }
-
+.uf-journey__images-wrap {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: transparent;
+}
 .uf-journey__row {
   overflow: hidden;
-  width: 100%;
-  margin-bottom: 1.3rem;
+  width: 100vw;
+  margin-bottom: 1.4rem;
 }
-
 .uf-journey__marquee {
   display: flex;
   align-items: stretch;
-  gap: 1.4rem;
-  animation: uf-journey-marquee 24s linear infinite;
+  gap: 2.1rem; /* Slightly bigger gap */
+  animation: uf-journey-marquee 22s linear infinite;
+  min-width: 100vw; /* Ensures row is always filled */
+  width: fit-content;
 }
 .uf-journey__marquee--reverse {
   animation-direction: reverse;
 }
-
 @keyframes uf-journey-marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-
 .uf-journey__img-wrap {
-  flex: 0 0 220px;
-  width: 220px;
-  height: 220px;
+  flex: 0 0 auto;
+  width: 13vw;  /* ~8 images per row on desktop (taller) */
+  height: 13vw;
+  min-width: 120px;
+  min-height: 120px;
+  max-width: 370px;
+  max-height: 370px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 1.2rem;
   background: #f7f7f4;
+  /* No border radius */
 }
 .uf-journey__img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 1.2rem;
 }
-
-/* Responsive */
+/* Responsive: tablet */
+@media (max-width: 1200px) {
+  .uf-journey__img-wrap {
+    width: 18vw;
+    height: 18vw;
+  }
+}
+/* Responsive: mobile */
 @media (max-width: 900px) {
-  .uf-journey__container {
-    padding: 1.5rem 0.5rem 0 0.5rem;
+  .uf-journey__heading-wrap {
+    padding-top: 1.3rem;
+    padding-bottom: 0.7rem;
   }
   .uf-journey__img-wrap {
-    flex-basis: 140px;
-    width: 140px;
-    height: 140px;
+    width: 26vw;
+    height: 26vw;
+    min-width: 70px;
+    min-height: 70px;
   }
+  .uf-journey__marquee { gap: 1.1rem; }
 }
-
-@media (max-width: 600px) {
-  .uf-journey__heading {
-    font-size: 1.25rem;
-  }
+@media (max-width: 700px) {
   .uf-journey__img-wrap {
-    flex-basis: 94px;
-    width: 94px;
-    height: 94px;
-    border-radius: 0.55rem;
+    width: 33vw;
+    height: 33vw;
+    min-width: 50px;
+    min-height: 50px;
   }
-  .uf-journey__marquee, .uf-journey__marquee--reverse {
-    gap: 0.4rem;
+  .uf-journey__marquee { gap: 0.5rem; }
+}
+@media (max-width: 500px) {
+  .uf-journey__img-wrap {
+    width: 46vw;
+    height: 46vw;
+    min-width: 38px;
+    min-height: 38px;
   }
+  /* No font-size override for heading, inherit from Dawn */
 }
 </style>
