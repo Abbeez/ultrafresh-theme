@@ -19,7 +19,7 @@
         "subheadline": "A diaper so soft, so light, they hardly feel it – but always feel our love.",
         "button_label": "See What Makes Us Different",
         "button_url": "shopify://collections",
-        "show_secondary_content": false,
+        "show_secondary_content": true,
         "secondary_padding_top": 350,
         "secondary_padding_bottom": 24,
         "secondary_heading": "Purposefully Made. Elegantly Designed.",
@@ -42,7 +42,8 @@
         "heading": "Every story  deserves gentle care",
         "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
         "button_label": "Click here to see parent stories",
-        "button_url": "shopify://collections"
+        "button_url": "shopify://collections",
+        "image_align": "right"
       }
     },
     "custom_text_image_qxeTjH": {

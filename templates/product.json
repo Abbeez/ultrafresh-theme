@@ -141,14 +141,16 @@
       "settings": {
         "banner_image": "shopify://shop_images/Rectangle_46.png",
         "heading": "Trusted Hands Behind Every Ultrafresh Pack",
-        "subheading": "Our distributors are more than just suppliers they’re partners in nurturing every baby’s unique journey."
+        "subheading": "Our distributors are more than just suppliers they’re partners in nurturing every baby’s unique journey.",
+        "padding_top": 120,
+        "padding_bottom": 150
       }
     },
     "custom_text_image_6th7FK": {
       "type": "custom-text-image",
       "name": "UF Text Image Split",
       "settings": {
-        "section_image": "shopify://shop_images/Row_1.png",
+        "section_image": "shopify://shop_images/header1.png",
         "image_position": "right",
         "padding_top": 72,
         "padding_bottom": 60,
@@ -167,13 +169,120 @@
         "heading": "Every story deserves gentle care",
         "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
         "button_label": "Click here to see parent stories",
-        "button_url": "",
-        "testimonials": [
-          "liza-mom-of-4-month-old-sofia",
-          "marvin-dad-of-8-month-old-ethan",
-          "kaye-mom-of-7-month-old-iris",
-          "patty-mom-of-5-month-old-caleb"
-        ]
+        "button_url": "shopify://pages/reviews",
+        "image_align": "left"
+      }
+    },
+    "collapsible_content_kEyEUe": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_TghrrF": {
+          "type": "collapsible_row",
+          "source": "{{ metaobjects.frequently_asked_questions[\"what-age-or-stage-is-best-for-pull-up-diapers\"] }}",
+          "settings": {
+            "heading": "{{ metaobjects.frequently_asked_questions[\"what-age-or-stage-is-best-for-pull-up-diapers\"].question.value }}",
+            "icon": "check_mark",
+            "row_content": "{{ metaobjects.frequently_asked_questions[\"what-age-or-stage-is-best-for-pull-up-diapers\"].answer | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_row_tRayz3": {
+          "type": "collapsible_row",
+          "source": "{{ metaobjects.frequently_asked_questions[\"how-do-i-know-if-pull-up-diapers-will-fit-my-child\"] }}",
+          "settings": {
+            "heading": "{{ metaobjects.frequently_asked_questions[\"how-do-i-know-if-pull-up-diapers-will-fit-my-child\"].question.value }}",
+            "icon": "check_mark",
+            "row_content": "{{ metaobjects.frequently_asked_questions[\"how-do-i-know-if-pull-up-diapers-will-fit-my-child\"].answer | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_row_Q6zxzJ": {
+          "type": "collapsible_row",
+          "source": "{{ metaobjects.frequently_asked_questions[\"are-they-as-absorbent-as-taped-diapers\"] }}",
+          "settings": {
+            "heading": "{{ metaobjects.frequently_asked_questions[\"are-they-as-absorbent-as-taped-diapers\"].question.value }}",
+            "icon": "check_mark",
+            "row_content": "{{ metaobjects.frequently_asked_questions[\"are-they-as-absorbent-as-taped-diapers\"].answer | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_row_MU6Hwb": {
+          "type": "collapsible_row",
+          "source": "{{ metaobjects.frequently_asked_questions[\"what-makes-taped-diapers-ideal-for-newborns\"] }}",
+          "settings": {
+            "heading": "{{ metaobjects.frequently_asked_questions[\"what-makes-taped-diapers-ideal-for-newborns\"].question.value }}",
+            "icon": "check_mark",
+            "row_content": "{{ metaobjects.frequently_asked_questions[\"what-makes-taped-diapers-ideal-for-newborns\"].answer | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_row_ihdfnN": {
+          "type": "collapsible_row",
+          "source": "{{ metaobjects.frequently_asked_questions[\"are-ultrafresh-taped-diapers-gentle-on-sensitive-skin\"] }}",
+          "settings": {
+            "heading": "{{ metaobjects.frequently_asked_questions[\"are-ultrafresh-taped-diapers-gentle-on-sensitive-skin\"].question.value }}",
+            "icon": "check_mark",
+            "row_content": "{{ metaobjects.frequently_asked_questions[\"are-ultrafresh-taped-diapers-gentle-on-sensitive-skin\"].answer | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_row_PhB8P4": {
+          "type": "collapsible_row",
+          "source": "{{ metaobjects.frequently_asked_questions[\"how-long-can-my-baby-wear-one-diaper\"] }}",
+          "settings": {
+            "heading": "{{ metaobjects.frequently_asked_questions[\"how-long-can-my-baby-wear-one-diaper\"].question.value }}",
+            "icon": "check_mark",
+            "row_content": "{{ metaobjects.frequently_asked_questions[\"how-long-can-my-baby-wear-one-diaper\"].answer | metafield_tag }}",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_TghrrF",
+        "collapsible_row_tRayz3",
+        "collapsible_row_Q6zxzJ",
+        "collapsible_row_MU6Hwb",
+        "collapsible_row_ihdfnN",
+        "collapsible_row_PhB8P4"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "We've gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we're always here for you and your little one.",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_talktous_VqLL4Q": {
+      "type": "custom-talktous",
+      "name": "UF Contact Callout",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "heading": "Got Questions? <span>Let’s Talk!</span>",
+        "subheading": "We’re here to help, anytime.",
+        "description": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need.",
+        "button_label": "Talk to Us Here",
+        "button_url": "shopify://pages/reviews"
+      }
+    },
+    "custom_social_proof_JegbNq": {
+      "type": "custom-social-proof",
+      "disabled": true,
+      "name": "Social Proof List",
+      "settings": {
+        "heading": "Trusted Hands Behind Every Ultrafresh Pack",
+        "subheading": "Our distributors are more than just suppliers they’re partners in nurturing every baby’s unique journey.",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
@@ -183,6 +292,9 @@
     "related-products",
     "custom_partners_Jxm8te",
     "custom_text_image_6th7FK",
-    "custom_testimonials_CBn8nc"
+    "custom_testimonials_CBn8nc",
+    "collapsible_content_kEyEUe",
+    "custom_talktous_VqLL4Q",
+    "custom_social_proof_JegbNq"
   ]
 }
