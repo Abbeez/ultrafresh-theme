@@ -14,7 +14,13 @@
       "disabled": true,
       "name": "UF Page Header",
       "settings": {
-        "header_image": "shopify://shop_images/Frame_287.png"
+        "header_image": "shopify://shop_images/Frame_287.png",
+        "headline": "More than a Diaper, Love, made visible",
+        "subheadline": "Simple. True. This is your signature whisper to close the journey with meaning.",
+        "button_label": "Explore Our Collection",
+        "button_url": "",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "main": {
@@ -62,7 +68,7 @@
           "settings": {
             "heading": "Features",
             "icon": "clipboard",
-            "content": "<p>{{ block.settings.page.metafields.custom.features | metafield_tag }}</p>",
+            "content": "<p>{{ product.metafields.custom.features | metafield_tag }}</p>",
             "page": ""
           }
         },

@@ -1,0 +1,165 @@
+{% schema %}
+{
+  "name": "Partners List",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Trusted Hands Behind Every <span>Ultrafresh</span> Pack"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Our distributors are more than just suppliers they’re partners in nurturing every baby’s unique journey."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Partners List"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+#partners-section {
+  position: relative;
+  text-align: center;
+  color: var(--custom-dark);
+  font-family: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--custom-bg);
+  padding: 6rem 1.5rem; /* Desktop default, overridden on mobile below */
+  transition: padding 0.2s;
+}
+
+#partners-section h2.h1 {
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+#partners-section h2.h1 span {
+  color: var(--custom-secondary);
+}
+
+#partners-section p.description {
+  font-weight: normal;
+  margin-bottom: 2rem;
+  color: var(--custom-dark);
+}
+
+#partners-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  row-gap: 0.7rem;
+}
+
+.partner-item {
+  background-color: #E6E3D7;
+  color: var(--custom-dark);
+  padding: 1rem 2rem;
+  font-weight: 500;
+  border: none;
+  cursor: default;
+  user-select: none;
+  box-shadow: none;
+  border-radius: 0;
+  white-space: nowrap;
+  line-height: 1.5;
+  transition: background 0.2s, color 0.2s;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 990px) {
+  #partners-section {
+    padding: 3rem 1rem;
+  }
+  #partners-list {
+    gap: 0.6rem;
+    row-gap: 0.5rem;
+  }
+  .partner-item {
+    padding: 0.85rem 1.3rem;
+  }
+}
+@media (max-width: 749px) {
+  #partners-section {
+    padding: 2rem 0.5rem;
+  }
+  #partners-list {
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .partner-item {
+    padding: 0.75rem 1rem;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 479px) {
+  #partners-section {
+    padding: 1rem 0.2rem;
+  }
+  #partners-list {
+    gap: 0.3rem;
+  }
+  .partner-item {
+    padding: 0.6rem 0.8rem;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+{% endstylesheet %}
+
+<section
+  id="partners-section"
+  class="partners-section"
+  style="
+    {% if section.settings.banner_image != blank %}
+      background-image: 
+        linear-gradient(
+        to bottom,
+        var(--custom-bg) 0%,
+        transparent 15%,
+        transparent 35%,
+        transparent 65%,
+        transparent 85%,
+        var(--custom-bg) 100%
+        ),
+        url('{{ section.settings.banner_image | img_url: '1800x' }}');
+    {% endif %}
+  "
+>
+  <h2 class="h1">{% assign heading_safe = section.settings.heading | escape | replace: '&lt;span&gt;', '<span>' | replace: '&lt;/span&gt;', '</span>' %}{{ heading_safe }}</h2>
+  <p class="description">{{ section.settings.subheading }}</p>
+  <div id="partners-list">
+    {% assign partners_list = shop.metaobjects.partners.values | default: empty %}
+    {% if partners_list.count > 0 %}
+      {% for partner in partners_list %}
+        <div class="partner-item">{{ partner.name }}</div>
+      {% endfor %}
+    {% else %}
+      <p>No partners found.</p>
+    {% endif %}
+  </div>
+</section>
