@@ -36,13 +36,6 @@
       "type": "url",
       "id": "button_url",
       "label": "Button Link"
-    },
-    {
-      "type": "metaobject_list",
-      "id": "testimonials",
-      "label": "Testimonials to show",
-      "metaobject_type": "testimonials",
-      "limit": 12
     }
   ],
   "presets": [
@@ -69,26 +62,26 @@
       {% endif %}
     </div>
     <div class="uf-testimonials__right">
-      <div class="swiper uf-swiper-{{ section.id }} uf-testimonials__slider">
-        <div class="swiper-wrapper">
-          {% for testimonial in section.settings.testimonials %}
-            <div class="swiper-slide">
-              <div class="uf-testimonials__card"
-                   style="
-                     background-image:
-                       linear-gradient(to top, var(--custom-secondary) 10%, transparent 100%),
-                       url('{{ testimonial.photo | image_url: width: 600, height: 800, crop: 'center' }}');
-                   ">
-                <div class="uf-testimonials__card-content">
-                  <div class="uf-testimonials__name">{{ testimonial.name }}</div>
-                  <div class="uf-testimonials__quote">“{{ testimonial.message }}”</div>
-                </div>
+      <div class="swiper uf-testimonials__slider"  data-swiper-autoplay="2000">
+        <div class="swiper-wrapper uf-testimonials__wrapper">
+          {% assign testimonial = shop.metaobjects.testimonials.values %}
+          {% if testimonial.count > 0 %}
+            {% for reviewer in testimonial %}
+              <div class="swiper-slide uf-testimonials__card" style="background-image:linear-gradient(to top, var(--custom-secondary) 10%, transparent 100%),
+                       url('{{ reviewer.photo | image_url: width: 600, height: 800, crop: 'center' }}');">
+                       <div class="uf-testimonials__innercard">
+                <div class="uf-testimonials__name">{{ reviewer.name }}</div>
+                <div class="uf-testimonials__message">{{ reviewer.message }}</div>
+                       </div>
+
               </div>
-            </div>
-          {% endfor %}
+            {% endfor %}
+          {% else %}
+            <p>No testimonial found.</p> 
+          {% endif %}
         </div>
         <!-- Progressbar Pagination -->
-        <div class="swiper-pagination swiper-pagination-progressbar"></div>
+        <div class="swiper-scrollbar"></div>
       </div>
     </div>
   </div>
@@ -96,20 +89,19 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    if (typeof Swiper !== "undefined") {
-      new Swiper('.uf-swiper-{{ section.id }}', {
-        slidesPerView: 2,
-        spaceBetween: 24,
-        pagination: {
-          el: '.uf-swiper-{{ section.id }} .swiper-pagination',
-          type: 'progressbar'
-        },
-        breakpoints: {
-          0:   { slidesPerView: 1, spaceBetween: 12 },
-          989: { slidesPerView: 2, spaceBetween: 24 }
-        }
-      });
+    var swiper = new Swiper(".uf-testimonials__slider", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+      },
+          breakpoints: {
+      0:   { slidesPerView: 1, spaceBetween: 12 },
+      990: { slidesPerView: 2, spaceBetween: 24 }
+      
     }
+    });
   });
 </script>
 
@@ -120,16 +112,49 @@
 }
 .uf-testimonials__container {
   display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
   padding: 0 5rem;
   align-items: flex-start;
+  overflow: hidden;
 }
 .uf-testimonials__left {
   flex: 0 0 30%;
 }
 .uf-testimonials__right {
   flex: 1;
+  overflow:hidden;
 }
+
+.uf-testimonials__card {
+  max-width: 700px; 
+  height:450px;
+  padding:2.3rem;
+  color: var(--custom-light);
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.uf-testimonials__slider .swiper-wrapper {padding-bottom:20px;}
+
+.uf-testimonials__slider div:empty {display:block;}
+
+.uf-testimonials__name {
+    font-weight: 700;
+    font-size: 130%;
+    margin-bottom: 15px;
+}
+
+.swiper-scrollbar-drag {
+
+    background: var(--custom-secondary);
+}
+
 .uf-testimonials__heading {
   margin-bottom: 1.1rem;
   color: var(--custom-dark);
@@ -161,102 +186,21 @@
   margin-left: 0.6em;
   font-size: 1.3em;
 }
-.uf-testimonials__slider {
+
+.swiper {
   width: 100%;
-}
-.uf-testimonials__slider .swiper-slide {
-  width: calc((100% - 24px) / 2) !important;
-}
-.uf-testimonials__card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 540px;
-  background-size:cover;
-  background-repeat: no-repeat;
-}
-.uf-testimonials__card-content {
-  padding: 2.3rem 2.1rem 1.7rem;
-  color: #fff;
-}
-.uf-testimonials__name {
-  font-weight: 700;
-  margin-bottom: 0.8rem;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
-}
-.uf-testimonials__quote {
-  opacity: 0.97;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  height: 100%;
 }
 
-/* Pagination styling */
-.uf-testimonials__container .swiper-wrapper {
-  padding-bottom: 20px;
+@media (max-width: 990px) {
+.uf-testimonials__container > div {
+    flex: 1 0 100%;
+    text-align:center
 }
 
-.uf-testimonials__container .swiper-pagination-progressbar {
-  background: rgba(0,0,0,0.1);
-  height: 4px !important;
-  border-radius: 2px;
-  margin: 1.5rem 0 0;
+.uf-testimonials__container {
+  padding: 0 3rem;
 }
-.uf-testimonials__container .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background: var(--custom-secondary) !important;
-  border-radius: 2px;
 }
 
-.uf-testimonials__container .swiper-horizontal > .swiper-pagination-progressbar,
-.uf-testimonials__container .swiper-pagination-progressbar.swiper-pagination-horizontal {
-  top: inherit;
-  bottom: 0;
-  z-index: 10 !important;
-}
-
-/* Tablet */
-@media (max-width: 900px) {
-  .uf-testimonials__outer {
-    padding-top: 36px !important;
-    padding-bottom: 36px !important;
-  }
-  .uf-testimonials__container {
-    flex-direction: column;
-    gap: 2.4rem;
-    padding: 0 5rem;
-  }
-  .uf-testimonials__left,
-  .uf-testimonials__right {
-    flex: 0 0 100%;
-  }
-  {% comment %} .uf-testimonials__slider .swiper-slide {
-    width: 100% !important;
-  } {% endcomment %}
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .uf-testimonials__outer {
-    padding-top: 16px !important;
-    padding-bottom: 16px !important;
-  }
-  .uf-testimonials__container {
-    padding: 0 3rem;
-  }
-  uf-testimonials__slider .swiper-slide {
-    width: 100% !important;
-  }
-  .uf-testimonials__card {
-    min-height: 500px;
-  }
-  .uf-testimonials__card-content {
-    padding: 1.4rem 1.3rem 1rem;
-    text-align: center;
-  }
-  .uf-testimonials__heading,
-  .uf-testimonials__desc,
-  .uf-testimonials__name,
-  .uf-testimonials__quote {
-    text-align: center;
-  }
-}
 </style>
