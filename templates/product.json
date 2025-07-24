@@ -113,11 +113,12 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 72,
-        "padding_bottom": 12
+        "padding_bottom": 72
       }
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -134,18 +135,45 @@
         "padding_bottom": 28
       }
     },
+    "custom_partners_Jxm8te": {
+      "type": "custom-partners",
+      "name": "Partners List",
+      "settings": {
+        "banner_image": "shopify://shop_images/Rectangle_46.png",
+        "heading": "Trusted Hands Behind Every Ultrafresh Pack",
+        "subheading": "Our distributors are more than just suppliers they’re partners in nurturing every baby’s unique journey."
+      }
+    },
     "custom_text_image_6th7FK": {
       "type": "custom-text-image",
       "name": "UF Text Image Split",
       "settings": {
         "section_image": "shopify://shop_images/Row_1.png",
         "image_position": "right",
-        "padding_top": 60,
+        "padding_top": 72,
         "padding_bottom": 60,
         "heading": "Comfort that cares. Protection that lasts.",
         "description": "Every baby deserves a diaper that feels gentle, stays dry, and moves with them through every giggle and wiggle. Ultrafresh diapers are thoughtfully made for modern parents who want the best for their little one without the bulk or compromise.",
         "button_label": "See why mommies choose UltraFresh",
         "button_url": "shopify://pages/reviews"
+      }
+    },
+    "custom_testimonials_CBn8nc": {
+      "type": "custom-testimonials",
+      "name": "UF Testimonials",
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "heading": "Every story deserves gentle care",
+        "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
+        "button_label": "Click here to see parent stories",
+        "button_url": "",
+        "testimonials": [
+          "liza-mom-of-4-month-old-sofia",
+          "marvin-dad-of-8-month-old-ethan",
+          "kaye-mom-of-7-month-old-iris",
+          "patty-mom-of-5-month-old-caleb"
+        ]
       }
     }
   },
@@ -153,6 +181,8 @@
     "custom_page_header_mp8qWi",
     "main",
     "related-products",
-    "custom_text_image_6th7FK"
+    "custom_partners_Jxm8te",
+    "custom_text_image_6th7FK",
+    "custom_testimonials_CBn8nc"
   ]
 }
