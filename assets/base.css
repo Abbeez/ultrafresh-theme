@@ -3729,3 +3729,7 @@ details[open] > .header__menu-item {
 .product__info-container {
   max-width: 100% !important;
 }
+
+body {
+  overflow-x: hidden;
+}

@@ -119,10 +119,7 @@
 
 <div class="uf-simple-banner uf-simple-banner--{{ section.settings.text_color }}"
   {% if section.settings.banner_image != blank %}
-    style="background-image:
-      linear-gradient(to top, var(--custom-secondary) 5%, transparent 100%),
-      url('{{ section.settings.banner_image | image_url: width: 2000 }}');
-    "
+    style="background-image:url('{{ section.settings.banner_image | image_url: width: 2000 }}');"
   {% endif %}
 >
   <div class="uf-simple-banner__center">
