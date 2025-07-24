@@ -54,7 +54,7 @@
 <div class="uf-cta-banner"
   style="padding-top:{{ section.settings.padding_top | default: 80 }}px; padding-bottom:{{ section.settings.padding_bottom | default: 80 }}px;
     {% if section.settings.cta_image != blank %}
-      background-image: linear-gradient(90deg, var(--custom-primary) 0%, transparent 80%), url('{{ section.settings.cta_image | image_url: width: 1800 }}');
+      background-image: linear-gradient(90deg, var(--custom-secondary) 0%, transparent 80%), url('{{ section.settings.cta_image | image_url: width: 1800 }}');
     {% endif %}">
   <div class="uf-cta-banner__content page-width">
     <div class="uf-cta-banner__inner">

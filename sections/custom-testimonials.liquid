@@ -36,6 +36,16 @@
       "type": "url",
       "id": "button_url",
       "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "image_align",
+      "label": "Image Alignment",
+      "options": [
+        { "value": "right", "label": "Image Right (default)" },
+        { "value": "left", "label": "Image Left" }
+      ],
+      "default": "right"
     }
   ],
   "presets": [
@@ -48,7 +58,7 @@
 
 <div class="uf-testimonials__outer uf-colors"
      style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
-  <div class="uf-testimonials__container">
+  <div class="uf-testimonials__container{% if section.settings.image_align == 'left' %} uf-testimonials__container--reverse{% endif %}">
     <div class="uf-testimonials__left">
       <h2 class="h1 uf-testimonials__heading">
         {{ section.settings.heading }}
@@ -96,11 +106,10 @@
         el: ".swiper-scrollbar",
         hide: false,
       },
-          breakpoints: {
-      0:   { slidesPerView: 1, spaceBetween: 12 },
-      990: { slidesPerView: 2, spaceBetween: 24 }
-      
-    }
+      breakpoints: {
+        0:   { slidesPerView: 1, spaceBetween: 12 },
+        990: { slidesPerView: 2, spaceBetween: 24 }
+      }
     });
   });
 </script>
@@ -117,18 +126,26 @@
   padding: 0 5rem;
   align-items: flex-start;
   overflow: hidden;
+  flex-direction: row;
+  transition: flex-direction 0.3s;
+}
+.uf-testimonials__container--reverse {
+  flex-direction: row-reverse;
 }
 .uf-testimonials__left {
   flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .uf-testimonials__right {
   flex: 1;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .uf-testimonials__card {
   max-width: 700px; 
-  height:450px;
+  height:550px;
   padding:2.3rem;
   color: var(--custom-light);
   display:flex;
@@ -141,21 +158,17 @@
 }
 
 .uf-testimonials__slider .swiper-wrapper {padding-bottom:20px;}
-
 .uf-testimonials__slider div:empty {display:block;}
-
 .uf-testimonials__name {
-    font-weight: 700;
-    font-size: 130%;
-    margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 130%;
+  margin-bottom: 15px;
 }
-
 .swiper-scrollbar-drag {
-
-    background: var(--custom-secondary);
+  background: var(--custom-secondary);
 }
-
 .uf-testimonials__heading {
+  margin-top:0;
   margin-bottom: 1.1rem;
   color: var(--custom-dark);
   line-height: 1.12;
@@ -186,21 +199,21 @@
   margin-left: 0.6em;
   font-size: 1.3em;
 }
-
 .swiper {
   width: 100%;
   height: 100%;
 }
 
 @media (max-width: 990px) {
-.uf-testimonials__container > div {
+  .uf-testimonials__container,
+  .uf-testimonials__container--reverse {
+    flex-direction: column !important;
+    padding: 0 3rem;
+  }
+  .uf-testimonials__left, .uf-testimonials__right {
     flex: 1 0 100%;
-    text-align:center
+    width: 100%;
+    text-align: center;
+  }
 }
-
-.uf-testimonials__container {
-  padding: 0 3rem;
-}
-}
-
 </style>
