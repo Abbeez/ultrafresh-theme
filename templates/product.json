@@ -177,7 +177,8 @@
       "type": "custom-faqs",
       "name": "Custom FAQS",
       "settings": {
-        "heading": "Frequently Asked Questions"
+        "heading": "Frequently Asked <span>Questions</span>",
+        "description": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one."
       }
     },
     "custom_talktous_VqLL4Q": {
@@ -210,7 +211,7 @@
       "settings": {
         "padding_top": 60,
         "padding_bottom": 0,
-        "heading": "More than a Diaper, <span>Love</span>, made visible",
+        "heading": "More than a Diaper, Love, made visible",
         "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
         "row1_image_1": "shopify://shop_images/279352301_1166509000832036_8087259750403889181_n.jpg",
         "row1_image_2": "shopify://shop_images/491455768_18499522900009539_4830294737759522855_n..jpg",
