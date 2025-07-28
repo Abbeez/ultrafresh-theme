@@ -3,18 +3,6 @@
   "name": "UF Stories Section",
   "settings": [
     {
-      "type": "number",
-      "id": "section_padding_top",
-      "label": "Section Padding Top (px)",
-      "default": 60
-    },
-    {
-      "type": "number",
-      "id": "section_padding_bottom",
-      "label": "Section Padding Bottom (px)",
-      "default": 60
-    },
-    {
       "type": "text",
       "id": "section_heading",
       "label": "Heading (use <span> for accent)",
@@ -46,76 +34,62 @@
 }
 {% endschema %}
 
-<div class="uf-stories-block" style="padding-top: {{ section.settings.section_padding_top }}px; padding-bottom: {{ section.settings.section_padding_bottom }}px;">
-  <div class="uf-stories-intro">
-    <h2 class="h1 uf-stories-heading">{{ section.settings.section_heading }}</h2>
-    <div class="uf-stories-description">{{ section.settings.section_description }}</div>
-    {% if section.settings.cta_label and section.settings.cta_link %}
-      <a href="{{ section.settings.cta_link }}" class="uf-stories-button">
-        {{ section.settings.cta_label }}
-        <span class="uf-stories-arrow">›</span>
-      </a>
-    {% endif %}
+<div class="uf-stories-section">
+  <div class="uf-stories-header">
+    <div class="uf-stories-header-inner">
+      <h2 class="h1 uf-stories-heading">{{ section.settings.section_heading }}</h2>
+      <div class="uf-stories-description">{{ section.settings.section_description }}</div>
+      {% if section.settings.cta_label and section.settings.cta_link %}
+        <a href="{{ section.settings.cta_link }}" class="uf-stories-button">
+          {{ section.settings.cta_label }}
+          <span class="uf-stories-arrow">›</span>
+        </a>
+      {% endif %}
+    </div>
   </div>
 
-  <div class="swiper uf-stories-carousel">
-    <div class="swiper-wrapper">
+  <div class="uf-marquee-track">
+    <div class="uf-marquee-inner">
       {% assign reviews = shop.metaobjects.testimonials.values %}
-      {% if reviews.size > 0 %}
+      {% if reviews.count > 0 %}
         {% for item in reviews %}
-          <div class="swiper-slide uf-stories-slide">
-            <div class="uf-stories-slide-img" style="background-image: url('{{ item.photo | image_url: width: 600, height: 800, crop: 'center' }}');"></div>
-            <div class="uf-stories-slide-content">
-              <div class="uf-stories-name">{{ item.name }}</div>
+          <div class="uf-marquee-card">
+            <div class="uf-marquee-img" style="background-image: url('{{ item.photo | image_url: width: 800, height: 600, crop: "center" }}');"></div>
+            <div class="uf-marquee-content">
+              <div class="h2">{{ item.name }}</div>
               <div class="uf-stories-message">{{ item.message }}</div>
             </div>
           </div>
         {% endfor %}
-      {% else %}
-        <p>No testimonials found.</p>
       {% endif %}
     </div>
-    <div class="swiper-scrollbar"></div>
   </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    new Swiper('.uf-stories-carousel', {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        hide: false,
-      },
-      breakpoints: {
-        990: {
-          slidesPerView: 2,
-          spaceBetween: 30
-        }
-      }
-    });
-  });
-</script>
-
 <style>
-.uf-stories-block {
-  background-color: var(--custom-light);
-  padding: 4rem 1.5rem;
+.uf-stories-section {
+  background-color: var(--custom-bg);
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
-.uf-stories-intro {
-  max-width: 880px;
-  margin: 0 auto 3rem;
+
+.uf-stories-section div:empty {
+  display: block !important;
+}
+
+.uf-stories-header {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 0 1.5rem;
 }
 .uf-stories-heading {
   color: var(--custom-dark);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .uf-stories-heading span {
   color: var(--custom-secondary);
@@ -123,18 +97,15 @@
 .uf-stories-description {
   color: var(--custom-dark);
   opacity: 0.95;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   line-height: 1.6;
 }
 .uf-stories-button {
   display: inline-flex;
   align-items: center;
   color: var(--custom-dark);
-  background: none;
-  border: none;
   text-decoration: underline;
   font-weight: 500;
-  cursor: pointer;
 }
 .uf-stories-button:hover {
   color: var(--custom-secondary);
@@ -143,53 +114,114 @@
   margin-left: 0.5em;
   font-size: 1.3em;
 }
-.uf-stories-carousel {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+
+/* Marquee */
+.uf-marquee-track {
+  height: 85vh;
+  overflow: hidden;
+  position: relative;
 }
-.uf-stories-slide {
+.uf-marquee-inner {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 20s linear infinite alternate;
+}
+.uf-marquee-card {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
-  background-color: var(--custom-primary);
-  padding: 2rem;
-  box-sizing: border-box;
-  border: 1px solid var(--custom-secondary);
+  width: 100vw;
+  height: 85vh;
+  flex-shrink: 0;
 }
-.uf-stories-slide-img {
-  width: 45%;
-  min-height: 300px;
+.uf-marquee-img {
+  width: 50%;
+  height: 100%;
   background-size: cover;
   background-position: center;
 }
-.uf-stories-slide-content {
-  flex: 1;
+.uf-marquee-content {
+  width: 50%;
+  background-color: var(--custom-bg);
+  color: var(--custom-dark);
+  padding: 4rem 7rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: var(--custom-dark);
 }
-.uf-stories-name {
-  font-weight: 600;
-  font-size: 1.2em;
-  margin-bottom: 0.5rem;
+.uf-marquee-content .h2 {
+  font-size: 180% !important;
+  margin-bottom: 15px;
 }
 .uf-stories-message {
   line-height: 1.6;
-  font-size: 1rem;
-}
-.swiper-scrollbar-drag {
-  background: var(--custom-secondary);
 }
 
-@media (max-width: 749px) {
-  .uf-stories-slide {
-    flex-direction: column;
+/* Pause on hover */
+.uf-marquee-track:hover .uf-marquee-inner {
+  animation-play-state: paused;
+}
+
+/* Keyframes */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Tablet (≤990px) */
+@media (max-width: 990px) {
+  .uf-stories-header {
+    height: auto;
+    padding: 2rem 1.5rem;
   }
-  .uf-stories-slide-img {
+  .uf-marquee-track {
+    height: auto;
+  }
+  .uf-marquee-card {
+    flex-direction: column;
+    height: auto;
+  }
+  .uf-marquee-img,
+  .uf-marquee-content {
     width: 100%;
+    height: auto;
+  }
+  .uf-marquee-img {
     height: 300px;
+  }
+  .uf-marquee-content {
+    padding: 2.5rem 2rem;
+  }
+  .uf-marquee-content .h2 {
+    font-size: 150% !important;
+  }
+}
+
+/* Mobile Large (≤749px) */
+@media (max-width: 749px) {
+  .uf-marquee-content {
+    padding: 2rem 1.5rem;
+  }
+  .uf-marquee-content .h2 {
+    font-size: 140% !important;
+  }
+  .uf-stories-message {
+    font-size: 95%;
+  }
+}
+
+/* Mobile Small (≤479px) */
+@media (max-width: 479px) {
+  .uf-marquee-img {
+    height: 220px;
+  }
+  .uf-marquee-content {
+    padding: 2rem 1rem;
+  }
+  .uf-marquee-content .h2 {
+    font-size: 125% !important;
+  }
+  .uf-stories-message {
+    font-size: 90%;
   }
 }
 </style>
