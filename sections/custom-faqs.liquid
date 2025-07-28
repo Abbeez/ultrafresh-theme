@@ -1,11 +1,78 @@
+{% schema %}
+{
+  "name": "Frequently Asked Question",
+  "settings": [
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Section Padding Top (px)",
+      "default": 64
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Section Padding Bottom (px)",
+      "default": 64
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Frequently Asked Question"
+    }
+  ]
+}
+{% endschema %}
+
+<div id="uf-faqs-section" style="padding-top:{{ section.settings.padding_top }}px; padding-bottom:{{ section.settings.padding_bottom }}px;">
+  <div class="uf-faqs-wrapper">
+    <h2 class="h1">{{ section.settings.heading }}</h2>
+    {% if section.settings.description != blank %}
+      <div class="uf-description">{{ section.settings.description }}</div>
+    {% endif %}
+
+    {% assign faqs = shop.metaobjects.frequently_asked_questions.values %}
+    {% for faq in faqs %}
+      <div class="uf-faq-item">
+        <div class="uf-faq-question">
+          <div class="uf-faq-left">
+            <span class="uf-faq-check">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-accordion icon-check-mark" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18.5 1.5h-17v17h17zm-17-1a1 1 0 0 0-1 1v17a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-17a1 1 0 0 0-1-1z"></path><path d="M14.998 6.09a.5.5 0 0 1 .03.707l-6.112 6.666a.5.5 0 0 1-.733.004l-3.188-3.394a.5.5 0 0 1 .729-.685l2.82 3.002 5.746-6.27a.5.5 0 0 1 .707-.03"></path></svg>
+            </span>
+            <span>{{ faq.question.value }}</span>
+          </div>
+          <span class="uf-faq-caret">
+            <svg class="icon icon-caret" viewBox="0 0 10 6"><path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"></path></svg>
+          </span>
+        </div>
+        <div class="uf-faq-answer">
+          {{ faq.answer | metafield_tag }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
 {% stylesheet %}
 #uf-faqs-section {
-  padding: 4rem 1rem;
+  font-family: var(--font-heading-family);
 }
 
-#uf-faqs-section .uf-faqs-wrapper {
+.uf-faqs-wrapper {
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 #uf-faqs-section h2.h1 {
@@ -14,7 +81,7 @@
   font-weight: normal;
 }
 
-#uf-faqs-section .uf-description {
+.uf-description {
   text-align: center;
   margin-bottom: 2rem;
   line-height: 1.6;
@@ -23,7 +90,6 @@
 .uf-faq-item {
   border-top: 1px solid var(--custom-dark);
   padding: 1rem 0;
-  font-family: var(--font-heading-family);
 }
 
 .uf-faq-item:last-child {
@@ -76,41 +142,43 @@
   display: block;
 }
 
+/* Breakpoints (as per your instruction) */
+@media (max-width: 990px) {
+  .uf-faqs-wrapper {
+    padding: 0 3rem;
+  }
+}
+
 @media (max-width: 749px) {
   #uf-faqs-section {
-    padding: 3rem 1rem;
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+
+  .uf-faqs-wrapper {
+    padding: 0 3rem;
+  }
+
+  .uf-faq-answer {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 479px) {
+  #uf-faqs-section {
+    padding-top: 36px !important;
+    padding-bottom: 36px !important;
+  }
+
+  .uf-faqs-wrapper {
+    padding: 0 3rem;
+  }
+
+  .uf-faq-answer {
+    font-size: 0.9rem;
   }
 }
 {% endstylesheet %}
-
-<div id="uf-faqs-section">
-  <div class="uf-faqs-wrapper">
-    <h2 class="h1">{{ section.settings.heading }}</h2>
-    {% if section.settings.description != blank %}
-      <div class="uf-description">{{ section.settings.description }}</div>
-    {% endif %}
-
-    {% assign faqs = shop.metaobjects.frequently_asked_questions.values %}
-    {% for faq in faqs %}
-      <div class="uf-faq-item">
-        <div class="uf-faq-question">
-          <div class="uf-faq-left">
-            <span class="uf-faq-check">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-accordion icon-check-mark" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18.5 1.5h-17v17h17zm-17-1a1 1 0 0 0-1 1v17a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-17a1 1 0 0 0-1-1z"></path><path d="M14.998 6.09a.5.5 0 0 1 .03.707l-6.112 6.666a.5.5 0 0 1-.733.004l-3.188-3.394a.5.5 0 0 1 .729-.685l2.82 3.002 5.746-6.27a.5.5 0 0 1 .707-.03"></path></svg>
-            </span>
-            <span>{{ faq.question.value }}</span>
-          </div>
-          <span class="uf-faq-caret">
-            <svg class="icon icon-caret" viewBox="0 0 10 6"><path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"></path></svg>
-          </span>
-        </div>
-        <div class="uf-faq-answer">
-          {{ faq.answer | metafield_tag }}
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-</div>
 
 {% javascript %}
 document.querySelectorAll('.uf-faq-question').forEach(item => {
@@ -120,28 +188,3 @@ document.querySelectorAll('.uf-faq-question').forEach(item => {
   });
 });
 {% endjavascript %}
-
-{% schema %}
-{
-  "name": "Frequently Asked Question",
-  "settings": [
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "Frequently Asked Questions"
-    },
-    {
-      "type": "textarea",
-      "id": "description",
-      "label": "Description",
-      "default": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one."
-    }
-  ],
-  "presets": [
-    {
-      "name": "Frequently Asked Question"
-    }
-  ]
-}
-{% endschema %}

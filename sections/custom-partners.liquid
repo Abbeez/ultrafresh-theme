@@ -50,7 +50,7 @@
   background-size: cover;
   background-position: center;
   background-color: var(--custom-bg);
-  padding: 6rem 1.5rem; /* Fallback, overridden by inline style */
+  padding: 5rem 0; /* Fallback, overridden by inline style */
   transition: padding 0.2s;
 }
 #partners-section h2.h1 {
@@ -95,10 +95,10 @@
 /* Responsive adjustments */
 @media (max-width: 990px) {
   #partners-section {
-    padding: 3rem 1rem;
+    padding: 2rem 3rem;
   }
   #partners-list {
-    gap: 0.6rem;
+    gap: 1rem;
     row-gap: 0.5rem;
   }
   .partner-item {
@@ -106,34 +106,17 @@
   }
 }
 @media (max-width: 749px) {
-  #partners-section {
-    padding: 2rem 0.5rem;
-  }
+
   #partners-list {
-    gap: 0.4rem;
+    gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .partner-item {
-    padding: 0.75rem 1rem;
-    width: 100%;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+
 }
 @media (max-width: 479px) {
-  #partners-section {
-    padding: 1rem 0.2rem;
-  }
-  #partners-list {
-    gap: 0.3rem;
-  }
-  .partner-item {
-    padding: 0.6rem 0.8rem;
-    width: 100%;
-    max-width: 100%;
-  }
+
+
 }
 {% endstylesheet %}
 
