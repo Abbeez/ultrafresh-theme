@@ -11,11 +11,36 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "custom_stories_REP74K": {
+      "type": "custom-stories",
+      "name": "UF Stories Section",
+      "settings": {
+        "section_heading": "Every story deserves gentle care",
+        "section_description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments—each smile, wiggle, and milestone.",
+        "cta_label": "Click here to see parent stories",
+        "cta_link": ""
+      }
+    },
+    "custom_partnerwall_dggjEW": {
+      "type": "custom-partnerwall",
+      "name": "UF Partner Wall",
+      "settings": {
+        "partner_heading": "Trusted Hands Behind Every Ultrafresh Pack",
+        "partner_subheading": "Ultrafresh distributors are more than just suppliers—they're partners in nurturing every baby’s unique journey.",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "custom_stories_REP74K",
+    "custom_partnerwall_dggjEW"
+  ]
 }
