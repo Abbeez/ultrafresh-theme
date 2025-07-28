@@ -9,6 +9,19 @@
  */
 {
   "sections": {
+    "custom_page_header_NTLeBz": {
+      "type": "custom-page-header",
+      "name": "UF Page Header",
+      "settings": {
+        "header_image": "shopify://shop_images/Untitled_design_2.png",
+        "headline": "Frequently Asked Questions",
+        "subheadline": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one.",
+        "button_label": "Explore Our Collection",
+        "button_url": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -22,13 +35,14 @@
       "name": "Frequently Asked Question",
       "settings": {
         "padding_top": 64,
-        "padding_bottom": 64,
-        "heading": "Frequently Asked Questions",
-        "description": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one."
+        "padding_bottom": 120,
+        "heading": "Every question has a <span>story</span> behind it.",
+        "description": "From curious first-time parents to late-night diaper dilemmas — we understand the journey. Let’s find the answers together, one gentle step at a time."
       }
     }
   },
   "order": [
+    "custom_page_header_NTLeBz",
     "main",
     "custom_faqs_CeGtap"
   ]
