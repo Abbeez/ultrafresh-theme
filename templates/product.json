@@ -177,7 +177,7 @@
       "type": "custom-faqs",
       "name": "Custom FAQS",
       "settings": {
-        "heading": "Frequently Asked <span>Questions</span>",
+        "heading": "Frequently Asked Questions",
         "description": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one."
       }
     },
@@ -187,6 +187,7 @@
       "settings": {
         "padding_top": 80,
         "padding_bottom": 80,
+        "background_color": "#ecdac0",
         "heading": "Got Questions? <span>Let’s Talk!</span>",
         "subheading": "We’re here to help, anytime.",
         "description": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need.",
