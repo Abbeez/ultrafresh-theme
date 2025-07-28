@@ -1,0 +1,195 @@
+{% schema %}
+{
+  "name": "UF Stories Section",
+  "settings": [
+    {
+      "type": "number",
+      "id": "section_padding_top",
+      "label": "Section Padding Top (px)",
+      "default": 60
+    },
+    {
+      "type": "number",
+      "id": "section_padding_bottom",
+      "label": "Section Padding Bottom (px)",
+      "default": 60
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Heading (use <span> for accent)",
+      "default": "Every story <span>deserves gentle care</span>"
+    },
+    {
+      "type": "textarea",
+      "id": "section_description",
+      "label": "Description",
+      "default": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments—each smile, wiggle, and milestone."
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Button Label",
+      "default": "Click here to see parent stories"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "UF Stories Section"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="uf-stories-block" style="padding-top: {{ section.settings.section_padding_top }}px; padding-bottom: {{ section.settings.section_padding_bottom }}px;">
+  <div class="uf-stories-intro">
+    <h2 class="h1 uf-stories-heading">{{ section.settings.section_heading }}</h2>
+    <div class="uf-stories-description">{{ section.settings.section_description }}</div>
+    {% if section.settings.cta_label and section.settings.cta_link %}
+      <a href="{{ section.settings.cta_link }}" class="uf-stories-button">
+        {{ section.settings.cta_label }}
+        <span class="uf-stories-arrow">›</span>
+      </a>
+    {% endif %}
+  </div>
+
+  <div class="swiper uf-stories-carousel">
+    <div class="swiper-wrapper">
+      {% assign reviews = shop.metaobjects.testimonials.values %}
+      {% if reviews.size > 0 %}
+        {% for item in reviews %}
+          <div class="swiper-slide uf-stories-slide">
+            <div class="uf-stories-slide-img" style="background-image: url('{{ item.photo | image_url: width: 600, height: 800, crop: 'center' }}');"></div>
+            <div class="uf-stories-slide-content">
+              <div class="uf-stories-name">{{ item.name }}</div>
+              <div class="uf-stories-message">{{ item.message }}</div>
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p>No testimonials found.</p>
+      {% endif %}
+    </div>
+    <div class="swiper-scrollbar"></div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.uf-stories-carousel', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: false,
+      },
+      breakpoints: {
+        990: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+.uf-stories-block {
+  background-color: var(--custom-light);
+  padding: 4rem 1.5rem;
+}
+.uf-stories-intro {
+  max-width: 880px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+.uf-stories-heading {
+  color: var(--custom-dark);
+  margin-bottom: 1rem;
+}
+.uf-stories-heading span {
+  color: var(--custom-secondary);
+}
+.uf-stories-description {
+  color: var(--custom-dark);
+  opacity: 0.95;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.uf-stories-button {
+  display: inline-flex;
+  align-items: center;
+  color: var(--custom-dark);
+  background: none;
+  border: none;
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
+}
+.uf-stories-button:hover {
+  color: var(--custom-secondary);
+}
+.uf-stories-arrow {
+  margin-left: 0.5em;
+  font-size: 1.3em;
+}
+.uf-stories-carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.uf-stories-slide {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background-color: var(--custom-primary);
+  padding: 2rem;
+  box-sizing: border-box;
+  border: 1px solid var(--custom-secondary);
+}
+.uf-stories-slide-img {
+  width: 45%;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+.uf-stories-slide-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--custom-dark);
+}
+.uf-stories-name {
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 0.5rem;
+}
+.uf-stories-message {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+.swiper-scrollbar-drag {
+  background: var(--custom-secondary);
+}
+
+@media (max-width: 749px) {
+  .uf-stories-slide {
+    flex-direction: column;
+  }
+  .uf-stories-slide-img {
+    width: 100%;
+    height: 300px;
+  }
+}
+</style>
