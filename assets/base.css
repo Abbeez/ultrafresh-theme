@@ -3733,3 +3733,7 @@ details[open] > .header__menu-item {
 body {
   overflow-x: hidden;
 }
+
+.product__title-accent {
+  color: var(--custom-secondary);
+}
