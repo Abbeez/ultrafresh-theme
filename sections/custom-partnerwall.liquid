@@ -1,0 +1,174 @@
+{% schema %}
+{
+  "name": "UF Partner Wall",
+  "settings": [
+    {
+      "type": "text",
+      "id": "partner_heading",
+      "label": "Heading",
+      "default": "Trusted Hands Behind Every <span>Ultrafresh</span> Pack"
+    },
+    {
+      "type": "textarea",
+      "id": "partner_subheading",
+      "label": "Subheading",
+      "default": "Ultrafresh distributors are more than just suppliers—they're partners in nurturing every baby’s unique journey."
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Padding Top (px)",
+      "default": 60
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Padding Bottom (px)",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "UF Partner Wall"
+    }
+  ]
+}
+{% endschema %}
+
+<section
+  id="uf-partner-wall"
+  class="uf-partner-wall"
+  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="uf-partner-wall__container">
+    <div class="uf-partner-wall__intro">
+      <p class="uf-partner-wall__label">Available Partners</p>
+      <h2 class="h1 uf-partner-wall__heading">
+        {% assign heading_safe = section.settings.partner_heading | escape | replace: '&lt;span&gt;', '<span>' | replace: '&lt;/span&gt;', '</span>' %}
+        {{ heading_safe }}
+      </h2>
+      <div class="uf-partner-wall__subheading">{{ section.settings.partner_subheading }}</div>
+    </div>
+
+    <div class="uf-partner-wall__grid">
+      {% assign partners = shop.metaobjects.partners.values %}
+      {% assign regions = partners | map: "country" | uniq %}
+
+      {% for region in regions %}
+        <div class="uf-partner-wall__block">
+          <h3 class="uf-partner-wall__region">{{ region }}</h3>
+          <div class="uf-partner-wall__location-list">
+            {% for partner in partners %}
+              {% if partner.country == region %}
+                <div class="uf-partner-wall__location">{{ partner.name }}</div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+#uf-partner-wall {
+  background-color: var(--custom-bg);
+  color: var(--custom-dark);
+  font-family: inherit;
+}
+
+.uf-partner-wall__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.uf-partner-wall__intro {
+  flex: 1 1 40%;
+  max-width: 40%;
+}
+.uf-partner-wall__label {
+  margin-bottom: 0.5rem;
+}
+.uf-partner-wall__heading {
+  font-weight: normal;
+  margin-bottom: 1rem;
+  margin-top:1rem;
+}
+.uf-partner-wall__heading span {
+  color: var(--custom-secondary);
+}
+.uf-partner-wall__subheading {
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.uf-partner-wall__grid {
+  flex: 1 1 55%;
+  max-width: 55%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-content: flex-start;
+}
+.uf-partner-wall__block {
+  flex: 1 1 220px;
+  min-width: 180px;
+}
+.uf-partner-wall__region {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.uf-partner-wall__location-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.uf-partner-wall__location {
+  white-space: nowrap;
+  line-height: 1.4;
+  user-select: none;
+  cursor: default;
+  color: var(--custom-dark);
+  font-weight: 500;
+  flex: 1 1 45%;
+  font-size: 120%;
+  font-family: var(--font-heading-family);
+  text-align: right;
+}
+
+/* Tablet */
+@media (max-width: 990px) {
+  .uf-partner-wall__container {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+  .uf-partner-wall__intro,
+  .uf-partner-wall__grid {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+  .uf-partner-wall__intro {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 749px) {
+  .uf-partner-wall__grid {
+    gap: 1.5rem;
+  }
+  .uf-partner-wall__block {
+    flex: 1 1 100%;
+  }
+  .uf-partner-wall__location {
+    flex: 1 1 100%;
+    text-align: left;
+  }
+}
+
+</style>
