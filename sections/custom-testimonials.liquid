@@ -56,7 +56,7 @@
 }
 {% endschema %}
 
-<div class="uf-testimonials__outer uf-colors"
+<div class="uf-testimonials__outer uf-colors animate--slide-in"
      style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
   <div class="uf-testimonials__container{% if section.settings.image_align == 'left' %} uf-testimonials__container--reverse{% endif %}">
     <div class="uf-testimonials__left">
@@ -77,11 +77,10 @@
           {% assign testimonial = shop.metaobjects.testimonials.values %}
           {% if testimonial.count > 0 %}
             {% for reviewer in testimonial %}
-              <div class="swiper-slide uf-testimonials__card" style="background-image:linear-gradient(to top, var(--custom-secondary) 10%, transparent 100%),
-                       url('{{ reviewer.photo | image_url: width: 600, height: 800, crop: 'center' }}');">
+              <div class="swiper-slide uf-testimonials__card" style="background-image:url('{{ reviewer.photo | image_url: width: 600, height: 800, crop: 'center' }}');">
                        <div class="uf-testimonials__innercard">
-                <div class="uf-testimonials__name">{{ reviewer.name }}</div>
-                <div class="uf-testimonials__message">{{ reviewer.message }}</div>
+                        <div class="uf-testimonials__name">{{ reviewer.name }}</div>
+                        <div class="uf-testimonials__message">{{ reviewer.message }}</div>
                        </div>
 
               </div>
@@ -102,6 +101,11 @@
     var swiper = new Swiper(".uf-testimonials__slider", {
       slidesPerView: 2,
       spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
       scrollbar: {
         el: ".swiper-scrollbar",
         hide: false,
@@ -146,7 +150,6 @@
 .uf-testimonials__card {
   max-width: 700px; 
   height:550px;
-  padding:2.3rem;
   color: var(--custom-light);
   display:flex;
   flex-direction: column;
@@ -157,12 +160,22 @@
   background-repeat: no-repeat;
 }
 
+.uf-testimonials__card .uf-testimonials__innercard {
+  padding:5rem 2.3rem 2.3rem 2.3rem;
+  background:linear-gradient(to top, rgba(206, 165, 120, 0.67) 10%, transparent 100%);
+}
+
+.uf-testimonials__card:hover .uf-testimonials__innercard  {
+  background:linear-gradient(to top, rgba(206, 164, 120,0.9) 50%, transparent 100%);
+  transition: all 2000ms ease-in-out;
+}
+
 .uf-testimonials__slider .swiper-wrapper {padding-bottom:20px;}
 .uf-testimonials__slider div:empty {display:block;}
 .uf-testimonials__name {
   font-weight: 700;
   font-size: 130%;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .swiper-scrollbar-drag {
   background: var(--custom-secondary);
