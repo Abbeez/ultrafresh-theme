@@ -3734,6 +3734,7 @@ body {
   overflow-x: hidden;
 }
 
-.product__title-accent {
-  color: var(--custom-secondary);
+.product__title-accent,
+#uf-faqs-section h2.h1 span {
+  color: var(--custom-secondary) !important;
 }
