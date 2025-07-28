@@ -284,6 +284,29 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "custom_journey_rEnW4j": {
+      "type": "custom-journey",
+      "name": "UF Journey",
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "heading": "More than a Diaper, Love, made visible",
+        "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
+        "row1_image_1": "shopify://shop_images/279352301_1166509000832036_8087259750403889181_n.jpg",
+        "row1_image_2": "shopify://shop_images/491455768_18499522900009539_4830294737759522855_n..jpg",
+        "row1_image_3": "shopify://shop_images/499554100_17892379431247420_1720371743213103977_n..jpg",
+        "row1_image_4": "shopify://shop_images/490326297_18505190920020649_7777200301315844931_n..jpg",
+        "row1_image_5": "shopify://shop_images/491431219_18503621830038785_7239015774362172629_n..jpg",
+        "row1_image_6": "shopify://shop_images/491433357_18503621800038785_4966057130570963193_n..jpg",
+        "row2_image_1": "shopify://shop_images/494048037_18494795206003693_3281376956366637441_n..jpg",
+        "row2_image_2": "shopify://shop_images/491900010_18494795224003693_322235917028460133_n..jpg",
+        "row2_image_3": "shopify://shop_images/500172275_18507490111038785_8868669547426764779_n..jpg",
+        "row2_image_4": "shopify://shop_images/7.png",
+        "row2_image_5": "shopify://shop_images/5_b058890e-fb85-4f08-bc96-eb100389c193.png",
+        "row2_image_6": "shopify://shop_images/10.png",
+        "row2_image_7": "shopify://shop_images/11.png"
+      }
     }
   },
   "order": [
@@ -295,6 +318,7 @@
     "custom_testimonials_CBn8nc",
     "collapsible_content_kEyEUe",
     "custom_talktous_VqLL4Q",
-    "custom_social_proof_JegbNq"
+    "custom_social_proof_JegbNq",
+    "custom_journey_rEnW4j"
   ]
 }
