@@ -36,11 +36,26 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "custom_text_image_yWABX9": {
+      "type": "custom-text-image",
+      "name": "UF Text Image Split",
+      "settings": {
+        "section_image": "shopify://shop_images/Frame_287_2.png",
+        "image_position": "left",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "heading": "UltraFresh around the <span>World</span>",
+        "description": "From one family to another, UltraFresh is part of bedtime routines and first steps all over the world \n— keeping little ones comfy, wherever they are.",
+        "button_label": "Join Our Family of Dealers",
+        "button_url": "shopify://pages/data-sharing-opt-out"
+      }
     }
   },
   "order": [
     "main",
     "custom_stories_REP74K",
-    "custom_partnerwall_dggjEW"
+    "custom_partnerwall_dggjEW",
+    "custom_text_image_yWABX9"
   ]
 }
