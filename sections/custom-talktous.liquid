@@ -15,9 +15,15 @@
       "default": 80
     },
     {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#FDFCF9"
+    },
+    {
       "type": "text",
       "id": "heading",
-      "label": "Heading (use &lt;span&gt; for highlight)",
+      "label": "Heading (use <span> for highlight)",
       "default": "Got Questions?<span> Let’s Talk!</span>"
     },
     {
@@ -53,7 +59,7 @@
 {% endschema %}
 
 <div class="uf-contact-callout"
-  style="padding-top:{{ section.settings.padding_top | default: 80 }}px; padding-bottom:{{ section.settings.padding_bottom | default: 80 }}px;">
+  style="background-color: {{ section.settings.background_color }}; padding-top:{{ section.settings.padding_top | default: 80 }}px; padding-bottom:{{ section.settings.padding_bottom | default: 80 }}px;">
   <div class="page-width uf-contact-callout__container">
     <h2 class="h1 uf-contact-callout__heading">
       {{ section.settings.heading }}
@@ -74,7 +80,6 @@
 
 <style>
 .uf-contact-callout {
-  background: var(--custom-bg);
   width: 100%;
   text-align: center;
 }
@@ -93,7 +98,6 @@
 .uf-contact-callout__heading span {
   color: var(--custom-secondary);
   font-weight: 400;
-  /* no font-size, just color */
 }
 .uf-contact-callout__subheading {
   margin-bottom: 1.2rem;
