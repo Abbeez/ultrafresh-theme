@@ -61,7 +61,7 @@
 }
 {% endschema %}
 
-<div class="uf-split-section{% if section.settings.image_position == 'right' %} uf-split-section--reverse{% endif %}"
+<div id="dealers" class="uf-split-section{% if section.settings.image_position == 'right' %} uf-split-section--reverse{% endif %}"
   style="padding-top: {{ section.settings.padding_top | default: 60 }}px; padding-bottom: {{ section.settings.padding_bottom | default: 60 }}px;">
   <div class="uf-split__image-col">
     {% if section.settings.section_image != blank %}
