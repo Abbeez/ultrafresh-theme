@@ -1,6 +1,8 @@
 {% schema %}
 {
-  "name": "UF Page Header",
+  "name": "Page Header",
+  "tag": "section",
+  "class": "uf-page-header-section",
   "settings": [
     {
       "type": "image_picker",
@@ -29,37 +31,25 @@
       "type": "url",
       "id": "button_url",
       "label": "Button Link"
-    },
-    {
-      "type": "number",
-      "id": "padding_top",
-      "label": "Section Padding Top (px)",
-      "default": 80
-    },
-    {
-      "type": "number",
-      "id": "padding_bottom",
-      "label": "Section Padding Bottom (px)",
-      "default": 80
     }
   ],
   "presets": [
     {
-      "name": "UF Page Header"
+      "name": "Page Header",
+      "category": "Custom"
     }
   ]
 }
 {% endschema %}
 
-<div class="uf-page-header {% if section.settings.header_image == blank %}no-image{% endif %}"
+<div class="uf-page-header"
   style="
-    padding-top:{{ section.settings.padding_top | default: 80 }}px;
-    padding-bottom:{{ section.settings.padding_bottom | default: 80 }}px;
     {% if section.settings.header_image != blank %}
-      background-image: url('{{ section.settings.header_image | image_url: width: 1800 }}');
+      background-image: linear-gradient(178deg, rgba(132, 86, 60, 0.6) 0%, rgba(151, 132, 107, 0.67) 100%), url('{{ section.settings.header_image | image_url: width: 1800 }}');
+    {% else %}
+      background-image: linear-gradient(178deg, rgba(132, 86, 60, 0.88) 0%, rgba(151, 132, 107, 0.67) 100%);
     {% endif %}
   ">
-  <div class="uf-page-header__overlay"></div>
   <div class="uf-page-header__content page-width">
     <div class="uf-page-header__inner">
       <h1 class="h1 uf-page-header__headline">{{ section.settings.headline }}</h1>
@@ -77,8 +67,6 @@
 .uf-page-header {
   position: relative;
   width: 100vw;
-  min-height: 330px;
-  background-color: var(--custom-primary);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -86,19 +74,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top:120px;
-}
-
-.uf-page-header.no-image {
-  background-color: var(--custom-primary);
-}
-
-.uf-page-header__overlay {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: rgba(56, 65, 72, 0.55); /* solid dark overlay */
-  z-index: 1;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .uf-page-header__content {
@@ -107,7 +84,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 350px;
   width: 100%;
   text-align: center;
 }
@@ -117,7 +93,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 1080px;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .uf-page-header__headline {
@@ -160,18 +136,11 @@
   color: var(--custom-dark);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .uf-page-header__content {
-    min-height: 200px;
-  }
-
-  .uf-page-header__inner {
-    padding-left: 0;
-    align-items: center;
-    text-align: center;
-    max-width: 100%;
-    margin: 0 auto;
+/* Tablet */
+@media (max-width: 990px) {
+  .uf-page-header {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .uf-page-header__headline,
@@ -184,21 +153,26 @@
   .uf-page-header__btn:hover {
     color: var(--custom-light);
   }
-
-  .uf-page-header__overlay {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
 }
 
+/* Mobile */
 @media (max-width: 600px) {
   .uf-page-header {
-    padding-top: 36px !important;
-    padding-bottom: 36px !important;
-    min-height: 1px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .uf-page-header__inner {
-    padding: 0;
+    padding: 0 1rem;
+  }
+
+  .uf-page-header__btn {
+    padding: 0.9rem 2rem;
+    font-size: 95%;
+  }
+
+  .uf-page-header__btn span {
+    font-size: 1.1em;
   }
 }
 </style>
