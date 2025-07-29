@@ -13,13 +13,13 @@
       "type": "custom-page-header",
       "name": "UF Page Header",
       "settings": {
-        "header_image": "shopify://shop_images/Untitled_design_3.png",
+        "header_image": "shopify://shop_images/Frame_287.png",
         "headline": "Frequently Asked Questions",
         "subheadline": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one.",
         "button_label": "Explore Our Collection",
         "button_url": "",
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 60,
+        "padding_bottom": 30
       }
     },
     "main": {

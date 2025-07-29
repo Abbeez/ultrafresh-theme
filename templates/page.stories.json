@@ -17,12 +17,25 @@
         "padding_bottom": 28
       }
     },
+    "custom_page_header_AjHQd3": {
+      "type": "custom-page-header",
+      "name": "UF Page Header",
+      "settings": {
+        "header_image": "shopify://shop_images/Frame_287.png",
+        "headline": "Every story deserves gentle care",
+        "subheadline": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments—each smile, wiggle, and milestone.",
+        "button_label": "",
+        "button_url": "",
+        "padding_top": 60,
+        "padding_bottom": 30
+      }
+    },
     "custom_stories_REP74K": {
       "type": "custom-stories",
       "name": "UF Stories Section",
       "settings": {
-        "section_heading": "Every story deserves gentle care",
-        "section_description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments—each smile, wiggle, and milestone.",
+        "section_heading": "",
+        "section_description": "",
         "cta_label": "Click here to see parent stories",
         "cta_link": ""
       }
@@ -54,6 +67,7 @@
   },
   "order": [
     "main",
+    "custom_page_header_AjHQd3",
     "custom_stories_REP74K",
     "custom_partnerwall_dggjEW",
     "custom_text_image_yWABX9"
