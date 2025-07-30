@@ -1,7 +1,15 @@
 {% schema %}
 {
-  "name": "UF Text Image Split",
+  "name": "Image and Content Column",
+  "tag": "section",
+  "class": "uf-split-section",
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_anchor_id",
+      "label": "Custom Section ID (for Smooth Scroll)",
+      "default": "image-content"
+    },
     {
       "type": "image_picker",
       "id": "section_image",
@@ -55,13 +63,18 @@
   ],
   "presets": [
     {
-      "name": "UF Text Image Split"
+      "name": "Image and Content Column",
+      "category": "Custom"
     }
   ]
 }
 {% endschema %}
 
-<div id="dealers" class="uf-split-section{% if section.settings.image_position == 'right' %} uf-split-section--reverse{% endif %}"
+<div
+  {% if section.settings.custom_anchor_id %}
+    id="{{ section.settings.custom_anchor_id | escape }}"
+  {% endif %}
+  class="uf-split-section{% if section.settings.image_position == 'right' %} uf-split-section--reverse{% endif %}"
   style="padding-top: {{ section.settings.padding_top | default: 60 }}px; padding-bottom: {{ section.settings.padding_bottom | default: 60 }}px;">
   <div class="uf-split__image-col">
     {% if section.settings.section_image != blank %}
@@ -90,6 +103,7 @@
     </div>
   </div>
 </div>
+
 
 <style>
 .uf-split-section {
