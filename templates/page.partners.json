@@ -42,6 +42,7 @@
       "type": "custom-text-image",
       "name": "UF Text Image Split",
       "settings": {
+        "custom_anchor_id": "image-content",
         "section_image": "shopify://shop_images/Frame_287_2.png",
         "image_position": "right",
         "padding_top": 60,
@@ -51,12 +52,30 @@
         "button_label": "Join Our Family of Dealers",
         "button_url": "#dealers"
       }
+    },
+    "custom_form_edeGbg": {
+      "type": "custom-form",
+      "name": "Custom Form",
+      "settings": {}
+    },
+    "contact_form_zGPdWB": {
+      "type": "contact-form",
+      "name": "t:sections.contact-form.presets.name",
+      "settings": {
+        "heading": "Contact form",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "custom_page_header_NicEci",
     "custom_partnerwall_dKAy6b",
-    "custom_text_image_L8UkaF"
+    "custom_text_image_L8UkaF",
+    "custom_form_edeGbg",
+    "contact_form_zGPdWB"
   ]
 }
