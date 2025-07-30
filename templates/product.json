@@ -14,12 +14,10 @@
       "name": "UF Page Header",
       "settings": {
         "header_image": "shopify://shop_images/Frame_287.png",
-        "headline": "More than a Diaper, Love, made visible",
-        "subheadline": "Simple. True. This is your signature whisper to close the journey with meaning.",
+        "headline": "",
+        "subheadline": "",
         "button_label": "Explore Our Collection",
-        "button_url": "",
-        "padding_top": 30,
-        "padding_bottom": 30
+        "button_url": ""
       }
     },
     "main": {
@@ -149,6 +147,7 @@
       "type": "custom-text-image",
       "name": "UF Text Image Split",
       "settings": {
+        "custom_anchor_id": "image-content",
         "section_image": "shopify://shop_images/header1.png",
         "image_position": "right",
         "padding_top": 72,
@@ -163,6 +162,7 @@
       "type": "custom-testimonials",
       "name": "UF Testimonials",
       "settings": {
+        "custom_anchor_id": "testimonials",
         "padding_top": 60,
         "padding_bottom": 60,
         "heading": "Every story deserves <span>gentle care</span>",

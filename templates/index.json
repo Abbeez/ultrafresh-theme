@@ -11,38 +11,39 @@
   "sections": {
     "custom_hero_banner_G6Bycn": {
       "type": "custom-hero-banner",
-      "name": "UF Simple Home Banner",
+      "name": "Hero Banner",
       "settings": {
         "banner_image": "shopify://shop_images/ultrafresh-banner.ai.png",
         "text_color": "light",
         "headline": "What does it mean to feel loved...even before you understand the word?",
         "subheadline": "A diaper so soft, so light, they hardly feel it – but always feel our love.",
         "button_label": "See What Makes Us Different",
-        "button_url": "shopify://collections",
+        "button_url": "#testimonials",
         "show_secondary_content": true,
         "secondary_padding_top": 350,
         "secondary_padding_bottom": 24,
         "secondary_heading": "Purposefully Made. Elegantly Designed.",
         "secondary_subheading": "UltraFresh protects with care and performs with grace — a reflection of love in every detail",
         "sec_btn1_label": "Pull Up Diapers",
-        "sec_btn1_url": "shopify://collections",
+        "sec_btn1_url": "shopify://products/ultrafresh-ultra-thin-pull-up-diaper-large-30s",
         "sec_btn2_label": "Taped Up Diapers",
-        "sec_btn2_url": "shopify://collections",
+        "sec_btn2_url": "shopify://products/ultrafresh-ultra-thin-tape-diaper-small-30s",
         "sec_btn3_label": "Size Guide",
-        "sec_btn3_url": "shopify://collections",
+        "sec_btn3_url": "shopify://collections/all",
         "scroll_feel_image": "shopify://shop_images/scroll.png"
       }
     },
     "custom_testimonials_7KwBiX": {
       "type": "custom-testimonials",
-      "name": "UF Testimonials",
+      "name": "Testimonials & Stories",
       "settings": {
+        "custom_anchor_id": "testimonials",
         "padding_top": 120,
         "padding_bottom": 120,
         "heading": "<span>Every story</span> deserves gentle care",
         "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
         "button_label": "Click here to see parent stories",
-        "button_url": "shopify://collections",
+        "button_url": "shopify://pages/stories",
         "image_align": "right"
       }
     },
@@ -50,20 +51,22 @@
       "type": "custom-text-image",
       "name": "Feel like love",
       "settings": {
+        "custom_anchor_id": "love",
         "section_image": "shopify://shop_images/Image_Placeholder_700x600_5b7b2b17-74e3-497b-a807-2b623bac42b8.png",
         "image_position": "left",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "What makes every layer <span>feel like Love?</span>",
+        "heading": "What makes <span>every layer</span> feel like Love?",
         "description": "From ultra-soft topsheets to leak-locking cores, every layer of UltraFresh diapers is thoughtfully designed to keep your baby dry, comfy, and cared for—because love starts with protection.",
-        "button_label": "See What’s Inside UltraFresh Diapers",
-        "button_url": "shopify://collections"
+        "button_label": "Find My Baby’s Size",
+        "button_url": "#perfect"
       }
     },
     "custom_text_image_GzYCjB": {
       "type": "custom-text-image",
       "name": "Perfect Fit",
       "settings": {
+        "custom_anchor_id": "perfect",
         "section_image": "shopify://shop_images/Frame_278_1.png",
         "image_position": "right",
         "padding_top": 60,
@@ -95,6 +98,7 @@
       "type": "custom-text-image",
       "name": "Even in the heat",
       "settings": {
+        "custom_anchor_id": "image-content",
         "section_image": "shopify://shop_images/Frame_287.png",
         "image_position": "left",
         "padding_top": 60,
@@ -109,6 +113,7 @@
       "type": "custom-text-image",
       "name": " Time to change",
       "settings": {
+        "custom_anchor_id": "image-content",
         "section_image": "shopify://shop_images/Image_Placeholder_700x600_1.png",
         "image_position": "right",
         "padding_top": 60,
@@ -123,6 +128,7 @@
       "type": "custom-text-image",
       "name": " Time to change",
       "settings": {
+        "custom_anchor_id": "image-content",
         "section_image": "shopify://shop_images/Frame_287_2.png",
         "image_position": "left",
         "padding_top": 60,
@@ -161,7 +167,7 @@
       "name": "UF Contact Callout",
       "settings": {
         "padding_top": 120,
-        "padding_bottom": 120,
+        "padding_bottom": 160,
         "background_color": "#f8f3ed",
         "heading": "Got Questions? <span>Let’s Talk!</span>",
         "subheading": "We’re here to help, anytime.",
