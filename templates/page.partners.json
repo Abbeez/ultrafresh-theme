@@ -53,16 +53,16 @@
         "button_url": "#dealers"
       }
     },
-    "custom_form_edeGbg": {
-      "type": "custom-form",
-      "disabled": true,
-      "name": "Custom Form",
-      "settings": {}
-    },
-    "custom_form_jjMHaq": {
-      "type": "custom-form",
-      "name": "Custom Form",
-      "settings": {}
+    "contact_form_LDnkBY": {
+      "type": "contact-form",
+      "name": "t:sections.contact-form.presets.name",
+      "settings": {
+        "heading": "Contact form",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -70,7 +70,6 @@
     "custom_page_header_NicEci",
     "custom_partnerwall_dKAy6b",
     "custom_text_image_L8UkaF",
-    "custom_form_edeGbg",
-    "custom_form_jjMHaq"
+    "contact_form_LDnkBY"
   ]
 }
