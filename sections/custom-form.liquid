@@ -1,0 +1,99 @@
+{% schema %}
+{
+  "name": "Custom Form",
+  "tag": "section",
+  "class": "custom-form-section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Custom Form",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .custom-form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+  }
+  .custom-form-wrapper label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  .custom-form-wrapper input,
+  .custom-form-wrapper textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .custom-form-wrapper button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--custom-primary, #CEA478);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .custom-form-wrapper .success-message {
+    color: green;
+    margin-top: 1rem;
+    display: none;
+  }
+</style>
+
+<div class="custom-form-wrapper">
+  <form id="customForm" method="post" action="/contact#custom-form" accept-charset="UTF-8" class="contact-form">
+    <input type="hidden" name="form_type" value="contact" />
+    <input type="hidden" name="utf8" value="✓" />
+
+    <label for="contact_name">Name</label>
+    <input type="text" id="contact_name" name="contact[name]" required>
+
+    <label for="contact_email">Email</label>
+    <input type="email" id="contact_email" name="contact[email]" required>
+
+    <label for="contact_message">Message</label>
+    <textarea id="contact_message" name="contact[body]" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+
+    <div class="success-message" id="formSuccess">Thank you! Your message has been sent.</div>
+  </form>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("customForm");
+
+    form.addEventListener("submit", function (e) {
+      const name = document.getElementById("contact_name").value.trim();
+      const email = document.getElementById("contact_email").value.trim();
+      const message = document.getElementById("contact_message").value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/;
+
+      if (!name || !email || !message) {
+        alert("Please fill in all fields.");
+        e.preventDefault();
+        return;
+      }
+
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        e.preventDefault();
+        return;
+      }
+
+      alert("Message sent! We'll get back to you soon.");
+      // Allow the form to submit normally to Shopify
+    });
+  });
+</script>
