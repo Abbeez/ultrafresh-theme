@@ -57,17 +57,6 @@
       "type": "custom-form",
       "name": "Custom Form",
       "settings": {}
-    },
-    "contact_form_zGPdWB": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
-      "settings": {
-        "heading": "Contact form",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -75,7 +64,6 @@
     "custom_page_header_NicEci",
     "custom_partnerwall_dKAy6b",
     "custom_text_image_L8UkaF",
-    "custom_form_edeGbg",
-    "contact_form_zGPdWB"
+    "custom_form_edeGbg"
   ]
 }
