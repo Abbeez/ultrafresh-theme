@@ -9,6 +9,17 @@
  */
 {
   "sections": {
+    "custom_page_header_YHzxim": {
+      "type": "custom-page-header",
+      "name": "Page Header",
+      "settings": {
+        "header_image": "shopify://shop_images/Untitled_design_5.png",
+        "headline": "Tiny Packs, Big Moments Ahead",
+        "subheadline": "In your cart are the little things that make a big difference — softness that soothes, comfort that lasts, and designs that move with your baby. With Ultrafresh, you’re not just adding to cart — you’re choosing confidence, ease, and a whole lot of love.",
+        "button_label": "",
+        "button_url": ""
+      }
+    },
     "cart-items": {
       "type": "main-cart-items",
       "settings": {
@@ -19,30 +30,29 @@
     },
     "cart-footer": {
       "type": "main-cart-footer",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "padding_top": 20,
-        "padding_bottom": 40
-      },
       "blocks": {
         "subtotal": {
           "type": "subtotal",
-          "settings": {
-          }
+          "settings": {}
         },
         "buttons": {
           "type": "buttons",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
         "subtotal",
         "buttons"
-      ]
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
+    "custom_page_header_YHzxim",
     "cart-items",
     "cart-footer"
   ]

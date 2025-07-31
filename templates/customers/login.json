@@ -9,16 +9,29 @@
  */
 {
   "sections": {
+    "custom_page_header_z8aifb": {
+      "type": "custom-page-header",
+      "disabled": true,
+      "name": "Page Header",
+      "settings": {
+        "header_image": "shopify://shop_images/Untitled_design_5.png",
+        "headline": "Welcome Back, Parent of Little Moments",
+        "subheadline": "Every login brings you closer to the comforts your baby deserves — soft, snug, and worry-free. Your Ultrafresh journey continues here, where every order supports your growing little one with love in every layer.",
+        "button_label": "Explore Our Collection",
+        "button_url": ""
+      }
+    },
     "main": {
       "type": "main-login",
       "settings": {
-        "enable_shop_login_button": "true",
+        "enable_shop_login_button": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
+    "custom_page_header_z8aifb",
     "main"
   ]
 }
