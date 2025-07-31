@@ -1451,5 +1451,15 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "General",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "site_background_image",
+        "label": "Site Background Image"
+      }
+    ]
   }
 ]
