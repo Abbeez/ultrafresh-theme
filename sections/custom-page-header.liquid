@@ -50,7 +50,7 @@
       background-image: linear-gradient(178deg, rgba(132, 86, 60, 0.88) 0%, rgba(151, 132, 107, 0) 100%);
     {% endif %}
   ">
-  <div class="uf-page-header__content page-width">
+  <div class="uf-page-header__content">
     <div class="uf-page-header__inner">
       <h1 class="h1 uf-page-header__headline">{{ section.settings.headline }}</h1>
       <div class="uf-page-header__subheadline">{{ section.settings.subheadline }}</div>
@@ -75,8 +75,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .uf-page-header__content {
@@ -84,17 +84,22 @@
   z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
-  text-align: center;
+  text-align: left;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .uf-page-header__inner {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 1080px;
-  padding: 0 1.5rem;
+  align-items: flex-start;
+  max-width: 800px;
+}
+
+.uf-page-header__inner * {
+    text-shadow: 0 1px 1px #1111114a;
 }
 
 .uf-page-header__headline {
@@ -148,12 +153,13 @@
 /* Mobile */
 @media (max-width: 600px) {
   .uf-page-header {
-    padding-top: 100px; /* Increased padding */
+    padding-top: 100px;
     padding-bottom: 60px;
   }
 
-  .uf-page-header__inner {
-    padding: 0 1rem;
+  .uf-page-header__content {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .uf-page-header__btn {
