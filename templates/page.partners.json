@@ -53,7 +53,6 @@
         "button_url": "shopify://pages/partners"
       }
     },
-<<<<<<< HEAD
     "17538456182dd6dfff": {
       "type": "apps",
       "blocks": {
@@ -79,11 +78,6 @@
         "forms_inline_4NLJU3"
       ],
       "disabled": true,
-=======
-    "contact_form_LDnkBY": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
->>>>>>> 3879c38bc1cebf96aa90ba12a6478ba4f514df1b
       "settings": {
         "include_margins": true
       }
@@ -94,10 +88,6 @@
     "custom_page_header_NicEci",
     "custom_partnerwall_dKAy6b",
     "custom_text_image_L8UkaF",
-<<<<<<< HEAD
     "17538456182dd6dfff"
-=======
-    "contact_form_LDnkBY"
->>>>>>> 3879c38bc1cebf96aa90ba12a6478ba4f514df1b
   ]
 }

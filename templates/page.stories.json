@@ -21,7 +21,7 @@
       "type": "custom-page-header",
       "name": "UF Page Header",
       "settings": {
-        "header_image": "shopify://shop_images/Frame_287.png",
+        "header_image": "shopify://shop_images/Untitled_design_5.png",
         "headline": "Every story deserves gentle care",
         "subheadline": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments—each smile, wiggle, and milestone.",
         "button_label": "",
@@ -52,6 +52,7 @@
       "type": "custom-text-image",
       "name": "UF Text Image Split",
       "settings": {
+        "custom_anchor_id": "image-content",
         "section_image": "shopify://shop_images/Frame_287_2.png",
         "image_position": "left",
         "padding_top": 60,
