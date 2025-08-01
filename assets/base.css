@@ -3726,6 +3726,10 @@ sticky-header .header {
   transition: color 300ms ease-in-out;
 }
 
+.cart-count-bubble {
+  color: var(--custom-dark);
+}
+
 /* End Header */
 
 .product-form__buttons {

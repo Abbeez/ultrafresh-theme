@@ -31,6 +31,17 @@
       "type": "url",
       "id": "button_url",
       "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
     }
   ],
   "presets": [
@@ -50,8 +61,8 @@
       background-image: linear-gradient(178deg, rgba(132, 86, 60, 0.88) 0%, rgba(151, 132, 107, 0) 100%);
     {% endif %}
   ">
-  <div class="uf-page-header__content">
-    <div class="uf-page-header__inner">
+  <div class="uf-page-header__content align-{{ section.settings.text_alignment }}">
+    <div class="uf-page-header__inner align-{{ section.settings.text_alignment }}">
       <h1 class="h1 uf-page-header__headline">{{ section.settings.headline }}</h1>
       <div class="uf-page-header__subheadline">{{ section.settings.subheadline }}</div>
       {% if section.settings.button_label != blank and section.settings.button_url != blank %}
@@ -76,7 +87,7 @@
   justify-content: center;
   overflow: hidden;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 90px;
 }
 
 .uf-page-header__content {
@@ -84,9 +95,7 @@
   z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   width: 100%;
-  text-align: left;
   padding-left: 5rem;
   padding-right: 5rem;
 }
@@ -94,12 +103,11 @@
 .uf-page-header__inner {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   max-width: 800px;
 }
 
 .uf-page-header__inner * {
-    text-shadow: 0 1px 1px #1111114a;
+  text-shadow: 0 1px 1px #1111114a;
 }
 
 .uf-page-header__headline {
@@ -140,6 +148,30 @@
   background: var(--custom-primary);
   border-color: var(--custom-primary);
   color: var(--custom-dark);
+}
+
+/* Alignment Modifiers */
+.uf-page-header__content.align-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+.uf-page-header__content.align-center {
+  justify-content: center;
+  text-align: center;
+}
+.uf-page-header__content.align-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.uf-page-header__inner.align-left {
+  align-items: flex-start;
+}
+.uf-page-header__inner.align-center {
+  align-items: center;
+}
+.uf-page-header__inner.align-right {
+  align-items: flex-end;
 }
 
 /* Tablet */
