@@ -9,17 +9,16 @@
  */
 {
   "sections": {
-    "custom_calltoaction_Cm7VWf": {
-      "type": "custom-calltoaction",
-      "name": "UF Call to Action",
+    "custom_page_header_8JLfkx": {
+      "type": "custom-page-header",
+      "name": "Page Header",
       "settings": {
-        "cta_image": "shopify://shop_images/header-1_1.png",
+        "header_image": "shopify://shop_images/Untitled_design_5.png",
         "headline": "Explore Ultrafresh More Than a Diaper",
         "subheadline": "Love in every layer, designed to care for your baby’s every move. Discover the full range of Ultrafresh diapers made to support their journey with comfort and protection.",
         "button_label": "Explore Our Collection",
         "button_url": "",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "text_alignment": "left"
       }
     },
     "banner": {
@@ -197,7 +196,7 @@
       "name": "UF Journey",
       "settings": {
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 0,
         "heading": "More than a Diaper, Love, made visible",
         "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
         "row1_image_1": "shopify://shop_images/Frame_287.png",
@@ -214,7 +213,7 @@
     }
   },
   "order": [
-    "custom_calltoaction_Cm7VWf",
+    "custom_page_header_8JLfkx",
     "banner",
     "product-grid",
     "featured_product_PnTiFT",

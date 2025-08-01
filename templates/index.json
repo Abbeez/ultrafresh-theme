@@ -57,9 +57,9 @@
         "padding_top": 60,
         "padding_bottom": 60,
         "heading": "What makes <span>every layer</span> feel like Love?",
-        "description": "From ultra-soft topsheets to leak-locking cores, every layer of UltraFresh diapers is thoughtfully designed to keep your baby dry, comfy, and cared for—because love starts with protection.",
-        "button_label": "Find My Baby’s Size",
-        "button_url": "#perfect"
+        "description": "<p>From ultra-soft topsheets to leak-locking cores, every layer of UltraFresh diapers is thoughtfully designed to keep your baby dry, comfy, and cared for—because love starts with protection.</p>",
+        "button_label": "See What’s Inside UltraFresh Diapers",
+        "button_url": "shopify://collections/all"
       }
     },
     "custom_text_image_GzYCjB": {
@@ -71,10 +71,10 @@
         "image_position": "right",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "Find the <span>perfect fit</span> for your baby",
-        "description": "Every baby is unique, and so is our size guide—built for comfort and fit. Still unsure? Just send us a message and we’ll help you choose.",
+        "heading": "Find the <span>perfect fit</span>  for your baby",
+        "description": "<p>Every baby is unique, and so is our size guide—built for comfort and fit. Still unsure? Just send us a message and we’ll help you choose.</p>",
         "button_label": "Find My Baby’s Size",
-        "button_url": "shopify://collections"
+        "button_url": "shopify://blogs/product-guides/taped-vs-pull-up-which-ultrafresh-diaper-is-right-for-your-baby"
       }
     },
     "custom_compare_cards_G77NkY": {
@@ -103,10 +103,10 @@
         "image_position": "left",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "Cool, dry, and comfy <span>even in the heat</span>",
-        "description": "UltraFresh is made for tropical climates with breathable layers, ultra-thin absorbent cores, and a non-sticky soft outer cover to keep your baby feeling fresh.",
+        "heading": "Cool, dry, and <span>comfy</span> even in the heat",
+        "description": "<p>UltraFresh is made for tropical climates with breathable layers, ultra-thin absorbent cores, and a non-sticky soft outer cover to keep your baby feeling fresh.</p>",
         "button_label": "See Why It’s Perfect for Tropical Heat",
-        "button_url": "shopify://collections"
+        "button_url": "shopify://blogs/product-guides/how-ultrafresh-diapers-keep-your-baby-comfortable-in-hot-weather"
       }
     },
     "custom_text_image_BnkNRV": {
@@ -118,15 +118,15 @@
         "image_position": "right",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "Know when it’s time <span>to change.</span>",
-        "description": "Change every 3–4 hours or whenever the diaper feels wet. Our ultra-absorbent core keeps baby dry through the night for better rest for both of you.",
+        "heading": "Know when it’s <span>time to change</span>.",
+        "description": "<p>Change every 3–4 hours or whenever the diaper feels wet. Our ultra-absorbent core keeps baby dry through the night for better rest for both of you.</p>",
         "button_label": "View Change Time Tips",
-        "button_url": "shopify://collections"
+        "button_url": "shopify://blogs/product-guides/diaper-changes-made-simple-how-often-should-you-really-change"
       }
     },
     "custom_text_image_G9Tn9j": {
       "type": "custom-text-image",
-      "name": " Time to change",
+      "name": "Partners",
       "settings": {
         "custom_anchor_id": "image-content",
         "section_image": "shopify://shop_images/Frame_287_2.png",
@@ -134,9 +134,9 @@
         "padding_top": 60,
         "padding_bottom": 60,
         "heading": "UltraFresh around the <span>World</span>",
-        "description": "From one family to another, UltraFresh is part of bedtime routines and first steps all over the world \n— keeping little ones comfy, wherever they are.",
+        "description": "<p>From one family to another, UltraFresh is part of bedtime routines and first steps all over the world <br/>— keeping little ones comfy, wherever they are.</p>",
         "button_label": "Join Our Family of Dealers",
-        "button_url": "shopify://collections"
+        "button_url": "shopify://pages/partners"
       }
     },
     "custom_journey_kWNpYT": {

@@ -9,43 +9,50 @@
  */
 {
   "sections": {
+    "custom_page_header_rGVGh8": {
+      "type": "custom-page-header",
+      "name": "Page Header",
+      "settings": {
+        "header_image": "{{ article.image }}",
+        "headline": "{{ article.title }}",
+        "subheadline": "",
+        "button_label": "Explore Our Collection",
+        "button_url": "",
+        "text_alignment": "center"
+      }
+    },
     "main": {
       "type": "main-article",
       "blocks": {
-        "featured_image": {
-          "type": "featured_image",
-          "settings": {
-            "image_height": "adapt"
-          }
-        },
         "title": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "blog_show_date": true,
             "blog_show_author": false
           }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
         },
         "share": {
           "type": "share",
           "settings": {
             "share_label": "Share"
           }
-        },
-        "content": {
-          "type": "content",
-          "settings": {}
         }
       },
       "block_order": [
-        "featured_image",
         "title",
-        "share",
-        "content"
+        "content",
+        "share"
       ],
       "settings": {}
     }
   },
   "order": [
+    "custom_page_header_rGVGh8",
     "main"
   ]
 }

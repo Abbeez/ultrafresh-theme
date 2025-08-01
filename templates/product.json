@@ -14,10 +14,11 @@
       "name": "UF Page Header",
       "settings": {
         "header_image": "shopify://shop_images/Frame_287.png",
-        "headline": "",
-        "subheadline": "",
+        "headline": "Small details, big comfort",
+        "subheadline": "From the soft waist to the snug fit, every part is made with care.",
         "button_label": "Explore Our Collection",
-        "button_url": ""
+        "button_url": "",
+        "text_alignment": "center"
       }
     },
     "main": {
@@ -152,10 +153,10 @@
         "image_position": "right",
         "padding_top": 72,
         "padding_bottom": 60,
-        "heading": "Comfort that cares. <span>Protection</span> that lasts.",
-        "description": "Every baby deserves a diaper that feels gentle, stays dry, and moves with them through every giggle and wiggle. Ultrafresh diapers are thoughtfully made for modern parents who want the best for their little one without the bulk or compromise.",
+        "heading": "Comfort that <span>cares</span>. Protection that lasts.",
+        "description": "<p>Every baby deserves a diaper that feels gentle, stays dry, and moves with them through every giggle and wiggle. Ultrafresh diapers are thoughtfully made for modern parents who want the best for their little one without the bulk or compromise.</p>",
         "button_label": "See why mommies choose UltraFresh",
-        "button_url": "shopify://pages/reviews"
+        "button_url": "shopify://pages/stories"
       }
     },
     "custom_testimonials_CBn8nc": {
@@ -165,10 +166,10 @@
         "custom_anchor_id": "testimonials",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "Every story deserves <span>gentle care</span>",
+        "heading": "<span>Every story</span> deserves gentle care",
         "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
         "button_label": "Click here to see parent stories",
-        "button_url": "shopify://pages/reviews",
+        "button_url": "shopify://pages/stories",
         "image_align": "left"
       }
     },
@@ -178,7 +179,7 @@
       "settings": {
         "padding_top": 64,
         "padding_bottom": 120,
-        "heading": "Frequently Asked Questions",
+        "heading": "Frequently Asked <span>Questions</span>",
         "description": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one."
       }
     },
@@ -189,11 +190,11 @@
         "padding_top": 80,
         "padding_bottom": 80,
         "background_color": "#ecdac0",
-        "heading": "Got Questions? <span>Let’s Talk!</span>",
+        "heading": "Got Questions? Let’s Talk!",
         "subheading": "We’re here to help, anytime.",
         "description": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need.",
         "button_label": "Talk to Us Here",
-        "button_url": "shopify://pages/reviews"
+        "button_url": "shopify://pages/get-in-touch"
       }
     },
     "custom_social_proof_JegbNq": {
@@ -213,7 +214,7 @@
       "settings": {
         "padding_top": 60,
         "padding_bottom": 0,
-        "heading": "More than a Diaper, Love, made visible",
+        "heading": "More than a Diaper, <span>Love,</span> made visible",
         "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
         "row1_image_1": "shopify://shop_images/279352301_1166509000832036_8087259750403889181_n.jpg",
         "row1_image_2": "shopify://shop_images/491455768_18499522900009539_4830294737759522855_n..jpg",

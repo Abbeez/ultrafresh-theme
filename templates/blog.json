@@ -9,6 +9,17 @@
  */
 {
   "sections": {
+    "custom_page_header_dCBd4K": {
+      "type": "custom-page-header",
+      "name": "Page Header",
+      "settings": {
+        "header_image": "shopify://shop_images/Untitled_design_5.png",
+        "headline": "Gentle words for growing days",
+        "subheadline": "Scroll through stories and tips that make parenting a little lighter.",
+        "button_label": "Explore Our Collection",
+        "button_url": ""
+      }
+    },
     "main": {
       "type": "main-blog",
       "settings": {
@@ -23,6 +34,7 @@
     }
   },
   "order": [
+    "custom_page_header_dCBd4K",
     "main"
   ]
 }
