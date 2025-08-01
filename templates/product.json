@@ -14,8 +14,8 @@
       "name": "UF Page Header",
       "settings": {
         "header_image": "shopify://shop_images/Frame_287.png",
-        "headline": "Small details, big comfort",
-        "subheadline": "From the soft waist to the snug fit, every part is made with care.",
+        "headline": "Ultra-thin, featherlight  and flexible,designed for tropical comfort. no sag no bulge",
+        "subheadline": "",
         "button_label": "Explore Our Collection",
         "button_url": "",
         "text_alignment": "center"
@@ -155,7 +155,7 @@
         "padding_bottom": 60,
         "heading": "Which <span>Ultrafresh Diaper</span> Is Right for Your Baby?",
         "description": "<p>This easy guide compares Ultrafresh’s taped and pull-up diapers, so you can find the perfect fit for your baby’s stage. Whether you're caring for a newborn or chasing after a toddler, we've got you covered with comfort, protection, and convenience.</p>",
-        "button_label": "Learn More",
+        "button_label": "Let's compare Taped and Pull-up",
         "button_url": "shopify://blogs/product-guides/taped-vs-pull-up-which-ultrafresh-diaper-is-right-for-your-baby"
       }
     },

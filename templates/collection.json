@@ -14,8 +14,8 @@
       "name": "Page Header",
       "settings": {
         "header_image": "shopify://shop_images/Untitled_design_5.png",
-        "headline": "Explore Ultrafresh More Than a Diaper",
-        "subheadline": "Love in every layer, designed to care for your baby’s every move. Discover the full range of Ultrafresh diapers made to support their journey with comfort and protection.",
+        "headline": "No Sag. No Bulk. Just Comfort.",
+        "subheadline": "Ultra-thin, featherlight  and flexible,designed for tropical comfort. no sag no bulge",
         "button_label": "Explore Our Collection",
         "button_url": "",
         "text_alignment": "left"
@@ -32,22 +32,27 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "disabled": true,
+      "custom_css": [
+        ".product-grid-container .grid {justify-content: center;}",
+        ".product-grid-container .card__information h3 {font-size: 150%;}",
+        ".product-grid-container .card__information {text-align: center;}",
+        ".product-grid-container .card-information {text-align: center;}"
+      ],
       "settings": {
         "products_per_page": 16,
-        "columns_desktop": 4,
+        "columns_desktop": 2,
         "columns_mobile": "2",
         "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
+        "show_vendor": true,
+        "show_rating": true,
         "quick_add": "none",
         "enable_filtering": true,
-        "filter_type": "horizontal",
-        "enable_sorting": true,
-        "padding_top": 36,
+        "filter_type": "vertical",
+        "enable_sorting": false,
+        "padding_top": 72,
         "padding_bottom": 36
       }
     },
@@ -105,6 +110,7 @@
         "buy_buttons_Q3kjyD",
         "share_W3PWfw"
       ],
+      "disabled": true,
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "ultrafresh-ultra-thin-pull-up-diaper-large-30s",
@@ -175,6 +181,7 @@
         "buy_buttons_aqnb4h",
         "share_m4k7f3"
       ],
+      "disabled": true,
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "ultrafresh-ultra-thin-tape-diaper-small-30s",
