@@ -25,7 +25,8 @@
         "headline": "Got a question? Let's talk.",
         "subheadline": "We’re here to help with anything Ultrafresh — just send us a message.",
         "button_label": "Explore Our Collection",
-        "button_url": ""
+        "button_url": "",
+        "text_alignment": "center"
       }
     },
     "form": {
