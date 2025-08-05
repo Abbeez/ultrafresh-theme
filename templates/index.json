@@ -52,7 +52,7 @@
       "name": "Feel like love",
       "settings": {
         "custom_anchor_id": "love",
-        "section_image": "shopify://shop_images/3_0b95d2b4-5fdb-4844-bbd5-625d003a2233.png",
+        "section_image": "shopify://shop_images/UF_Every_Layer.png",
         "image_position": "left",
         "padding_top": 60,
         "padding_bottom": 60,
@@ -67,11 +67,11 @@
       "name": "Perfect Fit",
       "settings": {
         "custom_anchor_id": "perfect",
-        "section_image": "shopify://shop_images/4_634834d8-e57e-4e46-9347-90c40a20c5f1.png",
+        "section_image": "shopify://shop_images/Ultrafresh_Perfect_Fit.png",
         "image_position": "right",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "Find the perfect fit  for your baby",
+        "heading": "Find the <span>perfect fit</span>  for your baby",
         "description": "<p>Every baby is unique, and so is our size guide—built for comfort and fit. Still unsure? Just send us a message and we’ll help you choose.</p>",
         "button_label": "Find My Baby’s Size",
         "button_url": "shopify://blogs/product-guides/taped-vs-pull-up-which-ultrafresh-diaper-is-right-for-your-baby"
