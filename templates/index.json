@@ -52,11 +52,11 @@
       "name": "Feel like love",
       "settings": {
         "custom_anchor_id": "love",
-        "section_image": "shopify://shop_images/Image_Placeholder_700x600_5b7b2b17-74e3-497b-a807-2b623bac42b8.png",
+        "section_image": "shopify://shop_images/3_0b95d2b4-5fdb-4844-bbd5-625d003a2233.png",
         "image_position": "left",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "What makes <span>every layer</span> feel like Love?",
+        "heading": "What makes every layer feel like Love?",
         "description": "<p>From ultra-soft topsheets to leak-locking cores, every layer of UltraFresh diapers is thoughtfully designed to keep your baby dry, comfy, and cared for—because love starts with protection.</p>",
         "button_label": "See What’s Inside UltraFresh Diapers",
         "button_url": "shopify://collections/all"
@@ -67,11 +67,11 @@
       "name": "Perfect Fit",
       "settings": {
         "custom_anchor_id": "perfect",
-        "section_image": "shopify://shop_images/Frame_278_1.png",
+        "section_image": "shopify://shop_images/4_634834d8-e57e-4e46-9347-90c40a20c5f1.png",
         "image_position": "right",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "Find the <span>perfect fit</span>  for your baby",
+        "heading": "Find the perfect fit  for your baby",
         "description": "<p>Every baby is unique, and so is our size guide—built for comfort and fit. Still unsure? Just send us a message and we’ll help you choose.</p>",
         "button_label": "Find My Baby’s Size",
         "button_url": "shopify://blogs/product-guides/taped-vs-pull-up-which-ultrafresh-diaper-is-right-for-your-baby"
@@ -83,7 +83,7 @@
       "settings": {
         "padding_top": 120,
         "padding_bottom": 120,
-        "section_title": "How UltraFresh <span>stands apart</span>",
+        "section_title": "How UltraFresh stands apart",
         "section_subheading": "Every detail is designed for what your baby needs most–comfort that feels like air, protection that feels like love.",
         "left_title": "Brand X",
         "left_bullets": "Thicker and heavier build that may restrict movement\nModerate breathability that can result in heat buildup\nNot specifically designed for tropical or humid conditions\nStrong absorbency performance, but with occasional bulkiness\nBasic, functional design with less attention to aesthetic appeal",
@@ -99,11 +99,11 @@
       "name": "Even in the heat",
       "settings": {
         "custom_anchor_id": "image-content",
-        "section_image": "shopify://shop_images/Frame_287.png",
+        "section_image": "shopify://shop_images/6_908734ed-722f-4c61-9291-1645b8385b19.png",
         "image_position": "left",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "Cool, dry, and <span>comfy</span> even in the heat",
+        "heading": "Cool, dry, and comfy even in the heat",
         "description": "<p>UltraFresh is made for tropical climates with breathable layers, ultra-thin absorbent cores, and a non-sticky soft outer cover to keep your baby feeling fresh.</p>",
         "button_label": "See Why It’s Perfect for Tropical Heat",
         "button_url": "shopify://blogs/product-guides/how-ultrafresh-diapers-keep-your-baby-comfortable-in-hot-weather"
@@ -111,6 +111,7 @@
     },
     "custom_text_image_BnkNRV": {
       "type": "custom-text-image",
+      "disabled": true,
       "name": " Time to change",
       "settings": {
         "custom_anchor_id": "image-content",
@@ -118,7 +119,7 @@
         "image_position": "right",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "Know when it’s <span>time to change</span>.",
+        "heading": "Know when it’s time to change.",
         "description": "<p>Change every 3–4 hours or whenever the diaper feels wet. Our ultra-absorbent core keeps baby dry through the night for better rest for both of you.</p>",
         "button_label": "View Change Time Tips",
         "button_url": "shopify://blogs/product-guides/diaper-changes-made-simple-how-often-should-you-really-change"
@@ -130,10 +131,10 @@
       "settings": {
         "custom_anchor_id": "image-content",
         "section_image": "shopify://shop_images/Frame_287_2.png",
-        "image_position": "left",
+        "image_position": "right",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "UltraFresh around the <span>World</span>",
+        "heading": "UltraFresh around the World",
         "description": "<p>From one family to another, UltraFresh is part of bedtime routines and first steps all over the world <br/>— keeping little ones comfy, wherever they are.</p>",
         "button_label": "Join Our Family of Dealers",
         "button_url": "shopify://pages/partners"
