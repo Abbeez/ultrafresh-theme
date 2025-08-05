@@ -60,7 +60,9 @@
           <div class="uf-partner-wall__location-list">
             {% for partner in partners %}
               {% if partner.country == region %}
-                <div class="uf-partner-wall__location">{{ partner.name }}</div>
+                 <div class="uf-partner-wall__location">
+                   <a href="{{ partner.location }}" class="uf-location">{{ partner.name }}</a>
+                 </div>
               {% endif %}
             {% endfor %}
           </div>
@@ -139,6 +141,16 @@
   font-size: 120%;
   font-family: var(--font-heading-family);
   text-align: right;
+}
+
+.uf-location {
+text-decoration:none;
+color:var(--custom-dark);
+transition: color 200ms;
+}
+
+.uf-location:hover {
+color:var(--custom-secondary)
 }
 
 /* Tablet */
