@@ -61,7 +61,7 @@
             {% for partner in partners %}
               {% if partner.country == region %}
                  <div class="uf-partner-wall__location">
-                   <a href="{{ partner.location }}" class="uf-location">{{ partner.name }}</a>
+                   <a href="{{partner.system.url}}" class="uf-location">{{ partner.name }}</a>
                  </div>
               {% endif %}
             {% endfor %}

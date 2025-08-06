@@ -1,0 +1,27 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_page_header_dkUBL8": {
+      "type": "custom-page-header",
+      "name": "Page Header",
+      "settings": {
+        "headline": "More than a Diaper, Love, made visible",
+        "subheadline": "Simple. True. This is your signature whisper to close the journey with meaning.",
+        "button_label": "Explore Our Collection",
+        "button_url": "",
+        "text_alignment": "left"
+      }
+    }
+  },
+  "order": [
+    "custom_page_header_dkUBL8"
+  ]
+}

@@ -56,7 +56,7 @@
         "image_position": "left",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "What makes every layer feel like Love?",
+        "heading": "What makes <span>every layer</span> feel like Love?",
         "description": "<p>From ultra-soft topsheets to leak-locking cores, every layer of UltraFresh diapers is thoughtfully designed to keep your baby dry, comfy, and cared for—because love starts with protection.</p>",
         "button_label": "See What’s Inside UltraFresh Diapers",
         "button_url": "shopify://collections/all"
@@ -83,7 +83,7 @@
       "settings": {
         "padding_top": 120,
         "padding_bottom": 120,
-        "section_title": "How UltraFresh stands apart",
+        "section_title": "How UltraFresh <span>stands apart</span>",
         "section_subheading": "Every detail is designed for what your baby needs most–comfort that feels like air, protection that feels like love.",
         "left_title": "Brand X",
         "left_bullets": "Thicker and heavier build that may restrict movement\nModerate breathability that can result in heat buildup\nNot specifically designed for tropical or humid conditions\nStrong absorbency performance, but with occasional bulkiness\nBasic, functional design with less attention to aesthetic appeal",
@@ -99,7 +99,7 @@
       "name": "Even in the heat",
       "settings": {
         "custom_anchor_id": "image-content",
-        "section_image": "shopify://shop_images/6_908734ed-722f-4c61-9291-1645b8385b19.png",
+        "section_image": "shopify://shop_images/Comfy_in_heat.png",
         "image_position": "left",
         "padding_top": 60,
         "padding_bottom": 60,
@@ -134,7 +134,7 @@
         "image_position": "right",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "UltraFresh around the World",
+        "heading": "UltraFresh around the <span>World</span>",
         "description": "<p>From one family to another, UltraFresh is part of bedtime routines and first steps all over the world <br/>— keeping little ones comfy, wherever they are.</p>",
         "button_label": "Join Our Family of Dealers",
         "button_url": "shopify://pages/partners"
