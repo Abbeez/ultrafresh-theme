@@ -13,15 +13,108 @@
       "type": "custom-page-header",
       "name": "Page Header",
       "settings": {
-        "headline": "More than a Diaper, Love, made visible",
-        "subheadline": "Simple. True. This is your signature whisper to close the journey with meaning.",
+        "header_image": "{{ metaobject.photo.value }}",
+        "headline": "Learn More About {{ metaobject.name.value }}",
+        "subheadline": "",
         "button_label": "Explore Our Collection",
         "button_url": "",
-        "text_alignment": "left"
+        "text_alignment": "center"
+      }
+    },
+    "custom_text_image_KxCtda": {
+      "type": "custom-text-image",
+      "disabled": true,
+      "name": "Image and Content Column",
+      "settings": {
+        "custom_anchor_id": "image-content",
+        "section_image": "{{ metaobject.photo.value }}",
+        "image_position": "right",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "heading": "{{ metaobject.name.value }}",
+        "description": "{{ metaobject.about | metafield_tag }}<p><strong>Location: </strong>{{ metaobject.location | metafield_tag }}</p>",
+        "button_label": "Visit {{ metaobject.name.value }}",
+        "button_url": "{{ metaobject.cta.value }}"
+      }
+    },
+    "rich_text_kEArRf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FG8d6i": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ metaobject.name.value }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_HaYhe4": {
+          "type": "text",
+          "settings": {
+            "text": "{{ metaobject.about | metafield_tag }}"
+          }
+        },
+        "button_yRGLJn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Visit {{ metaobject.name.value }}",
+            "button_link": "{{ metaobject.cta.value }}",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "text_6MHxwf": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Location:</strong> {{ metaobject.location | metafield_tag }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FG8d6i",
+        "text_HaYhe4",
+        "button_yRGLJn",
+        "text_6MHxwf"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "custom_partnerwall_YbKigJ": {
+      "type": "custom-partnerwall",
+      "disabled": true,
+      "name": "UF Partner Wall",
+      "settings": {
+        "partner_heading": "Trusted Hands Behind Every Ultrafresh Pack",
+        "partner_subheading": "Ultrafresh distributors are more than just suppliers—they're partners in nurturing every baby’s unique journey.",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "custom_partners_Te3HY7": {
+      "type": "custom-partners",
+      "name": "Partners List",
+      "settings": {
+        "banner_image": "shopify://shop_images/Rectangle_46.png",
+        "heading": "Trusted Hands Behind Every Ultrafresh Pack",
+        "subheading": "Our distributors are more than just suppliers they’re partners in nurturing every baby’s unique journey.",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
   "order": [
-    "custom_page_header_dkUBL8"
+    "custom_page_header_dkUBL8",
+    "custom_text_image_KxCtda",
+    "rich_text_kEArRf",
+    "custom_partnerwall_YbKigJ",
+    "custom_partners_Te3HY7"
   ]
 }
