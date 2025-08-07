@@ -1453,12 +1453,17 @@
     ]
   },
   {
-    "name": "General",
+    "name": "General Setting",
     "settings": [
       {
         "type": "image_picker",
         "id": "site_background_image",
         "label": "Site Background Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "page_background_image",
+        "label": "Page Background Image"
       }
     ]
   }

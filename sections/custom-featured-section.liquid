@@ -1,0 +1,188 @@
+{% stylesheet %}
+.featured-diaper-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 80px 5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 749px) {
+  .featured-diaper-section {
+    flex-direction: column;
+    padding: 60px 3rem;
+    text-align: center;
+  }
+
+  .diaper-column {
+    order: -1; /* Show center image first on mobile */
+  }
+}
+
+.section-heading-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-heading-wrapper .h1 {
+  margin-bottom: 0.5rem;
+}
+
+.section-heading-wrapper .section-accent {
+  display: inline-block;
+  width: 40px;
+  height: 4px;
+  background-color: var(--color-accent, #C49363);
+  border-radius: 2px;
+}
+
+.feature-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 3rem;
+  max-width: 300px;
+}
+
+.feature-box {
+  text-align: center;
+}
+
+.feature-box .h2 {
+  margin-bottom: 0.25rem;
+}
+
+.feature-box small {
+  display: block;
+  font-size: 130%;
+  color: var(--color-foreground, #333);
+}
+
+.diaper-column {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diaper-carousel {
+  width: 100%;
+  max-width: 550px;
+  aspect-ratio: 4 / 5;
+  position: relative;
+}
+
+.diaper-carousel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.diaper-carousel img.active {
+  opacity: 1;
+  z-index: 1;
+}
+{% endstylesheet %}
+
+{% if section.settings.section_heading != blank %}
+  <div class="section-heading-wrapper">
+    <div class="h1">{{ section.settings.section_heading }}</div>
+    <div class="section-accent"></div>
+  </div>
+{% endif %}
+
+<div class="featured-diaper-section">
+  <!-- Left Features -->
+  <div class="feature-column">
+    <div class="feature-box">
+      <div class="h2">VelvaCloud™ Layer</div>
+      <small>Whispers of softness – a gentle hug for every move.</small>
+    </div>
+    <div class="feature-box">
+      <div class="h2">FeatherFlex™ Core</div>
+      <small>Moves with them. Protects with ease. Ultra-light, ultra-absorbent.</small>
+    </div>
+  </div>
+
+  <!-- Center Diaper Image -->
+  <div class="diaper-column">
+    <div class="diaper-carousel">
+      <img 
+        src="{{ section.settings.image_1 | image_url }}" 
+        alt="Diaper 1" 
+        width="400" 
+        height="500"
+        class="active"
+      >
+      <img 
+        src="{{ section.settings.image_2 | image_url }}" 
+        alt="Diaper 2" 
+        width="400" 
+        height="500"
+      >
+    </div>
+  </div>
+
+  <!-- Right Features -->
+  <div class="feature-column">
+    <div class="feature-box">
+      <div class="h2">BreezeThin™ Shell</div>
+      <small>No bulk. No heat. Just breathable comfort made for the tropics.</small>
+    </div>
+    <div class="feature-box">
+      <div class="h2">FeatherCare™ Touch</div>
+      <small>So light they won’t notice. So loved they’ll always know.</small>
+    </div>
+  </div>
+</div>
+
+{% javascript %}
+document.addEventListener('DOMContentLoaded', function () {
+  const images = document.querySelectorAll('.diaper-carousel img');
+  let current = 0;
+
+  setInterval(() => {
+    images[current].classList.remove('active');
+    current = (current + 1) % images.length;
+    images[current].classList.add('active');
+  }, 5000);
+});
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Diaper Feature Section",
+  "tag": "section",
+  "class": "diaper-featured-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Love in Every Layer"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "First Diaper Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Second Diaper Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Diaper Feature Section"
+    }
+  ]
+}
+{% endschema %}

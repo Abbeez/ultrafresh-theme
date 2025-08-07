@@ -3696,6 +3696,15 @@ details-disclosure > details {
 
 /* Custom CSS  */
 
+body {
+  overflow-x: hidden;
+  background: var(--custom-bg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 details[open] > .header__menu-item {
   text-decoration: none;
 }
@@ -3738,10 +3747,6 @@ sticky-header .header {
 
 .product__info-container {
   max-width: 100% !important;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 .product__title-accent,
@@ -3813,4 +3818,14 @@ div#customer-section .addresses .input-label {
 div#customer-section input::placeholder,
 div#customer-section select {
   color: var(--custom-dark) !important;
+}
+
+.uf-location {
+  text-decoration: none;
+  color: var(--custom-dark);
+  transition: color 200ms;
+}
+
+.uf-location:hover {
+  color: var(--custom-secondary);
 }

@@ -145,9 +145,13 @@
   <p class="description">{{ section.settings.subheading }}</p>
   <div id="partners-list">
     {% assign partners_list = shop.metaobjects.partners.values | default: empty %}
+    {% assign partners_url = shop.metaobjects.partners.values %}
     {% if partners_list.count > 0 %}
       {% for partner in partners_list %}
-        <div class="partner-item">{{ partner.name }}</div>
+        {% unless metaobject.system.handle == partner.system.handle %}
+          <div class="partner-item">
+            <a href="{{ partner.system.url }}" class="uf-location">{{ partner.name }}</a></div>
+        {% endunless %}
       {% endfor %}
     {% else %}
       <p>No partners found.</p>
