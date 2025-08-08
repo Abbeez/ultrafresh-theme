@@ -3700,7 +3700,7 @@ body {
   overflow-x: hidden;
   background: var(--custom-bg);
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover !important;
   background-position: center;
   background-repeat: no-repeat;
 }
