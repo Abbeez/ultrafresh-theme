@@ -1,0 +1,145 @@
+{% comment %} sections/feature-tabs.liquid {% endcomment %}
+<section id="feature-tabs-{{ section.id }}" class="feature-tabs">
+  {% if section.settings.heading != blank %}
+    <h2 class="ft-heading">{{ section.settings.heading }}</h2>
+  {% endif %}
+
+  <div class="ft-tablist-wrap">
+    <div class="ft-rail"></div>
+    <div class="ft-tablist" role="tablist" aria-label="{{ section.settings.heading | escape }}">
+      {%- for block in section.blocks -%}
+        <button
+          id="ft-tab-{{ block.id }}"
+          class="ft-tab {% if forloop.first %}is-active{% endif %}"
+          role="tab"
+          aria-selected="{{ forloop.first }}"
+          aria-controls="ft-panel-{{ block.id }}"
+          tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
+          data-panel="ft-panel-{{ block.id }}"
+          {{ block.shopify_attributes }}
+        >
+          {{ block.settings.tab_title | escape }}
+        </button>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <div class="ft-panels">
+    {%- for block in section.blocks -%}
+      <div
+        id="ft-panel-{{ block.id }}"
+        class="ft-panel {% if forloop.first %}is-active{% endif %}"
+        role="tabpanel"
+        aria-labelledby="ft-tab-{{ block.id }}"
+        tabindex="0"
+      >
+        <div class="ft-media">
+          {% if block.settings.tab_image %}
+            {{ block.settings.tab_image | image_url: width: 700 | image_tag: alt: block.settings.tab_title }}
+          {% endif %}
+        </div>
+        <div class="ft-desc rte">
+          {{ block.settings.tab_description }}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+
+  {% if section.settings.footer_text != blank %}
+    <p class="ft-footnote">{{ section.settings.footer_text }}</p>
+  {% endif %}
+</section>
+
+<style>
+  #feature-tabs-{{ section.id }} { text-align:center; padding: 48px 0; }
+  #feature-tabs-{{ section.id }} .ft-heading { margin: 0 0 20px; }
+  #feature-tabs-{{ section.id }} .ft-tablist-wrap { position: relative; margin: 12px 0 28px; }
+  #feature-tabs-{{ section.id }} .ft-rail {
+    height:1px; background: currentColor; opacity:.2; width:100%;
+  }
+  #feature-tabs-{{ section.id }} .ft-tablist {
+    display:flex; justify-content:space-between; gap:16px;
+    position:absolute; inset: -12px 0 auto 0; padding:0 16px;
+  }
+  #feature-tabs-{{ section.id }} .ft-tab {
+    background:none; border:none; cursor:pointer;
+    font: inherit; color: inherit; opacity:.8; padding:4px 8px;
+  }
+  #feature-tabs-{{ section.id }} .ft-tab.is-active { opacity:1; text-decoration: underline; text-underline-offset: 6px; }
+
+  #feature-tabs-{{ section.id }} .ft-panels { display:grid; place-items:center; }
+  #feature-tabs-{{ section.id }} .ft-panel { display:none; max-width:760px; margin-inline:auto; }
+  #feature-tabs-{{ section.id }} .ft-panel.is-active { display:block; }
+  #feature-tabs-{{ section.id }} .ft-media img { width:auto; height:auto; max-width: 320px; margin: 0 auto 12px; display:block; }
+  #feature-tabs-{{ section.id }} .ft-desc { max-width: 720px; margin: 0 auto; }
+  #feature-tabs-{{ section.id }} .ft-footnote { margin-top: 18px; opacity:.8; }
+
+  @media (max-width: 768px) {
+    #feature-tabs-{{ section.id }} .ft-tablist { position: static; flex-wrap: wrap; justify-content:center; gap:8px 16px; margin-top: 12px; }
+    #feature-tabs-{{ section.id }} .ft-rail { display:none; }
+  }
+</style>
+
+<script>
+  (function() {
+    const root = document.getElementById('feature-tabs-{{ section.id }}');
+    if (!root) return;
+
+    const tabs = Array.from(root.querySelectorAll('.ft-tab'));
+    const panels = Array.from(root.querySelectorAll('.ft-panel'));
+
+    function activate(idx) {
+      tabs.forEach((t, i) => {
+        const active = i === idx;
+        t.classList.toggle('is-active', active);
+        t.setAttribute('aria-selected', active);
+        t.setAttribute('tabindex', active ? '0' : '-1');
+      });
+      panels.forEach((p, i) => p.classList.toggle('is-active', i === idx));
+      tabs[idx].focus();
+    }
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => activate(i));
+      tab.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') { e.preventDefault(); activate((i + 1) % tabs.length); }
+        if (e.key === 'ArrowLeft')  { e.preventDefault(); activate((i - 1 + tabs.length) % tabs.length); }
+      });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Feature Tabs",
+  "tag": "section",
+  "class": "feature-tabs-section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Section heading", "default": "Quality Certified" },
+    { "type": "richtext", "id": "footer_text", "label": "Footnote text", "default": "<p>Certified to meet strict safety and environmental standards.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Feature Tab",
+      "settings": [
+        { "type": "text", "id": "tab_title", "label": "Tab title", "default": "Dermatest Approved" },
+        { "type": "image_picker", "id": "tab_image", "label": "Center image (logo/badge)" },
+        { "type": "richtext", "id": "tab_description", "label": "Description", "default": "<p>Feature details go here.</p>" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Feature Tabs",
+      "blocks": [
+        { "type": "tab" },
+        { "type": "tab" },
+        { "type": "tab" },
+        { "type": "tab" }
+      ]
+    }
+  ]
+}
+{% endschema %}
