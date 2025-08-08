@@ -39,32 +39,32 @@
           "type": "tab",
           "settings": {
             "tab_title": "VelvaCloud™ Layer",
-            "tab_image": "shopify://shop_images/005-leaves.png",
-            "tab_description": "<p><strong>Whispers of softness — a gentle hug for every move.</strong></p><p>The VelvaCloud™ Layer is our signature top sheet, specially designed to feel like a gentle embrace against your baby’s skin. It draws moisture away in seconds and allows air to flow freely, helping keep your baby dry, comfortable, and rash-free.</p>"
+            "tab_image": "shopify://shop_images/VelvaCloud_Layer_265cff8d-a67d-44bc-8f22-82847a62ba7d.png",
+            "tab_description": "<h3><strong>Whispers of softness — a gentle hug for every move.</strong></h3><p>The VelvaCloud™ Layer is our signature top sheet, specially designed to feel like a gentle embrace against your baby’s skin. It draws moisture away in seconds and allows air to flow freely, helping keep your baby dry, comfortable, and rash-free.</p>"
           }
         },
         "tab_GaaQhH": {
           "type": "tab",
           "settings": {
             "tab_title": "BreezeThin™ Shell",
-            "tab_image": "shopify://shop_images/002-cloud-sky.png",
-            "tab_description": "<p><strong>No bulk. No heat. Just breathable comfort made for the tropics.</strong></p><p>Designed for warm, active days, the BreezeThin™ Shell is our ultra-light, airy outer layer that keeps your baby feeling cool and comfy. It’s thin without compromising protection — reducing heat and humidity build-up while allowing your little one to move freely, even in tropical weather.</p>"
+            "tab_image": "shopify://shop_images/BreezeThin_Shell.png",
+            "tab_description": "<h3><strong>No bulk. No heat. Just breathable comfort made for the tropics.</strong></h3><p>Designed for warm, active days, the BreezeThin™ Shell is our ultra-light, airy outer layer that keeps your baby feeling cool and comfy. It’s thin without compromising protection — reducing heat and humidity build-up while allowing your little one to move freely, even in tropical weather.</p>"
           }
         },
         "tab_m6LJ8M": {
           "type": "tab",
           "settings": {
             "tab_title": "FeatherFlex™ Core",
-            "tab_image": "shopify://shop_images/004-light.png",
-            "tab_description": "<p><strong>Moves with them. Protects with ease. Ultra-light, ultra-absorbent.</strong></p><p>The FeatherFlex™ Core is the heart of every UltraFresh diaper — slim, flexible, and powerfully absorbent. It locks in wetness fast without adding bulk, so your baby can stay dry and comfortable no matter how much they roll, crawl, or play. Designed to keep up with every move, it offers worry-free protection day and night.</p>"
+            "tab_image": "shopify://shop_images/FeatherCare_Touch.png",
+            "tab_description": "<h3><strong>Moves with them. Protects with ease. Ultra-light, ultra-absorbent.</strong></h3><p>The FeatherFlex™ Core is the heart of every UltraFresh diaper — slim, flexible, and powerfully absorbent. It locks in wetness fast without adding bulk, so your baby can stay dry and comfortable no matter how much they roll, crawl, or play. Designed to keep up with every move, it offers worry-free protection day and night.</p>"
           }
         },
         "tab_DBJWLd": {
           "type": "tab",
           "settings": {
             "tab_title": "FeatherCare™ Touch",
-            "tab_image": "shopify://shop_images/003-diaper.png",
-            "tab_description": "<p><strong>So light they won’t notice. So loved they’ll always know.</strong></p><p>Every diaper begins with a touch — and FeatherCare™ makes sure it’s the softest one yet. This gentle, skin-friendly finish is what gives UltraFresh diapers their signature feel. Delicately smooth and whisper-light, it cares for your baby’s skin from the moment you put it on, reminding them they’re loved in every little way.</p>"
+            "tab_image": "shopify://shop_images/FeatherFlex_Core.png",
+            "tab_description": "<h3><strong>So light they won’t notice. So loved they’ll always know.</strong></h3><p>Every diaper begins with a touch — and FeatherCare™ makes sure it’s the softest one yet. This gentle, skin-friendly finish is what gives UltraFresh diapers their signature feel. Delicately smooth and whisper-light, it cares for your baby’s skin from the moment you put it on, reminding them they’re loved in every little way.</p>"
           }
         }
       },
@@ -76,7 +76,9 @@
       ],
       "name": "Feature Slider",
       "settings": {
-        "heading": "UltraFresh Diaper Key Features"
+        "heading": "UltraFresh Diaper Key Features",
+        "pad_top": 96,
+        "pad_bottom": 92
       }
     },
     "custom_text_image_RfgUDY": {
@@ -86,12 +88,27 @@
         "custom_anchor_id": "image-content",
         "section_image": "shopify://shop_images/assets_task_01k0yhvsvmfs4s7rjc2rf14xe6_1753372229_img_1.webp",
         "image_position": "left",
-        "padding_top": 0,
+        "padding_top": 90,
         "padding_bottom": 0,
         "heading": "VelvaCloud™ Layer",
         "description": "<p><strong>Whispers of softness — a gentle hug for every move.</strong><br/><br/>The VelvaCloud™ Layer is our signature top sheet, specially designed to feel like a gentle embrace against your baby’s skin. It draws moisture away in seconds and allows air to flow freely, helping keep your baby dry, comfortable, and rash-free.</p><p>Whether it’s nap time or playtime, this layer moves with your little one — offering softness and protection that lasts.</p><h4>Key Benefits:</h4><ul><li>Feather-soft on delicate skin<br/></li><li>Quickly wicks away moisture<br/></li><li>Breathable to help prevent rashes<br/></li><li>Moves with your baby for all-day comfort</li></ul>",
         "button_label": "Featured 2: BreezeThin™ Shell",
         "button_url": "#breezethin"
+      }
+    },
+    "custom_text_image_PKUqNm": {
+      "type": "custom-text-image",
+      "name": "Image and Content Column",
+      "settings": {
+        "custom_anchor_id": "breezethin",
+        "section_image": "shopify://shop_images/assets_task_01k0yhvsvmfs4s7rjc2rf14xe6_1753372229_img_1.webp",
+        "image_position": "right",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "heading": "BreezeThin™ Shell",
+        "description": "<p><strong>No bulk. No heat. Just breathable comfort made for the tropics.</strong><br/><br/>Designed for warm, active days, the BreezeThin™ Shell is our ultra-light, airy outer layer that keeps your baby feeling cool and comfy. It’s thin without compromising protection — reducing heat and humidity build-up while allowing your little one to move freely, even in tropical weather.</p><h4>Key Benefits:</h4><ul><li>Lightweight and breathable — perfect for hot, humid climates<br/></li><li>Reduces heat build-up — keeps baby cool and fresh<br/></li><li>No bulky layers — slim profile for easy movement<br/></li><li><strong>Comfort in every move</strong> — ideal for playtime, daytime naps, and warm nights</li></ul>",
+        "button_label": "Feature 3: FeatherFlex™ Core",
+        "button_url": "#featurecore"
       }
     },
     "rich_text_MTiApq": {
@@ -135,21 +152,6 @@
         "full_width": true,
         "padding_top": 72,
         "padding_bottom": 72
-      }
-    },
-    "custom_text_image_PKUqNm": {
-      "type": "custom-text-image",
-      "name": "Image and Content Column",
-      "settings": {
-        "custom_anchor_id": "breezethin",
-        "section_image": "shopify://shop_images/assets_task_01k0yhvsvmfs4s7rjc2rf14xe6_1753372229_img_1.webp",
-        "image_position": "right",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "heading": "BreezeThin™ Shell",
-        "description": "<p><strong>No bulk. No heat. Just breathable comfort made for the tropics.</strong><br/><br/>Designed for warm, active days, the BreezeThin™ Shell is our ultra-light, airy outer layer that keeps your baby feeling cool and comfy. It’s thin without compromising protection — reducing heat and humidity build-up while allowing your little one to move freely, even in tropical weather.</p><h4>Key Benefits:</h4><ul><li>Lightweight and breathable — perfect for hot, humid climates<br/></li><li>Reduces heat build-up — keeps baby cool and fresh<br/></li><li>No bulky layers — slim profile for easy movement<br/></li><li><strong>Comfort in every move</strong> — ideal for playtime, daytime naps, and warm nights</li></ul>",
-        "button_label": "Feature 3: FeatherFlex™ Core",
-        "button_url": "#featurecore"
       }
     },
     "custom_text_image_gnTDbh": {
@@ -412,8 +414,8 @@
     "custom_hero_banner_kteJcq",
     "custom_feature_slider_GDeDfe",
     "custom_text_image_RfgUDY",
-    "rich_text_MTiApq",
     "custom_text_image_PKUqNm",
+    "rich_text_MTiApq",
     "custom_text_image_gnTDbh",
     "custom_text_image_eepgUr",
     "banner",
