@@ -3723,6 +3723,7 @@ sticky-header .header {
 .scrolled-past-header header {
   background: var(--custom-bg);
   transition: background 300ms ease-in-out;
+  border-bottom: 1px solid var(--custom-dark);
 }
 
 .scrolled-past-header .header__menu-item {
