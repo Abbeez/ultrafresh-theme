@@ -1,0 +1,28 @@
+<div class="sg-table-wrap">
+  <table class="sg-table" role="table" aria-label="{{ section.settings.title | escape }}">
+    <caption class="visually-hidden">{{ section.settings.title }}</caption>
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">{{ section.settings.col_a_title }}</th>
+        <th scope="col">{{ section.settings.col_b_title }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for block in section.blocks %}
+        {% if block.type == 'row' %}
+          <tr id="sg-row-{{ block.id }}">
+            <th scope="row" class="sg-label">
+              {% if block.settings.icon != blank %}
+                <span class="sg-emoji" aria-hidden="true">{{ block.settings.icon }}</span>
+              {% endif %}
+              {{ block.settings.label }}
+            </th>
+            <td class="sg-cell">{{ block.settings.col_a }}</td>
+            <td class="sg-cell">{{ block.settings.col_b }}</td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
