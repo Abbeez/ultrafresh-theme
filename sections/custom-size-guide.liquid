@@ -1,0 +1,156 @@
+{% comment %}
+UltraFresh — Size Chart (2-column, transparent)
+- No toggle, no unit switch
+- Desktop padding: 5rem L/R, Mobile: 3rem L/R
+- Dynamic top/bottom padding via settings
+- Uses standard, simple setting IDs
+{% endcomment %}
+
+<section
+  class="size-chart"
+  style="--pt: {{ section.settings.padding_top }}px; --pb: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="sc-wrapper">
+    <div class="sc-col sc-text">
+      {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title }}</h2>
+      {% endif %}
+
+      {% if section.settings.subtitle != blank %}
+        <p>{{ section.settings.subtitle }}</p>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <p>{{ section.settings.description }}</p>
+      {% endif %}
+
+      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+        <a href="{{ section.settings.button_link }}" class="button">
+          {{ section.settings.button_label }}
+        </a>
+      {% endif %}
+    </div>
+
+    <div class="sc-col sc-table">
+      <table aria-label="{{ section.settings.title | default: 'UltraFresh Size Chart' | escape }}">
+        <thead>
+          <tr>
+            <th scope="col">{{ section.settings.col_1_title }}</th>
+            <th scope="col">{{ section.settings.col_2_title }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for block in section.blocks %}
+            <tr>
+              <td>{{ block.settings.size }}</td>
+              <td>{{ block.settings.range }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      {% if section.settings.tip != blank %}
+        <p class="sc-tip">{{ section.settings.tip }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Size Chart (2-column)",
+  "tag": "section",
+  "class": "size-chart-section",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Heading", "default": "Diaper Size Chart" },
+    { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "Choose a diaper size based on your little one's weight." },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "UltraFresh diapers are made for tropical comfort and dermatologist-tested gentle on sensitive skin." },
+
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Learn More" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+
+    { "type": "text", "id": "col_1_title", "label": "Left column title", "default": "Size" },
+    { "type": "text", "id": "col_2_title", "label": "Right column title", "default": "Weight Range (lbs)" },
+    { "type": "text", "id": "tip", "label": "Tip text", "default": "Tip: If you’re between sizes, try the smaller size first." },
+
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 48 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 48 }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Row",
+      "settings": [
+        { "type": "text", "id": "size", "label": "Size", "default": "N (Newborn)" },
+        { "type": "text", "id": "range", "label": "Weight range", "default": "2 – 9lbs" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "UltraFresh • Size Chart (2-column)",
+      "blocks": [
+        { "type": "row", "settings": { "size": "N (Newborn)", "range": "2 – 9lbs" } },
+        { "type": "row", "settings": { "size": "1 (Newborn)", "range": "6 – 11lbs" } },
+        { "type": "row", "settings": { "size": "2", "range": "9 – 18lbs" } },
+        { "type": "row", "settings": { "size": "3", "range": "13 – 24lbs" } },
+        { "type": "row", "settings": { "size": "4", "range": "22 – 33lbs" } },
+        { "type": "row", "settings": { "size": "5", "range": "28 – 39lbs" } },
+        { "type": "row", "settings": { "size": "6", "range": "33 – 44lbs" } },
+        { "type": "row", "settings": { "size": "7", "range": "37lbs+" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+.size-chart {
+  background: transparent;
+  padding-top: var(--pt, 48px);
+  padding-bottom: var(--pb, 48px);
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.size-chart .sc-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.size-chart .sc-col {
+  flex: 1;
+  min-width: 280px;
+}
+
+.size-chart table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.size-chart th,
+.size-chart td {
+  text-align: left;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.size-chart thead th {
+  font-weight: 600;
+}
+
+.size-chart .sc-tip {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .size-chart {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .size-chart .sc-wrapper {
+    flex-direction: column;
+  }
+}
+</style>
