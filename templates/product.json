@@ -173,6 +173,53 @@
         "image_align": "left"
       }
     },
+    "custom_size_guide_Ef7wgd": {
+      "type": "custom-size-guide",
+      "blocks": {
+        "row_KYeP9k": {
+          "type": "row",
+          "settings": {}
+        },
+        "row_VAGkyQ": {
+          "type": "row",
+          "settings": {}
+        },
+        "row_HExGpm": {
+          "type": "row",
+          "settings": {}
+        },
+        "row_9tpMEk": {
+          "type": "row",
+          "settings": {}
+        },
+        "row_QLMciX": {
+          "type": "row",
+          "settings": {}
+        },
+        "row_XYAcTR": {
+          "type": "row",
+          "settings": {}
+        },
+        "row_6kJzCx": {
+          "type": "row",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "row_KYeP9k",
+        "row_VAGkyQ",
+        "row_HExGpm",
+        "row_9tpMEk",
+        "row_QLMciX",
+        "row_XYAcTR",
+        "row_6kJzCx"
+      ],
+      "name": "Size Guide (Plain Table)",
+      "settings": {
+        "title": "Size Guide",
+        "subtitle": "Compare styles and sizes at a glance"
+      }
+    },
     "custom_faqs_mMkVyW": {
       "type": "custom-faqs",
       "name": "Custom FAQS",
@@ -213,8 +260,8 @@
       "name": "UF Journey",
       "settings": {
         "padding_top": 60,
-        "padding_bottom": 0,
-        "heading": "More than a Diaper, <span>Love,</span> made visible",
+        "padding_bottom": 60,
+        "heading": "More than a Diaper, Love, made visible",
         "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
         "row1_image_1": "shopify://shop_images/279352301_1166509000832036_8087259750403889181_n.jpg",
         "row1_image_2": "shopify://shop_images/491455768_18499522900009539_4830294737759522855_n..jpg",
@@ -239,6 +286,7 @@
     "custom_partners_Jxm8te",
     "custom_text_image_6th7FK",
     "custom_testimonials_CBn8nc",
+    "custom_size_guide_Ef7wgd",
     "custom_faqs_mMkVyW",
     "custom_talktous_VqLL4Q",
     "custom_social_proof_JegbNq",
