@@ -13,9 +13,9 @@
     "logo_width": 140,
     "favicon": "shopify://shop_images/Ultrafresh_Favicon_72af4075-c383-4a0b-8235-dd782eaa38b4.png",
     "type_header_font": "merriweather_n3",
-    "heading_scale": 100,
-    "type_body_font": "assistant_n5",
-    "body_scale": 105,
+    "heading_scale": 110,
+    "type_body_font": "arsenal_n4",
+    "body_scale": 110,
     "page_width": 1600,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
@@ -129,7 +129,6 @@
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
     "site_background_image": "shopify://shop_images/ultrafresh-banner.ai.png",
-    "page_background_image": "shopify://shop_images/Ultrafresh_Diapers_a954268d-b4bf-4b46-a332-97266b3316ee.png",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",

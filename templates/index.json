@@ -13,7 +13,7 @@
       "type": "custom-hero-banner",
       "name": "Hero Banner",
       "settings": {
-        "banner_image": "shopify://shop_images/ultrafresh-banner.ai.png",
+        "banner_image": "shopify://shop_images/Ultrafresh_Diapers_2.png",
         "text_color": "light",
         "headline": "What does it mean to feel loved...even before you understand the word?",
         "subheadline": "A diaper so soft, so light, they hardly feel it – but always feel our love.",
@@ -37,10 +37,11 @@
       "type": "custom-testimonials",
       "name": "Testimonials & Stories",
       "settings": {
+        "background_color": "#f8f3ed",
         "custom_anchor_id": "testimonials",
         "padding_top": 120,
         "padding_bottom": 120,
-        "heading": "<span>Every story</span> deserves gentle care",
+        "heading": "Every story <span>deserves</span> gentle care",
         "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
         "button_label": "Click here to see parent stories",
         "button_url": "shopify://pages/stories",
@@ -52,7 +53,9 @@
       "name": "Feel like love",
       "settings": {
         "custom_anchor_id": "love",
-        "section_image": "shopify://shop_images/UF_Every_Layer.png",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "section_image": "shopify://shop_images/Copy_of_Ultrafresh_Diapers.png",
         "image_position": "left",
         "padding_top": 0,
         "padding_bottom": 0,
@@ -67,6 +70,8 @@
       "name": "Perfect Fit",
       "settings": {
         "custom_anchor_id": "perfect",
+        "show_top_border": false,
+        "show_bottom_border": false,
         "section_image": "shopify://shop_images/Ultrafresh_Perfect_Fit.png",
         "image_position": "right",
         "padding_top": 0,
@@ -81,9 +86,12 @@
       "type": "custom-compare-cards",
       "name": "UF Compare Cards",
       "settings": {
+        "section_bg_color": "#ecdac0",
+        "border_top_color": "rgba(0,0,0,0)",
+        "border_bottom_color": "rgba(0,0,0,0)",
         "padding_top": 120,
         "padding_bottom": 120,
-        "section_title": "How UltraFresh <span>stands apart</span>",
+        "section_title": "How UltraFresh stands apart",
         "section_subheading": "Every detail is designed for what your baby needs most–comfort that feels like air, protection that feels like love.",
         "left_title": "Brand X",
         "left_bullets": "Thicker and heavier build that may restrict movement\nModerate breathability that can result in heat buildup\nNot specifically designed for tropical or humid conditions\nStrong absorbency performance, but with occasional bulkiness\nBasic, functional design with less attention to aesthetic appeal",
@@ -99,8 +107,10 @@
       "name": "Even in the heat",
       "settings": {
         "custom_anchor_id": "image-content",
-        "section_image": "shopify://shop_images/Comfy_in_heat.png",
-        "image_position": "left",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "section_image": "shopify://shop_images/Copy_of_Ultrafresh_Diapers_1.png",
+        "image_position": "right",
         "padding_top": 0,
         "padding_bottom": 0,
         "heading": "Cool, dry, and comfy even in the heat",
@@ -115,6 +125,8 @@
       "name": " Time to change",
       "settings": {
         "custom_anchor_id": "image-content",
+        "show_top_border": true,
+        "show_bottom_border": true,
         "section_image": "shopify://shop_images/Image_Placeholder_700x600_1.png",
         "image_position": "right",
         "padding_top": 60,
@@ -130,14 +142,36 @@
       "name": "Partners",
       "settings": {
         "custom_anchor_id": "image-content",
+        "show_top_border": false,
+        "show_bottom_border": false,
         "section_image": "shopify://shop_images/Frame_287_2.png",
-        "image_position": "right",
+        "image_position": "left",
         "padding_top": 0,
-        "padding_bottom": 60,
+        "padding_bottom": 0,
         "heading": "UltraFresh around the World",
         "description": "<p>From one family to another, UltraFresh is part of bedtime routines and first steps all over the world <br/>— keeping little ones comfy, wherever they are.</p>",
         "button_label": "Join Our Family of Dealers",
         "button_url": "shopify://pages/partners"
+      }
+    },
+    "custom_talktous_Cm3Wpw": {
+      "type": "custom-talktous",
+      "name": "Call to action ",
+      "settings": {
+        "show_top_border": true,
+        "show_bottom_border": true,
+        "padding_top": 100,
+        "padding_bottom": 120,
+        "margin_top_desktop": 120,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 24,
+        "margin_bottom_mobile": 24,
+        "background_color": "#ecdac0",
+        "heading": "Got Questions? Let’s Talk!",
+        "subheading": "We’re here to help, anytime.",
+        "description": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need.",
+        "button_label": "Talk to Us Here",
+        "button_url": "shopify://pages/reviews"
       }
     },
     "custom_journey_kWNpYT": {
@@ -145,8 +179,8 @@
       "name": "UF Journey",
       "settings": {
         "padding_top": 60,
-        "padding_bottom": 60,
-        "heading": "More than a Diaper, Love, made visible",
+        "padding_bottom": 100,
+        "heading": "More than a Diaper, <span>Love, made visible</span>",
         "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
         "row1_image_1": "shopify://shop_images/491455768_18499522900009539_4830294737759522855_n..jpg",
         "row1_image_2": "shopify://shop_images/499554100_17892379431247420_1720371743213103977_n..jpg",
@@ -170,22 +204,9 @@
         "row2_image_10": "shopify://shop_images/IMG_20250731_080033_924.jpg"
       }
     },
-    "custom_talktous_Cm3Wpw": {
-      "type": "custom-talktous",
-      "name": "UF Contact Callout",
-      "settings": {
-        "padding_top": 120,
-        "padding_bottom": 160,
-        "background_color": "rgba(0,0,0,0)",
-        "heading": "Got Questions? Let’s Talk!",
-        "subheading": "We’re here to help, anytime.",
-        "description": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need.",
-        "button_label": "Talk to Us Here",
-        "button_url": "shopify://pages/reviews"
-      }
-    },
     "custom_calltoaction_4UnEqf": {
       "type": "custom-calltoaction",
+      "disabled": true,
       "name": "UF Call to Action",
       "settings": {
         "cta_image": "shopify://shop_images/background.png",
@@ -207,8 +228,8 @@
     "custom_text_image_FbNJTP",
     "custom_text_image_BnkNRV",
     "custom_text_image_G9Tn9j",
-    "custom_journey_kWNpYT",
     "custom_talktous_Cm3Wpw",
+    "custom_journey_kWNpYT",
     "custom_calltoaction_4UnEqf"
   ]
 }
