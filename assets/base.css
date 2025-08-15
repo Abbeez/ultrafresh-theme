@@ -3740,6 +3740,11 @@ sticky-header .header {
   color: var(--custom-dark);
 }
 
+/* ul.list-menu.list-menu--inline .header-menu,
+ul.list-menu.list-menu--inline .header-menu {
+  font-size: 105%;
+} */
+
 /* End Header */
 
 .product-form__buttons {

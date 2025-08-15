@@ -2,8 +2,13 @@
 {
   "name": "Testimonials",
   "tag": "section",
-  "class": "uf-testimonials-section",
   "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "#ffffff"
+    },
     {
       "type": "text",
       "id": "custom_anchor_id",
@@ -32,7 +37,7 @@
       "type": "textarea",
       "id": "description",
       "label": "Description",
-      "default": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone."
+      "default": "Every baby’s journey is filled with joy, discovery, and growth, and we celebrate these special moments — each smile, wiggle, and milestone."
     },
     {
       "type": "text",
@@ -69,31 +74,31 @@
   {% if section.settings.custom_anchor_id %}
     id="{{ section.settings.custom_anchor_id | escape }}"
   {% endif %}
-  class="uf-testimonials__outer uf-colors animate--slide-in"
-  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
-  <div class="uf-testimonials__container{% if section.settings.image_align == 'left' %} uf-testimonials__container--reverse{% endif %}">
-    <div class="uf-testimonials__left">
-      <h2 class="h1 uf-testimonials__heading">
+  class="testimonials__outer animate--slide-in"
+  style="background-color: {{ section.settings.background_color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  <div class="testimonials__container{% if section.settings.image_align == 'left' %} testimonials__container--reverse{% endif %}">
+    <div class="testimonials__left">
+      <h2 class="h1 testimonials__heading">
         {{ section.settings.heading }}
       </h2>
-      <div class="uf-testimonials__desc">{{ section.settings.description }}</div>
+      <div class="testimonials__desc">{{ section.settings.description }}</div>
       {% if section.settings.button_label and section.settings.button_url %}
-        <a href="{{ section.settings.button_url }}" class="uf-testimonials__btn">
+        <a href="{{ section.settings.button_url }}" class="testimonials__btn">
           {{ section.settings.button_label }}
-          <span class="uf-testimonials__arrow">›</span>
+          <span class="testimonials__arrow">›</span>
         </a>
       {% endif %}
     </div>
-    <div class="uf-testimonials__right">
-      <div class="swiper uf-testimonials__slider" data-swiper-autoplay="2000">
-        <div class="swiper-wrapper uf-testimonials__wrapper">
+    <div class="testimonials__right">
+      <div class="swiper testimonials__slider" data-swiper-autoplay="2000">
+        <div class="swiper-wrapper testimonials__wrapper">
           {% assign testimonial = shop.metaobjects.testimonials.values %}
           {% if testimonial.count > 0 %}
             {% for reviewer in testimonial %}
-              <div class="swiper-slide uf-testimonials__card" style="background-image:url('{{ reviewer.photo | image_url: width: 600, height: 800, crop: 'center' }}');">
-                <div class="uf-testimonials__innercard">
-                  <div class="uf-testimonials__name">{{ reviewer.name }}</div>
-                  <div class="uf-testimonials__message">{{ reviewer.message }}</div>
+              <div class="swiper-slide testimonials__card" style="background-image:url('{{ reviewer.photo | image_url: width: 600, height: 800, crop: 'center' }}');">
+                <div class="testimonials__innercard">
+                  <div class="testimonials__name">{{ reviewer.name }}</div>
+                  <div class="testimonials__message">{{ reviewer.message }}</div>
                 </div>
               </div>
             {% endfor %}
@@ -101,7 +106,6 @@
             <p>No testimonial found.</p>
           {% endif %}
         </div>
-        <!-- Progressbar Pagination -->
         <div class="swiper-scrollbar"></div>
       </div>
     </div>
@@ -110,7 +114,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    var swiper = new Swiper(".uf-testimonials__slider", {
+    var swiper = new Swiper(".testimonials__slider", {
       slidesPerView: 2,
       spaceBetween: 30,
       loop: true,
@@ -131,36 +135,35 @@
 </script>
 
 <style>
-.uf-testimonials__outer {
+.testimonials__outer {
   width: 100%;
-  {% comment %} background: var(--custom-bg); {% endcomment %}
 }
-.uf-testimonials__container {
+.testimonials__container {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
   padding: 0 5rem;
-  align-items: flex-start;
+  align-items: center;
   overflow: hidden;
   flex-direction: row;
   transition: flex-direction 0.3s;
 }
-.uf-testimonials__container--reverse {
+.testimonials__container--reverse {
   flex-direction: row-reverse;
 }
-.uf-testimonials__left {
+.testimonials__left {
   flex: 0 0 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.uf-testimonials__right {
+.testimonials__right {
   flex: 1;
   overflow: hidden;
 }
-.uf-testimonials__card {
+.testimonials__card {
   max-width: 700px;
-  height: 550px;
+  height: 420px;
   color: var(--custom-light);
   display: flex;
   flex-direction: column;
@@ -170,21 +173,21 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.uf-testimonials__card .uf-testimonials__innercard {
+.testimonials__card .testimonials__innercard {
   padding: 5rem 2.3rem 2.3rem 2.3rem;
   background: linear-gradient(to top, rgba(206, 165, 120, 0.67) 10%, transparent 100%);
 }
-.uf-testimonials__card:hover .uf-testimonials__innercard {
+.testimonials__card:hover .testimonials__innercard {
   background: linear-gradient(to top, rgba(206, 164, 120, 0.9) 50%, transparent 100%);
   transition: all 2000ms ease-in-out;
 }
-.uf-testimonials__slider .swiper-wrapper {
+.testimonials__slider .swiper-wrapper {
   padding-bottom: 20px;
 }
-.uf-testimonials__slider div:empty {
+.testimonials__slider div:empty {
   display: block;
 }
-.uf-testimonials__name {
+.testimonials__name {
   font-weight: 700;
   font-size: 130%;
   margin-bottom: 5px;
@@ -192,49 +195,56 @@
 .swiper-scrollbar-drag {
   background: var(--custom-secondary);
 }
-.uf-testimonials__heading {
+.testimonials__heading {
   margin-top: 0;
   margin-bottom: 1.1rem;
   color: var(--custom-dark);
   line-height: 1.12;
 }
-.uf-testimonials__heading span {
+.testimonials__heading span {
   color: var(--custom-secondary);
 }
-.uf-testimonials__desc {
+.testimonials__desc {
   margin-bottom: 1.6rem;
   color: var(--custom-dark);
   opacity: 0.97;
   line-height: 1.7;
 }
-.uf-testimonials__btn {
+
+/* Outlined button style */
+.testimonials__btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  background: transparent;
   color: var(--custom-dark);
-  background: none;
-  border: none;
-  text-decoration: underline;
   font-weight: 500;
+  padding: 1.1rem 2.3rem;
+  border-radius: 0;
+  border: 1px solid var(--custom-dark);
+  min-width: 260px;
+  max-width: fit-content;
+  text-decoration: none;
   cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
 }
-.uf-testimonials__btn:hover {
-  color: var(--custom-secondary);
+.testimonials__btn:hover {
+  background: var(--custom-dark);
+  color: var(--custom-light);
+  border-color: var(--custom-dark);
 }
-.uf-testimonials__arrow {
+.testimonials__arrow {
   margin-left: 0.6em;
   font-size: 1.3em;
 }
-.swiper {
-  width: 100%;
-  height: 100%;
-}
+
 @media (max-width: 990px) {
-  .uf-testimonials__container,
-  .uf-testimonials__container--reverse {
+  .testimonials__container,
+  .testimonials__container--reverse {
     flex-direction: column !important;
     padding: 0 3rem;
   }
-  .uf-testimonials__left, .uf-testimonials__right {
+  .testimonials__left, .testimonials__right {
     flex: 1 0 100%;
     width: 100%;
     text-align: center;

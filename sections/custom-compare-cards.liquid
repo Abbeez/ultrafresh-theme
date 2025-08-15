@@ -1,7 +1,25 @@
 {% schema %}
 {
-  "name": "UF Compare Cards",
+  "name": "Compare Cards",
   "settings": [
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section Background Color",
+      "default": "#edeadd"
+    },
+    {
+      "type": "color",
+      "id": "border_top_color",
+      "label": "Top Border Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "border_bottom_color",
+      "label": "Bottom Border Color",
+      "default": "#000000"
+    },
     {
       "type": "number",
       "id": "padding_top",
@@ -18,7 +36,7 @@
       "type": "text",
       "id": "section_title",
       "label": "Section Title",
-      "default": "How UltraFresh <span>stands apart</span>"
+      "default": "How Our Brand <span>stands apart</span>"
     },
     {
       "type": "textarea",
@@ -47,7 +65,7 @@
       "type": "text",
       "id": "center_title",
       "label": "Center Card Title",
-      "default": "UltraFresh"
+      "default": "Our Brand"
     },
     {
       "type": "textarea",
@@ -70,47 +88,51 @@
   ],
   "presets": [
     {
-      "name": "UF Compare Cards"
+      "name": "Compare Cards"
     }
   ]
 }
 {% endschema %}
 
-<div class="uf-compare-cards-section"
-     style="padding-top: {{ section.settings.padding_top | default: 64 }}px; padding-bottom: {{ section.settings.padding_bottom | default: 64 }}px;">
+<div class="compare-cards-section"
+     style="background-color: {{ section.settings.section_bg_color }};
+            border-top: 1px solid {{ section.settings.border_top_color }};
+            border-bottom: 1px solid {{ section.settings.border_bottom_color }};
+            padding-top: {{ section.settings.padding_top | default: 64 }}px;
+            padding-bottom: {{ section.settings.padding_bottom | default: 64 }}px;">
   <div class="page-width">
-    <div class="uf-compare-cards__header">
-      <h1 class="h1 uf-compare-cards__title" style="color:var(--custom-dark);">{{ section.settings.section_title }}</h1>
+    <div class="compare-cards__header">
+      <h1 class="h1 compare-cards__title" style="color:var(--custom-dark);">{{ section.settings.section_title }}</h1>
       {% if section.settings.section_subheading != blank %}
-        <div class="uf-compare-cards__subheading">{{ section.settings.section_subheading }}</div>
+        <div class="compare-cards__subheading">{{ section.settings.section_subheading }}</div>
       {% endif %}
     </div>
-    <div class="uf-compare-cards__row">
-      <!-- Brand X -->
-      <div class="uf-compare-cards__card uf-compare-cards__card--side uf-compare-cards__card--left">
-        <div class="h2 uf-compare-cards__card-title">{{ section.settings.left_title }}</div>
-        <ul class="uf-compare-cards__list">
+    <div class="compare-cards__row">
+      <!-- Left Card -->
+      <div class="compare-cards__card compare-cards__card--side compare-cards__card--left">
+        <div class="h2 compare-cards__card-title">{{ section.settings.left_title }}</div>
+        <ul class="compare-cards__list">
           {% assign left_bullets = section.settings.left_bullets | newline_to_br | split: '<br />' %}
           {% for item in left_bullets %}
             <li>{{ item | strip }}</li>
           {% endfor %}
         </ul>
       </div>
-      <!-- UltraFresh (center) -->
-      <div class="uf-compare-cards__card uf-compare-cards__card--center">
+      <!-- Center Card -->
+      <div class="compare-cards__card compare-cards__card--center">
         {% if section.settings.center_logo != blank %}
-          <div class="uf-compare-cards__logo">
+          <div class="compare-cards__logo">
             <img
               src="{{ section.settings.center_logo | image_url: width: 240 }}"
               alt="{{ section.settings.center_title | escape }}"
               width="140" height="60" loading="lazy">
           </div>
         {% endif %}
-        <ul class="uf-compare-cards__list uf-compare-cards__list--center">
+        <ul class="compare-cards__list compare-cards__list--center">
           {% assign center_bullets = section.settings.center_bullets | newline_to_br | split: '<br />' %}
           {% for item in center_bullets %}
             <li>
-              <span class="uf-compare-cards__icon">
+              <span class="compare-cards__icon">
                 <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true" focusable="false" style="vertical-align:middle;">
                   <circle cx="13" cy="13" r="12" stroke="var(--custom-secondary, #CEA478)" stroke-width="2" fill="transparent"/>
                   <polyline points="8.5,14.2 12,17.5 18,10.2" fill="none" stroke="var(--custom-secondary, #CEA478)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -121,10 +143,10 @@
           {% endfor %}
         </ul>
       </div>
-      <!-- Brand Z -->
-      <div class="uf-compare-cards__card uf-compare-cards__card--side uf-compare-cards__card--right">
-        <div class="h2 uf-compare-cards__card-title">{{ section.settings.right_title }}</div>
-        <ul class="uf-compare-cards__list">
+      <!-- Right Card -->
+      <div class="compare-cards__card compare-cards__card--side compare-cards__card--right">
+        <div class="h2 compare-cards__card-title">{{ section.settings.right_title }}</div>
+        <ul class="compare-cards__list">
           {% assign right_bullets = section.settings.right_bullets | newline_to_br | split: '<br />' %}
           {% for item in right_bullets %}
             <li>{{ item | strip }}</li>
@@ -136,36 +158,33 @@
 </div>
 
 <style>
-.uf-compare-cards-section {
-  background: var(--custom-light);
-}
-.uf-compare-cards__header {
+.compare-cards__header {
   text-align: center;
   margin-bottom: 2.5rem;
 }
-.uf-compare-cards__title {
+.compare-cards__title {
   margin-bottom: 0.7rem;
 }
-.uf-compare-cards__title span {
+.compare-cards__title span {
   color: var(--custom-secondary);
 }
-.uf-compare-cards__subheading {
+.compare-cards__subheading {
   margin: 0 auto 0;
   max-width: 660px;
   line-height: 1.6;
   opacity: 0.92;
 }
-.uf-compare-cards__row {
+.compare-cards__row {
   display: flex;
   gap: 2.2rem;
   justify-content: center;
   align-items: stretch;
   width: 100%;
 }
-.uf-compare-cards__card {
+.compare-cards__card {
   background: #edeadd;
   flex: 1 1 0%;
-  padding: 2.5rem 1.7rem 2.5rem 1.7rem;
+  padding: 2.5rem 1.7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -173,94 +192,55 @@
   border-radius: 0;
   min-width: 0;
 }
-.uf-compare-cards__card--side {
-  background: #edeadd;
-}
-.uf-compare-cards__card--center {
+.compare-cards__card--center {
   background: var(--custom-light);
   border: 2px solid var(--custom-secondary);
   box-shadow: 0 0 0 3px rgba(206,164,120,0.09);
   position: relative;
   z-index: 2;
 }
-.uf-compare-cards__logo {
+.compare-cards__logo {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 1.3rem;
 }
-.uf-compare-cards__card-title {
+.compare-cards__card-title {
   text-align: center;
   margin-bottom: 1.4rem;
 }
-.uf-compare-cards__list {
+.compare-cards__list {
   list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
 }
-.uf-compare-cards__list li {
+.compare-cards__list li {
   border-bottom: 1px solid #dad8ce;
   padding: 1.1em 1em;
   margin: 0;
   text-align: left;
 }
-.uf-compare-cards__list li:last-child {
+.compare-cards__list li:last-child {
   border-bottom: none;
 }
-.uf-compare-cards__list--center li {
+.compare-cards__list--center li {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
 }
-.uf-compare-cards__icon {
+.compare-cards__icon {
   display: inline-flex;
   align-items: center;
   margin-right: 0.2em;
   flex-shrink: 0;
 }
-
-/* Responsive tweaks */
-@media (max-width: 1024px) {
-  .uf-compare-cards__row {
-    gap: 1rem;
-  }
-  .uf-compare-cards__card {
-    padding: 1.8rem 0.6rem 1.8rem 0.6rem;
-  }
-}
 @media (max-width: 900px) {
-  .uf-compare-cards-section {
-    padding-top: 24px !important;
-    padding-bottom: 24px !important;
-  }
-  .uf-compare-cards__header {
-    margin-bottom: 1.4rem;
-  }
-  .uf-compare-cards__row {
+  .compare-cards__row {
     flex-direction: column;
-    gap: 0;
-    align-items: stretch;
   }
-  .uf-compare-cards__card {
-    max-width: 540px;
-    margin: 0 auto;
-  }
-  .uf-compare-cards__card--side {
+  .compare-cards__card--side {
     display: none !important;
-  }
-  .uf-compare-cards__card--center {
-    order: 1;
-    padding: 1.1rem 0.7rem 1.1rem 0.7rem;
-  }
-}
-@media (max-width: 600px) {
-  .uf-compare-cards-section {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-  }
-  .uf-compare-cards__card--center {
-    padding: 0.7rem 0.3rem 0.7rem 0.3rem;
   }
 }
 </style>

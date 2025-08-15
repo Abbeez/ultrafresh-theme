@@ -2,13 +2,25 @@
 {
   "name": "Image and Content Column",
   "tag": "section",
-  "class": "uf-split-section",
+  "class": "split-section",
   "settings": [
     {
       "type": "text",
       "id": "custom_anchor_id",
       "label": "Custom Section ID (for Smooth Scroll)",
       "default": "image-content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_top_border",
+      "label": "Show Top Border",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bottom_border",
+      "label": "Show Bottom Border",
+      "default": true
     },
     {
       "type": "image_picker",
@@ -52,7 +64,7 @@
       "type": "text",
       "id": "button_label",
       "label": "Button Label",
-      "default": "See What's Inside UltraFresh Diapers"
+      "default": "See What's Inside"
     },
     {
       "type": "url",
@@ -69,13 +81,23 @@
 }
 {% endschema %}
 
+{% assign top_border_style = '' %}
+{% if section.settings.show_top_border %}
+  {% assign top_border_style = 'border-top: 1px solid var(--custom-dark)' %}
+{% endif %}
+
+{% assign bottom_border_style = '' %}
+{% if section.settings.show_bottom_border %}
+  {% assign bottom_border_style = 'border-bottom: 1px solid var(--custom-dark)' %}
+{% endif %}
+
 <div
   {% if section.settings.custom_anchor_id %}
     id="{{ section.settings.custom_anchor_id | escape }}"
   {% endif %}
-  class="uf-split-section{% if section.settings.image_position == 'right' %} uf-split-section--reverse{% endif %}"
-  style="padding-top: {{ section.settings.padding_top | default: 60 }}px; padding-bottom: {{ section.settings.padding_bottom | default: 60 }}px;">
-  <div class="uf-split__image-col">
+  class="split-section{% if section.settings.image_position == 'right' %} split-section--reverse{% endif %}"
+  style="{{ top_border_style }}; {{ bottom_border_style }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  <div class="split__image-col">
     {% if section.settings.section_image != blank %}
       <img 
         src="{{ section.settings.section_image | image_url: width: 1000 }}"
@@ -83,42 +105,40 @@
         width="900"
         height="auto"
         loading="lazy"
-        class="uf-split__img"
+        class="split__img"
       >
     {% endif %}
   </div>
-  <div class="uf-split__text-col">
-    <div class="uf-split__text-inner">
-      <h2 class="h1 uf-split__heading">
+  <div class="split__text-col">
+    <div class="split__text-inner">
+      <h2 class="h1 split__heading">
         {{ section.settings.heading }}
       </h2>
-      <div class="uf-split__desc">{{ section.settings.description }}</div>
+      <div class="split__desc">{{ section.settings.description }}</div>
       {% if section.settings.button_label != blank and section.settings.button_url != blank %}
-        <a href="{{ section.settings.button_url }}" class="uf-split__btn">
+        <a href="{{ section.settings.button_url }}" class="split__btn">
           {{ section.settings.button_label }}
-          <span class="uf-split__btn-arrow">›</span>
+          <span class="split__btn-arrow">›</span>
         </a>
       {% endif %}
     </div>
   </div>
 </div>
 
-
 <style>
-.uf-split-section {
+.split-section {
   width: 100vw;
   min-height: 500px;
-  {% comment %} background: var(--custom-bg); {% endcomment %}
   display: flex;
   flex-direction: row;
   justify-content: stretch;
   align-items: stretch;
   transition: padding 0.2s;
 }
-.uf-split-section--reverse {
+.split-section--reverse {
   flex-direction: row-reverse;
 }
-.uf-split__image-col {
+.split__image-col {
   flex: 1 1 50%;
   position: relative;
   display: flex;
@@ -126,137 +146,95 @@
   justify-content: flex-end;
   min-height: 350px;
   overflow: hidden;
-  background: transparent;
-    {% comment %} max-height: 600px; {% endcomment %}
 }
-.uf-split__img {
+.split__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: left center;
   display: block;
-  border-radius: 0;
-  max-width: none;
-  min-width: 100%;
-  min-height: 100%;
 }
-.uf-split-section--reverse .uf-split__img {
+.split-section--reverse .split__img {
   object-position: right center;
 }
-.uf-split__text-col {
+.split__text-col {
   flex: 1 1 50%;
-  background: var(--custom-);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0;
-  {% comment %} max-height: 600px; {% endcomment %}
 }
-.uf-split__text-inner {
+.split__text-inner {
   width: 100%;
   max-width: 800px;
   margin: 0 0 0 7vw;
   padding: 4vw 3vw 4vw 0;
   box-sizing: border-box;
-  text-align: left;
 }
-.uf-split-section--reverse .uf-split__text-inner {
+.split-section--reverse .split__text-inner {
   margin: 0 7vw 0 0;
   padding: 4vw 0 4vw 3vw;
-  text-align: left;
 }
-.uf-split__heading {
+.split__heading {
   color: var(--custom-dark);
-  font-weight: 400;
   margin-bottom: 1.3rem;
   line-height: 1.13;
 }
-.uf-split__heading span {
+.split__heading span {
   color: var(--custom-secondary);
-  font-weight: 400;
 }
-.uf-split__desc {
+.split__desc {
   color: var(--custom-dark);
   opacity: 0.93;
   margin-bottom: 2.1rem;
   line-height: 1.6;
 }
-
-/* Outline Button (1px border) */
-.uf-split__btn {
+.split__btn {
   display: inline-flex;
   align-items: center;
   background: transparent;
   color: var(--custom-dark);
   font-weight: 500;
-  padding: 1.1rem 2.3rem 1.1rem 2.3rem;
-  border-radius: 0;
+  padding: 1.1rem 2.3rem;
   border: 1px solid var(--custom-dark);
   min-width: 260px;
-  justify-content: center;
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.18s, color 0.18s, border-color 0.18s;
 }
-.uf-split__btn-arrow {
+.split__btn-arrow {
   margin-left: 0.8em;
   font-size: 1.3em;
-  line-height: 1;
 }
-.uf-split__btn:hover,
-.uf-split__btn:focus {
+.split__btn:hover {
   background: var(--custom-primary);
   color: var(--custom-dark);
   border-color: var(--custom-primary);
 }
 @media (max-width: 1100px) {
-  .uf-split-section,
-  .uf-split-section--reverse {
+  .split-section {
     flex-direction: column !important;
   }
-  .uf-split__image-col,
-  .uf-split__text-col {
+  .split__image-col,
+  .split__text-col {
     flex: 0 0 100%;
     min-height: 350px;
-    max-width: 100vw;
   }
-  .uf-split__img {
-    min-width: 100vw;
+  .split__img {
     height: 550px;
-    object-fit: cover;
     object-position: center;
   }
-  .uf-split__text-inner,
-  .uf-split-section--reverse .uf-split__text-inner {
+  .split__text-inner {
     margin: 0;
     padding: 6vw 5vw;
-    max-width: 98vw;
     text-align: center;
-  }
-  .uf-split__heading, .uf-split__desc {
-    text-align: center;
-  }
-  .uf-split-section {
-    padding-top: 36px !important;
-    padding-bottom: 36px !important;
   }
 }
 @media (max-width: 600px) {
-  .uf-split__img {
-    min-width: 100vw;
+  .split__img {
     height: 280px;
   }
-  .uf-split__text-inner,
-  .uf-split-section--reverse .uf-split__text-inner {
-    padding: 1.3rem 0.5rem;
-  }
-  .uf-split__btn {
+  .split__btn {
     min-width: 120px;
-    padding: 0.7rem 1.2rem 0.7rem 1.2rem;
-  }
-  .uf-split-section {
-    padding-top: 18px !important;
-    padding-bottom: 18px !important;
+    padding: 0.7rem 1.2rem;
   }
 }
 </style>

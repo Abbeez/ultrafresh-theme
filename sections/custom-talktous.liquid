@@ -1,77 +1,58 @@
 {% schema %}
 {
-  "name": "UF Contact Callout",
+  "name": "Contact Callout",
   "settings": [
-    {
-      "type": "number",
-      "id": "padding_top",
-      "label": "Section Padding Top (px)",
-      "default": 80
-    },
-    {
-      "type": "number",
-      "id": "padding_bottom",
-      "label": "Section Padding Bottom (px)",
-      "default": 80
-    },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background Color",
-      "default": "#FDFCF9"
-    },
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading (use <span> for highlight)",
-      "default": "Got Questions?<span> Let’s Talk!</span>"
-    },
-    {
-      "type": "text",
-      "id": "subheading",
-      "label": "Subheading",
-      "default": "We’re here to help, anytime."
-    },
-    {
-      "type": "textarea",
-      "id": "description",
-      "label": "Description",
-      "default": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need."
-    },
-    {
-      "type": "text",
-      "id": "button_label",
-      "label": "Button Label",
-      "default": "Talk to Us Here"
-    },
-    {
-      "type": "url",
-      "id": "button_url",
-      "label": "Button Link"
-    }
+    { "type": "checkbox", "id": "show_top_border", "label": "Show Top Border", "default": false },
+    { "type": "checkbox", "id": "show_bottom_border", "label": "Show Bottom Border", "default": false },
+
+    { "type": "number", "id": "padding_top", "label": "Section Padding Top (px)", "default": 80 },
+    { "type": "number", "id": "padding_bottom", "label": "Section Padding Bottom (px)", "default": 80 },
+
+    { "type": "number", "id": "margin_top_desktop", "label": "Margin Top (Desktop, px)", "default": 0 },
+    { "type": "number", "id": "margin_bottom_desktop", "label": "Margin Bottom (Desktop, px)", "default": 0 },
+    { "type": "number", "id": "margin_top_mobile", "label": "Margin Top (Mobile, px)", "default": 24 },
+    { "type": "number", "id": "margin_bottom_mobile", "label": "Margin Bottom (Mobile, px)", "default": 24 },
+
+    { "type": "color", "id": "background_color", "label": "Background Color", "default": "#FDFCF9" },
+    { "type": "text", "id": "heading", "label": "Heading (use <span> for highlight)", "default": "Got Questions?<span> Let’s Talk!</span>" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "We’re here to help, anytime." },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need." },
+    { "type": "text", "id": "button_label", "label": "Button Label", "default": "Talk to Us Here" },
+    { "type": "url", "id": "button_url", "label": "Button Link" }
   ],
-  "presets": [
-    {
-      "name": "UF Contact Callout"
-    }
-  ]
+  "presets": [{ "name": "Contact Callout" }]
 }
 {% endschema %}
 
-<div class="uf-contact-callout"
-  style="background-color: {{ section.settings.background_color }}; padding-top:{{ section.settings.padding_top | default: 80 }}px; padding-bottom:{{ section.settings.padding_bottom | default: 80 }}px;">
-  <div class="page-width uf-contact-callout__container">
-    <h2 class="h1 uf-contact-callout__heading">
+{% assign top_border_style = '' %}
+{% if section.settings.show_top_border %}
+  {% assign top_border_style = 'border-top: 1px solid var(--custom-dark)' %}
+{% endif %}
+{% assign bottom_border_style = '' %}
+{% if section.settings.show_bottom_border %}
+  {% assign bottom_border_style = 'border-bottom: 1px solid var(--custom-dark)' %}
+{% endif %}
+
+<div class="contact-callout"
+  style="background-color: {{ section.settings.background_color }};
+         {{ top_border_style }};
+         {{ bottom_border_style }};
+         padding-top: {{ section.settings.padding_top | default: 80 }}px;
+         padding-bottom: {{ section.settings.padding_bottom | default: 80 }}px;
+         margin-top: {{ section.settings.margin_top_desktop | default: 0 }}px;
+         margin-bottom: {{ section.settings.margin_bottom_desktop | default: 0 }}px;">
+  <div class="page-width contact-callout__container">
+    <h2 class="h1 contact-callout__heading">
       {{ section.settings.heading }}
     </h2>
     {% if section.settings.subheading != blank %}
-      <div class="uf-contact-callout__subheading">{{ section.settings.subheading }}</div>
+      <div class="contact-callout__subheading">{{ section.settings.subheading }}</div>
     {% endif %}
     {% if section.settings.description != blank %}
-      <div class="uf-contact-callout__desc">{{ section.settings.description }}</div>
+      <div class="contact-callout__desc">{{ section.settings.description }}</div>
     {% endif %}
     {% if section.settings.button_label != blank and section.settings.button_url != blank %}
-      <a href="{{ section.settings.button_url }}" class="uf-contact-callout__btn">
+      <a href="{{ section.settings.button_url }}" class="contact-callout__btn">
         {{ section.settings.button_label }} <span>›</span>
       </a>
     {% endif %}
@@ -79,39 +60,32 @@
 </div>
 
 <style>
-.uf-contact-callout {
+.contact-callout {
   width: 100%;
   text-align: center;
 }
-.uf-contact-callout__container {
+.contact-callout__container {
   max-width: 780px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.uf-contact-callout__heading {
+.contact-callout__heading {
   color: var(--custom-dark);
   margin-bottom: 1.2rem;
   font-weight: 400;
 }
-.uf-contact-callout__heading span {
-  color: var(--custom-secondary);
-  font-weight: 400;
-}
-.uf-contact-callout__subheading {
-  margin-bottom: 1.2rem;
-  color: var(--custom-dark);
-  font-weight: 400;
-}
-.uf-contact-callout__desc {
+.contact-callout__heading span { color: var(--custom-secondary); font-weight: 400; }
+.contact-callout__subheading { margin-bottom: 1.2rem; color: var(--custom-dark); font-weight: 400; }
+.contact-callout__desc {
   margin-bottom: 2.1rem;
   opacity: 0.96;
   color: var(--custom-dark);
   line-height: 1.5;
   max-width: 600px;
 }
-.uf-contact-callout__btn {
+.contact-callout__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -125,34 +99,26 @@
   text-decoration: none;
   font-family: inherit;
   transition: background 0.18s, color 0.18s, border-color 0.18s;
-  font-size: inherit;
 }
-.uf-contact-callout__btn span {
-  margin-left: 0.8em;
-  font-size: 1.3em;
-  line-height: 1;
+.contact-callout__btn span { margin-left: 0.8em; font-size: 1.3em; line-height: 1; }
+.contact-callout__btn:hover,
+.contact-callout__btn:focus { background: var(--custom-primary); border-color: var(--custom-primary); color: var(--custom-dark); }
+
+/* Mobile overrides for margins and padding */
+@media (max-width: 990px) {
+  .contact-callout {
+    margin-top: {{ section.settings.margin_top_mobile | default: 24 }}px !important;
+    margin-bottom: {{ section.settings.margin_bottom_mobile | default: 24 }}px !important;
+  }
 }
-.uf-contact-callout__btn:hover,
-.uf-contact-callout__btn:focus {
-  background: var(--custom-primary);
-  border-color: var(--custom-primary);
-  color: var(--custom-dark);
-}
+
 @media (max-width: 600px) {
-  .uf-contact-callout {
+  .contact-callout {
     padding-top: 36px !important;
     padding-bottom: 36px !important;
   }
-  .uf-contact-callout__container {
-    max-width: 97vw;
-    padding: 0 1rem;
-  }
-  .uf-contact-callout__btn {
-    min-width: 120px;
-    padding: 0.8rem 1.2rem;
-  }
-  .uf-contact-callout__desc {
-    margin-bottom: 1.2rem;
-  }
+  .contact-callout__container { max-width: 97vw; padding: 0 1rem; }
+  .contact-callout__btn { min-width: 120px; padding: 0.8rem 1.2rem; }
+  .contact-callout__desc { margin-bottom: 1.2rem; }
 }
 </style>
