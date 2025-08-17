@@ -41,7 +41,7 @@
         "custom_anchor_id": "testimonials",
         "padding_top": 120,
         "padding_bottom": 120,
-        "heading": "Every story <span>deserves</span> gentle care",
+        "heading": "Every story deserves gentle care",
         "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
         "button_label": "Click here to see parent stories",
         "button_url": "shopify://pages/stories",
@@ -55,14 +55,20 @@
         "custom_anchor_id": "love",
         "show_top_border": false,
         "show_bottom_border": false,
+        "background_color": "#f8f3ed",
         "section_image": "shopify://shop_images/Copy_of_Ultrafresh_Diapers.png",
         "image_position": "left",
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "image_fit": "cover",
+        "overline": "Premium Comfort",
         "heading": "What makes every layer feel like Love?",
         "description": "<p>From ultra-soft topsheets to leak-locking cores, every layer of UltraFresh diapers is thoughtfully designed to keep your baby dry, comfy, and cared for—because love starts with protection.</p>",
+        "content_image": "shopify://shop_images/UltraFresh_Packaging_of_6-03.png",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 100,
         "button_label": "See What’s Inside UltraFresh Diapers",
-        "button_url": "shopify://collections/all"
+        "button_url": "shopify://collections/all",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_text_image_GzYCjB": {
@@ -72,14 +78,19 @@
         "custom_anchor_id": "perfect",
         "show_top_border": false,
         "show_bottom_border": false,
+        "background_color": "#f8f3ed",
         "section_image": "shopify://shop_images/Ultrafresh_Perfect_Fit.png",
         "image_position": "right",
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "image_fit": "cover",
+        "overline": "Premium Comfort",
         "heading": "Find the perfect fit  for your baby",
         "description": "<p>Every baby is unique, and so is our size guide—built for comfort and fit. Still unsure? Just send us a message and we’ll help you choose.</p>",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 800,
         "button_label": "Find My Baby’s Size",
-        "button_url": "shopify://blogs/product-guides/taped-vs-pull-up-which-ultrafresh-diaper-is-right-for-your-baby"
+        "button_url": "shopify://blogs/product-guides/taped-vs-pull-up-which-ultrafresh-diaper-is-right-for-your-baby",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_compare_cards_G77NkY": {
@@ -109,14 +120,19 @@
         "custom_anchor_id": "image-content",
         "show_top_border": false,
         "show_bottom_border": false,
+        "background_color": "#f8f3ed",
         "section_image": "shopify://shop_images/Copy_of_Ultrafresh_Diapers_1.png",
         "image_position": "right",
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "image_fit": "cover",
+        "overline": "Premium Comfort",
         "heading": "Cool, dry, and comfy even in the heat",
         "description": "<p>UltraFresh is made for tropical climates with breathable layers, ultra-thin absorbent cores, and a non-sticky soft outer cover to keep your baby feeling fresh.</p>",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 800,
         "button_label": "See Why It’s Perfect for Tropical Heat",
-        "button_url": "shopify://blogs/product-guides/how-ultrafresh-diapers-keep-your-baby-comfortable-in-hot-weather"
+        "button_url": "shopify://blogs/product-guides/how-ultrafresh-diapers-keep-your-baby-comfortable-in-hot-weather",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_text_image_BnkNRV": {
@@ -127,14 +143,19 @@
         "custom_anchor_id": "image-content",
         "show_top_border": true,
         "show_bottom_border": true,
+        "background_color": "#fdfcf9",
         "section_image": "shopify://shop_images/Image_Placeholder_700x600_1.png",
         "image_position": "right",
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "image_fit": "cover",
+        "overline": "Premium Comfort",
         "heading": "Know when it’s time to change.",
         "description": "<p>Change every 3–4 hours or whenever the diaper feels wet. Our ultra-absorbent core keeps baby dry through the night for better rest for both of you.</p>",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 800,
         "button_label": "View Change Time Tips",
-        "button_url": "shopify://blogs/product-guides/diaper-changes-made-simple-how-often-should-you-really-change"
+        "button_url": "shopify://blogs/product-guides/diaper-changes-made-simple-how-often-should-you-really-change",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "custom_text_image_G9Tn9j": {
@@ -144,14 +165,19 @@
         "custom_anchor_id": "image-content",
         "show_top_border": false,
         "show_bottom_border": false,
+        "background_color": "#f8f3ed",
         "section_image": "shopify://shop_images/Frame_287_2.png",
         "image_position": "left",
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "image_fit": "cover",
+        "overline": "Premium Comfort",
         "heading": "UltraFresh around the World",
         "description": "<p>From one family to another, UltraFresh is part of bedtime routines and first steps all over the world <br/>— keeping little ones comfy, wherever they are.</p>",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 800,
         "button_label": "Join Our Family of Dealers",
-        "button_url": "shopify://pages/partners"
+        "button_url": "shopify://pages/partners",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_talktous_Cm3Wpw": {
