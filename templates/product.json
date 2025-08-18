@@ -11,6 +11,7 @@
   "sections": {
     "custom_page_header_mp8qWi": {
       "type": "custom-page-header",
+      "disabled": true,
       "name": "UF Page Header",
       "settings": {
         "header_image": "shopify://shop_images/Frame_287.png",
@@ -149,20 +150,28 @@
       "name": "UF Text Image Split",
       "settings": {
         "custom_anchor_id": "image-content",
+        "show_top_border": true,
+        "show_bottom_border": true,
+        "background_color": "#fdfcf9",
         "section_image": "shopify://shop_images/header1.png",
         "image_position": "right",
-        "padding_top": 72,
-        "padding_bottom": 60,
+        "image_fit": "cover",
+        "overline": "Premium Comfort",
         "heading": "Which <span>Ultrafresh Diaper</span> Is Right for Your Baby?",
         "description": "<p>This easy guide compares Ultrafresh’s taped and pull-up diapers, so you can find the perfect fit for your baby’s stage. Whether you're caring for a newborn or chasing after a toddler, we've got you covered with comfort, protection, and convenience.</p>",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 800,
         "button_label": "Let's compare Taped and Pull-up",
-        "button_url": "shopify://blogs/product-guides/taped-vs-pull-up-which-ultrafresh-diaper-is-right-for-your-baby"
+        "button_url": "shopify://blogs/product-guides/taped-vs-pull-up-which-ultrafresh-diaper-is-right-for-your-baby",
+        "padding_top": 72,
+        "padding_bottom": 60
       }
     },
     "custom_testimonials_CBn8nc": {
       "type": "custom-testimonials",
       "name": "UF Testimonials",
       "settings": {
+        "background_color": "#ffffff",
         "custom_anchor_id": "testimonials",
         "padding_top": 60,
         "padding_bottom": 60,
@@ -178,31 +187,52 @@
       "blocks": {
         "row_KYeP9k": {
           "type": "row",
-          "settings": {}
+          "settings": {
+            "size": "N (Newborn)",
+            "range": "2 – 9lbs"
+          }
         },
         "row_VAGkyQ": {
           "type": "row",
-          "settings": {}
+          "settings": {
+            "size": "N (Newborn)",
+            "range": "2 – 9lbs"
+          }
         },
         "row_HExGpm": {
           "type": "row",
-          "settings": {}
+          "settings": {
+            "size": "N (Newborn)",
+            "range": "2 – 9lbs"
+          }
         },
         "row_9tpMEk": {
           "type": "row",
-          "settings": {}
+          "settings": {
+            "size": "N (Newborn)",
+            "range": "2 – 9lbs"
+          }
         },
         "row_QLMciX": {
           "type": "row",
-          "settings": {}
+          "settings": {
+            "size": "N (Newborn)",
+            "range": "2 – 9lbs"
+          }
         },
         "row_XYAcTR": {
           "type": "row",
-          "settings": {}
+          "settings": {
+            "size": "N (Newborn)",
+            "range": "2 – 9lbs"
+          }
         },
         "row_6kJzCx": {
           "type": "row",
-          "settings": {}
+          "settings": {
+            "size": "N (Newborn)",
+            "range": "2 – 9lbs"
+          }
         }
       },
       "block_order": [
@@ -217,7 +247,15 @@
       "name": "Size Guide (Plain Table)",
       "settings": {
         "title": "Size Guide",
-        "subtitle": "Compare styles and sizes at a glance"
+        "subtitle": "Compare styles and sizes at a glance",
+        "description": "UltraFresh diapers are made for tropical comfort and dermatologist-tested gentle on sensitive skin.",
+        "button_label": "Learn More",
+        "button_link": "",
+        "col_1_title": "Size",
+        "col_2_title": "Weight Range (lbs)",
+        "tip": "Tip: If you’re between sizes, try the smaller size first.",
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "custom_faqs_mMkVyW": {
@@ -234,8 +272,14 @@
       "type": "custom-talktous",
       "name": "UF Contact Callout",
       "settings": {
+        "show_top_border": false,
+        "show_bottom_border": false,
         "padding_top": 80,
         "padding_bottom": 80,
+        "margin_top_desktop": 0,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 24,
+        "margin_bottom_mobile": 24,
         "background_color": "#ecdac0",
         "heading": "Got Questions? Let’s Talk!",
         "subheading": "We’re here to help, anytime.",

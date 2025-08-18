@@ -12,8 +12,8 @@
     "logo": "shopify://shop_images/UF_LOGO_37d35d4f-a33c-44ab-bdf0-6b671a4a47c1.png",
     "logo_width": 140,
     "favicon": "shopify://shop_images/Ultrafresh_Favicon_72af4075-c383-4a0b-8235-dd782eaa38b4.png",
-    "type_header_font": "merriweather_n3",
-    "heading_scale": 110,
+    "type_header_font": "arsenal_n4",
+    "heading_scale": 100,
     "type_body_font": "arsenal_n4",
     "body_scale": 110,
     "page_width": 1600,
@@ -141,6 +141,35 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "custom-fonts": {
+        "type": "custom-fonts",
+        "blocks": {
+          "image_fEG3UY": {
+            "type": "image",
+            "settings": {
+              "name": "customfont",
+              "custom_font_weight": "none",
+              "custom_font_style": "none",
+              "custom_font_url": "https://cdn.shopify.com/s/files/1/0694/9542/3210/files/Signatura_Monoline.ttf?v=1755484282",
+              "apply_h1": false,
+              "apply_h2": false,
+              "apply_h3": false,
+              "apply_h4": false,
+              "apply_h5": false,
+              "apply_h6": false,
+              "apply_span": false,
+              "apply_p": false,
+              "apply_custom": ".font-cursive"
+            }
+          }
+        },
+        "block_order": [
+          "image_fEG3UY"
+        ],
+        "settings": {
+          "enable": true
+        }
       }
     },
     "content_for_index": [],
@@ -236,6 +265,17 @@
         "settings": {
           "background": "rgba(0,0,0,0)",
           "background_gradient": "",
+          "text": "#242833",
+          "button": "#242833",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#242833",
+          "shadow": "#242833"
+        }
+      },
+      "scheme-f723f80b-4c8d-4e3c-8bb8-d0c2b5a666fe": {
+        "settings": {
+          "background": "rgba(0,0,0,0)",
+          "background_gradient": "linear-gradient(180deg, rgba(247, 235, 221, 1), rgba(168, 255, 251, 0) 100%)",
           "text": "#242833",
           "button": "#242833",
           "button_label": "#ffffff",

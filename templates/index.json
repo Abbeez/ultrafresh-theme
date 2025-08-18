@@ -13,7 +13,7 @@
       "type": "custom-hero-banner",
       "name": "Hero Banner",
       "settings": {
-        "banner_image": "shopify://shop_images/Ultrafresh_Diapers_2.png",
+        "banner_image": "shopify://shop_images/3_a68f7667-0344-4f4f-9b8c-3b44a0b90f53.png",
         "text_color": "light",
         "headline": "What does it mean to feel loved...even before you understand the word?",
         "subheadline": "A diaper so soft, so light, they hardly feel it – but always feel our love.",
@@ -33,21 +33,6 @@
         "scroll_feel_image": "shopify://shop_images/scroll.png"
       }
     },
-    "custom_testimonials_7KwBiX": {
-      "type": "custom-testimonials",
-      "name": "Testimonials & Stories",
-      "settings": {
-        "background_color": "#f8f3ed",
-        "custom_anchor_id": "testimonials",
-        "padding_top": 120,
-        "padding_bottom": 120,
-        "heading": "Every story deserves gentle care",
-        "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
-        "button_label": "Click here to see parent stories",
-        "button_url": "shopify://pages/stories",
-        "image_align": "right"
-      }
-    },
     "custom_text_image_qxeTjH": {
       "type": "custom-text-image",
       "name": "Feel like love",
@@ -56,13 +41,12 @@
         "show_top_border": false,
         "show_bottom_border": false,
         "background_color": "#f8f3ed",
-        "section_image": "shopify://shop_images/Copy_of_Ultrafresh_Diapers.png",
+        "section_image": "shopify://shop_images/4_66908f11-842d-44fc-ae34-26eaddff2824.png",
         "image_position": "left",
         "image_fit": "cover",
         "overline": "Premium Comfort",
-        "heading": "What makes every layer feel like Love?",
+        "heading": "What makes <span>every layer</span> feel like Love?",
         "description": "<p>From ultra-soft topsheets to leak-locking cores, every layer of UltraFresh diapers is thoughtfully designed to keep your baby dry, comfy, and cared for—because love starts with protection.</p>",
-        "content_image": "shopify://shop_images/UltraFresh_Packaging_of_6-03.png",
         "content_image_alt": "Alt text",
         "content_image_max_width": 100,
         "button_label": "See What’s Inside UltraFresh Diapers",
@@ -79,11 +63,11 @@
         "show_top_border": false,
         "show_bottom_border": false,
         "background_color": "#f8f3ed",
-        "section_image": "shopify://shop_images/Ultrafresh_Perfect_Fit.png",
+        "section_image": "shopify://shop_images/5_bcb2c4c4-995c-48bc-8730-e2863673db2d.png",
         "image_position": "right",
         "image_fit": "cover",
         "overline": "Premium Comfort",
-        "heading": "Find the perfect fit  for your baby",
+        "heading": "Find the <span>perfect fit</span>  for your baby",
         "description": "<p>Every baby is unique, and so is our size guide—built for comfort and fit. Still unsure? Just send us a message and we’ll help you choose.</p>",
         "content_image_alt": "Alt text",
         "content_image_max_width": 800,
@@ -91,26 +75,6 @@
         "button_url": "shopify://blogs/product-guides/taped-vs-pull-up-which-ultrafresh-diaper-is-right-for-your-baby",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "custom_compare_cards_G77NkY": {
-      "type": "custom-compare-cards",
-      "name": "UF Compare Cards",
-      "settings": {
-        "section_bg_color": "#ecdac0",
-        "border_top_color": "rgba(0,0,0,0)",
-        "border_bottom_color": "rgba(0,0,0,0)",
-        "padding_top": 120,
-        "padding_bottom": 120,
-        "section_title": "How UltraFresh stands apart",
-        "section_subheading": "Every detail is designed for what your baby needs most–comfort that feels like air, protection that feels like love.",
-        "left_title": "Brand X",
-        "left_bullets": "Thicker and heavier build that may restrict movement\nModerate breathability that can result in heat buildup\nNot specifically designed for tropical or humid conditions\nStrong absorbency performance, but with occasional bulkiness\nBasic, functional design with less attention to aesthetic appeal",
-        "center_logo": "shopify://shop_images/UF_LOGO_37d35d4f-a33c-44ab-bdf0-6b671a4a47c1.png",
-        "center_title": "UltraFresh",
-        "center_bullets": "Ultra-thin & flexible for all-day movement\nEngineered for hot & humid conditions\nSpecifically engineered to stay cool and dry in hot weather\nEqual or better absorbency compared to premium brands, without sagging or leakage\nDesign-forward look with clean, modern aesthetics parents love",
-        "right_title": "Brand Z",
-        "right_bullets": "Bulky layers, especially when saturated, can feel heavy on the baby\nLower breathability, which may cause discomfort in warmer environments\nSome ventilation but not optimized for consistently hot climates\nGood absorbency, suitable for overnight use\nStylish design but leans more bold and playful than subtle or modern"
       }
     },
     "custom_text_image_FbNJTP": {
@@ -121,11 +85,11 @@
         "show_top_border": false,
         "show_bottom_border": false,
         "background_color": "#f8f3ed",
-        "section_image": "shopify://shop_images/Copy_of_Ultrafresh_Diapers_1.png",
-        "image_position": "right",
+        "section_image": "shopify://shop_images/7_2051898e-945f-4fca-ad1f-ad0c3ffd6aa6.png",
+        "image_position": "left",
         "image_fit": "cover",
         "overline": "Premium Comfort",
-        "heading": "Cool, dry, and comfy even in the heat",
+        "heading": "Cool, dry, and comfy even <span>in the heat</span>",
         "description": "<p>UltraFresh is made for tropical climates with breathable layers, ultra-thin absorbent cores, and a non-sticky soft outer cover to keep your baby feeling fresh.</p>",
         "content_image_alt": "Alt text",
         "content_image_max_width": 800,
@@ -167,10 +131,10 @@
         "show_bottom_border": false,
         "background_color": "#f8f3ed",
         "section_image": "shopify://shop_images/Frame_287_2.png",
-        "image_position": "left",
+        "image_position": "right",
         "image_fit": "cover",
         "overline": "Premium Comfort",
-        "heading": "UltraFresh around the World",
+        "heading": "UltraFresh around the <span>World</span>",
         "description": "<p>From one family to another, UltraFresh is part of bedtime routines and first steps all over the world <br/>— keeping little ones comfy, wherever they are.</p>",
         "content_image_alt": "Alt text",
         "content_image_max_width": 800,
@@ -180,24 +144,39 @@
         "padding_bottom": 0
       }
     },
-    "custom_talktous_Cm3Wpw": {
-      "type": "custom-talktous",
-      "name": "Call to action ",
+    "custom_compare_cards_G77NkY": {
+      "type": "custom-compare-cards",
+      "name": "UF Compare Cards",
       "settings": {
-        "show_top_border": true,
-        "show_bottom_border": true,
-        "padding_top": 100,
+        "section_bg_color": "#f8f3ed",
+        "border_top_color": "rgba(0,0,0,0)",
+        "border_bottom_color": "rgba(0,0,0,0)",
+        "padding_top": 60,
         "padding_bottom": 120,
-        "margin_top_desktop": 120,
-        "margin_bottom_desktop": 0,
-        "margin_top_mobile": 24,
-        "margin_bottom_mobile": 24,
-        "background_color": "#ecdac0",
-        "heading": "Got Questions? Let’s Talk!",
-        "subheading": "We’re here to help, anytime.",
-        "description": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need.",
-        "button_label": "Talk to Us Here",
-        "button_url": "shopify://pages/reviews"
+        "section_title": "How UltraFresh <span>stands apart<span></span></span>",
+        "section_subheading": "Every detail is designed for what your baby needs most–comfort that feels like air, protection that feels like love.",
+        "left_title": "Brand X",
+        "left_bullets": "Thicker and heavier build that may restrict movement\nModerate breathability that can result in heat buildup\nNot specifically designed for tropical or humid conditions\nStrong absorbency performance, but with occasional bulkiness\nBasic, functional design with less attention to aesthetic appeal",
+        "center_logo": "shopify://shop_images/UF_LOGO_37d35d4f-a33c-44ab-bdf0-6b671a4a47c1.png",
+        "center_title": "UltraFresh",
+        "center_bullets": "Ultra-thin & flexible for all-day movement\nEngineered for hot & humid conditions\nSpecifically engineered to stay cool and dry in hot weather\nEqual or better absorbency compared to premium brands, without sagging or leakage\nDesign-forward look with clean, modern aesthetics parents love",
+        "right_title": "Brand Z",
+        "right_bullets": "Bulky layers, especially when saturated, can feel heavy on the baby\nLower breathability, which may cause discomfort in warmer environments\nSome ventilation but not optimized for consistently hot climates\nGood absorbency, suitable for overnight use\nStylish design but leans more bold and playful than subtle or modern"
+      }
+    },
+    "custom_testimonials_7KwBiX": {
+      "type": "custom-testimonials",
+      "name": "Testimonials & Stories",
+      "settings": {
+        "background_color": "#f8f3ed",
+        "custom_anchor_id": "testimonials",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "heading": "Every story<br>deserves <span>gentle care</span>",
+        "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
+        "button_label": "Click here to see parent stories",
+        "button_url": "shopify://pages/stories",
+        "image_align": "right"
       }
     },
     "custom_journey_kWNpYT": {
@@ -206,7 +185,7 @@
       "settings": {
         "padding_top": 60,
         "padding_bottom": 100,
-        "heading": "More than a Diaper, <span>Love, made visible</span>",
+        "heading": "More than a Diaper, Love, <span>made visible</span>",
         "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
         "row1_image_1": "shopify://shop_images/491455768_18499522900009539_4830294737759522855_n..jpg",
         "row1_image_2": "shopify://shop_images/499554100_17892379431247420_1720371743213103977_n..jpg",
@@ -230,6 +209,26 @@
         "row2_image_10": "shopify://shop_images/IMG_20250731_080033_924.jpg"
       }
     },
+    "custom_talktous_Cm3Wpw": {
+      "type": "custom-talktous",
+      "name": "Call to action ",
+      "settings": {
+        "show_top_border": true,
+        "show_bottom_border": true,
+        "padding_top": 30,
+        "padding_bottom": 90,
+        "margin_top_desktop": 0,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 24,
+        "margin_bottom_mobile": 24,
+        "background_color": "#fcf6e9",
+        "heading": "Got Questions? Let’s Talk!",
+        "subheading": "We’re here to help, anytime.",
+        "description": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need.",
+        "button_label": "Talk to Us Here",
+        "button_url": "shopify://pages/reviews"
+      }
+    },
     "custom_calltoaction_4UnEqf": {
       "type": "custom-calltoaction",
       "disabled": true,
@@ -247,15 +246,15 @@
   },
   "order": [
     "custom_hero_banner_G6Bycn",
-    "custom_testimonials_7KwBiX",
     "custom_text_image_qxeTjH",
     "custom_text_image_GzYCjB",
-    "custom_compare_cards_G77NkY",
     "custom_text_image_FbNJTP",
     "custom_text_image_BnkNRV",
     "custom_text_image_G9Tn9j",
-    "custom_talktous_Cm3Wpw",
+    "custom_compare_cards_G77NkY",
+    "custom_testimonials_7KwBiX",
     "custom_journey_kWNpYT",
+    "custom_talktous_Cm3Wpw",
     "custom_calltoaction_4UnEqf"
   ]
 }
