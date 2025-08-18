@@ -16,8 +16,9 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
-            "text": "Inspired by Baby, Made with Love",
+            "text": "Inspired by Baby, Made with Love dsd",
             "link": ""
           }
         }
@@ -25,15 +26,29 @@
       "block_order": [
         "announcement-bar-0"
       ],
-      "disabled": true,
       "settings": {
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "color_scheme": "scheme-cfce202b-b4a2-463a-bfb9-87a3ed179eda",
-        "show_line_separator": false,
+        "color_scheme": "scheme-f723f80b-4c8d-4e3c-8bb8-d0c2b5a666fe",
+        "show_line_separator": true,
         "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false
+      }
+    },
+    "custom_liquid_L9pM3C": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [
+        "div > div {text-align: center; font-size: 110%; margin: 0; border-bottom: 1px solid var(--custom-dark);}",
+        "h6.custom-announcement {margin: 0; font-weight: 500;}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<h6 class=\"custom-announcement\">Welcome to Ultrafresh — More Than a Diaper, Love in Every Layer <strong>Learn More</strong></h6>",
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "header": {
@@ -59,6 +74,7 @@
   },
   "order": [
     "announcement-bar",
+    "custom_liquid_L9pM3C",
     "header"
   ]
 }
