@@ -3,9 +3,34 @@
   "name": "UF Simple Home Banner",
   "settings": [
     {
+      "type": "header",
+      "content": "Background Settings"
+    },
+    {
       "type": "image_picker",
       "id": "banner_image",
       "label": "Background Image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color (fallback or overlay)",
+      "default": "#f8f9fa"
+    },
+    {
+      "type": "range",
+      "id": "background_opacity",
+      "label": "Background Color Opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 0,
+      "info": "Overlay opacity when using background image"
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
     },
     {
       "type": "select",
@@ -16,6 +41,17 @@
         { "value": "dark", "label": "Dark" }
       ],
       "default": "light"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_text_shadow",
+      "label": "Enable Text Shadow",
+      "default": true,
+      "info": "Adds shadow to text for better readability over images"
+    },
+    {
+      "type": "header",
+      "content": "Main Content"
     },
     {
       "type": "text",
@@ -39,6 +75,10 @@
       "type": "url",
       "id": "button_url",
       "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Secondary Section"
     },
     {
       "type": "checkbox",
@@ -69,6 +109,10 @@
       "id": "secondary_subheading",
       "label": "Secondary Subheading",
       "default": "UltraFresh protects with care and performs with grace — a reflection of love in every detail"
+    },
+    {
+      "type": "header",
+      "content": "Secondary Section Buttons"
     },
     {
       "type": "text",
@@ -104,6 +148,10 @@
       "label": "Third Button Link"
     },
     {
+      "type": "header",
+      "content": "Additional Elements"
+    },
+    {
       "type": "image_picker",
       "id": "scroll_feel_image",
       "label": "Scroll to feel the story Image"
@@ -117,10 +165,28 @@
 }
 {% endschema %}
 
-<div class="uf-simple-banner uf-simple-banner--{{ section.settings.text_color }}"
-  {% if section.settings.banner_image != blank %}
-    style="background-image:url('{{ section.settings.banner_image | image_url: width: 2000 }}');"
-  {% endif %}
+{% comment %}
+Fix: Do not assign a comparison. Store the object, then compare in conditionals.
+{% endcomment %}
+{% assign has_bg_image = section.settings.banner_image %}
+{% assign bg_opacity = section.settings.background_opacity | divided_by: 100.0 %}
+
+<div class="uf-simple-banner uf-simple-banner--{{ section.settings.text_color }} {% if section.settings.enable_text_shadow %}uf-simple-banner--text-shadow{% endif %}"
+  style="
+    {% if section.settings.background_color != blank %}
+      background-color: {{ section.settings.background_color }};
+    {% endif %}
+    {% if has_bg_image != blank and section.settings.background_opacity > 0 %}
+      background-image:
+        linear-gradient(
+          rgba({{ section.settings.background_color | color_extract: 'red' }}, {{ section.settings.background_color | color_extract: 'green' }}, {{ section.settings.background_color | color_extract: 'blue' }}, {{ bg_opacity }}),
+          rgba({{ section.settings.background_color | color_extract: 'red' }}, {{ section.settings.background_color | color_extract: 'green' }}, {{ section.settings.background_color | color_extract: 'blue' }}, {{ bg_opacity }})
+        ),
+        url('{{ has_bg_image | image_url: width: 2000 }}');
+    {% elsif has_bg_image != blank %}
+      background-image: url('{{ has_bg_image | image_url: width: 2000 }}');
+    {% endif %}
+  "
 >
   <div class="uf-simple-banner__center">
     <div class="uf-simple-banner__inner">
@@ -183,6 +249,7 @@
   padding: 100px 0 180px 0;
   transition: padding 0.2s;
 }
+
 .uf-simple-banner__center {
   position: relative;
   z-index: 2;
@@ -193,6 +260,7 @@
   justify-content: center;
   text-align: center;
 }
+
 .uf-simple-banner__inner,
 .uf-simple-banner__secondary {
   max-width: 1050px;
@@ -209,23 +277,31 @@
   margin-bottom: 2.2rem;
   color: var(--custom-light);
   word-break: break-word;
+}
+
+.uf-simple-banner--text-shadow .uf-simple-banner__headline {
   text-shadow: 0 5px 30px black;
-  /* No font-size by default, uses Dawn */
 }
 
 .uf-simple-banner--dark .uf-simple-banner__headline {
   color: var(--custom-dark);
 }
+
 .uf-simple-banner__subheadline {
   opacity: 0.98;
   margin-bottom: 2.2rem;
   color: var(--custom-light);
   word-break: break-word;
+}
+
+.uf-simple-banner--text-shadow .uf-simple-banner__subheadline {
   text-shadow: 0 5px 30px black;
 }
+
 .uf-simple-banner--dark .uf-simple-banner__subheadline {
   color: var(--custom-dark);
 }
+
 .uf-simple-banner__btn {
   display: inline-flex;
   align-items: center;
@@ -243,19 +319,23 @@
   transition: background 0.18s, color 0.18s;
   margin-bottom: 2.5rem;
 }
+
 .uf-simple-banner__btn-arrow {
   margin-left: 0.8em;
   line-height: 1;
 }
+
 .uf-simple-banner__btn:hover,
 .uf-simple-banner__btn:focus {
   background: var(--custom-secondary);
   color: var(--custom-light);
 }
+
 .uf-simple-banner--dark .uf-simple-banner__btn {
   background: var(--custom-dark);
   color: var(--custom-light);
 }
+
 .uf-simple-banner--dark .uf-simple-banner__btn:hover,
 .uf-simple-banner--dark .uf-simple-banner__btn:focus {
   background: var(--custom-secondary);
@@ -274,6 +354,7 @@
   opacity: 0.98;
   pointer-events: none;
 }
+
 .uf-simple-banner__scroll-feel img {
   max-width: 140px;
   width: 100%;
@@ -281,6 +362,7 @@
   display: block;
   filter: drop-shadow(0 1px 8px rgba(0,0,0,0.04));
 }
+
 @media (max-width: 700px) {
   .uf-simple-banner__scroll-feel {
     display: none;
@@ -295,31 +377,43 @@
   transition: padding 0.22s;
   word-break: break-word;
 }
+
 .uf-simple-banner__secondary-heading {
   margin: 0 0 1.2rem 0;
   color: var(--custom-light);
   word-break: break-word;
-   text-shadow: 0 5px 30px black;
 }
+
+.uf-simple-banner--text-shadow .uf-simple-banner__secondary-heading {
+  text-shadow: 0 5px 30px black;
+}
+
 .uf-simple-banner--dark .uf-simple-banner__secondary-heading {
   color: var(--custom-dark);
-   text-shadow: 0 5px 30px black;
 }
+
 .uf-simple-banner__secondary-subheading {
   color: var(--custom-light);
   margin-bottom: 2.2rem;
   opacity: 0.94;
   word-break: break-word;
 }
+
+.uf-simple-banner--text-shadow .uf-simple-banner__secondary-subheading {
+  text-shadow: 0 5px 30px black;
+}
+
 .uf-simple-banner--dark .uf-simple-banner__secondary-subheading {
   color: var(--custom-dark);
 }
+
 .uf-simple-banner__secondary-btns {
   display: flex;
   gap: 1.2rem;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .uf-simple-banner__outline-btn {
   display: inline-flex;
   align-items: center;
@@ -335,20 +429,24 @@
   justify-content: center;
   margin-bottom: 0.7rem;
 }
+
 .uf-simple-banner__outline-btn span {
   margin-left: 0.7em;
   line-height: 1;
 }
+
 .uf-simple-banner__outline-btn:hover,
 .uf-simple-banner__outline-btn:focus {
   background: var(--custom-primary);
   color: var(--custom-dark);
   border-color: var(--custom-primary);
 }
+
 .uf-simple-banner--dark .uf-simple-banner__outline-btn {
   border: 1.5px solid var(--custom-dark);
   color: var(--custom-dark);
 }
+
 .uf-simple-banner--dark .uf-simple-banner__outline-btn:hover,
 .uf-simple-banner--dark .uf-simple-banner__outline-btn:focus {
   background: var(--custom-secondary);
@@ -359,26 +457,29 @@
 /* Responsive container spacing only, no font-size */
 @media (max-width: 990px) {
   .uf-simple-banner {
-    {% comment %} padding: 36px 0 36px 0; {% endcomment %}
     background-attachment: scroll;
     padding: 130px 0 80px 0;
   }
+
   .uf-simple-banner__inner,
   .uf-simple-banner__secondary {
     padding-left: 1.7rem !important;
     padding-right: 1.7rem !important;
     max-width: 99vw;
   }
+
   .uf-simple-banner__secondary {
     margin-top: 1.6rem !important;
     padding-top: 10px !important;
     padding-bottom: 4px !important;
   }
+
   /* Headline font-size clamp for mobile - max 3rem */
   .uf-simple-banner__headline {
     font-size: clamp(1.3rem, 7vw, 3rem) !important;
   }
 }
+
 @media (max-width: 749px) {
   .uf-simple-banner__inner,
   .uf-simple-banner__secondary {
@@ -386,6 +487,7 @@
     padding-right: 1.1rem !important;
   }
 }
+
 @media (max-width: 479px) {
   .uf-simple-banner__inner,
   .uf-simple-banner__secondary {

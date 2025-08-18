@@ -63,7 +63,7 @@
   ">
   <div class="uf-page-header__content align-{{ section.settings.text_alignment }}">
     <div class="uf-page-header__inner align-{{ section.settings.text_alignment }}">
-      <h1 class="h1 uf-page-header__headline">{{ section.settings.headline }}</h1>
+      <h1 class="h0 uf-page-header__headline font-cursive">{{ section.settings.headline }}</h1>
       <div class="uf-page-header__subheadline">{{ section.settings.subheadline }}</div>
       {% if section.settings.button_label != blank and section.settings.button_url != blank %}
         <a href="{{ section.settings.button_url }}" class="uf-page-header__btn">
@@ -86,8 +86,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top: 120px;
-  padding-bottom: 90px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .uf-page-header__content {
@@ -103,7 +103,7 @@
 .uf-page-header__inner {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
+  max-width: 1080px;
 }
 
 .uf-page-header__inner * {
@@ -113,6 +113,7 @@
 .uf-page-header__headline {
   color: var(--custom-light);
   margin-bottom: 1.2rem;
+  margin-top:1.2rem;
 }
 
 .uf-page-header__subheadline {
