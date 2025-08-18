@@ -78,7 +78,7 @@
   style="background-color: {{ section.settings.background_color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
   <div class="testimonials__container{% if section.settings.image_align == 'left' %} testimonials__container--reverse{% endif %}">
     <div class="testimonials__left">
-      <h2 class="h1 testimonials__heading">
+      <h2 class="h1 testimonials__heading font-cursive">
         {{ section.settings.heading }}
       </h2>
       <div class="testimonials__desc">{{ section.settings.description }}</div>
@@ -97,7 +97,7 @@
             {% for reviewer in testimonial %}
               <div class="swiper-slide testimonials__card" style="background-image:url('{{ reviewer.photo | image_url: width: 600, height: 800, crop: 'center' }}');">
                 <div class="testimonials__innercard">
-                  <div class="testimonials__name">{{ reviewer.name }}</div>
+                  <div class="testimonials__name font-cursive">{{ reviewer.name }}</div>
                   <div class="testimonials__message">{{ reviewer.message }}</div>
                 </div>
               </div>
@@ -163,7 +163,7 @@
 }
 .testimonials__card {
   max-width: 700px;
-  height: 420px;
+  height: 620px;
   color: var(--custom-light);
   display: flex;
   flex-direction: column;
@@ -175,12 +175,12 @@
 }
 .testimonials__card .testimonials__innercard {
   padding: 5rem 2.3rem 2.3rem 2.3rem;
-  background: linear-gradient(to top, rgba(206, 165, 120, 0.67) 10%, transparent 100%);
+  {% comment %} background: linear-gradient(to top, rgba(206, 165, 120, 0.67) 10%, transparent 100%); {% endcomment %}
 }
-.testimonials__card:hover .testimonials__innercard {
+{% comment %} .testimonials__card:hover .testimonials__innercard {
   background: linear-gradient(to top, rgba(206, 164, 120, 0.9) 50%, transparent 100%);
   transition: all 2000ms ease-in-out;
-}
+} {% endcomment %}
 .testimonials__slider .swiper-wrapper {
   padding-bottom: 20px;
 }
@@ -188,9 +188,8 @@
   display: block;
 }
 .testimonials__name {
-  font-weight: 700;
-  font-size: 130%;
-  margin-bottom: 5px;
+ text-shadow: 0 5px 30px black;
+  font-size: 190%;
 }
 .swiper-scrollbar-drag {
   background: var(--custom-secondary);
@@ -201,9 +200,7 @@
   color: var(--custom-dark);
   line-height: 1.12;
 }
-.testimonials__heading span {
-  color: var(--custom-secondary);
-}
+
 .testimonials__desc {
   margin-bottom: 1.6rem;
   color: var(--custom-dark);

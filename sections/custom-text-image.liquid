@@ -178,7 +178,7 @@
         <div class="split__overline">{{ section.settings.overline }}</div>
       {% endif %}
 
-      <h2 class="h1 split__heading">
+      <h2 class="h1 split__heading font-cursive">
         {{ section.settings.heading }}
       </h2>
 
@@ -230,6 +230,7 @@
   align-items: center;
   justify-content: flex-end;
   min-height: 350px;
+  max-height:800px;
   overflow: hidden;
 }
 
@@ -280,7 +281,7 @@
   line-height: 1.13;
   font-weight: 400; /* normal */
 }
-.split__heading span { color: var(--custom-secondary); }
+{% comment %} .split__heading span { color: var(--custom-secondary); } {% endcomment %}
 
 /* Description */
 .split__desc {

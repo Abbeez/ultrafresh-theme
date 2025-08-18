@@ -102,7 +102,7 @@
             padding-bottom: {{ section.settings.padding_bottom | default: 64 }}px;">
   <div class="page-width">
     <div class="compare-cards__header">
-      <h1 class="h1 compare-cards__title" style="color:var(--custom-dark);">{{ section.settings.section_title }}</h1>
+      <h1 class="h1 compare-cards__title font-cursive" style="color:var(--custom-dark);">{{ section.settings.section_title }}</h1>
       {% if section.settings.section_subheading != blank %}
         <div class="compare-cards__subheading">{{ section.settings.section_subheading }}</div>
       {% endif %}
@@ -120,14 +120,15 @@
       </div>
       <!-- Center Card -->
       <div class="compare-cards__card compare-cards__card--center">
-        {% if section.settings.center_logo != blank %}
+        {% comment %} {% if section.settings.center_logo != blank %}
           <div class="compare-cards__logo">
             <img
               src="{{ section.settings.center_logo | image_url: width: 240 }}"
               alt="{{ section.settings.center_title | escape }}"
               width="140" height="60" loading="lazy">
           </div>
-        {% endif %}
+        {% endif %} {% endcomment %}
+        <div class="h2 compare-cards__card-title"><span>UltraFresh</span></div>
         <ul class="compare-cards__list compare-cards__list--center">
           {% assign center_bullets = section.settings.center_bullets | newline_to_br | split: '<br />' %}
           {% for item in center_bullets %}

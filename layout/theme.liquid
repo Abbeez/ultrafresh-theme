@@ -309,6 +309,8 @@
       {{ 'accessibility.skip_to_text' | t }}
     </a>
 
+    {% section 'custom-fonts' %}
+
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%}

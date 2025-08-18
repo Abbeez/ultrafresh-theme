@@ -124,7 +124,7 @@
 >
   <div class="uf-simple-banner__center">
     <div class="uf-simple-banner__inner">
-      <h1 class="h0 uf-simple-banner__headline">{{ section.settings.headline }}</h1>
+      <h1 class="h0 uf-simple-banner__headline font-cursive">{{ section.settings.headline }}</h1>
       <div class="uf-simple-banner__subheadline">{{ section.settings.subheadline }}</div>
       {% if section.settings.button_label != blank and section.settings.button_url != blank %}
         <a href="{{ section.settings.button_url }}" class="uf-simple-banner__btn">
@@ -149,7 +149,7 @@
     {% if section.settings.show_secondary_content %}
       <div class="uf-simple-banner__secondary"
         style="padding-top: {{ section.settings.secondary_padding_top | default: 42 }}px; padding-bottom: {{ section.settings.secondary_padding_bottom | default: 24 }}px;">
-        <h2 class="h1 uf-simple-banner__secondary-heading">{{ section.settings.secondary_heading }}</h2>
+        <h2 class="h1 uf-simple-banner__secondary-heading font-cursive">{{ section.settings.secondary_heading }}</h2>
         <div class="uf-simple-banner__secondary-subheading">{{ section.settings.secondary_subheading }}</div>
         <div class="uf-simple-banner__secondary-btns">
           {% if section.settings.sec_btn1_label != blank and section.settings.sec_btn1_url != blank %}
@@ -180,7 +180,7 @@
   justify-content: center;
   box-sizing: border-box;
   overflow: hidden;
-  padding: 250px 0 180px 0;
+  padding: 100px 0 180px 0;
   transition: padding 0.2s;
 }
 .uf-simple-banner__center {
@@ -209,8 +209,10 @@
   margin-bottom: 2.2rem;
   color: var(--custom-light);
   word-break: break-word;
+  text-shadow: 0 5px 30px black;
   /* No font-size by default, uses Dawn */
 }
+
 .uf-simple-banner--dark .uf-simple-banner__headline {
   color: var(--custom-dark);
 }
@@ -219,6 +221,7 @@
   margin-bottom: 2.2rem;
   color: var(--custom-light);
   word-break: break-word;
+  text-shadow: 0 5px 30px black;
 }
 .uf-simple-banner--dark .uf-simple-banner__subheadline {
   color: var(--custom-dark);
@@ -296,9 +299,11 @@
   margin: 0 0 1.2rem 0;
   color: var(--custom-light);
   word-break: break-word;
+   text-shadow: 0 5px 30px black;
 }
 .uf-simple-banner--dark .uf-simple-banner__secondary-heading {
   color: var(--custom-dark);
+   text-shadow: 0 5px 30px black;
 }
 .uf-simple-banner__secondary-subheading {
   color: var(--custom-light);
