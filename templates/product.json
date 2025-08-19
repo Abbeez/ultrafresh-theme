@@ -84,6 +84,7 @@
         },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Share"
           }
@@ -102,16 +103,16 @@
         "share"
       ],
       "settings": {
-        "enable_sticky_info": true,
+        "enable_sticky_info": false,
         "color_scheme": "scheme-1",
         "media_size": "small",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
+        "media_fit": "cover",
         "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "lightbox",
-        "hide_variants": true,
+        "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 72,
         "padding_bottom": 72
@@ -166,13 +167,13 @@
       "name": "Tabbed Features Section",
       "settings": {
         "custom_anchor_id": "tabbed-features",
-        "show_top_border": false,
+        "show_top_border": true,
         "show_bottom_border": false,
         "background_color": "#f8f3ed",
         "background_image": "shopify://shop_images/7_2051898e-945f-4fca-ad1f-ad0c3ffd6aa6.png",
         "image_fit": "cover",
         "overline": "Features",
-        "heading": "UltraFresh Diaper Key Features",
+        "heading": "Designed for Their <span>World</span> of Wonder",
         "description": "<p>Made with diaper-like absorbency, feather soft materials and CloudTouch™ Softness for ultimate comfort, our training pants are perfect for potty training.</p>",
         "padding_top": 0,
         "padding_bottom": 0
@@ -189,9 +190,9 @@
         "section_image": "shopify://shop_images/12_bb00b155-60ff-46ca-8b2f-36a7517debbe.png",
         "image_position": "left",
         "image_fit": "cover",
-        "overline": "Premium Quality",
-        "heading": "Protecting your little one",
-        "description": "<p>Crafting a high-quality training pants begins with the materials we select when making our products. We go to great lengths to ensure our products are gentle on your little one's skin.</p>",
+        "overline": "Size  Guide",
+        "heading": "Growing Together, <span>Every Step</span> of the Way",
+        "description": "<p>Every baby grows at their own perfect pace. Our size guide isn't just about weight – it's about supporting their unique journey from tiny newborn cuddles to confident first steps.</p>",
         "default_dot_color": "#d4a574",
         "padding_top": 0,
         "padding_bottom": 0
@@ -208,9 +209,9 @@
         "section_image": "shopify://shop_images/header1.png",
         "image_position": "right",
         "image_fit": "cover",
-        "overline": "Premium Comfort",
-        "heading": "Which Ultrafresh Diaper Is Right for Your Baby?",
-        "description": "<p>This easy guide compares Ultrafresh’s taped and pull-up diapers, so you can find the perfect fit for your baby’s stage. Whether you're caring for a newborn or chasing after a toddler, we've got you covered with comfort, protection, and convenience.</p>",
+        "overline": "About Us",
+        "heading": "Quality Without Compromise, Love <span>Without Limits</span>",
+        "description": "<p><strong>Ultrafresh Inc.</strong> was born from a simple Filipino promise: every baby deserves the gentlest care, and every parent deserves peace of mind they can afford. Our flagship <strong>Ultrafresh Diapers</strong> aren't just products – they're a parent's quiet confidence at 3 AM, a baby's freedom to explore, and a family's trust in comfort that never compromises on quality or value.<br/><br/></p>",
         "content_image": "shopify://shop_images/16.png",
         "content_image_alt": "Alt text",
         "content_image_max_width": 100,
@@ -361,7 +362,7 @@
       "settings": {
         "padding_top": 64,
         "padding_bottom": 120,
-        "heading": "Frequently Asked <span>Questions</span>",
+        "heading": "Questions from <span>Caring</span> Parents",
         "description": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one."
       }
     },
@@ -395,7 +396,7 @@
       "name": "Partners List",
       "settings": {
         "banner_image": "shopify://shop_images/Rectangle_46.png",
-        "heading": "Trusted Hands Behind Every Ultrafresh Pack",
+        "heading": "<span>Trusted Hands</span> Behind Every Ultrafresh Pack",
         "subheading": "Our distributors are more than just suppliers they’re partners in nurturing every baby’s unique journey.",
         "padding_top": 90,
         "padding_bottom": 150
@@ -405,9 +406,9 @@
       "type": "custom-reviews",
       "name": "Scoped Review Slider",
       "settings": {
-        "heading": "Happy Parents",
+        "heading": "Loved by Thousands of Moms <span>Nationwide</span>",
         "heading_image": "shopify://shop_images/18.png",
-        "heading_image_width": 80,
+        "heading_image_width": 130,
         "heading_image_alt": "Decorative icon"
       }
     }
