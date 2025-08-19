@@ -141,7 +141,7 @@
     padding-bottom: {{ section.settings.padding_bottom | default: 60 }}px;
   "
 >
-  <h2 class="h1">{% assign heading_safe = section.settings.heading | escape | replace: '&lt;span&gt;', '<span>' | replace: '&lt;/span&gt;', '</span>' %}{{ heading_safe }}</h2>
+  <h2 class="h1 font-cursive">{% assign heading_safe = section.settings.heading | escape | replace: '&lt;span&gt;', '<span>' | replace: '&lt;/span&gt;', '</span>' %}{{ heading_safe }}</h2>
   <p class="description">{{ section.settings.subheading }}</p>
   <div id="partners-list">
     {% assign partners_list = shop.metaobjects.partners.values | default: empty %}

@@ -1,0 +1,7 @@
+      {% assign target_product = product.metafields.custom.diaper_sizes.value %}
+        {% if target_product %}
+            {% for size in target_product %}
+                <span>{{ size.value }}</span>
+            {% endfor %}
+        {% endif %}
+      <p>{{ product.price }}</p>

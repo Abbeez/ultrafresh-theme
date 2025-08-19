@@ -3765,7 +3765,8 @@ ul.list-menu.list-menu--inline .header-menu {
   }
 }
 .header__menu-item:hover,
-.header__active-menu-item {
+.header__active-menu-item,
+.product__title-accent {
   background: linear-gradient(90deg, #5db431, #139cdd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3795,10 +3796,10 @@ nav.header__inline-menu li header-menu span {
   max-width: 100% !important;
 }
 
-.product__title-accent,
+/* .product__title-accent,
 #uf-faqs-section h2.h1 span {
   color: var(--custom-secondary) !important;
-}
+} */
 
 div#customer-section {
   background-size: cover;
