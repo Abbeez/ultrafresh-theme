@@ -17,10 +17,10 @@
         "background_opacity": 0,
         "text_color": "dark",
         "enable_text_shadow": false,
-        "headline": "What does it mean to feel loved...even before you <span>understand</span> the word?",
-        "subheadline": "A diaper so soft, so light, they hardly feel it – but always feel our love.",
-        "button_label": "See What Makes Us Different",
-        "button_url": "",
+        "headline": "Every Mom Has a <span>Story</span>. Every Baby Has a J<span>Journey</span>.",
+        "subheadline": "Behind every cuddle, every giggle, and every milestone is a parent searching for comfort and care. These are the real stories of families who found love, trust, and peace of mind with Ultrafresh.",
+        "button_label": "Explore Our Stories & Journeys",
+        "button_url": "#secstories",
         "show_secondary_content": false,
         "secondary_padding_top": 42,
         "secondary_padding_bottom": 24,
@@ -31,8 +31,32 @@
         "sec_btn2_label": "Taped Up Diapers",
         "sec_btn2_url": "",
         "sec_btn3_label": "Size Guide",
-        "sec_btn3_url": "",
-        "scroll_feel_image": "shopify://shop_images/15.png"
+        "sec_btn3_url": ""
+      }
+    },
+    "custom_journey_rxXRiD": {
+      "type": "custom-journey",
+      "name": "UF Journey",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_heading": false,
+        "heading": "Real Families. Real Moments.",
+        "subheading": "Each photo is a glimpse into everyday life — laughter, hugs, and milestones, with Ultrafresh quietly supporting from the background.",
+        "row1_image_1": "shopify://shop_images/Ultrafresh_Mother_Care_36938374-0a01-4d3b-9afa-de6cccaf4123.png",
+        "row1_image_2": "shopify://shop_images/image0_1.jpg",
+        "row1_image_3": "shopify://shop_images/image0.jpg",
+        "row1_image_4": "shopify://shop_images/IMG_20250422_113458.jpg",
+        "row1_image_5": "shopify://shop_images/IMG_2873.jpg",
+        "row1_image_6": "shopify://shop_images/IMG_20250731_080033_924.jpg",
+        "row1_image_7": "shopify://shop_images/IMG-fa55bd22513dc2570f6e614e8e398a47-V.jpg",
+        "row2_image_1": "shopify://shop_images/Screenshot_2025-07-25-19-31-28-534_com.instagram.android-edit.jpg",
+        "row2_image_2": "shopify://shop_images/Screenshot_2025-07-25-19-30-56-669_com.instagram.android-edit.jpg",
+        "row2_image_3": "shopify://shop_images/sabine2.jpg",
+        "row2_image_4": "shopify://shop_images/494812113_18494795215003693_7532515526751925647_n..webp",
+        "row2_image_5": "shopify://shop_images/jokamiyama.jpg",
+        "row2_image_6": "shopify://shop_images/Comfy_in_heat.png",
+        "row2_image_7": "shopify://shop_images/UF_Every_Layer.png"
       }
     },
     "main": {
@@ -58,7 +82,10 @@
       "custom_css": [],
       "name": "Scoped Review Slider",
       "settings": {
-        "heading": "210,000+ 5-Star Reviews <span>Globally</span>"
+        "heading": "Loved by Thousands of Moms <span>Nationwide</span>",
+        "heading_image": "shopify://shop_images/15.png",
+        "heading_image_width": 80,
+        "heading_image_alt": "Decorative icon"
       }
     },
     "custom_page_header_AjHQd3": {
@@ -66,44 +93,20 @@
       "name": "UF Page Header",
       "settings": {
         "header_image": "shopify://shop_images/Untitled_design_5.png",
-        "headline": "Chosen by Moms, Designed for Little Ones",
-        "subheadline": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments—each smile, wiggle, and milestone.",
+        "headline": "Because Every Baby Deserves Gentle Care",
+        "subheadline": "Ultrafresh isn’t just about diapers. It’s about helping moms and dads create little moments of joy, discovery, and connection with their child.",
         "button_label": "Explore Our Stories",
         "button_url": "shopify://collections/all",
         "text_alignment": "center"
-      }
-    },
-    "custom_journey_rxXRiD": {
-      "type": "custom-journey",
-      "name": "UF Journey",
-      "settings": {
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "heading": "More than a Diaper, Love, made visible",
-        "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
-        "row1_image_1": "shopify://shop_images/Ultrafresh_Mother_Care_36938374-0a01-4d3b-9afa-de6cccaf4123.png",
-        "row1_image_2": "shopify://shop_images/image0_1.jpg",
-        "row1_image_3": "shopify://shop_images/image0.jpg",
-        "row1_image_4": "shopify://shop_images/IMG_20250422_113458.jpg",
-        "row1_image_5": "shopify://shop_images/IMG_2873.jpg",
-        "row1_image_6": "shopify://shop_images/IMG_20250731_080033_924.jpg",
-        "row1_image_7": "shopify://shop_images/IMG-fa55bd22513dc2570f6e614e8e398a47-V.jpg",
-        "row2_image_1": "shopify://shop_images/Screenshot_2025-07-25-19-31-28-534_com.instagram.android-edit.jpg",
-        "row2_image_2": "shopify://shop_images/Screenshot_2025-07-25-19-30-56-669_com.instagram.android-edit.jpg",
-        "row2_image_3": "shopify://shop_images/sabine2.jpg",
-        "row2_image_4": "shopify://shop_images/494812113_18494795215003693_7532515526751925647_n..webp",
-        "row2_image_5": "shopify://shop_images/jokamiyama.jpg",
-        "row2_image_6": "shopify://shop_images/Comfy_in_heat.png",
-        "row2_image_7": "shopify://shop_images/UF_Every_Layer.png"
       }
     }
   },
   "order": [
     "custom_hero_banner_dnnCci",
+    "custom_journey_rxXRiD",
     "main",
     "custom_stories_REP74K",
     "custom_reviews_TTHCk3",
-    "custom_page_header_AjHQd3",
-    "custom_journey_rxXRiD"
+    "custom_page_header_AjHQd3"
   ]
 }
