@@ -64,6 +64,7 @@
         },
         "collapsible_tab_MP7pxE": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Features",
             "icon": "clipboard",
@@ -73,6 +74,7 @@
         },
         "collapsible_tab_kf9h9P": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Sizes",
             "icon": "ruler",
@@ -115,6 +117,132 @@
         "padding_bottom": 72
       }
     },
+    "custom_featured_tabs_TiUwgD": {
+      "type": "custom-featured-tabs",
+      "blocks": {
+        "feature_tab_9BWcdQ": {
+          "type": "feature_tab",
+          "settings": {
+            "tab_title": "FeatherCare™ Touch",
+            "tab_icon": "shopify://shop_images/19.png",
+            "content_title": "So light they won’t notice. So loved they’ll always know.",
+            "content_description": "<p>Every diaper begins with a touch — and FeatherCare™ makes sure it’s the softest one yet. This gentle, skin-friendly finish is what gives UltraFresh diapers their signature feel. Delicately smooth and whisper-light, it cares for your baby’s skin from the moment you put it on, reminding them they’re loved in every little way.</p>"
+          }
+        },
+        "feature_tab_ctURnJ": {
+          "type": "feature_tab",
+          "settings": {
+            "tab_title": "VelvaCloud™ Layer",
+            "tab_icon": "shopify://shop_images/15.png",
+            "content_title": "Whispers of softness — a gentle hug for every move.",
+            "content_description": "<p>The VelvaCloud™ Layer is our signature top sheet, specially designed to feel like a gentle embrace against your baby’s skin. It draws moisture away in seconds and allows air to flow freely, helping keep your baby dry, comfortable, and rash-free.</p>"
+          }
+        },
+        "feature_tab_Pp4Tgj": {
+          "type": "feature_tab",
+          "settings": {
+            "tab_title": "BreezeThin™ Shell",
+            "tab_icon": "shopify://shop_images/17.png",
+            "content_title": "No bulk. No heat. Just breathable comfort made for the tropics.",
+            "content_description": "<p>Designed for warm, active days, the BreezeThin™ Shell is our ultra-light, airy outer layer that keeps your baby feeling cool and comfy. It’s thin without compromising protection — reducing heat and humidity build-up while allowing your little one to move freely, even in tropical weather.</p>"
+          }
+        },
+        "feature_tab_QTh6Qh": {
+          "type": "feature_tab",
+          "settings": {
+            "tab_title": "FeatherFlex™ Core",
+            "tab_icon": "shopify://shop_images/16.png",
+            "content_title": "Moves with them. Protects with ease. Ultra-light, ultra-absorbent.",
+            "content_description": "<p>The FeatherFlex™ Core is the heart of every UltraFresh diaper — slim, flexible, and powerfully absorbent. It locks in wetness fast without adding bulk, so your baby can stay dry and comfortable no matter how much they roll, crawl, or play. Designed to keep up with every move, it offers worry-free protection day and night.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "feature_tab_9BWcdQ",
+        "feature_tab_ctURnJ",
+        "feature_tab_Pp4Tgj",
+        "feature_tab_QTh6Qh"
+      ],
+      "name": "Tabbed Features Section",
+      "settings": {
+        "custom_anchor_id": "tabbed-features",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "background_color": "#f8f3ed",
+        "background_image": "shopify://shop_images/7_2051898e-945f-4fca-ad1f-ad0c3ffd6aa6.png",
+        "image_fit": "cover",
+        "overline": "Features",
+        "heading": "UltraFresh Diaper Key Features",
+        "description": "<p>Made with diaper-like absorbency, feather soft materials and CloudTouch™ Softness for ultimate comfort, our training pants are perfect for potty training.</p>",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_featured_grid_M8CEGE": {
+      "type": "custom-featured-grid",
+      "name": "Features Grid Section",
+      "settings": {
+        "custom_anchor_id": "features-grid",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "background_color": "#f8f3ed",
+        "section_image": "shopify://shop_images/12_bb00b155-60ff-46ca-8b2f-36a7517debbe.png",
+        "image_position": "left",
+        "image_fit": "cover",
+        "overline": "Premium Quality",
+        "heading": "Protecting your little one",
+        "description": "<p>Crafting a high-quality training pants begins with the materials we select when making our products. We go to great lengths to ensure our products are gentle on your little one's skin.</p>",
+        "default_dot_color": "#d4a574",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_text_image_6th7FK": {
+      "type": "custom-text-image",
+      "name": "UF Text Image Split",
+      "settings": {
+        "custom_anchor_id": "image-content",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "background_color": "#f8f3ed",
+        "section_image": "shopify://shop_images/header1.png",
+        "image_position": "right",
+        "image_fit": "cover",
+        "overline": "Premium Comfort",
+        "heading": "Which Ultrafresh Diaper Is Right for Your Baby?",
+        "description": "<p>This easy guide compares Ultrafresh’s taped and pull-up diapers, so you can find the perfect fit for your baby’s stage. Whether you're caring for a newborn or chasing after a toddler, we've got you covered with comfort, protection, and convenience.</p>",
+        "content_image": "shopify://shop_images/16.png",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 100,
+        "button_label": "Let's compare Taped and Pull-up",
+        "button_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_text_image_CXyB89": {
+      "type": "custom-text-image",
+      "disabled": true,
+      "name": "UF Text Image Split",
+      "settings": {
+        "custom_anchor_id": "image-content",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "background_color": "#f8f3ed",
+        "section_image": "shopify://shop_images/header1.png",
+        "image_position": "left",
+        "image_fit": "cover",
+        "overline": "Premium Comfort",
+        "heading": "Which Ultrafresh Diaper Is Right for Your Baby?",
+        "description": "<p>This easy guide compares Ultrafresh’s taped and pull-up diapers, so you can find the perfect fit for your baby’s stage. Whether you're caring for a newborn or chasing after a toddler, we've got you covered with comfort, protection, and convenience.</p>",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 800,
+        "button_label": "Let's compare Taped and Pull-up",
+        "button_url": "shopify://blogs/product-guides/taped-vs-pull-up-which-ultrafresh-diaper-is-right-for-your-baby",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -134,48 +262,16 @@
         "padding_bottom": 28
       }
     },
-    "custom_partners_Jxm8te": {
-      "type": "custom-partners",
-      "name": "Partners List",
-      "settings": {
-        "banner_image": "shopify://shop_images/Rectangle_46.png",
-        "heading": "<span>Trusted Hands</span> Behind Every Ultrafresh Pack",
-        "subheading": "Our distributors are more than just suppliers they’re partners in nurturing every baby’s unique journey.",
-        "padding_top": 120,
-        "padding_bottom": 150
-      }
-    },
-    "custom_text_image_6th7FK": {
-      "type": "custom-text-image",
-      "name": "UF Text Image Split",
-      "settings": {
-        "custom_anchor_id": "image-content",
-        "show_top_border": true,
-        "show_bottom_border": true,
-        "background_color": "#fdfcf9",
-        "section_image": "shopify://shop_images/header1.png",
-        "image_position": "right",
-        "image_fit": "cover",
-        "overline": "Premium Comfort",
-        "heading": "Which <span>Ultrafresh Diaper</span> Is Right for Your Baby?",
-        "description": "<p>This easy guide compares Ultrafresh’s taped and pull-up diapers, so you can find the perfect fit for your baby’s stage. Whether you're caring for a newborn or chasing after a toddler, we've got you covered with comfort, protection, and convenience.</p>",
-        "content_image_alt": "Alt text",
-        "content_image_max_width": 800,
-        "button_label": "Let's compare Taped and Pull-up",
-        "button_url": "shopify://blogs/product-guides/taped-vs-pull-up-which-ultrafresh-diaper-is-right-for-your-baby",
-        "padding_top": 72,
-        "padding_bottom": 60
-      }
-    },
     "custom_testimonials_CBn8nc": {
       "type": "custom-testimonials",
+      "disabled": true,
       "name": "UF Testimonials",
       "settings": {
-        "background_color": "#ffffff",
+        "background_color": "#f8f3ed",
         "custom_anchor_id": "testimonials",
         "padding_top": 60,
         "padding_bottom": 60,
-        "heading": "<span>Every story</span> deserves gentle care",
+        "heading": "Every story deserves gentle care",
         "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
         "button_label": "Click here to see parent stories",
         "button_url": "shopify://pages/stories",
@@ -244,6 +340,7 @@
         "row_XYAcTR",
         "row_6kJzCx"
       ],
+      "disabled": true,
       "name": "Size Guide (Plain Table)",
       "settings": {
         "title": "Size Guide",
@@ -268,43 +365,14 @@
         "description": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one."
       }
     },
-    "custom_talktous_VqLL4Q": {
-      "type": "custom-talktous",
-      "name": "UF Contact Callout",
-      "settings": {
-        "show_top_border": false,
-        "show_bottom_border": false,
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "margin_top_desktop": 0,
-        "margin_bottom_desktop": 0,
-        "margin_top_mobile": 24,
-        "margin_bottom_mobile": 24,
-        "background_color": "#ecdac0",
-        "heading": "Got Questions? Let’s Talk!",
-        "subheading": "We’re here to help, anytime.",
-        "description": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need.",
-        "button_label": "Talk to Us Here",
-        "button_url": "shopify://pages/get-in-touch"
-      }
-    },
-    "custom_social_proof_JegbNq": {
-      "type": "custom-social-proof",
-      "disabled": true,
-      "name": "Social Proof List",
-      "settings": {
-        "heading": "Trusted Hands Behind Every Ultrafresh Pack",
-        "subheading": "Our distributors are more than just suppliers they’re partners in nurturing every baby’s unique journey.",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "custom_journey_rEnW4j": {
       "type": "custom-journey",
+      "disabled": true,
       "name": "UF Journey",
       "settings": {
         "padding_top": 60,
         "padding_bottom": 60,
+        "show_heading": true,
         "heading": "More than a Diaper, Love, made visible",
         "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
         "row1_image_1": "shopify://shop_images/279352301_1166509000832036_8087259750403889181_n.jpg",
@@ -321,19 +389,42 @@
         "row2_image_6": "shopify://shop_images/10.png",
         "row2_image_7": "shopify://shop_images/11.png"
       }
+    },
+    "custom_partners_Jxm8te": {
+      "type": "custom-partners",
+      "name": "Partners List",
+      "settings": {
+        "banner_image": "shopify://shop_images/Rectangle_46.png",
+        "heading": "Trusted Hands Behind Every Ultrafresh Pack",
+        "subheading": "Our distributors are more than just suppliers they’re partners in nurturing every baby’s unique journey.",
+        "padding_top": 90,
+        "padding_bottom": 150
+      }
+    },
+    "custom_reviews_9a3ntx": {
+      "type": "custom-reviews",
+      "name": "Scoped Review Slider",
+      "settings": {
+        "heading": "Happy Parents",
+        "heading_image": "shopify://shop_images/18.png",
+        "heading_image_width": 80,
+        "heading_image_alt": "Decorative icon"
+      }
     }
   },
   "order": [
     "custom_page_header_mp8qWi",
     "main",
-    "related-products",
-    "custom_partners_Jxm8te",
+    "custom_featured_tabs_TiUwgD",
+    "custom_featured_grid_M8CEGE",
     "custom_text_image_6th7FK",
+    "custom_text_image_CXyB89",
+    "related-products",
     "custom_testimonials_CBn8nc",
     "custom_size_guide_Ef7wgd",
     "custom_faqs_mMkVyW",
-    "custom_talktous_VqLL4Q",
-    "custom_social_proof_JegbNq",
-    "custom_journey_rEnW4j"
+    "custom_journey_rEnW4j",
+    "custom_partners_Jxm8te",
+    "custom_reviews_9a3ntx"
   ]
 }

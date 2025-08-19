@@ -17,7 +17,7 @@
         "background_opacity": 0,
         "text_color": "dark",
         "enable_text_shadow": false,
-        "headline": "Every Mom Has a <span>Story</span>. Every Baby Has a J<span>Journey</span>.",
+        "headline": "Every Mom Has a <span>Story</span>. Every Baby Has a <span>Journey</span>.",
         "subheadline": "Behind every cuddle, every giggle, and every milestone is a parent searching for comfort and care. These are the real stories of families who found love, trust, and peace of mind with Ultrafresh.",
         "button_label": "Explore Our Stories & Journeys",
         "button_url": "#secstories",

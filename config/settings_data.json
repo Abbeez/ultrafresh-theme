@@ -160,7 +160,7 @@
               "apply_h6": false,
               "apply_span": false,
               "apply_p": false,
-              "apply_custom": ".font-cursive"
+              "apply_custom": ".font-cursive, .product__title h1"
             }
           }
         },
