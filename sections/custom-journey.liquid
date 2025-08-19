@@ -15,6 +15,12 @@
       "default": 60
     },
     {
+      "type": "checkbox",
+      "id": "show_heading",
+      "label": "Show heading section",
+      "default": true
+    },
+    {
       "type": "text",
       "id": "heading",
       "label": "Heading",
@@ -60,12 +66,14 @@
     padding-bottom: {{ section.settings.padding_bottom | default: 60 }}px;
   "
 >
-  <div class="uf-journey__heading-wrap page-width">
-    <h2 class="h1 uf-journey__heading font-cursive">
-      {{ section.settings.heading }}
-    </h2>
-    <div class="uf-journey__subheading">{{ section.settings.subheading }}</div>
-  </div>
+  {% if section.settings.show_heading %}
+    <div class="uf-journey__heading-wrap page-width">
+      <h2 class="h1 uf-journey__heading font-cursive">
+        {{ section.settings.heading }}
+      </h2>
+      <div class="uf-journey__subheading">{{ section.settings.subheading }}</div>
+    </div>
+  {% endif %}
 
   <div class="uf-journey__images-wrap">
     {% assign images_row1 = "" %}
@@ -216,12 +224,26 @@
   justify-content: center;
   overflow: hidden;
   background: #f7f7f4;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.uf-journey__img-wrap:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  z-index: 2;
 }
 .uf-journey__img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.uf-journey__img-wrap:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1) contrast(1.05);
 }
 @media (max-width: 1200px) {
   .uf-journey__img-wrap {

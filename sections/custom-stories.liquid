@@ -47,7 +47,7 @@
       {% endif %}
     </div>
 
-    <div class="uf-stories-swiper">
+    <div class="uf-stories-swiper" id="secstories">
       <div class="swiper" id="uf-stories-slider">
         <div class="swiper-wrapper">
           {% assign reviews = shop.metaobjects.testimonials.values %}
@@ -59,6 +59,26 @@
                   <div class="uf-story-content">
                     <h3 class="h1 uf-story-name font-cursive">{{ item.name }}</h3>
                     <div class="uf-story-message">{{ item.message }}</div>
+                    <!-- Product Information Section -->
+                    {% assign featured_product = item.featured_product.value %}
+                    {% if featured_product != blank %}
+                      <div class="uf-story-product-info">
+                        <div class="uf-product-details">
+                          <div class="uf-product-category">
+                            <span class="uf-product-label">Category:</span>
+                            <span class="uf-product-value">{{ featured_product.type | default: 'Diaper' }}</span>
+                          </div>
+                          <div class="uf-product-name">
+                            <span class="uf-product-label">Product:</span>
+                            <span class="uf-product-value">{{ featured_product.title }}</span>
+                          </div>
+                        </div>
+                        <a href="{{ featured_product.url }}" class="uf-shop-now-btn">
+                          Shop Now
+                          <span class="uf-shop-now-btn-arrow">›</span>
+                        </a>
+                      </div>
+                    {% endif %}
                   </div>
                 </div>
               </div>
@@ -166,6 +186,7 @@
   flex-direction: row;
   max-width: 1000px;
   margin: 0 auto;
+  align-items: center; /* Center align items */
 }
 
 .uf-story-card:hover {
@@ -175,12 +196,13 @@
 
 .uf-story-img {
   width: 50%;
-  height: 500px;
+  height: 650px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   flex-shrink: 0;
   position: relative;
+  align-self: stretch; /* Take up full height of parent */
 }
 
 .uf-story-img::after {
@@ -201,12 +223,14 @@
   flex-direction: column;
   justify-content: center;
   background: transparent;
+  align-items: flex-start; /* Align content to start */
 }
 
 .uf-story-name {
   color: var(--custom-dark, #333);
   font-weight: 300;
   margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
   line-height: 1.2;
   font-family: inherit;
 }
@@ -219,8 +243,86 @@
   color: var(--custom-dark, #333);
   opacity: 0.85;
   line-height: 1.7;
-  flex-grow: 1;
+  margin-bottom: 1.5rem;
   font-weight: 300;
+}
+
+/* Product Information Section */
+.uf-story-product-info {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+.uf-product-details {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.uf-product-category,
+.uf-product-name {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.uf-product-category:last-child,
+.uf-product-name:last-child {
+  margin-bottom: 0;
+}
+
+.uf-product-label {
+  font-weight: 600;
+  color: var(--custom-dark, #333);
+  min-width: 80px;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.uf-product-value {
+  color: var(--custom-dark, #333);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.uf-shop-now-btn {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: var(--custom-dark);
+  font-weight: 500;
+  padding: 0.8rem 1.5rem; /* Reduced padding */
+  border: 1px solid var(--custom-dark);
+  width: auto; /* Remove full width */
+  min-width: auto; /* Remove min-width constraint */
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  justify-content: center;
+}
+
+.uf-shop-now-btn-arrow {
+  margin-left: 0.6em;
+  font-size: 1.2em;
+}
+
+.uf-shop-now-btn:hover {
+  background: var(--custom-primary);
+  color: var(--custom-dark);
+  border-color: var(--custom-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 749px) {
+  .uf-product-label {
+    min-width: 70px;
+  }
+  
+  .uf-shop-now-btn {
+    padding: 0.7rem 1.3rem; /* Smaller padding for mobile */
+  }
 }
 
 /* Navigation Buttons */
@@ -313,6 +415,7 @@
   .uf-story-img {
     width: 100%;
     height: 350px;
+    align-self: auto; /* Reset align-self for mobile layout */
   }
   
   .uf-story-content {
@@ -432,7 +535,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     pagination: {
       el: '.uf-swiper-pagination',
