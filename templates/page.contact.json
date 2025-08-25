@@ -17,11 +17,38 @@
         "padding_bottom": 36
       }
     },
+    "custom_hero_banner_VGFVnw": {
+      "type": "custom-hero-banner",
+      "name": "UF Simple Home Banner",
+      "settings": {
+        "banner_image": "shopify://shop_images/Ultrafresh_Contact_Us.png",
+        "background_color": "#f8f9fa",
+        "background_opacity": 0,
+        "text_color": "dark",
+        "enable_text_shadow": false,
+        "headline": "What does it mean to feel loved...even before you understand the word?",
+        "subheadline": "A diaper so soft, so light, they hardly feel it – but always feel our love.",
+        "button_label": "See What Makes Us Different",
+        "button_url": "",
+        "show_secondary_content": false,
+        "secondary_padding_top": 42,
+        "secondary_padding_bottom": 24,
+        "secondary_heading": "Purposefully Made. Elegantly Designed.",
+        "secondary_subheading": "UltraFresh protects with care and performs with grace — a reflection of love in every detail",
+        "sec_btn1_label": "Pull Up Diapers",
+        "sec_btn1_url": "",
+        "sec_btn2_label": "Taped Up Diapers",
+        "sec_btn2_url": "",
+        "sec_btn3_label": "Size Guide",
+        "sec_btn3_url": ""
+      }
+    },
     "custom_page_header_4ekbct": {
       "type": "custom-page-header",
+      "disabled": true,
       "name": "Page Header",
       "settings": {
-        "header_image": "shopify://shop_images/Untitled_design_3.png",
+        "header_image": "shopify://shop_images/Get_in_touch.png",
         "headline": "Got a question? Let's talk.",
         "subheadline": "We’re here to help with anything Ultrafresh — just send us a message.",
         "button_label": "Explore Our Collection",
@@ -42,6 +69,7 @@
   },
   "order": [
     "main",
+    "custom_hero_banner_VGFVnw",
     "custom_page_header_4ekbct",
     "form"
   ]

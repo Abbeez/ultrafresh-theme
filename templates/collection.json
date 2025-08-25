@@ -9,12 +9,24 @@
  */
 {
   "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
     "custom_hero_banner_kteJcq": {
       "type": "custom-hero-banner",
       "name": "UF Simple Home Banner",
       "settings": {
         "banner_image": "shopify://shop_images/UF_Features.png",
+        "background_color": "#f8f9fa",
+        "background_opacity": 0,
         "text_color": "light",
+        "enable_text_shadow": true,
         "headline": "Features That Keep Your Baby UltraFresh",
         "subheadline": "Every diaper is made with skin-loving softness, all-day dryness, and a breathable design that stays gentle on delicate skin. Our features aren’t just smart — they’re made for peace of mind, from the first change to every overnight cuddle.",
         "button_label": "Explore UltraFresh Features",
@@ -32,49 +44,186 @@
         "sec_btn3_url": ""
       }
     },
-    "rich_text_MTiApq": {
-      "type": "rich-text",
+    "custom_multi_images_MXjAmB": {
+      "type": "custom-multi-images",
+      "name": "2 Column Multi-Images",
+      "settings": {
+        "custom_anchor_id": "multi-images-content",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "background_color": "#f8f3ed",
+        "section_image_1": "shopify://shop_images/26.png",
+        "section_image_2": "shopify://shop_images/21_140a3286-6f41-46f5-8534-df5bb73b348e.png",
+        "section_image_3": "shopify://shop_images/22.png",
+        "section_image_4": "shopify://shop_images/24.png",
+        "fade_duration": 3,
+        "image_position": "left",
+        "image_fit": "cover",
+        "overline": "Premium Comfort",
+        "heading": "Why does every layer feel like Love?",
+        "description": "<p><strong>Whispers of softness — a gentle hug for every move.</strong><br/><br/>The VelvaCloud™ Layer is our signature top sheet, specially designed to feel like a gentle embrace against your baby’s skin. It draws moisture away in seconds and allows air to flow freely, helping keep your baby dry, comfortable, and rash-free.</p><p>Whether it’s nap time or playtime, this layer moves with your little one — offering softness and protection that lasts.</p><h4>Key Benefits:</h4><ul><li>Feather-soft on delicate skin<br/></li><li>Quickly wicks away moisture<br/></li><li>Breathable to help prevent rashes<br/></li><li>Moves with your baby for all-day comfort</li></ul>",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 800,
+        "button_label": "See What's Inside",
+        "button_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_multi_images_Ma9NAT": {
+      "type": "custom-multi-images",
+      "name": "2 Column Multi-Images",
+      "settings": {
+        "custom_anchor_id": "multi-images-content",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "background_color": "#f8f3ed",
+        "section_image_1": "shopify://shop_images/Layers_1.png",
+        "section_image_2": "shopify://shop_images/23.png",
+        "section_image_3": "shopify://shop_images/25.png",
+        "section_image_4": "shopify://shop_images/20_5d54b361-5ef0-49b2-83d6-540e96fd217f.png",
+        "fade_duration": 4,
+        "image_position": "right",
+        "image_fit": "cover",
+        "overline": "Premium Comfort",
+        "heading": "Why does every layer feel like Love?",
+        "description": "<p><strong>Whispers of softness — a gentle hug for every move.</strong><br/><br/>The VelvaCloud™ Layer is our signature top sheet, specially designed to feel like a gentle embrace against your baby’s skin. It draws moisture away in seconds and allows air to flow freely, helping keep your baby dry, comfortable, and rash-free.</p><p>Whether it’s nap time or playtime, this layer moves with your little one — offering softness and protection that lasts.</p><h4>Key Benefits:</h4><ul><li>Feather-soft on delicate skin<br/></li><li>Quickly wicks away moisture<br/></li><li>Breathable to help prevent rashes<br/></li><li>Moves with your baby for all-day comfort</li></ul>",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 800,
+        "button_label": "See What's Inside",
+        "button_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_text_image_RfgUDY": {
+      "type": "custom-text-image",
+      "name": "Image and Content Column",
+      "settings": {
+        "custom_anchor_id": "image-content",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "background_color": "#f8f3ed",
+        "section_image": "shopify://shop_images/assets_task_01k0yhvsvmfs4s7rjc2rf14xe6_1753372229_img_1.webp",
+        "image_position": "left",
+        "image_fit": "cover",
+        "overline": "Premium Comfort",
+        "heading": "VelvaCloud™ Layer",
+        "description": "<p><strong>Whispers of softness — a gentle hug for every move.</strong><br/><br/>The VelvaCloud™ Layer is our signature top sheet, specially designed to feel like a gentle embrace against your baby’s skin. It draws moisture away in seconds and allows air to flow freely, helping keep your baby dry, comfortable, and rash-free.</p><p>Whether it’s nap time or playtime, this layer moves with your little one — offering softness and protection that lasts.</p><h4>Key Benefits:</h4><ul><li>Feather-soft on delicate skin<br/></li><li>Quickly wicks away moisture<br/></li><li>Breathable to help prevent rashes<br/></li><li>Moves with your baby for all-day comfort</li></ul>",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 800,
+        "button_label": "Featured 2: BreezeThin™ Shell",
+        "button_url": "#breezethin",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_featured_tabs_HxkCjw": {
+      "type": "custom-featured-tabs",
       "blocks": {
-        "heading_gcHxjU": {
-          "type": "heading",
+        "feature_tab_AkLhHB": {
+          "type": "feature_tab",
           "settings": {
-            "heading": "Every Layer Has a Purpose — Here’s How",
-            "heading_size": "h1"
+            "tab_title": "Feather Soft",
+            "content_title": "Feather Soft",
+            "content_description": "<p>Crafted with an enhanced fibre blend and high-GSM topsheet for luxurious comfort</p>"
           }
         },
-        "text_hfAdwc": {
-          "type": "text",
+        "feature_tab_y9rkjr": {
+          "type": "feature_tab",
           "settings": {
-            "text": "<p>From top to bottom, each layer of an UltraFresh diaper is designed with your baby’s comfort, dryness, and skin health in mind. Let’s walk through the features that make all the difference.</p>"
+            "tab_title": "Resealable Tab",
+            "content_title": "Resealable Tab",
+            "content_description": "<p>Easy-to-use resealable tabs for convenient adjustments</p>"
           }
         },
-        "button_eaHDK8": {
-          "type": "button",
-          "disabled": true,
+        "feature_tab_RLExx9": {
+          "type": "feature_tab",
           "settings": {
-            "button_label": "Let's get started!",
-            "button_link": "#",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "tab_title": "Dermatologically Tested",
+            "content_title": "Dermatologically Tested",
+            "content_description": "<p>Tested by dermatologists to ensure safety for sensitive skin</p>"
           }
         }
       },
       "block_order": [
-        "heading_gcHxjU",
-        "text_hfAdwc",
-        "button_eaHDK8"
+        "feature_tab_AkLhHB",
+        "feature_tab_y9rkjr",
+        "feature_tab_RLExx9"
       ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
+      "name": "Tabbed Features Section",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-5",
-        "full_width": true,
+        "custom_anchor_id": "tabbed-features",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "background_color": "#f8f3ed",
+        "background_image": "shopify://shop_images/24.png",
+        "image_fit": "cover",
+        "overline": "Premium Comfort",
+        "heading": "Our Training Pants Features",
+        "description": "<p>Made with diaper-like absorbency, feather soft materials and CloudTouch™ Softness for ultimate comfort, our training pants are perfect for potty training.</p>",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "custom_text_image_PKUqNm": {
+      "type": "custom-text-image",
+      "disabled": true,
+      "name": "Image and Content Column",
+      "settings": {
+        "custom_anchor_id": "breezethin",
+        "show_top_border": true,
+        "show_bottom_border": true,
+        "background_color": "#fdfcf9",
+        "section_image": "shopify://shop_images/11_9b2dc811-5497-4d39-896f-8a9478fa6776.png",
+        "image_position": "right",
+        "image_fit": "cover",
+        "overline": "Premium Comfort",
+        "heading": "BreezeThin™ Shell",
+        "description": "<p><strong>No bulk. No heat. Just breathable comfort made for the tropics.</strong><br/><br/>Designed for warm, active days, the BreezeThin™ Shell is our ultra-light, airy outer layer that keeps your baby feeling cool and comfy. It’s thin without compromising protection — reducing heat and humidity build-up while allowing your little one to move freely, even in tropical weather.</p><h4>Key Benefits:</h4><ul><li>Lightweight and breathable — perfect for hot, humid climates<br/></li><li>Reduces heat build-up — keeps baby cool and fresh<br/></li><li>No bulky layers — slim profile for easy movement<br/></li><li><strong>Comfort in every move</strong> — ideal for playtime, daytime naps, and warm nights</li></ul>",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 800,
+        "button_label": "Feature 3: FeatherFlex™ Core",
+        "button_url": "#featurecore",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_featured_section_XDRpUd": {
+      "type": "custom-featured-section",
+      "disabled": true,
+      "name": "Diaper Feature Section",
+      "settings": {
+        "section_heading": "Ultrafresh Features",
+        "image_1": "shopify://shop_images/UF_Taped_Features.png",
+        "image_2": "shopify://shop_images/UF_Pull-up_Features.png"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "custom_css": [
+        ".product-grid-container .grid {justify-content: center;}",
+        ".product-grid-container .card__information h3 {font-size: 150%;}",
+        ".product-grid-container .card__information {text-align: center;}",
+        ".product-grid-container .card-information {text-align: center;}"
+      ],
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": false,
         "padding_top": 72,
-        "padding_bottom": 72
+        "padding_bottom": 36
       }
     },
     "custom_feature_slider_GDeDfe": {
@@ -126,230 +275,13 @@
         "pad_bottom": 92
       }
     },
-    "custom_text_image_RfgUDY": {
-      "type": "custom-text-image",
-      "name": "Image and Content Column",
-      "settings": {
-        "custom_anchor_id": "image-content",
-        "section_image": "shopify://shop_images/assets_task_01k0yhvsvmfs4s7rjc2rf14xe6_1753372229_img_1.webp",
-        "image_position": "left",
-        "heading": "VelvaCloud™ Layer",
-        "description": "<p><strong>Whispers of softness — a gentle hug for every move.</strong><br/><br/>The VelvaCloud™ Layer is our signature top sheet, specially designed to feel like a gentle embrace against your baby’s skin. It draws moisture away in seconds and allows air to flow freely, helping keep your baby dry, comfortable, and rash-free.</p><p>Whether it’s nap time or playtime, this layer moves with your little one — offering softness and protection that lasts.</p><h4>Key Benefits:</h4><ul><li>Feather-soft on delicate skin<br/></li><li>Quickly wicks away moisture<br/></li><li>Breathable to help prevent rashes<br/></li><li>Moves with your baby for all-day comfort</li></ul>",
-        "button_label": "Featured 2: BreezeThin™ Shell",
-        "button_url": "#breezethin",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_text_image_PKUqNm": {
-      "type": "custom-text-image",
-      "disabled": true,
-      "name": "Image and Content Column",
-      "settings": {
-        "custom_anchor_id": "breezethin",
-        "section_image": "shopify://shop_images/11_9b2dc811-5497-4d39-896f-8a9478fa6776.png",
-        "image_position": "right",
-        "heading": "BreezeThin™ Shell",
-        "description": "<p><strong>No bulk. No heat. Just breathable comfort made for the tropics.</strong><br/><br/>Designed for warm, active days, the BreezeThin™ Shell is our ultra-light, airy outer layer that keeps your baby feeling cool and comfy. It’s thin without compromising protection — reducing heat and humidity build-up while allowing your little one to move freely, even in tropical weather.</p><h4>Key Benefits:</h4><ul><li>Lightweight and breathable — perfect for hot, humid climates<br/></li><li>Reduces heat build-up — keeps baby cool and fresh<br/></li><li>No bulky layers — slim profile for easy movement<br/></li><li><strong>Comfort in every move</strong> — ideal for playtime, daytime naps, and warm nights</li></ul>",
-        "button_label": "Feature 3: FeatherFlex™ Core",
-        "button_url": "#featurecore",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "banner": {
-      "type": "main-collection-banner",
-      "disabled": true,
-      "settings": {
-        "show_collection_description": true,
-        "show_collection_image": false,
-        "color_scheme": "scheme-1"
-      }
-    },
-    "custom_featured_section_XDRpUd": {
-      "type": "custom-featured-section",
-      "disabled": true,
-      "name": "Diaper Feature Section",
-      "settings": {
-        "section_heading": "Ultrafresh Features",
-        "image_1": "shopify://shop_images/UF_Taped_Features.png",
-        "image_2": "shopify://shop_images/UF_Pull-up_Features.png"
-      }
-    },
-    "product-grid": {
-      "type": "main-collection-product-grid",
-      "custom_css": [
-        ".product-grid-container .grid {justify-content: center;}",
-        ".product-grid-container .card__information h3 {font-size: 150%;}",
-        ".product-grid-container .card__information {text-align: center;}",
-        ".product-grid-container .card-information {text-align: center;}"
-      ],
-      "settings": {
-        "products_per_page": 16,
-        "columns_desktop": 4,
-        "columns_mobile": "2",
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": true,
-        "show_rating": true,
-        "quick_add": "none",
-        "enable_filtering": true,
-        "filter_type": "vertical",
-        "enable_sorting": false,
-        "padding_top": 72,
-        "padding_bottom": 36
-      }
-    },
-    "featured_product_PnTiFT": {
-      "type": "featured-product",
-      "blocks": {
-        "text_qPEEn4": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_MeYhQA": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_eVDFtP": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_XJDTzK": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_9jiUnR": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_Q3kjyD": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_W3PWfw": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_qPEEn4",
-        "title_MeYhQA",
-        "price_eVDFtP",
-        "variant_picker_XJDTzK",
-        "quantity_selector_9jiUnR",
-        "buy_buttons_Q3kjyD",
-        "share_W3PWfw"
-      ],
-      "disabled": true,
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "ultrafresh-ultra-thin-pull-up-diaper-large-30s",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "small",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "right",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 100,
-        "padding_bottom": 52
-      }
-    },
-    "featured_product_7XTKVM": {
-      "type": "featured-product",
-      "blocks": {
-        "text_axGFw3": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_txC9EL": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_BXtWqe": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_AgpJLq": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_i87fR4": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_aqnb4h": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_m4k7f3": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_axGFw3",
-        "title_txC9EL",
-        "price_BXtWqe",
-        "variant_picker_AgpJLq",
-        "quantity_selector_i87fR4",
-        "buy_buttons_aqnb4h",
-        "share_m4k7f3"
-      ],
-      "disabled": true,
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "ultrafresh-ultra-thin-tape-diaper",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "small",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 100,
-        "padding_bottom": 52
-      }
-    },
     "custom_journey_MtQzqx": {
       "type": "custom-journey",
       "name": "UF Journey",
       "settings": {
         "padding_top": 60,
         "padding_bottom": 60,
+        "show_heading": true,
         "heading": "More than a Diaper, Love, made visible",
         "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
         "row1_image_1": "shopify://shop_images/Frame_287.png",
@@ -366,16 +298,16 @@
     }
   },
   "order": [
-    "custom_hero_banner_kteJcq",
-    "rich_text_MTiApq",
-    "custom_feature_slider_GDeDfe",
-    "custom_text_image_RfgUDY",
-    "custom_text_image_PKUqNm",
     "banner",
+    "custom_hero_banner_kteJcq",
+    "custom_multi_images_MXjAmB",
+    "custom_multi_images_Ma9NAT",
+    "custom_text_image_RfgUDY",
+    "custom_featured_tabs_HxkCjw",
+    "custom_text_image_PKUqNm",
     "custom_featured_section_XDRpUd",
     "product-grid",
-    "featured_product_PnTiFT",
-    "featured_product_7XTKVM",
+    "custom_feature_slider_GDeDfe",
     "custom_journey_MtQzqx"
   ]
 }
