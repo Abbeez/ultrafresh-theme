@@ -12,7 +12,7 @@
       "type": "textarea",
       "id": "partner_subheading",
       "label": "Subheading",
-      "default": "Ultrafresh distributors are more than just suppliers—they're partners in nurturing every baby’s unique journey."
+      "default": "Ultrafresh distributors are more than just suppliers—they're partners in nurturing every baby's unique journey."
     },
     {
       "type": "number",
@@ -51,21 +51,10 @@
     </div>
 
     <div class="uf-partner-wall__grid">
-      {% assign partners = shop.metaobjects.partners.values %}
-      {% assign regions = partners | map: "country" | uniq %}
-
-      {% for region in regions %}
-        <div class="uf-partner-wall__block">
-          <h3 class="uf-partner-wall__region">{{ region }}</h3>
-          <div class="uf-partner-wall__location-list">
-            {% for partner in partners %}
-              {% if partner.country == region %}
-                 <div class="uf-partner-wall__location">
-                   <a href="{{partner.system.url}}" class="uf-location">{{ partner.name }}</a>
-                 </div>
-              {% endif %}
-            {% endfor %}
-          </div>
+      {% assign partners = shop.metaobjects.partners.values | sort: "name" %}
+      {% for partner in partners %}
+        <div class="uf-partner-wall__location">
+          <a href="{{partner.system.url}}" class="uf-location">{{ partner.name }}</a>
         </div>
       {% endfor %}
     </div>
@@ -87,23 +76,28 @@
   max-width: 1400px;
   margin: 0 auto;
   gap: 3rem;
+  align-items: center;
 }
 
 .uf-partner-wall__intro {
   flex: 1 1 40%;
   max-width: 40%;
 }
+
 .uf-partner-wall__label {
   margin-bottom: 0.5rem;
 }
+
 .uf-partner-wall__heading {
   font-weight: normal;
   margin-bottom: 1rem;
-  margin-top:1rem;
+  margin-top: 1rem;
 }
+
 .uf-partner-wall__heading span {
   color: var(--custom-secondary);
 }
+
 .uf-partner-wall__subheading {
   line-height: 1.6;
   opacity: 0.95;
@@ -114,64 +108,114 @@
   max-width: 55%;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
   align-content: flex-start;
 }
-.uf-partner-wall__block {
-  flex: 1 1 220px;
-  min-width: 180px;
-}
-.uf-partner-wall__region {
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-.uf-partner-wall__location-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
+
 .uf-partner-wall__location {
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 200px;
   white-space: nowrap;
   line-height: 1.4;
   user-select: none;
   cursor: default;
   color: var(--custom-dark);
   font-weight: 500;
-  flex: 1 1 45%;
   font-size: 120%;
   font-family: var(--font-heading-family);
   text-align: right;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
+.uf-partner-wall__location a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.uf-partner-wall__location a:hover {
+  color: var(--custom-secondary);
+  transition: color 0.3s ease;
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .uf-partner-wall__location {
+    flex: 1 1 calc(25% - 1rem);
+  }
+}
+
+/* Desktop */
+@media (max-width: 1199px) and (min-width: 991px) {
+  .uf-partner-wall__location {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+}
 
 /* Tablet */
 @media (max-width: 990px) {
   .uf-partner-wall__container {
     flex-direction: column;
     padding: 0 2rem;
+    gap: 2rem;
   }
+  
   .uf-partner-wall__intro,
   .uf-partner-wall__grid {
     max-width: 100%;
     flex: 1 1 100%;
   }
+  
   .uf-partner-wall__intro {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .uf-partner-wall__grid {
+    gap: 0.75rem;
+  }
+  
+  .uf-partner-wall__location {
+    flex: 1 1 calc(50% - 0.75rem);
+    min-width: 150px;
+    text-align: right;
+    justify-content: flex-end;
   }
 }
 
 /* Mobile */
 @media (max-width: 749px) {
-  .uf-partner-wall__grid {
+  .uf-partner-wall__container {
+    padding: 0 1rem;
     gap: 1.5rem;
   }
-  .uf-partner-wall__block {
-    flex: 1 1 100%;
+  
+  .uf-partner-wall__grid {
+    gap: 0.5rem;
   }
+  
   .uf-partner-wall__location {
     flex: 1 1 100%;
-    text-align: left;
+    min-width: auto;
+    text-align: center;
+    font-size: 110%;
+    justify-content: center;
   }
 }
 
+/* Small Mobile */
+@media (max-width: 480px) {
+  .uf-partner-wall__container {
+    padding: 0 0.75rem;
+  }
+  
+  .uf-partner-wall__heading {
+    font-size: 1.5rem;
+  }
+  
+  .uf-partner-wall__location {
+    font-size: 100%;
+  }
+}
 </style>
