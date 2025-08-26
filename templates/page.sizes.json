@@ -17,6 +17,31 @@
         "padding_bottom": 28
       }
     },
+    "custom_hero_banner_Ek4qjC": {
+      "type": "custom-hero-banner",
+      "name": "UF Simple Home Banner",
+      "settings": {
+        "background_color": "#f8f3ed",
+        "background_opacity": 0,
+        "text_color": "dark",
+        "enable_text_shadow": false,
+        "headline": "What does it mean to feel loved...even before you understand the word?",
+        "subheadline": "A diaper so soft, so light, they hardly feel it – but always feel our love.",
+        "button_label": "Check the sizes",
+        "button_url": "#sizeguide",
+        "show_secondary_content": false,
+        "secondary_padding_top": 42,
+        "secondary_padding_bottom": 24,
+        "secondary_heading": "Purposefully Made. Elegantly Designed.",
+        "secondary_subheading": "UltraFresh protects with care and performs with grace — a reflection of love in every detail",
+        "sec_btn1_label": "Pull Up Diapers",
+        "sec_btn1_url": "",
+        "sec_btn2_label": "Taped Up Diapers",
+        "sec_btn2_url": "",
+        "sec_btn3_label": "Size Guide",
+        "sec_btn3_url": ""
+      }
+    },
     "custom_table_compare_pXRAeh": {
       "type": "custom-table-compare",
       "blocks": {
@@ -86,9 +111,13 @@
       "name": "Product Comparison Table",
       "settings": {
         "section_id": "comparison-table",
+        "background_color": "#f8f3ed",
+        "background_position": "center",
+        "background_size": "cover",
+        "background_opacity": 100,
         "padding_top": 60,
         "padding_bottom": 60,
-        "table_heading": "Product Comparison",
+        "table_heading": "Size  Guide",
         "column_1_title": "Features",
         "column_2_title": "Pull Up Diapers",
         "column_3_title": "Taped Diapers",
@@ -98,18 +127,102 @@
         "row_text_color": "#333333"
       }
     },
-    "custom_hero_banner_Ek4qjC": {
+    "custom_column_tabs_9GpWFM": {
+      "type": "custom-column-tabs",
+      "blocks": {
+        "size_item_z7drB6": {
+          "type": "size_item",
+          "settings": {
+            "size_label": "SMALL",
+            "size_info": "For ages 0 - 3 months old (4 to 8 kilograms)"
+          }
+        },
+        "size_item_qVJwbx": {
+          "type": "size_item",
+          "settings": {
+            "size_label": "MEDIUM",
+            "size_info": "For ages 3-11 months old (6 to 11 kilograms)"
+          }
+        },
+        "size_item_BNJ66h": {
+          "type": "size_item",
+          "settings": {
+            "size_label": "LARGE",
+            "size_info": "For ages 5-11 months old (9 to 14 kilograms)"
+          }
+        },
+        "size_item_cQDmUn": {
+          "type": "size_item",
+          "settings": {
+            "size_label": "EXTRA LARGE",
+            "size_info": "For ages 1 to 2 years old (12 to 17 kilograms)"
+          }
+        },
+        "size_item_UDkiJb": {
+          "type": "size_item",
+          "settings": {
+            "size_label": "DOUBLE XL",
+            "size_info": "For ages 1 to 2 years old (15 kilograms and up)"
+          }
+        },
+        "size_item_Rn4Ght": {
+          "type": "size_item",
+          "settings": {
+            "size_label": "TRIPLE XL",
+            "size_info": "For ages 1 to 2 years old (18 kilograms and up)"
+          }
+        }
+      },
+      "block_order": [
+        "size_item_z7drB6",
+        "size_item_qVJwbx",
+        "size_item_BNJ66h",
+        "size_item_cQDmUn",
+        "size_item_UDkiJb",
+        "size_item_Rn4Ght"
+      ],
+      "name": "2 Column Size Guide",
+      "settings": {
+        "background_color": "#f5f3f0",
+        "background_position": "center",
+        "background_size": "cover",
+        "background_opacity": 100,
+        "section_id": "size-guide",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "heading": "Perfect Size, Happy Baby",
+        "description": "Our size guide helps you choose the right diaper for maximum comfort, leak protection, and happy smiles at every stage.",
+        "baby_image": "shopify://shop_images/Baby_Diaper_-_UF.png",
+        "baby_image_alt": "Happy baby sitting",
+        "size_label_bg": "#d4a574",
+        "size_label_text": "#ffffff",
+        "size_info_bg": "#ffffff",
+        "size_info_text": "#666666"
+      }
+    },
+    "custom_faqs_77VB4U": {
+      "type": "custom-faqs",
+      "name": "Frequently Asked Question",
+      "settings": {
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "heading": "Frequently Asked Questions",
+        "description": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one."
+      }
+    },
+    "custom_hero_banner_eewYxB": {
       "type": "custom-hero-banner",
       "name": "UF Simple Home Banner",
       "settings": {
-        "background_color": "#f8f3ed",
-        "background_opacity": 0,
-        "text_color": "dark",
+        "banner_image": "shopify://shop_images/Untitled_design_4.png",
+        "background_color": "#d4a574",
+        "background_opacity": 75,
+        "text_color": "light",
         "enable_text_shadow": false,
         "headline": "What does it mean to feel loved...even before you understand the word?",
         "subheadline": "A diaper so soft, so light, they hardly feel it – but always feel our love.",
-        "button_label": "See What Makes Us Different",
-        "button_url": "",
+        "button_label": "Explore UltraFresh",
+        "button_url": "shopify://collections/all",
         "show_secondary_content": false,
         "secondary_padding_top": 42,
         "secondary_padding_bottom": 24,
@@ -122,11 +235,40 @@
         "sec_btn3_label": "Size Guide",
         "sec_btn3_url": ""
       }
+    },
+    "custom_journey_CTfHdB": {
+      "type": "custom-journey",
+      "name": "UF Journey",
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_heading": true,
+        "heading": "More than a Diaper, Love, made visible",
+        "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
+        "row1_image_1": "shopify://shop_images/Ultrafresh_Mother_Care_36938374-0a01-4d3b-9afa-de6cccaf4123.png",
+        "row1_image_2": "shopify://shop_images/image0_1.jpg",
+        "row1_image_3": "shopify://shop_images/image0.jpg",
+        "row1_image_4": "shopify://shop_images/IMG_20250422_113458.jpg",
+        "row1_image_5": "shopify://shop_images/IMG_2873.jpg",
+        "row1_image_6": "shopify://shop_images/IMG_20250731_080033_924.jpg",
+        "row1_image_7": "shopify://shop_images/IMG-fa55bd22513dc2570f6e614e8e398a47-V.jpg",
+        "row2_image_1": "shopify://shop_images/1746444247741.jpg",
+        "row2_image_2": "shopify://shop_images/Screenshot_2025-07-25-19-31-28-534_com.instagram.android-edit.jpg",
+        "row2_image_3": "shopify://shop_images/Screenshot_2025-07-25-19-30-56-669_com.instagram.android-edit.jpg",
+        "row2_image_4": "shopify://shop_images/sabine2.jpg",
+        "row2_image_5": "shopify://shop_images/image1.jpg",
+        "row2_image_6": "shopify://shop_images/jokamiyama.jpg",
+        "row2_image_7": "shopify://shop_images/Comfy_in_heat.png"
+      }
     }
   },
   "order": [
     "main",
     "custom_hero_banner_Ek4qjC",
-    "custom_table_compare_pXRAeh"
+    "custom_table_compare_pXRAeh",
+    "custom_column_tabs_9GpWFM",
+    "custom_faqs_77VB4U",
+    "custom_hero_banner_eewYxB",
+    "custom_journey_CTfHdB"
   ]
 }
