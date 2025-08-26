@@ -1,0 +1,316 @@
+{% schema %}
+{
+  "name": "Product Comparison Table",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID",
+      "default": "comparison-table"
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Padding Top (px)",
+      "default": 60
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Padding Bottom (px)",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Table Settings"
+    },
+    {
+      "type": "text",
+      "id": "table_heading",
+      "label": "Table Heading",
+      "default": "Product Comparison"
+    },
+    {
+      "type": "text",
+      "id": "column_1_title",
+      "label": "Column 1 Title",
+      "default": "Features"
+    },
+    {
+      "type": "text",
+      "id": "column_2_title",
+      "label": "Column 2 Title",
+      "default": "Pull Up Diapers"
+    },
+    {
+      "type": "text",
+      "id": "column_3_title",
+      "label": "Column 3 Title",
+      "default": "Taped Diapers"
+    },
+    {
+      "type": "color",
+      "id": "header_bg_color",
+      "label": "Header Background Color",
+      "default": "#d4a574"
+    },
+    {
+      "type": "color",
+      "id": "header_text_color",
+      "label": "Header Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "row_bg_color",
+      "label": "Row Background Color",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "row_text_color",
+      "label": "Row Text Color",
+      "default": "#333333"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "comparison_row",
+      "name": "Comparison Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature_name",
+          "label": "Feature Name",
+          "default": "Feature Name"
+        },
+        {
+          "type": "textarea",
+          "id": "column_2_content",
+          "label": "Column 2 Content",
+          "default": "Description for column 2"
+        },
+        {
+          "type": "textarea",
+          "id": "column_3_content",
+          "label": "Column 3 Content",
+          "default": "Description for column 3"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_feature_header",
+          "label": "Make this row a feature header",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Comparison Table",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Best For",
+            "column_2_content": "Newborn & infants",
+            "column_3_content": "Active toddlers & walkiers"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Changing Style",
+            "column_2_content": "Lying down (easy for small babies)",
+            "column_3_content": "Standing up or on-the-go changes"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Freedom to Move",
+            "column_2_content": "Secure side tapes for adjustability",
+            "column_3_content": "360° stretchy waistband for comfort"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Night Protection",
+            "column_2_content": "Soft and snug fit",
+            "column_3_content": "Easy to wear, perfect for active play"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Great For",
+            "column_2_content": "Ideal for first-time moms",
+            "column_3_content": "Potty training, travel, busy toddlers"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Sizes Available",
+            "column_2_content": "Small, Medium, Large, Extra Large",
+            "column_3_content": "Large, Extra Large, Double XL, Triple XL"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<div 
+  {% if section.settings.section_id %}id="{{ section.settings.section_id }}"{% endif %}
+  class="comparison-table-section"
+  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  
+  <div class="comparison-table-container">
+    {% if section.settings.table_heading != blank %}
+      <h2 class="comparison-table__heading">{{ section.settings.table_heading }}</h2>
+    {% endif %}
+    
+    <div class="comparison-table-wrapper">
+      <table class="comparison-table">
+        <thead>
+          <tr class="comparison-table__header">
+            <th style="background-color: {{ section.settings.header_bg_color }}; color: {{ section.settings.header_text_color }};">
+              {{ section.settings.column_1_title }}
+            </th>
+            <th style="background-color: {{ section.settings.header_bg_color }}; color: {{ section.settings.header_text_color }};">
+              {{ section.settings.column_2_title }}
+            </th>
+            <th style="background-color: {{ section.settings.header_bg_color }}; color: {{ section.settings.header_text_color }};">
+              {{ section.settings.column_3_title }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for block in section.blocks %}
+            <tr class="comparison-table__row{% if block.settings.is_feature_header %} comparison-table__row--header{% endif %}" {{ block.shopify_attributes }}>
+              <td class="comparison-table__feature" 
+                  style="{% unless block.settings.is_feature_header %}background-color: {{ section.settings.row_bg_color }}; color: {{ section.settings.row_text_color }};{% else %}background-color: {{ section.settings.header_bg_color }}; color: {{ section.settings.header_text_color }}; font-weight: bold;{% endunless %}">
+                {{ block.settings.feature_name }}
+              </td>
+              <td class="comparison-table__content" 
+                  style="{% unless block.settings.is_feature_header %}background-color: {{ section.settings.row_bg_color }}; color: {{ section.settings.row_text_color }};{% else %}background-color: {{ section.settings.header_bg_color }}; color: {{ section.settings.header_text_color }}; font-weight: bold;{% endunless %}">
+                {{ block.settings.column_2_content }}
+              </td>
+              <td class="comparison-table__content" 
+                  style="{% unless block.settings.is_feature_header %}background-color: {{ section.settings.row_bg_color }}; color: {{ section.settings.row_text_color }};{% else %}background-color: {{ section.settings.header_bg_color }}; color: {{ section.settings.header_text_color }}; font-weight: bold;{% endunless %}">
+                {{ block.settings.column_3_content }}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<style>
+.comparison-table-section {
+  width: 100%;
+  background-color: #fff;
+}
+
+.comparison-table-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.comparison-table__heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+.comparison-table__header th {
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.comparison-table__row td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.comparison-table__feature {
+  font-weight: 600;
+  width: 25%;
+  min-width: 150px;
+}
+
+.comparison-table__content {
+  width: 37.5%;
+  font-size: 0.9rem;
+}
+
+.comparison-table__row--header td {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .comparison-table-container {
+    padding: 0 1rem;
+  }
+  
+  .comparison-table__heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .comparison-table__header th,
+  .comparison-table__row td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .comparison-table__feature {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-table__header th,
+  .comparison-table__row td {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.8rem;
+  }
+  
+  .comparison-table__feature {
+    min-width: 100px;
+  }
+}
+</style>

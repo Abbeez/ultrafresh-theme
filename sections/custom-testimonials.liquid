@@ -4,10 +4,57 @@
   "tag": "section",
   "settings": [
     {
+      "type": "header",
+      "content": "Background Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
       "type": "color",
       "id": "background_color",
-      "label": "Section Background Color",
+      "label": "Fallback Background Color",
+      "info": "Used when no background image is uploaded",
       "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "background_position",
+      "label": "Background Image Position",
+      "options": [
+        { "value": "center", "label": "Center" },
+        { "value": "top", "label": "Top" },
+        { "value": "bottom", "label": "Bottom" },
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "background_size",
+      "label": "Background Image Size",
+      "options": [
+        { "value": "cover", "label": "Cover" },
+        { "value": "contain", "label": "Contain" },
+        { "value": "auto", "label": "Auto" }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "range",
+      "id": "background_opacity",
+      "label": "Background Image Opacity (%)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Section Settings"
     },
     {
       "type": "text",
@@ -28,16 +75,26 @@
       "default": 60
     },
     {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "What parents say"
+    },
+    {
       "type": "text",
       "id": "heading",
-      "label": "Heading (use <span> for accent)",
+      "label": "Main Heading (use <span> for accent)",
       "default": "Every story <span>deserves gentle care</span>"
     },
     {
       "type": "textarea",
       "id": "description",
       "label": "Description",
-      "default": "Every baby’s journey is filled with joy, discovery, and growth, and we celebrate these special moments — each smile, wiggle, and milestone."
+      "default": "Every baby's journey is filled with joy, discovery, and growth, and we celebrate these special moments — each smile, wiggle, and milestone."
     },
     {
       "type": "text",
@@ -70,14 +127,39 @@
 }
 {% endschema %}
 
+{% comment %} Generate dynamic background styles {% endcomment %}
+{% assign background_style = '' %}
+{% if section.settings.background_image %}
+  {% assign opacity_decimal = section.settings.background_opacity | divided_by: 100.0 %}
+  {% if opacity_decimal == 1 %}
+    {% assign background_style = 'background-image: url(' | append: section.settings.background_image | image_url: width: 1920 | append: '); background-size: ' | append: section.settings.background_size | append: '; background-position: ' | append: section.settings.background_position | append: '; background-repeat: no-repeat;' %}
+  {% else %}
+    {% assign background_style = 'position: relative;' %}
+  {% endif %}
+{% else %}
+  {% assign background_style = 'background-color: ' | append: section.settings.background_color | append: ';' %}
+{% endif %}
+
 <div
   {% if section.settings.custom_anchor_id %}
     id="{{ section.settings.custom_anchor_id | escape }}"
   {% endif %}
   class="testimonials__outer animate--slide-in"
-  style="background-color: {{ section.settings.background_color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  style="{{ background_style }} padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  
+  {% comment %} Background image overlay for opacity control {% endcomment %}
+  {% if section.settings.background_image %}
+    {% assign opacity_decimal = section.settings.background_opacity | divided_by: 100.0 %}
+    {% if opacity_decimal < 1 %}
+      <div class="testimonials__bg-overlay" style="background-image: url({{ section.settings.background_image | image_url: width: 1920 }}); background-size: {{ section.settings.background_size }}; background-position: {{ section.settings.background_position }}; background-repeat: no-repeat; opacity: {{ opacity_decimal }};"></div>
+    {% endif %}
+  {% endif %}
+
   <div class="testimonials__container{% if section.settings.image_align == 'left' %} testimonials__container--reverse{% endif %}">
     <div class="testimonials__left">
+      {% if section.settings.subheading != blank %}
+        <div class="testimonials__subheading">{{ section.settings.subheading }}</div>
+      {% endif %}
       <h2 class="h1 testimonials__heading font-cursive">
         {{ section.settings.heading }}
       </h2>
@@ -137,7 +219,23 @@
 <style>
 .testimonials__outer {
   width: 100%;
+  position: relative;
 }
+
+/* Background image overlay for opacity control */
+.testimonials__bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  z-index: 0;
+}
+
 .testimonials__container {
   display: flex;
   flex-wrap: wrap;
@@ -147,53 +245,37 @@
   overflow: hidden;
   flex-direction: row;
   transition: flex-direction 0.3s;
+  position: relative;
+  z-index: 1;
 }
+
 .testimonials__container--reverse {
   flex-direction: row-reverse;
 }
+
 .testimonials__left {
   flex: 0 0 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .testimonials__right {
   flex: 1;
   overflow: hidden;
 }
-.testimonials__card {
-  max-width: 700px;
-  height: 620px;
-  color: var(--custom-light);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  box-sizing: border-box;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
+/* Subheading styles */
+.testimonials__subheading {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--custom-secondary, #cea578);
+  margin-bottom: 0.8rem;
+  opacity: 0.9;
 }
-.testimonials__card .testimonials__innercard {
-  padding: 5rem 2.3rem 2.3rem 2.3rem;
-  {% comment %} background: linear-gradient(to top, rgba(206, 165, 120, 0.67) 10%, transparent 100%); {% endcomment %}
-}
-{% comment %} .testimonials__card:hover .testimonials__innercard {
-  background: linear-gradient(to top, rgba(206, 164, 120, 0.9) 50%, transparent 100%);
-  transition: all 2000ms ease-in-out;
-} {% endcomment %}
-.testimonials__slider .swiper-wrapper {
-  padding-bottom: 20px;
-}
-.testimonials__slider div:empty {
-  display: block;
-}
-.testimonials__name {
- text-shadow: 0 5px 30px black;
-  font-size: 190%;
-}
-.swiper-scrollbar-drag {
-  background: var(--custom-secondary);
-}
+
 .testimonials__heading {
   margin-top: 0;
   margin-bottom: 1.1rem;
@@ -206,6 +288,40 @@
   color: var(--custom-dark);
   opacity: 0.97;
   line-height: 1.7;
+}
+
+.testimonials__card {
+  max-width: 700px;
+  height: 620px;
+  color: var(--custom-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.testimonials__card .testimonials__innercard {
+  padding: 5rem 2.3rem 2.3rem 2.3rem;
+}
+
+.testimonials__slider .swiper-wrapper {
+  padding-bottom: 20px;
+}
+
+.testimonials__slider div:empty {
+  display: block;
+}
+
+.testimonials__name {
+  text-shadow: 0 5px 30px black;
+  font-size: 190%;
+}
+
+.swiper-scrollbar-drag {
+  background: var(--custom-secondary);
 }
 
 /* Outlined button style */
@@ -225,11 +341,13 @@
   cursor: pointer;
   transition: background 0.18s, color 0.18s, border-color 0.18s;
 }
+
 .testimonials__btn:hover {
   background: var(--custom-dark);
   color: var(--custom-light);
   border-color: var(--custom-dark);
 }
+
 .testimonials__arrow {
   margin-left: 0.6em;
   font-size: 1.3em;
@@ -241,10 +359,16 @@
     flex-direction: column !important;
     padding: 0 3rem;
   }
-  .testimonials__left, .testimonials__right {
+  
+  .testimonials__left, 
+  .testimonials__right {
     flex: 1 0 100%;
     width: 100%;
     text-align: center;
+  }
+  
+  .testimonials__subheading {
+    font-size: 0.8rem;
   }
 }
 </style>

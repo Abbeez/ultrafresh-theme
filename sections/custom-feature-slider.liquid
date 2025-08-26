@@ -11,7 +11,7 @@
   <div class="ft-tablist-wrap">
     <div class="ft-tablist" role="tablist" aria-label="{{ section.settings.heading | escape }}">
       {%- for block in section.blocks -%}
-        <h3 class="ft-tab-h">
+        <h3 class="ft-tab-h h3">
           <button
             id="ft-tab-{{ block.id }}"
             class="ft-tab {% if forloop.first %}is-active{% endif %}"
@@ -87,9 +87,9 @@
   }
 
   /* Tabs (flow) */
-  #feature-tabs-{{ section.id }} .ft-tablist-wrap { margin-bottom: clamp(2rem, 6vw, 7rem); }
+  #feature-tabs-{{ section.id }} .ft-tablist-wrap { margin-bottom: clamp(2rem, 6vw, 5rem); }
   #feature-tabs-{{ section.id }} .ft-tablist {
-    display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px;
+    display:flex; flex-wrap:wrap; justify-content:center; gap:20px;
   }
   #feature-tabs-{{ section.id }} .ft-tab-h { margin: 0; }
   #feature-tabs-{{ section.id }} .ft-tab {
