@@ -90,6 +90,7 @@
     },
     "custom_page_header_AjHQd3": {
       "type": "custom-page-header",
+      "disabled": true,
       "name": "UF Page Header",
       "settings": {
         "header_image": "shopify://shop_images/Untitled_design_5.png",

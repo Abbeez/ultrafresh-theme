@@ -9,16 +9,29 @@
  */
 {
   "sections": {
-    "custom_page_header_NTLeBz": {
-      "type": "custom-page-header",
-      "name": "UF Page Header",
+    "custom_hero_banner_XQn7XC": {
+      "type": "custom-hero-banner",
+      "name": "UF Simple Home Banner",
       "settings": {
-        "header_image": "shopify://shop_images/Frame_287.png",
+        "background_color": "#ecdac0",
+        "background_opacity": 0,
+        "text_color": "dark",
+        "enable_text_shadow": false,
         "headline": "Frequently Asked Questions",
         "subheadline": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one.",
-        "button_label": "Explore Our Collection",
+        "button_label": "See What Makes Us Different",
         "button_url": "",
-        "text_alignment": "center"
+        "show_secondary_content": false,
+        "secondary_padding_top": 42,
+        "secondary_padding_bottom": 24,
+        "secondary_heading": "Purposefully Made. Elegantly Designed.",
+        "secondary_subheading": "UltraFresh protects with care and performs with grace — a reflection of love in every detail",
+        "sec_btn1_label": "Pull Up Diapers",
+        "sec_btn1_url": "",
+        "sec_btn2_label": "Taped Up Diapers",
+        "sec_btn2_url": "",
+        "sec_btn3_label": "Size Guide",
+        "sec_btn3_url": ""
       }
     },
     "main": {
@@ -35,13 +48,13 @@
       "settings": {
         "padding_top": 64,
         "padding_bottom": 120,
-        "heading": "Every question has a story behind it.",
+        "heading": "",
         "description": "From curious first-time parents to late-night diaper dilemmas — we understand the journey. Let’s find the answers together, one gentle step at a time."
       }
     }
   },
   "order": [
-    "custom_page_header_NTLeBz",
+    "custom_hero_banner_XQn7XC",
     "main",
     "custom_faqs_CeGtap"
   ]

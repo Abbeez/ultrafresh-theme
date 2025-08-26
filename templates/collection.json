@@ -22,13 +22,12 @@
       "type": "custom-hero-banner",
       "name": "UF Simple Home Banner",
       "settings": {
-        "banner_image": "shopify://shop_images/UF_Features.png",
-        "background_color": "#f8f9fa",
+        "background_color": "#ecdac0",
         "background_opacity": 0,
-        "text_color": "light",
-        "enable_text_shadow": true,
-        "headline": "Features That Keep Your Baby UltraFresh",
-        "subheadline": "Every diaper is made with skin-loving softness, all-day dryness, and a breathable design that stays gentle on delicate skin. Our features aren’t just smart — they’re made for peace of mind, from the first change to every overnight cuddle.",
+        "text_color": "dark",
+        "enable_text_shadow": false,
+        "headline": "Every Precious Moment Deserves UltraFresh Care",
+        "subheadline": "From those first sleepy smiles to adventurous crawling expeditions, every moment with your little one is a treasure. UltraFresh diapers are crafted with the same love you pour into every cuddle, every gentle touch, every peaceful night.",
         "button_label": "Explore UltraFresh Features",
         "button_url": "#",
         "show_secondary_content": false,
@@ -42,32 +41,6 @@
         "sec_btn2_url": "",
         "sec_btn3_label": "Size Guide",
         "sec_btn3_url": ""
-      }
-    },
-    "custom_multi_images_MXjAmB": {
-      "type": "custom-multi-images",
-      "name": "2 Column Multi-Images",
-      "settings": {
-        "custom_anchor_id": "multi-images-content",
-        "show_top_border": false,
-        "show_bottom_border": false,
-        "background_color": "#f8f3ed",
-        "section_image_1": "shopify://shop_images/26.png",
-        "section_image_2": "shopify://shop_images/21_140a3286-6f41-46f5-8534-df5bb73b348e.png",
-        "section_image_3": "shopify://shop_images/22.png",
-        "section_image_4": "shopify://shop_images/24.png",
-        "fade_duration": 3,
-        "image_position": "left",
-        "image_fit": "cover",
-        "overline": "Premium Comfort",
-        "heading": "Why does every layer feel like Love?",
-        "description": "<p><strong>Whispers of softness — a gentle hug for every move.</strong><br/><br/>The VelvaCloud™ Layer is our signature top sheet, specially designed to feel like a gentle embrace against your baby’s skin. It draws moisture away in seconds and allows air to flow freely, helping keep your baby dry, comfortable, and rash-free.</p><p>Whether it’s nap time or playtime, this layer moves with your little one — offering softness and protection that lasts.</p><h4>Key Benefits:</h4><ul><li>Feather-soft on delicate skin<br/></li><li>Quickly wicks away moisture<br/></li><li>Breathable to help prevent rashes<br/></li><li>Moves with your baby for all-day comfort</li></ul>",
-        "content_image_alt": "Alt text",
-        "content_image_max_width": 800,
-        "button_label": "See What's Inside",
-        "button_url": "",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "custom_multi_images_Ma9NAT": {
@@ -85,19 +58,91 @@
         "fade_duration": 4,
         "image_position": "right",
         "image_fit": "cover",
-        "overline": "Premium Comfort",
-        "heading": "Why does every layer feel like Love?",
-        "description": "<p><strong>Whispers of softness — a gentle hug for every move.</strong><br/><br/>The VelvaCloud™ Layer is our signature top sheet, specially designed to feel like a gentle embrace against your baby’s skin. It draws moisture away in seconds and allows air to flow freely, helping keep your baby dry, comfortable, and rash-free.</p><p>Whether it’s nap time or playtime, this layer moves with your little one — offering softness and protection that lasts.</p><h4>Key Benefits:</h4><ul><li>Feather-soft on delicate skin<br/></li><li>Quickly wicks away moisture<br/></li><li>Breathable to help prevent rashes<br/></li><li>Moves with your baby for all-day comfort</li></ul>",
+        "overline": "Secure in Every Embrace",
+        "heading": "Trusted Protection That Never Lets Go",
+        "description": "<p>Some moments call for the ultimate in secure comfort. Whether it's a long night's sleep or an afternoon of tummy time, our UltraFresh Taped Diapers provide the dependable protection that lets you focus on what matters most those precious moments together.</p>",
         "content_image_alt": "Alt text",
         "content_image_max_width": 800,
         "button_label": "See What's Inside",
-        "button_url": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "button_url": "shopify://products/ultrafresh-ultra-thin-tape-diaper",
+        "padding_top": 60,
+        "padding_bottom": 30
+      }
+    },
+    "custom_multi_images_MXjAmB": {
+      "type": "custom-multi-images",
+      "name": "2 Column Multi-Images",
+      "settings": {
+        "custom_anchor_id": "multi-images-content",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "background_color": "#f8f3ed",
+        "section_image_1": "shopify://shop_images/26.png",
+        "section_image_2": "shopify://shop_images/21_140a3286-6f41-46f5-8534-df5bb73b348e.png",
+        "section_image_3": "shopify://shop_images/22.png",
+        "section_image_4": "shopify://shop_images/24.png",
+        "fade_duration": 3,
+        "image_position": "left",
+        "image_fit": "cover",
+        "overline": "Growing Up, One Step at a Time",
+        "heading": "Where Independence Begins",
+        "description": "<p>The journey from baby to big kid is filled with proud moments and little accidents and that's perfectly okay. Our UltraFresh Training Pants are designed for this beautiful transition, giving your toddler the confidence to explore their independence while giving you the peace of mind that comes with superior protection.</p>",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 800,
+        "button_label": "Learn More",
+        "button_url": "shopify://products/ultrafresh-ultra-thin-pull-up-diaper-large-30s",
+        "padding_top": 30,
+        "padding_bottom": 60
+      }
+    },
+    "custom_feature_slider_zEdPqw": {
+      "type": "custom-feature-slider",
+      "blocks": {
+        "tab_9cGrw9": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "All-Day Dryness",
+            "tab_description": "<p>Like a gentle promise that lasts from sunrise to sunset, keeping your baby comfortable through every giggle, every nap, and every discovery.</p>"
+          }
+        },
+        "tab_pmtJwq": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Breathable Design",
+            "tab_description": "<p>Because delicate skin needs to breathe as freely as your child's spirit – soft, natural, and always comfortable.</p>"
+          }
+        },
+        "tab_J8Y8M7": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Perfect Fit",
+            "tab_description": "<p>Designed to grow with your baby's world, moving as they move, protecting as they explore, loving as you love.</p>"
+          }
+        },
+        "tab_fRcKBL": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Gentle on Skin",
+            "tab_description": "<p>Crafted for the most precious skin in your world – because nothing is too good for your little miracle.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_9cGrw9",
+        "tab_pmtJwq",
+        "tab_J8Y8M7",
+        "tab_fRcKBL"
+      ],
+      "name": "Feature Tabs (flow)",
+      "settings": {
+        "heading": "Every Feature Tells a Love Story",
+        "pad_top": 48,
+        "pad_bottom": 48
       }
     },
     "custom_text_image_RfgUDY": {
       "type": "custom-text-image",
+      "disabled": true,
       "name": "Image and Content Column",
       "settings": {
         "custom_anchor_id": "image-content",
@@ -151,6 +196,7 @@
         "feature_tab_y9rkjr",
         "feature_tab_RLExx9"
       ],
+      "disabled": true,
       "name": "Tabbed Features Section",
       "settings": {
         "custom_anchor_id": "tabbed-features",
@@ -268,6 +314,7 @@
         "tab_m6LJ8M",
         "tab_DBJWLd"
       ],
+      "disabled": true,
       "name": "Feature Slider",
       "settings": {
         "heading": "UltraFresh Diaper Key Features",
@@ -300,8 +347,9 @@
   "order": [
     "banner",
     "custom_hero_banner_kteJcq",
-    "custom_multi_images_MXjAmB",
     "custom_multi_images_Ma9NAT",
+    "custom_multi_images_MXjAmB",
+    "custom_feature_slider_zEdPqw",
     "custom_text_image_RfgUDY",
     "custom_featured_tabs_HxkCjw",
     "custom_text_image_PKUqNm",

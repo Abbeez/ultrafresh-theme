@@ -14,15 +14,15 @@
       "name": "Hero Banner",
       "settings": {
         "banner_image": "shopify://shop_images/3_a68f7667-0344-4f4f-9b8c-3b44a0b90f53.png",
-        "background_color": "#f8f9fa",
-        "background_opacity": 0,
+        "background_color": "#121212",
+        "background_opacity": 10,
         "text_color": "light",
         "enable_text_shadow": true,
         "headline": "What does it mean to feel loved...even before you understand the word?",
         "subheadline": "A diaper so soft, so light, they hardly feel it – but always feel our love.",
         "button_label": "See What Makes Us Different",
         "button_url": "#testimonials",
-        "show_secondary_content": true,
+        "show_secondary_content": false,
         "secondary_padding_top": 350,
         "secondary_padding_bottom": 24,
         "secondary_heading": "Purposefully Made. Elegantly Designed.",
@@ -34,6 +34,26 @@
         "sec_btn3_label": "Size Guide",
         "sec_btn3_url": "",
         "scroll_feel_image": "shopify://shop_images/scroll.png"
+      }
+    },
+    "custom_testimonials_7KwBiX": {
+      "type": "custom-testimonials",
+      "name": "Testimonials & Stories",
+      "settings": {
+        "background_image": "shopify://shop_images/Stories.png",
+        "background_color": "#f8f3ed",
+        "background_position": "center",
+        "background_size": "cover",
+        "background_opacity": 0,
+        "custom_anchor_id": "testimonials",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "subheading": "What parents say",
+        "heading": "Every story deserves gentle care",
+        "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
+        "button_label": "Click here to see parent stories",
+        "button_url": "shopify://pages/stories",
+        "image_align": "right"
       }
     },
     "custom_text_image_qxeTjH": {
@@ -151,29 +171,6 @@
         "padding_bottom": 0
       }
     },
-    "custom_text_image_FbNJTP": {
-      "type": "custom-text-image",
-      "name": "Even in the heat",
-      "settings": {
-        "custom_anchor_id": "image-content",
-        "show_top_border": false,
-        "show_bottom_border": false,
-        "background_color": "#f8f3ed",
-        "section_image": "shopify://shop_images/7_2051898e-945f-4fca-ad1f-ad0c3ffd6aa6.png",
-        "image_position": "left",
-        "image_fit": "cover",
-        "overline": "Premium Comfort",
-        "heading": "Cool, dry, and comfy even in the heat",
-        "description": "<p>UltraFresh is made for tropical climates with breathable layers, ultra-thin absorbent cores, and a non-sticky soft outer cover to keep your baby feeling fresh.</p>",
-        "content_image": "shopify://shop_images/Ultrafresh_Diapers_5.png",
-        "content_image_alt": "Alt text",
-        "content_image_max_width": 320,
-        "button_label": "See Why It’s Perfect for Tropical Heat",
-        "button_url": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "custom_text_image_BnkNRV": {
       "type": "custom-text-image",
       "disabled": true,
@@ -217,19 +214,26 @@
         "right_bullets": "Bulky layers, especially when saturated, can feel heavy on the baby\nLower breathability, which may cause discomfort in warmer environments\nSome ventilation but not optimized for consistently hot climates\nGood absorbency, suitable for overnight use\nStylish design but leans more bold and playful than subtle or modern"
       }
     },
-    "custom_testimonials_7KwBiX": {
-      "type": "custom-testimonials",
-      "name": "Testimonials & Stories",
+    "custom_text_image_FbNJTP": {
+      "type": "custom-text-image",
+      "name": "Even in the heat",
       "settings": {
+        "custom_anchor_id": "image-content",
+        "show_top_border": false,
+        "show_bottom_border": false,
         "background_color": "#f8f3ed",
-        "custom_anchor_id": "testimonials",
-        "padding_top": 120,
-        "padding_bottom": 120,
-        "heading": "Every story deserves <span>gentle care</span>",
-        "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
-        "button_label": "Click here to see parent stories",
-        "button_url": "shopify://pages/stories",
-        "image_align": "right"
+        "section_image": "shopify://shop_images/7_2051898e-945f-4fca-ad1f-ad0c3ffd6aa6.png",
+        "image_position": "left",
+        "image_fit": "cover",
+        "overline": "Premium Comfort",
+        "heading": "Cool, dry, and comfy even in the heat",
+        "description": "<p>UltraFresh is made for tropical climates with breathable layers, ultra-thin absorbent cores, and a non-sticky soft outer cover to keep your baby feeling fresh.</p>",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 320,
+        "button_label": "See Why It’s Perfect for Tropical Heat",
+        "button_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_text_image_G9Tn9j": {
@@ -237,14 +241,14 @@
       "name": "Partners",
       "settings": {
         "custom_anchor_id": "image-content",
-        "show_top_border": true,
-        "show_bottom_border": true,
+        "show_top_border": false,
+        "show_bottom_border": false,
         "background_color": "#f8f3ed",
-        "section_image": "shopify://shop_images/Frame_287_2.png",
-        "image_position": "left",
+        "section_image": "shopify://shop_images/assets_task_01k2xd2e4qfpmbtaptbdva8fbe_1755481020_img_0.webp",
+        "image_position": "right",
         "image_fit": "cover",
         "overline": "Premium Comfort",
-        "heading": "UltraFresh around the <span>World</span>",
+        "heading": "UltraFresh around the World",
         "description": "<p>From one family to another, UltraFresh is part of bedtime routines and first steps all over the world <br/>— keeping little ones comfy, wherever they are.</p>",
         "content_image_alt": "Alt text",
         "content_image_max_width": 800,
@@ -252,6 +256,26 @@
         "button_url": "shopify://pages/partners",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_talktous_Cm3Wpw": {
+      "type": "custom-talktous",
+      "name": "Call to action ",
+      "settings": {
+        "show_top_border": true,
+        "show_bottom_border": true,
+        "padding_top": 100,
+        "padding_bottom": 120,
+        "margin_top_desktop": 60,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 24,
+        "background_color": "#f2e9db",
+        "heading": "Got Questions? Let’s Talk!",
+        "subheading": "We’re here to help, anytime.",
+        "description": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need.",
+        "button_label": "Talk to Us Here",
+        "button_url": "shopify://pages/get-in-touch"
       }
     },
     "custom_journey_kWNpYT": {
@@ -285,26 +309,6 @@
         "row2_image_10": "shopify://shop_images/IMG_20250731_080033_924.jpg"
       }
     },
-    "custom_talktous_Cm3Wpw": {
-      "type": "custom-talktous",
-      "name": "Call to action ",
-      "settings": {
-        "show_top_border": true,
-        "show_bottom_border": true,
-        "padding_top": 100,
-        "padding_bottom": 120,
-        "margin_top_desktop": 120,
-        "margin_bottom_desktop": 0,
-        "margin_top_mobile": 24,
-        "margin_bottom_mobile": 24,
-        "background_color": "#ecdac0",
-        "heading": "Got Questions? Let’s Talk!",
-        "subheading": "We’re here to help, anytime.",
-        "description": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need.",
-        "button_label": "Talk to Us Here",
-        "button_url": "shopify://pages/reviews"
-      }
-    },
     "custom_calltoaction_4UnEqf": {
       "type": "custom-calltoaction",
       "disabled": true,
@@ -322,16 +326,16 @@
   },
   "order": [
     "custom_hero_banner_G6Bycn",
+    "custom_testimonials_7KwBiX",
     "custom_text_image_qxeTjH",
     "custom_size_list_48cye6",
     "custom_text_image_GzYCjB",
-    "custom_text_image_FbNJTP",
     "custom_text_image_BnkNRV",
     "custom_compare_cards_G77NkY",
-    "custom_testimonials_7KwBiX",
+    "custom_text_image_FbNJTP",
     "custom_text_image_G9Tn9j",
-    "custom_journey_kWNpYT",
     "custom_talktous_Cm3Wpw",
+    "custom_journey_kWNpYT",
     "custom_calltoaction_4UnEqf"
   ]
 }
