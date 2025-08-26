@@ -14,6 +14,50 @@
       "default": "comparison-table"
     },
     {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "background_position",
+      "label": "Background Image Position",
+      "options": [
+        { "value": "center", "label": "Center" },
+        { "value": "top", "label": "Top" },
+        { "value": "bottom", "label": "Bottom" },
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "background_size",
+      "label": "Background Image Size",
+      "options": [
+        { "value": "cover", "label": "Cover" },
+        { "value": "contain", "label": "Contain" },
+        { "value": "auto", "label": "Auto" }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "range",
+      "id": "background_opacity",
+      "label": "Background Image Opacity (%)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 100
+    },
+    {
       "type": "number",
       "id": "padding_top",
       "label": "Padding Top (px)",
@@ -169,11 +213,31 @@
 }
 {% endschema %}
 
+{% comment %} Generate dynamic background styles {% endcomment %}
+{% assign background_style = '' %}
+{% if section.settings.background_image %}
+  {% assign opacity_decimal = section.settings.background_opacity | divided_by: 100.0 %}
+  {% if opacity_decimal == 1 %}
+    {% assign background_style = 'background-image: url(' | append: section.settings.background_image | image_url: width: 1920 | append: '); background-size: ' | append: section.settings.background_size | append: '; background-position: ' | append: section.settings.background_position | append: '; background-repeat: no-repeat; background-color: ' | append: section.settings.background_color | append: ';' %}
+  {% else %}
+    {% assign background_style = 'position: relative; background-color: ' | append: section.settings.background_color | append: ';' %}
+  {% endif %}
+{% else %}
+  {% assign background_style = 'background-color: ' | append: section.settings.background_color | append: ';' %}
+{% endif %}
+
 <div 
   {% if section.settings.section_id %}id="{{ section.settings.section_id }}"{% endif %}
   class="comparison-table-section"
-  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  style="{{ background_style }} padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
   
+  {% comment %} Background image overlay for opacity control {% endcomment %}
+  {% if section.settings.background_image %}
+    {% assign opacity_decimal = section.settings.background_opacity | divided_by: 100.0 %}
+    {% if opacity_decimal < 1 %}
+      <div class="comparison-table__bg-overlay" style="background-image: url({{ section.settings.background_image | image_url: width: 1920 }}); background-size: {{ section.settings.background_size }}; background-position: {{ section.settings.background_position }}; background-repeat: no-repeat; opacity: {{ opacity_decimal }};"></div>
+    {% endif %}
+  {% endif %}
   <div class="comparison-table-container">
     {% if section.settings.table_heading != blank %}
       <h2 class="comparison-table__heading">{{ section.settings.table_heading }}</h2>
@@ -220,20 +284,30 @@
 <style>
 .comparison-table-section {
   width: 100%;
-  background-color: #fff;
+  position: relative;
+}
+
+/* Background image overlay for opacity control */
+.comparison-table__bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
 }
 
 .comparison-table-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .comparison-table__heading {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #333;
 }
 
 .comparison-table-wrapper {
@@ -245,7 +319,6 @@
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: Arial, sans-serif;
   background-color: #fff;
 }
 
@@ -253,7 +326,6 @@
   padding: 1rem;
   text-align: center;
   font-weight: bold;
-  font-size: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -272,7 +344,6 @@
 
 .comparison-table__content {
   width: 37.5%;
-  font-size: 0.9rem;
 }
 
 .comparison-table__row--header td {
@@ -287,14 +358,12 @@
   }
   
   .comparison-table__heading {
-    font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
   
   .comparison-table__header th,
   .comparison-table__row td {
     padding: 0.75rem 0.5rem;
-    font-size: 0.85rem;
   }
   
   .comparison-table__feature {
@@ -306,7 +375,6 @@
   .comparison-table__header th,
   .comparison-table__row td {
     padding: 0.5rem 0.25rem;
-    font-size: 0.8rem;
   }
   
   .comparison-table__feature {

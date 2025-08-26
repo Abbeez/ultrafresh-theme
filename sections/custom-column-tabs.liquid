@@ -1,0 +1,432 @@
+{% schema %}
+{
+  "name": "2 Column Size Guide",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f5f3f0"
+    },
+    {
+      "type": "select",
+      "id": "background_position",
+      "label": "Background Image Position",
+      "options": [
+        { "value": "center", "label": "Center" },
+        { "value": "top", "label": "Top" },
+        { "value": "bottom", "label": "Bottom" },
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "background_size",
+      "label": "Background Image Size",
+      "options": [
+        { "value": "cover", "label": "Cover" },
+        { "value": "contain", "label": "Contain" },
+        { "value": "auto", "label": "Auto" }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "range",
+      "id": "background_opacity",
+      "label": "Background Image Opacity (%)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID",
+      "default": "size-guide"
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Padding Top (px)",
+      "default": 80
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Padding Bottom (px)",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "Perfect Size, Happy Baby"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Our size guide helps you choose the right diaper for maximum comfort, leak protection, and happy smiles at every stage."
+    },
+    {
+      "type": "image_picker",
+      "id": "baby_image",
+      "label": "Baby Image"
+    },
+    {
+      "type": "text",
+      "id": "baby_image_alt",
+      "label": "Baby Image Alt Text",
+      "default": "Happy baby sitting"
+    },
+    {
+      "type": "color",
+      "id": "size_label_bg",
+      "label": "Size Label Background Color",
+      "default": "#d4a574"
+    },
+    {
+      "type": "color",
+      "id": "size_label_text",
+      "label": "Size Label Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "size_info_bg",
+      "label": "Size Info Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "size_info_text",
+      "label": "Size Info Text Color",
+      "default": "#666666"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "size_item",
+      "name": "Size Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "size_label",
+          "label": "Size Label",
+          "default": "SMALL"
+        },
+        {
+          "type": "text",
+          "id": "size_info",
+          "label": "Size Information",
+          "default": "For ages 0 - 3 months old (4 to 8 kilograms)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "2 Column Size Guide",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "size_item",
+          "settings": {
+            "size_label": "SMALL",
+            "size_info": "For ages 0 - 3 months old (4 to 8 kilograms)"
+          }
+        },
+        {
+          "type": "size_item",
+          "settings": {
+            "size_label": "MEDIUM",
+            "size_info": "For ages 3-11 months old (6 to 11 kilograms)"
+          }
+        },
+        {
+          "type": "size_item",
+          "settings": {
+            "size_label": "LARGE",
+            "size_info": "For ages 5-11 months old (9 to 14 kilograms)"
+          }
+        },
+        {
+          "type": "size_item",
+          "settings": {
+            "size_label": "EXTRA LARGE",
+            "size_info": "For ages 1 to 2 years old (12 to 17 kilograms)"
+          }
+        },
+        {
+          "type": "size_item",
+          "settings": {
+            "size_label": "DOUBLE XL",
+            "size_info": "For ages 1 to 2 years old (15 kilograms and up)"
+          }
+        },
+        {
+          "type": "size_item",
+          "settings": {
+            "size_label": "TRIPLE XL",
+            "size_info": "For ages 1 to 2 years old (18 kilograms and up)"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% comment %} Generate dynamic background styles {% endcomment %}
+{% assign background_style = '' %}
+{% if section.settings.background_image %}
+  {% assign opacity_decimal = section.settings.background_opacity | divided_by: 100.0 %}
+  {% if opacity_decimal == 1 %}
+    {% assign background_style = 'background-image: url(' | append: section.settings.background_image | image_url: width: 1920 | append: '); background-size: ' | append: section.settings.background_size | append: '; background-position: ' | append: section.settings.background_position | append: '; background-repeat: no-repeat; background-color: ' | append: section.settings.background_color | append: ';' %}
+  {% else %}
+    {% assign background_style = 'position: relative; background-color: ' | append: section.settings.background_color | append: ';' %}
+  {% endif %}
+{% else %}
+  {% assign background_style = 'background-color: ' | append: section.settings.background_color | append: ';' %}
+{% endif %}
+
+<section 
+  {% if section.settings.section_id %}id="{{ section.settings.section_id }}"{% endif %}
+  class="size-guide-section"
+  style="{{ background_style }} padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  
+  {% comment %} Background image overlay for opacity control {% endcomment %}
+  {% if section.settings.background_image %}
+    {% assign opacity_decimal = section.settings.background_opacity | divided_by: 100.0 %}
+    {% if opacity_decimal < 1 %}
+      <div class="size-guide__bg-overlay" style="background-image: url({{ section.settings.background_image | image_url: width: 1920 }}); background-size: {{ section.settings.background_size }}; background-position: {{ section.settings.background_position }}; background-repeat: no-repeat; opacity: {{ opacity_decimal }};"></div>
+    {% endif %}
+  {% endif %}
+
+  <div class="size-guide-container">
+    <div class="size-guide__header">
+      {% if section.settings.heading != blank %}
+        <h2 class="size-guide__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.description != blank %}
+        <p class="size-guide__description">{{ section.settings.description }}</p>
+      {% endif %}
+    </div>
+
+    <div class="size-guide__content">
+      <div class="size-guide__image-wrapper">
+        {% if section.settings.baby_image %}
+          <img 
+            src="{{ section.settings.baby_image | image_url: width: 600 }}" 
+            alt="{{ section.settings.baby_image_alt | escape }}"
+            class="size-guide__baby-image"
+            loading="lazy">
+        {% else %}
+          <div class="size-guide__placeholder">
+            <span>Baby Image Placeholder</span>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="size-guide__sizes">
+        {% for block in section.blocks %}
+          <div class="size-guide__size-item" {{ block.shopify_attributes }}>
+            <div class="size-guide__size-label" 
+                 style="background-color: {{ section.settings.size_label_bg }}; color: {{ section.settings.size_label_text }};">
+              {{ block.settings.size_label }}
+            </div>
+            <div class="size-guide__size-info" 
+                 style="background-color: {{ section.settings.size_info_bg }}; color: {{ section.settings.size_info_text }};">
+              {{ block.settings.size_info }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.size-guide-section {
+  width: 100%;
+  position: relative;
+}
+
+/* Background image overlay for opacity control */
+.size-guide__bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.size-guide-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.size-guide__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.size-guide__heading {
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.size-guide__description {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.size-guide__content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.size-guide__image-wrapper {
+  flex: 0 0 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.size-guide__baby-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.size-guide__placeholder {
+  width: 400px;
+  height: 400px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  border: 2px dashed #ddd;
+}
+
+.size-guide__sizes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.size-guide__size-item {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.size-guide__size-label {
+  flex: 0 0 180px;
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+}
+
+.size-guide__size-info {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .size-guide-container {
+    padding: 0 1rem;
+  }
+  
+  .size-guide__content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .size-guide__image-wrapper {
+    flex: none;
+    width: 100%;
+  }
+  
+  .size-guide__baby-image {
+    max-width: 300px;
+  }
+  
+  .size-guide__placeholder {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .size-guide__size-label {
+    flex: 0 0 140px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .size-guide__size-info {
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .size-guide__header {
+    margin-bottom: 2rem;
+  }
+  
+  .size-guide__content {
+    gap: 1.5rem;
+  }
+  
+  .size-guide__size-item {
+    flex-direction: column;
+  }
+  
+  .size-guide__size-label {
+    flex: none;
+    border-radius: 0;
+  }
+  
+  .size-guide__size-info {
+    border-left: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+</style>
