@@ -22,12 +22,11 @@
       "disabled": true,
       "name": "Page Header",
       "settings": {
-        "header_image": "shopify://shop_images/Frame_287_2.png",
+        "text_alignment": "left",
         "headline": "UltraFresh {{ page.title }}",
         "subheadline": "Simple. True. This is your signature whisper to close the journey with meaning.",
         "button_label": "",
-        "button_url": "",
-        "text_alignment": "left"
+        "button_url": ""
       }
     },
     "custom_partnerwall_dKAy6b": {
@@ -51,7 +50,6 @@
         "background_color": "#f8f3ed",
         "section_image": "shopify://shop_images/Messenger_creation_e86b402c-45f2-472e-8d8e-ec215c763d77.jpg",
         "image_position": "left",
-        "image_fit": "cover",
         "overline": "Premium Comfort",
         "heading": "To Our Future Partner,",
         "description": "<p>We built <strong>Ultrafresh</strong> on a simple but powerful belief that every family deserves access to products made with <strong>care, honesty, and heart</strong>. From day one, our mission has always gone beyond selling. It’s about building something meaningful, something that touches lives. But we’ve never believed in doing it alone.</p><p>Behind every <strong>pack delivered</strong>, every <strong>shelf stocked</strong>, and every <strong>doorstep reached</strong>, there are real people  <strong>partners like you</strong>  who help make it all possible. Whether you’re a <strong>retailer</strong>, <strong>distributor</strong>, or <strong>service provider</strong>, your role is more than transactional  it’s transformational.</p><p>We’re not just looking for business relationships. We’re looking for people who believe in the same values we do: <strong>gentle care</strong>, <strong>genuine connections</strong>, and <strong>long-term growth</strong>. We’re building a community, a family of partners who take pride in what they bring to the table and who want to grow <strong>with us</strong>, not just alongside us.</p><p>If you're someone who believes in <strong>purpose-driven work</strong>, who values <strong>integrity over shortcuts</strong>, and who wants to be part of a brand that puts <strong>people before profits</strong>, then we’d love to welcome you into our circle.</p><p>Together, let’s reach more homes, create more smiles, and grow something truly special one gentle step at a time.</p><p><strong>Let’s make care visible. Let’s partner up.</strong></p>",

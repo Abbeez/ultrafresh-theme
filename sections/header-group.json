@@ -25,10 +25,13 @@
       "block_order": [
         "announcement-bar-0"
       ],
+      "custom_css": [
+        ".announcement-bar__message {padding: 7px 0; /* font-weight: 700; */ min-height: 0;}"
+      ],
       "settings": {
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "color_scheme": "scheme-cedf5ed3-5404-4a76-9771-bfeadd55a67b",
+        "color_scheme": "scheme-e98e2279-ad78-4c51-b7b5-e01a5a55b4ae",
         "show_line_separator": true,
         "show_social": false,
         "enable_country_selector": false,

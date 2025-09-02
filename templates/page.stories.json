@@ -13,11 +13,11 @@
       "type": "custom-hero-banner",
       "name": "UF Simple Home Banner",
       "settings": {
-        "background_color": "#f8f3ed",
+        "background_color": "rgba(0,0,0,0)",
         "background_opacity": 0,
         "text_color": "dark",
         "enable_text_shadow": false,
-        "headline": "Every Mom Has a <span>Story</span>. Every Baby Has a <span>Journey</span>.",
+        "headline": "Every Mom Has a Story. Every Baby Has a Journey.",
         "subheadline": "Behind every cuddle, every giggle, and every milestone is a parent searching for comfort and care. These are the real stories of families who found love, trust, and peace of mind with Ultrafresh.",
         "button_label": "Explore Our Stories & Journeys",
         "button_url": "#secstories",
@@ -93,12 +93,20 @@
       "disabled": true,
       "name": "UF Page Header",
       "settings": {
-        "header_image": "shopify://shop_images/Untitled_design_5.png",
+        "padding_top_desktop": 120,
+        "padding_bottom_desktop": 120,
+        "padding_top_tablet": 100,
+        "padding_bottom_tablet": 100,
+        "padding_top_mobile": 80,
+        "padding_bottom_mobile": 80,
+        "background_color": "#f8f9fa",
+        "background_opacity": 0,
+        "text_color": "light",
+        "enable_text_shadow": true,
         "headline": "Because Every Baby Deserves Gentle Care",
         "subheadline": "Ultrafresh isn’t just about diapers. It’s about helping moms and dads create little moments of joy, discovery, and connection with their child.",
         "button_label": "Explore Our Stories",
-        "button_url": "shopify://collections/all",
-        "text_alignment": "center"
+        "button_url": "shopify://collections/all"
       }
     }
   },

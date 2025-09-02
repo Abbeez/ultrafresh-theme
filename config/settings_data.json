@@ -12,10 +12,10 @@
     "logo": "shopify://shop_images/uf-1.png",
     "logo_width": 120,
     "favicon": "shopify://shop_images/Ultrafresh_Favicon_72af4075-c383-4a0b-8235-dd782eaa38b4.png",
-    "type_header_font": "arsenal_n4",
+    "type_header_font": "open_sans_n4",
     "heading_scale": 100,
-    "type_body_font": "arsenal_n4",
-    "body_scale": 110,
+    "type_body_font": "open_sans_n4",
+    "body_scale": 100,
     "page_width": 1600,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
@@ -129,6 +129,7 @@
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
     "site_background_image": "shopify://shop_images/ultrafresh-banner.ai.png",
+    "page_background_image": "shopify://shop_images/UltraFresh_Background.png",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -263,7 +264,7 @@
       },
       "scheme-efc27197-f5e2-44ca-a261-4a228925a38b": {
         "settings": {
-          "background": "rgba(0,0,0,0)",
+          "background": "#f8f3ed",
           "background_gradient": "",
           "text": "#242833",
           "button": "#242833",
@@ -292,6 +293,17 @@
           "button_label": "#ffffff",
           "secondary_button_label": "#242833",
           "shadow": "#242833"
+        }
+      },
+      "scheme-e98e2279-ad78-4c51-b7b5-e01a5a55b4ae": {
+        "settings": {
+          "background": "#242833",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#ffffff"
         }
       }
     }

@@ -18,29 +18,25 @@
         "color_scheme": "scheme-1"
       }
     },
-    "custom_hero_banner_kteJcq": {
-      "type": "custom-hero-banner",
-      "name": "UF Simple Home Banner",
+    "custom_page_header_9YhyDe": {
+      "type": "custom-page-header",
+      "name": "Custom Page Header",
       "settings": {
-        "background_color": "#ecdac0",
-        "background_opacity": 0,
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "page_header_image": "shopify://shop_images/Untitled_design_4.png",
+        "background_color": "#f8f3ed",
+        "background_opacity": 75,
         "text_color": "dark",
         "enable_text_shadow": false,
         "headline": "Every Precious Moment Deserves UltraFresh Care",
         "subheadline": "From those first sleepy smiles to adventurous crawling expeditions, every moment with your little one is a treasure. UltraFresh diapers are crafted with the same love you pour into every cuddle, every gentle touch, every peaceful night.",
-        "button_label": "Explore UltraFresh Features",
-        "button_url": "#",
-        "show_secondary_content": false,
-        "secondary_padding_top": 42,
-        "secondary_padding_bottom": 24,
-        "secondary_heading": "Purposefully Made. Elegantly Designed.",
-        "secondary_subheading": "UltraFresh protects with care and performs with grace — a reflection of love in every detail",
-        "sec_btn1_label": "Pull Up Diapers",
-        "sec_btn1_url": "",
-        "sec_btn2_label": "Taped Up Diapers",
-        "sec_btn2_url": "",
-        "sec_btn3_label": "Size Guide",
-        "sec_btn3_url": ""
+        "button_label": "Shop Now",
+        "button_url": ""
       }
     },
     "custom_multi_images_Ma9NAT": {
@@ -49,7 +45,7 @@
       "settings": {
         "custom_anchor_id": "multi-images-content",
         "show_top_border": false,
-        "show_bottom_border": false,
+        "show_bottom_border": true,
         "background_color": "#f8f3ed",
         "section_image_1": "shopify://shop_images/Layers_1.png",
         "section_image_2": "shopify://shop_images/23.png",
@@ -346,7 +342,7 @@
   },
   "order": [
     "banner",
-    "custom_hero_banner_kteJcq",
+    "custom_page_header_9YhyDe",
     "custom_multi_images_Ma9NAT",
     "custom_multi_images_MXjAmB",
     "custom_feature_slider_zEdPqw",

@@ -14,12 +14,11 @@
       "disabled": true,
       "name": "UF Page Header",
       "settings": {
-        "header_image": "shopify://shop_images/Frame_287.png",
+        "text_alignment": "center",
         "headline": "Ultra-thin, featherlight  and flexible,designed for tropical comfort. no sag no bulge",
         "subheadline": "",
         "button_label": "Explore Our Collection",
-        "button_url": "",
-        "text_alignment": "center"
+        "button_url": ""
       }
     },
     "main": {
@@ -171,7 +170,6 @@
         "show_top_border": true,
         "show_bottom_border": false,
         "background_color": "#f8f3ed",
-        "background_image": "shopify://shop_images/7_2051898e-945f-4fca-ad1f-ad0c3ffd6aa6.png",
         "image_fit": "cover",
         "overline": "Diaper Features",
         "heading": "Designed for Their World of Wonder",
@@ -209,7 +207,6 @@
         "background_color": "#f8f3ed",
         "section_image": "shopify://shop_images/header1.png",
         "image_position": "right",
-        "image_fit": "cover",
         "overline": "About UltraFresh",
         "heading": "Quality Without Compromise, Love Without Limits",
         "description": "<p><strong>Ultrafresh Inc.</strong> was born from a simple Filipino promise: every baby deserves the gentlest care, and every parent deserves peace of mind they can afford. Our flagship <strong>Ultrafresh Diapers</strong> aren't just products – they're a parent's quiet confidence at 3 AM, a baby's freedom to explore, and a family's trust in comfort that never compromises on quality or value.<br/><br/></p>",
@@ -233,7 +230,6 @@
         "background_color": "#f8f3ed",
         "section_image": "shopify://shop_images/header1.png",
         "image_position": "left",
-        "image_fit": "cover",
         "overline": "Premium Comfort",
         "heading": "Which Ultrafresh Diaper Is Right for Your Baby?",
         "description": "<p>This easy guide compares Ultrafresh’s taped and pull-up diapers, so you can find the perfect fit for your baby’s stage. Whether you're caring for a newborn or chasing after a toddler, we've got you covered with comfort, protection, and convenience.</p>",

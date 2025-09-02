@@ -48,12 +48,11 @@
       "disabled": true,
       "name": "Page Header",
       "settings": {
-        "header_image": "shopify://shop_images/Get_in_touch.png",
+        "text_alignment": "center",
         "headline": "Got a question? Let's talk.",
         "subheadline": "We’re here to help with anything Ultrafresh — just send us a message.",
         "button_label": "Explore Our Collection",
-        "button_url": "",
-        "text_alignment": "center"
+        "button_url": ""
       }
     },
     "form": {
