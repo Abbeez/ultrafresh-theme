@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -24,8 +25,8 @@
         "background_opacity": 0,
         "text_color": "dark",
         "enable_text_shadow": false,
-        "headline": "What does it mean to feel loved...even before you understand the word?",
-        "subheadline": "A diaper so soft, so light, they hardly feel it – but always feel our love.",
+        "headline": "Find the Perfect Diaper Size for Your Little One",
+        "subheadline": "Every baby grows at their own beautiful pace, and finding the right diaper size ensures gentle comfort at every stage. Our comprehensive size guide helps you choose the perfect fit for your baby's sensitive skin, from newborn diapers to toddler protection. Because the right size means better comfort and fewer worries",
         "button_label": "Check the sizes",
         "button_url": "#sizeguide",
         "show_secondary_content": false,
@@ -116,7 +117,7 @@
         "background_opacity": 100,
         "padding_top": 60,
         "padding_bottom": 60,
-        "table_heading": "Size  Guide",
+        "table_heading": "What’s the Right Diaper for My Baby?",
         "column_1_title": "Features",
         "column_2_title": "Pull Up Diapers",
         "column_3_title": "Taped Diapers",

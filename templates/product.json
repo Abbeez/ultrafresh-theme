@@ -27,6 +27,7 @@
       "blocks": {
         "vendor": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "uppercase"
@@ -172,9 +173,9 @@
         "background_color": "#f8f3ed",
         "background_image": "shopify://shop_images/7_2051898e-945f-4fca-ad1f-ad0c3ffd6aa6.png",
         "image_fit": "cover",
-        "overline": "Features",
-        "heading": "Designed for Their <span>World</span> of Wonder",
-        "description": "<p>Made with diaper-like absorbency, feather soft materials and CloudTouch™ Softness for ultimate comfort, our training pants are perfect for potty training.</p>",
+        "overline": "Diaper Features",
+        "heading": "Designed for Their World of Wonder",
+        "description": "<p>Featuring our thinnest 2mm design, feather-soft hypoallergenic materials and CloudTouch™ technology, UltraFresh diapers deliver gentle care for busy toddlers. Our ultra-thin design keeps your child comfortably protected through every run, jump, and moment of exploration.<br/><br/><br/></p>",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -190,9 +191,9 @@
         "section_image": "shopify://shop_images/12_bb00b155-60ff-46ca-8b2f-36a7517debbe.png",
         "image_position": "left",
         "image_fit": "cover",
-        "overline": "Size  Guide",
-        "heading": "Growing Together, <span>Every Step</span> of the Way",
-        "description": "<p>Every baby grows at their own perfect pace. Our size guide isn't just about weight – it's about supporting their unique journey from tiny newborn cuddles to confident first steps.</p>",
+        "overline": "Diaper Size Guide",
+        "heading": "Perfect Fit for Every Precious Moment",
+        "description": "<p>Every baby grows differently. Our diaper size guide helps you find the right fit at every stage, from newborn to toddler.</p>",
         "default_dot_color": "#d4a574",
         "padding_top": 0,
         "padding_bottom": 0
@@ -209,8 +210,8 @@
         "section_image": "shopify://shop_images/header1.png",
         "image_position": "right",
         "image_fit": "cover",
-        "overline": "About Us",
-        "heading": "Quality Without Compromise, Love <span>Without Limits</span>",
+        "overline": "About UltraFresh",
+        "heading": "Quality Without Compromise, Love Without Limits",
         "description": "<p><strong>Ultrafresh Inc.</strong> was born from a simple Filipino promise: every baby deserves the gentlest care, and every parent deserves peace of mind they can afford. Our flagship <strong>Ultrafresh Diapers</strong> aren't just products – they're a parent's quiet confidence at 3 AM, a baby's freedom to explore, and a family's trust in comfort that never compromises on quality or value.<br/><br/></p>",
         "content_image": "shopify://shop_images/16.png",
         "content_image_alt": "Alt text",
@@ -269,9 +270,13 @@
       "name": "UF Testimonials",
       "settings": {
         "background_color": "#f8f3ed",
+        "background_position": "center",
+        "background_size": "cover",
+        "background_opacity": 100,
         "custom_anchor_id": "testimonials",
         "padding_top": 60,
         "padding_bottom": 60,
+        "subheading": "What parents say",
         "heading": "Every story deserves gentle care",
         "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
         "button_label": "Click here to see parent stories",
@@ -290,6 +295,13 @@
           }
         },
         "row_VAGkyQ": {
+          "type": "row",
+          "settings": {
+            "size": "N (Newborn)",
+            "range": "2 – 9lbs"
+          }
+        },
+        "row_kECFAD": {
           "type": "row",
           "settings": {
             "size": "N (Newborn)",
@@ -335,6 +347,7 @@
       "block_order": [
         "row_KYeP9k",
         "row_VAGkyQ",
+        "row_kECFAD",
         "row_HExGpm",
         "row_9tpMEk",
         "row_QLMciX",
@@ -362,7 +375,7 @@
       "settings": {
         "padding_top": 64,
         "padding_bottom": 120,
-        "heading": "Questions from <span>Caring</span> Parents",
+        "heading": "Questions from Caring Parents",
         "description": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one."
       }
     },
