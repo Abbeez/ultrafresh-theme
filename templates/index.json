@@ -98,14 +98,14 @@
         "size_item_YmGmh4": {
           "type": "size_item",
           "settings": {
-            "size_text": "Medium: 3-11 months old (6-11 kgs)",
+            "size_text": "Medium: 3-11 months old (6-11 kg)",
             "dot_color": "#d4a574"
           }
         },
         "size_item_JgqXLQ": {
           "type": "size_item",
           "settings": {
-            "size_text": "XXL: 1-2 years old (15kg up)",
+            "size_text": "XXL: 1-2 years old (15kg and up)",
             "dot_color": "#d4a574"
           }
         },
@@ -119,7 +119,7 @@
         "size_item_eza7TV": {
           "type": "size_item",
           "settings": {
-            "size_text": "XXXL: 1-2 years old (18kg up)",
+            "size_text": "XXXL: 1-2 years old (18kg and up)",
             "dot_color": "#d4a574"
           }
         }
