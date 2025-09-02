@@ -27,6 +27,7 @@
       "blocks": {
         "vendor": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "uppercase"
@@ -173,8 +174,8 @@
         "background_image": "shopify://shop_images/7_2051898e-945f-4fca-ad1f-ad0c3ffd6aa6.png",
         "image_fit": "cover",
         "overline": "Features",
-        "heading": "Designed for Their <span>World</span> of Wonder",
-        "description": "<p>Made with diaper-like absorbency, feather soft materials and CloudTouch™ Softness for ultimate comfort, our training pants are perfect for potty training.</p>",
+        "heading": "Designed for Their World of Wonder",
+        "description": "<p>Made with diaper-like absorbency, feather soft materials and CloudTouch™ Softness for ultimate comfort, UltraFresh taped diapers keep your baby comfortably protected through every move and moment.<br/><br/></p>",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -191,7 +192,7 @@
         "image_position": "left",
         "image_fit": "cover",
         "overline": "Size  Guide",
-        "heading": "Growing Together, <span>Every Step</span> of the Way",
+        "heading": "Growing Together, Every Step of the Way",
         "description": "<p>Every baby grows at their own perfect pace. Our size guide isn't just about weight – it's about supporting their unique journey from tiny newborn cuddles to confident first steps.</p>",
         "default_dot_color": "#d4a574",
         "padding_top": 0,
@@ -269,9 +270,13 @@
       "name": "UF Testimonials",
       "settings": {
         "background_color": "#f8f3ed",
+        "background_position": "center",
+        "background_size": "cover",
+        "background_opacity": 100,
         "custom_anchor_id": "testimonials",
         "padding_top": 60,
         "padding_bottom": 60,
+        "subheading": "What parents say",
         "heading": "Every story deserves gentle care",
         "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
         "button_label": "Click here to see parent stories",
