@@ -47,14 +47,13 @@
       "default": "left"
     },
     {
-      "type": "select",
-      "id": "image_fit",
-      "label": "Banner Image Fit",
-      "options": [
-        { "value": "cover", "label": "Cover (fill & crop)" },
-        { "value": "contain", "label": "Contain (no crop)" }
-      ],
-      "default": "cover"
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image Border Radius (px)",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 0
     },
 
     /* Content */
@@ -137,12 +136,12 @@
 
 {% assign top_border_style = '' %}
 {% if section.settings.show_top_border %}
-  {% assign top_border_style = 'border-top: 1px solid var(--custom-dark)' %}
+  {% assign top_border_style = 'border-top: 1px solid var(--custom-borderbg)' %}
 {% endif %}
 
 {% assign bottom_border_style = '' %}
 {% if section.settings.show_bottom_border %}
-  {% assign bottom_border_style = 'border-bottom: 1px solid var(--custom-dark)' %}
+  {% assign bottom_border_style = 'border-bottom: 1px solid var(--custom-borderbg)' %}
 {% endif %}
 
 <div
@@ -155,8 +154,8 @@
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
     background-color: {{ section.settings.background_color }};
-    --split-img-fit: {{ section.settings.image_fit }};
     --split-content-img-max-width: {{ section.settings.content_image_max_width | default: 800 }}px;
+    --split-border-radius: {{ section.settings.image_border_radius | default: 0 }}px;
   "
 >
   <div class="split__image-col">
@@ -213,7 +212,6 @@
 /* Base */
 .split-section {
   width: 100vw;
-  min-height: 500px;
   display: flex;
   flex-direction: row;
   justify-content: stretch;
@@ -229,21 +227,26 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  min-height: 350px;
-  max-height:800px;
+  min-height: 650px;
+  max-height: 650px;
   overflow: hidden;
 }
 
-/* Banner (side) image: responsive */
+/* Banner (side) image: responsive with cover fit by default and dynamic border radius */
 .split__img {
   width: 100%;
-  height: auto;
-  object-fit: var(--split-img-fit);
-  object-position: left center;
+  height: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  border-radius: 0;
+  /* Default: left position gets top-right & bottom-right radius */
+  border-radius: 0 var(--split-border-radius) var(--split-border-radius) 0;
 }
-.split-section--reverse .split__img { object-position: right center; }
+/* When image is on right: top-left & bottom-left radius */
+.split-section--reverse .split__img {
+  border-radius: var(--split-border-radius) 0 0 var(--split-border-radius);
+}
 
 .split__text-col {
   flex: 1 1 50%;
@@ -327,10 +330,23 @@
 
 /* Breakpoints: 990 / 749 / 479 */
 @media (max-width: 990px) {
-  .split-section { flex-direction: column !important; }
+  .split-section { 
+    flex-direction: column !important; 
+  }
   .split__image-col,
-  .split__text-col { flex: 0 0 100%; min-height: 350px; }
-  .split__img { object-position: center; }
+  .split__text-col { 
+    flex: 0 0 100%; 
+    min-height: 350px; 
+  }
+  .split__image-col {
+    max-height: 500px;
+  }
+  .split__img { 
+    object-position: center;
+    height: 100%;
+    /* Reset border radius on mobile */
+    border-radius: 0 !important;
+  }
   .split__text-inner {
     margin: 0;
     padding: 6vw 6vw;
@@ -341,9 +357,15 @@
 @media (max-width: 749px) {
   .split__text-inner { padding: 7vw 5rem; }
   .split__btn { min-width: 180px; padding: 1rem 1.6rem; }
+  .split__image-col {
+    max-height: 450px;
+  }
 }
 @media (max-width: 479px) {
   .split__text-inner { padding: 7vw 3rem; }
   .split__btn { min-width: 140px; padding: 0.7rem 1.2rem; }
+  .split__image-col {
+    max-height: 400px;
+  }
 }
 </style>

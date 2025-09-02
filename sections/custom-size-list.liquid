@@ -47,14 +47,13 @@
       "default": "left"
     },
     {
-      "type": "select",
-      "id": "image_fit",
-      "label": "Banner Image Fit",
-      "options": [
-        { "value": "cover", "label": "Cover (fill & crop)" },
-        { "value": "contain", "label": "Contain (no crop)" }
-      ],
-      "default": "cover"
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image Border Radius (px)",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 0
     },
 
     /* Content */
@@ -75,6 +74,25 @@
       "id": "description",
       "label": "Description",
       "default": "<p>Our comprehensive size range ensures the perfect fit for every body type. From newborn to toddler, we've got you covered with accurate measurements and comfortable fits.</p>"
+    },
+
+    /* Button */
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "View Size Guide"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Show Button",
+      "default": true
     },
 
     /* Spacing */
@@ -166,12 +184,12 @@
 
 {% assign top_border_style = '' %}
 {% if section.settings.show_top_border %}
-  {% assign top_border_style = 'border-top: 1px solid var(--custom-dark)' %}
+  {% assign top_border_style = 'border-top: 1px solid var(--custom-borderbg)' %}
 {% endif %}
 
 {% assign bottom_border_style = '' %}
 {% if section.settings.show_bottom_border %}
-  {% assign bottom_border_style = 'border-bottom: 1px solid var(--custom-dark)' %}
+  {% assign bottom_border_style = 'border-bottom: 1px solid var(--custom-borderbg)' %}
 {% endif %}
 
 <div
@@ -184,7 +202,7 @@
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
     background-color: {{ section.settings.background_color }};
-    --list-img-fit: {{ section.settings.image_fit }};
+    --sizes-border-radius: {{ section.settings.image_border_radius | default: 0 }}px;
   "
 >
   <div class="sizes__image-col">
@@ -224,15 +242,22 @@
           {% endfor %}
         </div>
       {% endif %}
+
+      {% if section.settings.show_button and section.settings.button_text != blank %}
+        <div class="sizes__button-wrapper">
+          <a href="{{ section.settings.button_url | default: '#' }}" class="sizes__btn">
+            {{ section.settings.button_text }}
+          </a>
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>
 
 <style>
-/* Base - exact same values as split-section */
+/* Base */
 .sizes-list-section {
   width: 100vw;
-  min-height: 500px;
   display: flex;
   flex-direction: row;
   justify-content: stretch;
@@ -248,21 +273,26 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  min-height: 350px;
-  max-height: 800px;
+  min-height: 650px;
+  max-height: 650px;
   overflow: hidden;
 }
 
-/* Banner (side) image: responsive */
+/* Banner (side) image: responsive with dynamic border radius */
 .sizes__img {
   width: 100%;
-  height: auto;
-  object-fit: var(--list-img-fit);
-  object-position: left center;
+  height: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  border-radius: 0;
+  /* Default: left position gets top-right & bottom-right radius */
+  border-radius: 0 var(--sizes-border-radius) var(--sizes-border-radius) 0;
 }
-.sizes-list-section--reverse .sizes__img { object-position: right center; }
+/* When image is on right: top-left & bottom-left radius */
+.sizes-list-section--reverse .sizes__img {
+  border-radius: var(--sizes-border-radius) 0 0 var(--sizes-border-radius);
+}
 
 .sizes__text-col {
   flex: 1 1 50%;
@@ -337,12 +367,53 @@
   font-weight: 400;
 }
 
+/* Button */
+.sizes__button-wrapper {
+  margin-top: 2.5rem;
+}
+
+.sizes__btn {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: var(--custom-dark);
+  font-weight: 500;
+  padding: 1.1rem 2.3rem;
+  border: 1px solid var(--custom-dark);
+  min-width: 260px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+  text-align: center;
+  justify-content: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.sizes__btn:hover {
+  background-color: var(--custom-dark);
+  color: var(--custom-light, #fff);
+  text-decoration: none;
+}
+
 /* Breakpoints: 990 / 749 / 479 */
 @media (max-width: 990px) {
-  .sizes-list-section { flex-direction: column !important; }
+  .sizes-list-section { 
+    flex-direction: column !important; 
+  }
   .sizes__image-col,
-  .sizes__text-col { flex: 0 0 100%; min-height: 350px; }
-  .sizes__img { object-position: center; }
+  .sizes__text-col { 
+    flex: 0 0 100%; 
+    min-height: 350px; 
+  }
+  .sizes__image-col {
+    max-height: 500px;
+  }
+  .sizes__img { 
+    object-position: center;
+    height: 100%;
+    /* Reset border radius on mobile */
+    border-radius: 0 !important;
+  }
   .sizes__text-inner {
     margin: 0;
     padding: 6vw 6vw;
@@ -355,13 +426,27 @@
 }
 @media (max-width: 749px) {
   .sizes__text-inner { padding: 7vw 5rem; }
+  .sizes__image-col {
+    max-height: 450px;
+  }
   .sizes__list-wrapper {
     grid-template-columns: 1fr;
     gap: 1rem;
     text-align: left;
   }
+  .sizes__btn {
+    min-width: 220px;
+    padding: 1rem 2rem;
+  }
 }
 @media (max-width: 479px) {
   .sizes__text-inner { padding: 7vw 3rem; }
+  .sizes__image-col {
+    max-height: 400px;
+  }
+  .sizes__btn {
+    min-width: 200px;
+    padding: 0.9rem 1.5rem;
+  }
 }
 </style>

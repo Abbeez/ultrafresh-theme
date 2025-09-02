@@ -30,12 +30,33 @@
       "info": "Leave as-is to mimic --custom-light."
     },
 
-    /* Background image for the image column */
+    /* Image position */
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image Border Radius (px)",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 0
+    },
+
+    /* Default background image */
     {
       "type": "image_picker",
-      "id": "background_image",
-      "label": "Background Image",
-      "info": "This image stays fixed while tab content changes"
+      "id": "default_background_image",
+      "label": "Default Background Image",
+      "info": "Shows when no specific tab background is set"
     },
     {
       "type": "select",
@@ -99,6 +120,12 @@
           "label": "Tab Icon"
         },
         {
+          "type": "image_picker",
+          "id": "tab_background_image",
+          "label": "Tab Background Image",
+          "info": "Specific background for this tab. If empty, uses default background."
+        },
+        {
           "type": "text",
           "id": "content_title",
           "label": "Content Title",
@@ -150,25 +177,26 @@
 
 {% assign top_border_style = '' %}
 {% if section.settings.show_top_border %}
-  {% assign top_border_style = 'border-top: 1px solid var(--custom-dark)' %}
+  {% assign top_border_style = 'border-top: 1px solid var(--custom-borderbg)' %}
 {% endif %}
 
 {% assign bottom_border_style = '' %}
 {% if section.settings.show_bottom_border %}
-  {% assign bottom_border_style = 'border-bottom: 1px solid var(--custom-dark)' %}
+  {% assign bottom_border_style = 'border-bottom: 1px solid var(--custom-borderbg)' %}
 {% endif %}
 
 <div
   {% if section.settings.custom_anchor_id %}
     id="{{ section.settings.custom_anchor_id | escape }}"
   {% endif %}
-  class="tabbed-section"
+  class="tabbed-section{% if section.settings.image_position == 'right' %} tabbed-section--reverse{% endif %}"
   style="
     {{ top_border_style }}; {{ bottom_border_style }};
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
     background-color: {{ section.settings.background_color }};
     --tabbed-img-fit: {{ section.settings.image_fit }};
+    --tabbed-border-radius: {{ section.settings.image_border_radius | default: 0 }}px;
   "
 >
   <div class="tabbed__text-col">
@@ -202,16 +230,39 @@
   </div>
 
   <div class="tabbed__image-col">
-    {% if section.settings.background_image != blank %}
-      <img
-        src="{{ section.settings.background_image | image_url: width: 1600 }}"
-        alt="{{ section.settings.heading | strip_html }}"
-        width="1600"
-        height="auto"
-        loading="lazy"
-        class="tabbed__img"
-      >
-    {% endif %}
+    <!-- Background images for each tab -->
+    {% for block in section.blocks %}
+      {% assign tab_bg_image = block.settings.tab_background_image %}
+      {% if tab_bg_image == blank %}
+        {% assign tab_bg_image = section.settings.default_background_image %}
+      {% endif %}
+      
+      {% if tab_bg_image != blank %}
+        <img
+          src="{{ tab_bg_image | image_url: width: 1600 }}"
+          alt="{{ block.settings.content_title | strip_html }}"
+          width="1600"
+          height="auto"
+          loading="lazy"
+          class="tabbed__img tabbed__bg-image{% if forloop.first %} tabbed__bg-image--active{% endif %}"
+          data-bg-index="{{ forloop.index0 }}"
+        >
+      {% endif %}
+    {% endfor %}
+
+    <!-- Fallback to default background if no tab backgrounds exist -->
+    {% unless section.blocks.size > 0 %}
+      {% if section.settings.default_background_image != blank %}
+        <img
+          src="{{ section.settings.default_background_image | image_url: width: 1600 }}"
+          alt="{{ section.settings.heading | strip_html }}"
+          width="1600"
+          height="auto"
+          loading="lazy"
+          class="tabbed__img tabbed__bg-image tabbed__bg-image--active"
+        >
+      {% endif %}
+    {% endunless %}
 
     <!-- Overlaid tab content -->
     <div class="tabbed__overlay-content">
@@ -246,10 +297,9 @@
 </div>
 
 <style>
-/* Base - exact same values as split-section */
+/* Base - matching split-section with increased height */
 .tabbed-section {
   width: 100vw;
-  min-height: 500px;
   display: flex;
   flex-direction: row;
   justify-content: stretch;
@@ -257,6 +307,7 @@
   transition: padding 0.2s, background-color 0.2s;
   font-family: inherit; /* Dawn default */
 }
+.tabbed-section--reverse { flex-direction: row-reverse; }
 
 .tabbed__image-col {
   flex: 1 1 50%;
@@ -264,19 +315,46 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  min-height: 350px;
+  min-height: 650px;
   max-height: 800px;
   overflow: hidden;
 }
 
-/* Background image - exact same values as split__img */
-.tabbed__img {
+/* Background images with transitions and dynamic border radius */
+.tabbed__bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: var(--tabbed-img-fit);
+  object-position: center;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  /* When image is on right: top-left & bottom-left radius */
+  border-radius: var(--tabbed-border-radius) 0 0 var(--tabbed-border-radius);
+}
+/* Default: left position gets top-right & bottom-right radius */
+.tabbed-section--reverse .tabbed__bg-image {
+  border-radius: 0 var(--tabbed-border-radius) var(--tabbed-border-radius) 0;
+}
+
+.tabbed__bg-image--active {
+  opacity: 1;
+}
+
+/* Legacy support for single background image */
+.tabbed__img:not(.tabbed__bg-image) {
   width: 100%;
   height: auto;
   object-fit: var(--tabbed-img-fit);
   object-position: left center;
   display: block;
-  border-radius: 0;
+  border-radius: var(--tabbed-border-radius) 0 0 var(--tabbed-border-radius);
+}
+.tabbed-section--reverse .tabbed__img:not(.tabbed__bg-image) {
+  border-radius: 0 var(--tabbed-border-radius) var(--tabbed-border-radius) 0;
 }
 
 .tabbed__text-col {
@@ -292,6 +370,10 @@
   margin: 0 0 0 7vw;
   padding: 4vw 3vw 4vw 0;
   box-sizing: border-box;
+}
+.tabbed-section--reverse .tabbed__text-inner {
+  margin: 0 7vw 0 0;
+  padding: 4vw 0 4vw 3vw;
 }
 
 /* Overline / sub text - exact same values */
@@ -330,7 +412,6 @@ margin-top: 1.6rem;
 flex-wrap: wrap;
 }
 
-
 .tabbed__tab {
 width: 45%;
   background: transparent;
@@ -352,14 +433,16 @@ width: 45%;
   font-weight: 500;
 }
 
-
-
 /* Overlay content on image */
 .tabbed__overlay-content {
   position: absolute;
   bottom: 2rem;
   left: 2rem;
   z-index: 2;
+}
+.tabbed-section--reverse .tabbed__overlay-content {
+  left: auto;
+  right: 2rem;
 }
 
 .tabbed__content-item {
@@ -431,10 +514,18 @@ width: 45%;
     margin: 0 0 0 5vw;
     padding: 3vw 2vw 3vw 0;
   }
+  .tabbed-section--reverse .tabbed__text-inner {
+    margin: 0 5vw 0 0;
+    padding: 3vw 0 3vw 2vw;
+  }
   
   .tabbed__overlay-content {
     bottom: 1.5rem;
     left: 1.5rem;
+  }
+  .tabbed-section--reverse .tabbed__overlay-content {
+    left: auto;
+    right: 1.5rem;
   }
   
   .tabbed__content-item {
@@ -463,28 +554,31 @@ width: 45%;
   .tabbed-section { 
     flex-direction: column !important; 
     min-height: auto;
+    max-height: none;
   }
   
   .tabbed__image-col,
   .tabbed__text-col { 
     flex: 0 0 100%; 
-    min-height: 300px; 
+    min-height: 350px; 
   }
   
   .tabbed__image-col {
     order: 2;
-    min-height: 400px;
-    max-height: 500px;
+    min-height: 500px;
+    max-height: 600px;
   }
   
   .tabbed__text-col {
     order: 1;
   }
   
-  .tabbed__img { 
+  .tabbed__bg-image { 
     object-position: center; 
     height: 100%;
     object-fit: cover;
+    /* Reset border radius on mobile */
+    border-radius: 0 !important;
   }
   
   .tabbed__text-inner {
@@ -557,8 +651,8 @@ width: 45%;
   }
   
   .tabbed__image-col {
-    min-height: 350px;
-    max-height: 450px;
+    min-height: 450px;
+    max-height: 550px;
   }
   
   .tabbed__overlay-content {
@@ -609,8 +703,8 @@ width: 45%;
   }
   
   .tabbed__image-col {
-    min-height: 300px;
-    max-height: 400px;
+    min-height: 400px;
+    max-height: 500px;
   }
   
   .tabbed__overlay-content {
@@ -674,6 +768,7 @@ width: 45%;
 document.addEventListener('DOMContentLoaded', function() {
   const tabs = document.querySelectorAll('.tabbed__tab');
   const contentItems = document.querySelectorAll('.tabbed__content-item');
+  const backgroundImages = document.querySelectorAll('.tabbed__bg-image');
 
   tabs.forEach(tab => {
     tab.addEventListener('click', function() {
@@ -687,14 +782,25 @@ document.addEventListener('DOMContentLoaded', function() {
         item.classList.remove('tabbed__content-item--active');
       });
       
+      // Remove active class from all background images
+      backgroundImages.forEach(bg => {
+        bg.classList.remove('tabbed__bg-image--active');
+      });
+      
       // Add active class to clicked tab
       this.classList.add('tabbed__tab--active');
       
-      // Show corresponding content with a slight delay for smoother transition
+      // Show corresponding content and background with a slight delay for smoother transition
       setTimeout(() => {
         const targetContent = document.querySelector(`[data-content-index="${targetIndex}"]`);
+        const targetBackground = document.querySelector(`[data-bg-index="${targetIndex}"]`);
+        
         if (targetContent) {
           targetContent.classList.add('tabbed__content-item--active');
+        }
+        
+        if (targetBackground) {
+          targetBackground.classList.add('tabbed__bg-image--active');
         }
       }, 50);
     });

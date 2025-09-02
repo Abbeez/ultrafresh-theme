@@ -1,73 +1,155 @@
 {% schema %}
 {
-  "name": "Page Header",
-  "tag": "section",
-  "class": "uf-page-header-section",
+  "name": "Custom Page Header",
   "settings": [
     {
-      "type": "image_picker",
-      "id": "header_image",
-      "label": "Header Background Image"
-    },
-    {
-      "type": "text",
-      "id": "headline",
-      "label": "Headline",
-      "default": "More than a Diaper, Love, made visible"
-    },
-    {
-      "type": "text",
-      "id": "subheadline",
-      "label": "Subheadline",
-      "default": "Simple. True. This is your signature whisper to close the journey with meaning."
-    },
-    {
-      "type": "text",
-      "id": "button_label",
-      "label": "Button Label",
-      "default": "Explore Our Collection"
-    },
-    {
-      "type": "url",
-      "id": "button_url",
-      "label": "Button Link"
+      "type": "header",
+      "content": "Layout Settings"
     },
     {
       "type": "select",
       "id": "text_alignment",
       "label": "Text Alignment",
-      "default": "left",
       "options": [
         { "value": "left", "label": "Left" },
         { "value": "center", "label": "Center" },
         { "value": "right", "label": "Right" }
-      ]
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Spacing Settings"
+    },
+    {
+      "type": "number",
+      "id": "padding_top_desktop",
+      "label": "Padding Top - Desktop (px)",
+      "default": 120
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom_desktop",
+      "label": "Padding Bottom - Desktop (px)",
+      "default": 120
+    },
+    {
+      "type": "header",
+      "content": "Background Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "page_header_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color (fallback or overlay)",
+      "default": "#f8f9fa"
+    },
+    {
+      "type": "range",
+      "id": "background_opacity",
+      "label": "Background Color Opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 0,
+      "info": "Overlay opacity when using background image"
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Text color",
+      "options": [
+        { "value": "light", "label": "Light" },
+        { "value": "dark", "label": "Dark" }
+      ],
+      "default": "light"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_text_shadow",
+      "label": "Enable Text Shadow",
+      "default": true,
+      "info": "Adds shadow to text for better readability over images"
+    },
+    {
+      "type": "header",
+      "content": "Main Content"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Your Amazing Headline Here"
+    },
+    {
+      "type": "textarea",
+      "id": "subheadline",
+      "label": "Subheadline",
+      "default": "A compelling subheadline that describes your product or service."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link"
     }
   ],
   "presets": [
     {
-      "name": "Page Header",
-      "category": "Custom"
+      "name": "Custom Page Header"
     }
   ]
 }
 {% endschema %}
 
-<div class="uf-page-header"
+{% assign has_page_header_image = section.settings.page_header_image %}
+{% assign bg_opacity = section.settings.background_opacity | divided_by: 100.0 %}
+
+<div class="custom-page-header custom-page-header--{{ section.settings.text_color }} custom-page-header--align-{{ section.settings.text_alignment }} {% if section.settings.enable_text_shadow %}custom-page-header--text-shadow{% endif %}"
   style="
-    {% if section.settings.header_image != blank %}
-      background-image: linear-gradient(178deg, rgba(132, 86, 60, 0.71) 0%, rgba(151, 132, 107, 0.77) 100%), url('{{ section.settings.header_image | image_url: width: 1800 }}');
-    {% else %}
-      background-image: linear-gradient(178deg, rgba(132, 86, 60, 0.88) 0%, rgba(151, 132, 107, 0) 100%);
+    padding-top: {{ section.settings.padding_top_desktop | default: 120 }}px;
+    padding-bottom: {{ section.settings.padding_bottom_desktop | default: 120 }}px;
+    --desktop-padding-top: {{ section.settings.padding_top_desktop | default: 120 }}px;
+    --desktop-padding-bottom: {{ section.settings.padding_bottom_desktop | default: 120 }}px;
+    {% if section.settings.background_color != blank %}
+      background-color: {{ section.settings.background_color }};
     {% endif %}
-  ">
-  <div class="uf-page-header__content align-{{ section.settings.text_alignment }}">
-    <div class="uf-page-header__inner align-{{ section.settings.text_alignment }}">
-      <h1 class="h0 uf-page-header__headline font-cursive">{{ section.settings.headline }}</h1>
-      <div class="uf-page-header__subheadline">{{ section.settings.subheadline }}</div>
+    {% if has_page_header_image != blank and section.settings.background_opacity > 0 %}
+      background-image:
+        linear-gradient(
+          rgba({{ section.settings.background_color | color_extract: 'red' }}, {{ section.settings.background_color | color_extract: 'green' }}, {{ section.settings.background_color | color_extract: 'blue' }}, {{ bg_opacity }}),
+          rgba({{ section.settings.background_color | color_extract: 'red' }}, {{ section.settings.background_color | color_extract: 'green' }}, {{ section.settings.background_color | color_extract: 'blue' }}, {{ bg_opacity }})
+        ),
+        url('{{ has_page_header_image | image_url: width: 2000 }}');
+    {% elsif has_page_header_image != blank %}
+      background-image: url('{{ has_page_header_image | image_url: width: 2000 }}');
+    {% endif %}
+  "
+>
+  <div class="page-width">
+    <div class="custom-page-header__content">
+      <h1 class="h1 custom-page-header__headline font-cursive">{{ section.settings.headline }}</h1>
+      {% if section.settings.subheadline != blank %}
+        <div class="custom-page-header__subheadline">{{ section.settings.subheadline }}</div>
+      {% endif %}
       {% if section.settings.button_label != blank and section.settings.button_url != blank %}
-        <a href="{{ section.settings.button_url }}" class="uf-page-header__btn">
-          {{ section.settings.button_label }} <span>›</span>
+        <a href="{{ section.settings.button_url }}" class="custom-page-header__btn">
+          {{ section.settings.button_label }}
+          <span class="custom-page-header__btn-arrow">›</span>
         </a>
       {% endif %}
     </div>
@@ -75,133 +157,181 @@
 </div>
 
 <style>
-.uf-page-header {
+.custom-page-header {
   position: relative;
   width: 100vw;
-  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   overflow: hidden;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  min-height: 40vh;
 }
 
-.uf-page-header__content {
+.custom-page-header .page-width {
   position: relative;
   z-index: 2;
-  display: flex;
-  align-items: center;
   width: 100%;
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
-.uf-page-header__inner {
   display: flex;
   flex-direction: column;
-  max-width: 1080px;
-}
-
-.uf-page-header__inner * {
-  text-shadow: 0 1px 1px #1111114a;
-}
-
-.uf-page-header__headline {
-  color: var(--custom-light);
-  margin-bottom: 1.2rem;
-  margin-top:1.2rem;
-}
-
-.uf-page-header__subheadline {
-  color: var(--custom-light);
-  margin-bottom: 2.1rem;
-  opacity: 0.97;
-}
-
-.uf-page-header__btn {
-  display: inline-flex;
   align-items: center;
-  padding: 1.1rem 2.3rem;
-  border: 1.5px solid var(--custom-light);
-  background: none;
+  justify-content: center;
+}
+
+.custom-page-header__content {
+  max-width: 950px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  word-break: break-word;
+  width: 100%;
+}
+
+/* Text Alignment Options */
+.custom-page-header--align-left .custom-page-header__content {
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.custom-page-header--align-center .custom-page-header__content {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-page-header--align-right .custom-page-header__content {
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.custom-page-header__headline {
+  margin-bottom: 1.5rem;
   color: var(--custom-light);
-  font-weight: 700;
-  border-radius: 0;
-  min-width: 220px;
-  text-decoration: none;
-  font-family: inherit;
-  transition: background 0.18s, color 0.18s, border-color 0.18s;
-  font-size: inherit;
+  word-break: break-word;
+  line-height: 1.2;
 }
 
-.uf-page-header__btn span {
-  margin-left: 0.8em;
-  font-size: 1.3em;
-  line-height: 1;
+.custom-page-header--text-shadow .custom-page-header__headline {
+  text-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
 }
 
-.uf-page-header__btn:hover,
-.uf-page-header__btn:focus {
-  background: var(--custom-primary);
-  border-color: var(--custom-primary);
+.custom-page-header--dark .custom-page-header__headline {
   color: var(--custom-dark);
 }
 
-/* Alignment Modifiers */
-.uf-page-header__content.align-left {
-  justify-content: flex-start;
-  text-align: left;
-}
-.uf-page-header__content.align-center {
-  justify-content: center;
-  text-align: center;
-}
-.uf-page-header__content.align-right {
-  justify-content: flex-end;
-  text-align: right;
+.custom-page-header__subheadline {
+  opacity: 0.95;
+  margin-bottom: 2rem;
+  color: var(--custom-light);
+  word-break: break-word;
+  line-height: 1.4;
 }
 
-.uf-page-header__inner.align-left {
-  align-items: flex-start;
+.custom-page-header--text-shadow .custom-page-header__subheadline {
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
 }
-.uf-page-header__inner.align-center {
+
+.custom-page-header--dark .custom-page-header__subheadline {
+  color: var(--custom-dark);
+}
+
+.custom-page-header__btn {
+  display: inline-flex;
   align-items: center;
-}
-.uf-page-header__inner.align-right {
-  align-items: flex-end;
+  background: var(--custom-primary);
+  color: var(--custom-dark);
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem 2.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  min-width: 200px;
+  justify-content: center;
+  border-radius: 0;
+  transition: all 0.3s ease;
 }
 
-/* Tablet */
+.custom-page-header__btn-arrow {
+  margin-left: 0.8em;
+  line-height: 1;
+}
+
+.custom-page-header__btn:hover,
+.custom-page-header__btn:focus {
+  background: var(--custom-secondary);
+  color: var(--custom-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.custom-page-header--dark .custom-page-header__btn {
+  background: var(--custom-dark);
+  color: var(--custom-light);
+}
+
+.custom-page-header--dark .custom-page-header__btn:hover,
+.custom-page-header--dark .custom-page-header__btn:focus {
+  background: var(--custom-secondary);
+  color: var(--custom-light);
+}
+
+/* Mobile Responsive with dynamic padding */
 @media (max-width: 990px) {
-  .uf-page-header {
-    padding-top: 80px;
-    padding-bottom: 80px;
+  .custom-page-header {
+    background-attachment: scroll;
+    padding-top: {{ section.settings.padding_top_tablet | default: 100 }}px;
+    padding-bottom: {{ section.settings.padding_bottom_tablet | default: 100 }}px;
+    min-height: 50vh;
+  }
+
+  .custom-page-header__content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 95vw;
+  }
+
+  .custom-page-header__headline {
+    margin-bottom: 1.2rem;
+  }
+
+  .custom-page-header__subheadline {
+    margin-bottom: 1.8rem;
   }
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .uf-page-header {
-    padding-top: 100px;
-    padding-bottom: 60px;
+@media (max-width: 749px) {
+  .custom-page-header {
+    padding-top: {{ section.settings.padding_top_mobile | default: 80 }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile | default: 80 }}px;
   }
 
-  .uf-page-header__content {
-    padding-left: 3rem;
-    padding-right: 3rem;
+  .custom-page-header__content {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .uf-page-header__btn {
-    padding: 0.9rem 2rem;
-    font-size: 95%;
+  .custom-page-header__btn {
+    padding: 1rem 2rem;
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 479px) {
+  .custom-page-header__content {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
-  .uf-page-header__btn span {
-    font-size: 1.1em;
+  .custom-page-header__btn {
+    min-width: 160px;
   }
 }
 </style>
