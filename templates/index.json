@@ -271,10 +271,10 @@
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 24,
         "background_color": "#f2e9db",
-        "heading": "Got Questions? Let’s Talk!",
-        "subheading": "We’re here to help, anytime.",
-        "description": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need.",
-        "button_label": "Talk to Us Here",
+        "heading": "Here for You, Always.",
+        "subheading": "Because your questions matter to us.",
+        "description": "Curious about sizing, materials, or even partnering with us?<br>Don’t hesitate to reach out.<br>Our family is here to support yours, anytime.",
+        "button_label": "Talk to Us",
         "button_url": "shopify://pages/get-in-touch"
       }
     },
