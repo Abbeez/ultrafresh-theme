@@ -18,8 +18,8 @@
         "background_opacity": 10,
         "text_color": "light",
         "enable_text_shadow": true,
-        "headline": "What does it mean to <span>feel loved</span>...even before you understand the word?",
-        "subheadline": "A diaper so soft, so light, they hardly feel it – but always feel our love.",
+        "headline": "What does it mean to feel loved... even before you understand the word?",
+        "subheadline": "A diaper so light and gentle, babies hardly feel them, but they always feel the love that comes with them. UltraFresh baby diapers are made to feel like love.",
         "button_label": "See What Makes Us Different",
         "button_url": "#testimonials",
         "show_secondary_content": false,
@@ -49,9 +49,9 @@
         "padding_top": 120,
         "padding_bottom": 120,
         "subheading": "What parents say",
-        "heading": "Every story deserves <span>gentle care</span>",
+        "heading": "Every baby's story deserves UltraFresh care",
         "description": "Every baby’s journey is filled with joy, discovery, and growth, and at Ultrafresh, we celebrate these special moments each smile, wiggle, and milestone.",
-        "button_label": "Click here to see parent stories",
+        "button_label": "Read Parent Reviews & Stories",
         "button_url": "shopify://pages/stories",
         "image_align": "right"
       }
@@ -67,9 +67,9 @@
         "section_image": "shopify://shop_images/5_c8200653-cc21-4a7e-9acb-a005c10a98bd.png",
         "image_position": "left",
         "image_fit": "cover",
-        "overline": "Premium Comfort",
-        "heading": "What makes <span>every layer</span> feel like Love?",
-        "description": "<p>From ultra-soft topsheets to leak-locking cores, every layer of UltraFresh diapers is thoughtfully designed to keep your baby dry, comfy, and cared for—because love starts with protection.</p>",
+        "overline": "Protection in Every Layer",
+        "heading": "What makes UltraFresh baby diapers feel like love in every layer?",
+        "description": "<p>From ultra-soft top sheets to leak-locking cores, every layer of UltraFresh diapers is carefully designed to keep your baby dry, comfy, and cared for. They are hypoallergenic because love begins with protection.</p>",
         "content_image_alt": "Alt text",
         "content_image_max_width": 100,
         "button_label": "See What’s Inside UltraFresh Diapers",
@@ -98,14 +98,14 @@
         "size_item_YmGmh4": {
           "type": "size_item",
           "settings": {
-            "size_text": "Medium: 3-11 months old (6-11 kgs)",
+            "size_text": "Medium: 3-11 months old (6-11 kg)",
             "dot_color": "#d4a574"
           }
         },
         "size_item_JgqXLQ": {
           "type": "size_item",
           "settings": {
-            "size_text": "XXL: 1-2 years old (15kg up)",
+            "size_text": "XXL: 1-2 years old (15kg and up)",
             "dot_color": "#d4a574"
           }
         },
@@ -119,7 +119,7 @@
         "size_item_eza7TV": {
           "type": "size_item",
           "settings": {
-            "size_text": "XXXL: 1-2 years old (18kg up)",
+            "size_text": "XXXL: 1-2 years old (18kg and up)",
             "dot_color": "#d4a574"
           }
         }
@@ -141,9 +141,9 @@
         "section_image": "shopify://shop_images/5_bcb2c4c4-995c-48bc-8730-e2863673db2d.png",
         "image_position": "right",
         "image_fit": "cover",
-        "overline": "Perfect Fit",
-        "heading": "Find your <span>perfect size</span>",
-        "description": "<p>Our comprehensive size range ensures the perfect fit for every body type. From newborn to toddler, we've got you covered with accurate measurements and comfortable fits.</p>",
+        "overline": "Diaper Size Chart",
+        "heading": "Find Your Perfect Size",
+        "description": "<p>Use our diaper size guide to find the right fit for your baby. From newborn to toddler, you’ll get accurate measurements and comfy fits for every stage of growth.</p>",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -203,7 +203,7 @@
         "border_bottom_color": "rgba(0,0,0,0)",
         "padding_top": 60,
         "padding_bottom": 120,
-        "section_title": "How UltraFresh <span>stands apart</span>",
+        "section_title": "How UltraFresh stands apart",
         "section_subheading": "Every detail is designed for what your baby needs most–comfort that feels like air, protection that feels like love.",
         "left_title": "Brand X",
         "left_bullets": "Thicker and heavier build that may restrict movement\nModerate breathability that can result in heat buildup\nNot specifically designed for tropical or humid conditions\nStrong absorbency performance, but with occasional bulkiness\nBasic, functional design with less attention to aesthetic appeal",
@@ -225,8 +225,8 @@
         "section_image": "shopify://shop_images/7_2051898e-945f-4fca-ad1f-ad0c3ffd6aa6.png",
         "image_position": "left",
         "image_fit": "cover",
-        "overline": "Cool & Dry all the time",
-        "heading": "Cool, dry, and comfy <span>even in the heat</span>",
+        "overline": "Premium Comfort",
+        "heading": "Cool, dry, and comfy even in the heat",
         "description": "<p>UltraFresh is made for tropical climates with breathable layers, ultra-thin absorbent cores, and a non-sticky soft outer cover to keep your baby feeling fresh.</p>",
         "content_image_alt": "Alt text",
         "content_image_max_width": 320,
@@ -247,8 +247,8 @@
         "section_image": "shopify://shop_images/assets_task_01k2xd2e4qfpmbtaptbdva8fbe_1755481020_img_0.webp",
         "image_position": "right",
         "image_fit": "cover",
-        "overline": "UltraFresh Partners",
-        "heading": "UltraFresh around the <span>World</span>",
+        "overline": "Premium Comfort",
+        "heading": "UltraFresh around the World",
         "description": "<p>From one family to another, UltraFresh is part of bedtime routines and first steps all over the world <br/>— keeping little ones comfy, wherever they are.</p>",
         "content_image_alt": "Alt text",
         "content_image_max_width": 800,
@@ -271,7 +271,7 @@
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 24,
         "background_color": "#f2e9db",
-        "heading": "Got Questions? <span>Let’s Talk!</span>",
+        "heading": "Got Questions? Let’s Talk!",
         "subheading": "We’re here to help, anytime.",
         "description": "Whether you’re curious about sizing, ingredients, or how to partner with us—don’t hesitate to reach out.<br>Our team is happy to assist you with anything you need.",
         "button_label": "Talk to Us Here",
@@ -285,7 +285,7 @@
         "padding_top": 60,
         "padding_bottom": 100,
         "show_heading": true,
-        "heading": "<span>More than a Diaper</span>, Love, made visible",
+        "heading": "More than a Diaper, <span>Love, made visible</span>",
         "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
         "row1_image_1": "shopify://shop_images/491455768_18499522900009539_4830294737759522855_n..jpg",
         "row1_image_2": "shopify://shop_images/499554100_17892379431247420_1720371743213103977_n..jpg",
