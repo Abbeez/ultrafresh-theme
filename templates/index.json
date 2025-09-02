@@ -9,8 +9,27 @@
  */
 {
   "sections": {
+    "custom_page_header_HbLdwa": {
+      "type": "custom-page-header",
+      "name": "Custom Page Header",
+      "settings": {
+        "text_alignment": "center",
+        "padding_top_desktop": 120,
+        "padding_bottom_desktop": 120,
+        "page_header_image": "shopify://shop_images/3_a68f7667-0344-4f4f-9b8c-3b44a0b90f53.png",
+        "background_color": "#f8f9fa",
+        "background_opacity": 0,
+        "text_color": "light",
+        "enable_text_shadow": true,
+        "headline": "What does it mean to feel loved... even before you understand the word?",
+        "subheadline": "A diaper so light and gentle, babies hardly feel them, but they always feel the love that comes with them. UltraFresh baby diapers are made to feel like love.",
+        "button_label": "See What Makes Us Different",
+        "button_url": "shopify://collections/all"
+      }
+    },
     "custom_hero_banner_G6Bycn": {
       "type": "custom-hero-banner",
+      "disabled": true,
       "name": "Hero Banner",
       "settings": {
         "banner_image": "shopify://shop_images/3_a68f7667-0344-4f4f-9b8c-3b44a0b90f53.png",
@@ -38,6 +57,7 @@
     },
     "custom_testimonials_7KwBiX": {
       "type": "custom-testimonials",
+      "disabled": true,
       "name": "Testimonials & Stories",
       "settings": {
         "background_image": "shopify://shop_images/Stories.png",
@@ -63,9 +83,10 @@
         "custom_anchor_id": "love",
         "show_top_border": false,
         "show_bottom_border": false,
-        "background_color": "#f8f3ed",
+        "background_color": "rgba(0,0,0,0)",
         "section_image": "shopify://shop_images/5_c8200653-cc21-4a7e-9acb-a005c10a98bd.png",
-        "image_position": "left",
+        "image_position": "right",
+        "image_border_radius": 0,
         "overline": "Protection in Every Layer",
         "heading": "How does UltraFresh wrap your baby in comfort and care?",
         "description": "<p>From ultra-soft top sheets to leak-locking cores, every layer of UltraFresh diapers is carefully designed to keep your baby dry, comfy, and cared for. They are hypoallergenic because love begins with protection.</p>",
@@ -77,124 +98,61 @@
         "padding_bottom": 0
       }
     },
-    "custom_size_list_48cye6": {
-      "type": "custom-size-list",
+    "custom_featured_tabs_CCeNxr": {
+      "type": "custom-featured-tabs",
       "blocks": {
-        "size_item_E6MWdn": {
-          "type": "size_item",
+        "feature_tab_NQ7GC9": {
+          "type": "feature_tab",
           "settings": {
-            "size_text": "Small:0-3 months old (4-9 kg)",
-            "dot_color": "#d4a574"
+            "tab_title": "Feather Soft",
+            "content_title": "Feather Soft",
+            "content_description": "<p>Crafted with an enhanced fibre blend and high-GSM topsheet for luxurious comfort</p>"
           }
         },
-        "size_item_TTYzqx": {
-          "type": "size_item",
+        "feature_tab_PJ9fmP": {
+          "type": "feature_tab",
           "settings": {
-            "size_text": "XL: 1-2 years old (12-17 kg)",
-            "dot_color": "#d4a574"
+            "tab_title": "Resealable Tab",
+            "content_title": "Resealable Tab",
+            "content_description": "<p>Easy-to-use resealable tabs for convenient adjustments</p>"
           }
         },
-        "size_item_YmGmh4": {
-          "type": "size_item",
+        "feature_tab_MJW7Vk": {
+          "type": "feature_tab",
           "settings": {
-            "size_text": "Medium: 3-11 months old (6-11 kg)",
-            "dot_color": "#d4a574"
-          }
-        },
-        "size_item_JgqXLQ": {
-          "type": "size_item",
-          "settings": {
-            "size_text": "XXL: 1-2 years old (15kg and up)",
-            "dot_color": "#d4a574"
-          }
-        },
-        "size_item_8FEMcn": {
-          "type": "size_item",
-          "settings": {
-            "size_text": "Large: 3-11 months old (9-14 kg)",
-            "dot_color": "#d4a574"
-          }
-        },
-        "size_item_eza7TV": {
-          "type": "size_item",
-          "settings": {
-            "size_text": "XXXL: 1-2 years old (18kg and up)",
-            "dot_color": "#d4a574"
+            "tab_title": "Dermatologically Tested",
+            "content_title": "Dermatologically Tested",
+            "content_description": "<p>Tested by dermatologists to ensure safety for sensitive skin</p>"
           }
         }
       },
       "block_order": [
-        "size_item_E6MWdn",
-        "size_item_TTYzqx",
-        "size_item_YmGmh4",
-        "size_item_JgqXLQ",
-        "size_item_8FEMcn",
-        "size_item_eza7TV"
+        "feature_tab_NQ7GC9",
+        "feature_tab_PJ9fmP",
+        "feature_tab_MJW7Vk"
       ],
-      "name": "Sizes List Section",
+      "name": "Tabbed Features Section",
       "settings": {
-        "custom_anchor_id": "sizes-list",
-        "show_top_border": false,
-        "show_bottom_border": false,
-        "background_color": "#f8f3ed",
-        "section_image": "shopify://shop_images/5_bcb2c4c4-995c-48bc-8730-e2863673db2d.png",
-        "image_position": "right",
-        "overline": "Diaper Size Chart",
-        "heading": "Find Your Perfect Size",
-        "description": "<p>Use our diaper size guide to find the right fit for your baby. From newborn to toddler, you’ll get accurate measurements and comfy fits for every stage of growth.</p>",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_text_image_GzYCjB": {
-      "type": "custom-text-image",
-      "disabled": true,
-      "name": "Perfect Fit",
-      "settings": {
-        "custom_anchor_id": "perfect",
-        "show_top_border": false,
-        "show_bottom_border": false,
-        "background_color": "#f8f3ed",
-        "section_image": "shopify://shop_images/5_bcb2c4c4-995c-48bc-8730-e2863673db2d.png",
-        "image_position": "right",
-        "overline": "Size Guide",
-        "heading": "Find the perfect fit  for your baby",
-        "description": "<p>Every baby is unique, and so is our size guide—built for comfort and fit. Still unsure? Just send us a message and we’ll help you choose.</p>",
-        "content_image_alt": "Alt text",
-        "content_image_max_width": 800,
-        "button_label": "Find My Baby’s Size",
-        "button_url": "shopify://blogs/product-guides/taped-vs-pull-up-which-ultrafresh-diaper-is-right-for-your-baby",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_text_image_BnkNRV": {
-      "type": "custom-text-image",
-      "disabled": true,
-      "name": " Time to change",
-      "settings": {
-        "custom_anchor_id": "image-content",
+        "custom_anchor_id": "tabbed-features",
         "show_top_border": true,
         "show_bottom_border": true,
-        "background_color": "#fdfcf9",
-        "section_image": "shopify://shop_images/Image_Placeholder_700x600_1.png",
+        "background_color": "rgba(0,0,0,0)",
         "image_position": "right",
+        "image_border_radius": 0,
+        "default_background_image": "shopify://shop_images/6_71351bfd-06ed-4c5d-8021-b1e3dc30e19e.png",
+        "image_fit": "cover",
         "overline": "Premium Comfort",
-        "heading": "Know when it’s time to change.",
-        "description": "<p>Change every 3–4 hours or whenever the diaper feels wet. Our ultra-absorbent core keeps baby dry through the night for better rest for both of you.</p>",
-        "content_image_alt": "Alt text",
-        "content_image_max_width": 800,
-        "button_label": "View Change Time Tips",
-        "button_url": "shopify://blogs/product-guides/diaper-changes-made-simple-how-often-should-you-really-change",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "heading": "Our Training Pants Features",
+        "description": "<p>Made with diaper-like absorbency, feather soft materials and CloudTouch™ Softness for ultimate comfort, our training pants are perfect for potty training.</p>",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_compare_cards_G77NkY": {
       "type": "custom-compare-cards",
       "name": "UF Compare Cards",
       "settings": {
-        "section_bg_color": "#f8f3ed",
+        "section_bg_color": "#ffffff",
         "border_top_color": "rgba(0,0,0,0)",
         "border_bottom_color": "rgba(0,0,0,0)",
         "padding_top": 60,
@@ -217,22 +175,97 @@
         "custom_anchor_id": "image-content",
         "show_top_border": false,
         "show_bottom_border": false,
-        "background_color": "#f8f3ed",
+        "background_color": "rgba(0,0,0,0)",
         "section_image": "shopify://shop_images/7_2051898e-945f-4fca-ad1f-ad0c3ffd6aa6.png",
         "image_position": "left",
+        "image_border_radius": 0,
         "overline": "Made for the Tropics",
         "heading": "Cool, dry, and comfy even in the heat",
         "description": "<p>UltraFresh tape diapers and pull-up diapers are made for tropical climates. With breathable layers, ultra-thin absorbent cores, and a soft, non-sticky outer cover, they keep your baby feeling fresh and comfortable all day.</p>",
         "content_image_alt": "Alt text",
         "content_image_max_width": 320,
         "button_label": "See Why It’s Perfect for Tropical Heat",
+        "button_url": "shopify://collections/all",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_size_list_48cye6": {
+      "type": "custom-size-list",
+      "blocks": {
+        "size_item_E6MWdn": {
+          "type": "size_item",
+          "settings": {
+            "size_text": "Small:4-9 kg",
+            "dot_color": "#d4a574"
+          }
+        },
+        "size_item_TTYzqx": {
+          "type": "size_item",
+          "settings": {
+            "size_text": "XL: 12-17 kg",
+            "dot_color": "#d4a574"
+          }
+        },
+        "size_item_YmGmh4": {
+          "type": "size_item",
+          "settings": {
+            "size_text": "Medium: 6-11 kg",
+            "dot_color": "#d4a574"
+          }
+        },
+        "size_item_JgqXLQ": {
+          "type": "size_item",
+          "settings": {
+            "size_text": "XXL: 15kg and up",
+            "dot_color": "#d4a574"
+          }
+        },
+        "size_item_8FEMcn": {
+          "type": "size_item",
+          "settings": {
+            "size_text": "Large: 9-14 kg",
+            "dot_color": "#d4a574"
+          }
+        },
+        "size_item_eza7TV": {
+          "type": "size_item",
+          "settings": {
+            "size_text": "XXXL: 18kg and up",
+            "dot_color": "#d4a574"
+          }
+        }
+      },
+      "block_order": [
+        "size_item_E6MWdn",
+        "size_item_TTYzqx",
+        "size_item_YmGmh4",
+        "size_item_JgqXLQ",
+        "size_item_8FEMcn",
+        "size_item_eza7TV"
+      ],
+      "name": "Sizes List Section",
+      "settings": {
+        "custom_anchor_id": "sizes-list",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "background_color": "rgba(0,0,0,0)",
+        "section_image": "shopify://shop_images/5_bcb2c4c4-995c-48bc-8730-e2863673db2d.png",
+        "image_position": "right",
+        "image_border_radius": 0,
+        "overline": "Diaper Size Chart",
+        "heading": "Find Your Perfect Size",
+        "description": "<p>Use our diaper size guide to find the right fit for your baby. From newborn to toddler, you’ll get accurate measurements and comfy fits for every stage of growth.</p>",
+        "button_text": "View Size Guide",
         "button_url": "",
+        "show_button": true,
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
     "custom_text_image_G9Tn9j": {
       "type": "custom-text-image",
+      "disabled": true,
       "name": "Partners",
       "settings": {
         "custom_anchor_id": "image-content",
@@ -241,6 +274,7 @@
         "background_color": "#f8f3ed",
         "section_image": "shopify://shop_images/assets_task_01k2xd2e4qfpmbtaptbdva8fbe_1755481020_img_0.webp",
         "image_position": "right",
+        "image_border_radius": 0,
         "overline": "Partner with UltraFresh",
         "heading": "UltraFresh around the World",
         "description": "<p>We have built a family-first brand beloved by Filipinos, not just for our quality products, but for the genuine care we put into every detail. Join our trusted family of partners and help us bring that same level of care to your community and homes across the world.</p>",
@@ -254,6 +288,7 @@
     },
     "custom_talktous_Cm3Wpw": {
       "type": "custom-talktous",
+      "disabled": true,
       "name": "Call to action ",
       "settings": {
         "show_top_border": true,
@@ -270,6 +305,31 @@
         "description": "Curious about sizing, materials, or even partnering with us?<br>Don’t hesitate to reach out.<br>Our family is here to support yours, anytime.",
         "button_label": "Talk to Us",
         "button_url": "shopify://pages/get-in-touch"
+      }
+    },
+    "custom_calltoaction_4UnEqf": {
+      "type": "custom-calltoaction",
+      "disabled": true,
+      "name": "UF Call to Action",
+      "settings": {
+        "cta_image": "shopify://shop_images/background.png",
+        "headline": "More than a Diaper, Love, made visible",
+        "subheadline": "Simple. True. This is your signature whisper to close the journey with meaning",
+        "button_label": "Explore Our Collection",
+        "button_url": "shopify://collections/all",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "custom_partners_scroll_TytXX9": {
+      "type": "custom-partners-scroll",
+      "name": "Partners Autoscroll",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "background_color": "#F5F0EA",
+        "main_text": "Find us at",
+        "animation_speed": 4
       }
     },
     "custom_journey_kWNpYT": {
@@ -302,34 +362,21 @@
         "row2_image_9": "shopify://shop_images/IMG_2873.jpg",
         "row2_image_10": "shopify://shop_images/IMG_20250731_080033_924.jpg"
       }
-    },
-    "custom_calltoaction_4UnEqf": {
-      "type": "custom-calltoaction",
-      "disabled": true,
-      "name": "UF Call to Action",
-      "settings": {
-        "cta_image": "shopify://shop_images/background.png",
-        "headline": "More than a Diaper, Love, made visible",
-        "subheadline": "Simple. True. This is your signature whisper to close the journey with meaning",
-        "button_label": "Explore Our Collection",
-        "button_url": "shopify://collections/all",
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
     }
   },
   "order": [
+    "custom_page_header_HbLdwa",
     "custom_hero_banner_G6Bycn",
     "custom_testimonials_7KwBiX",
     "custom_text_image_qxeTjH",
-    "custom_size_list_48cye6",
-    "custom_text_image_GzYCjB",
-    "custom_text_image_BnkNRV",
+    "custom_featured_tabs_CCeNxr",
     "custom_compare_cards_G77NkY",
     "custom_text_image_FbNJTP",
+    "custom_size_list_48cye6",
     "custom_text_image_G9Tn9j",
     "custom_talktous_Cm3Wpw",
-    "custom_journey_kWNpYT",
-    "custom_calltoaction_4UnEqf"
+    "custom_calltoaction_4UnEqf",
+    "custom_partners_scroll_TytXX9",
+    "custom_journey_kWNpYT"
   ]
 }
