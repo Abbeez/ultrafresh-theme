@@ -301,6 +301,13 @@
             "range": "2 – 9lbs"
           }
         },
+        "row_kECFAD": {
+          "type": "row",
+          "settings": {
+            "size": "N (Newborn)",
+            "range": "2 – 9lbs"
+          }
+        },
         "row_HExGpm": {
           "type": "row",
           "settings": {
@@ -340,6 +347,7 @@
       "block_order": [
         "row_KYeP9k",
         "row_VAGkyQ",
+        "row_kECFAD",
         "row_HExGpm",
         "row_9tpMEk",
         "row_QLMciX",
@@ -367,7 +375,7 @@
       "settings": {
         "padding_top": 64,
         "padding_bottom": 120,
-        "heading": "Questions from <span>Caring</span> Parents",
+        "heading": "Questions from Caring Parents",
         "description": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one."
       }
     },
