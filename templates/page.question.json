@@ -9,29 +9,21 @@
  */
 {
   "sections": {
-    "custom_hero_banner_XQn7XC": {
-      "type": "custom-hero-banner",
-      "name": "UF Simple Home Banner",
+    "custom_page_header_LJKnxn": {
+      "type": "custom-page-header",
+      "name": "Custom Page Header",
       "settings": {
-        "background_color": "#ecdac0",
+        "text_alignment": "center",
+        "padding_top_desktop": 120,
+        "padding_bottom_desktop": 60,
+        "background_color": "rgba(0,0,0,0)",
         "background_opacity": 0,
         "text_color": "dark",
-        "enable_text_shadow": false,
+        "enable_text_shadow": true,
         "headline": "Questions Parents Ask Most About Our Diapers",
         "subheadline": "Caring for your baby comes with many questions. UltraFresh understands what you are going through. Find the answers here to our most asked FAQs about baby diapers and training pants.",
-        "button_label": "See What Makes Us Different",
-        "button_url": "",
-        "show_secondary_content": false,
-        "secondary_padding_top": 42,
-        "secondary_padding_bottom": 24,
-        "secondary_heading": "Purposefully Made. Elegantly Designed.",
-        "secondary_subheading": "UltraFresh protects with care and performs with grace — a reflection of love in every detail",
-        "sec_btn1_label": "Pull Up Diapers",
-        "sec_btn1_url": "",
-        "sec_btn2_label": "Taped Up Diapers",
-        "sec_btn2_url": "",
-        "sec_btn3_label": "Size Guide",
-        "sec_btn3_url": ""
+        "button_label": "Shop Now",
+        "button_url": ""
       }
     },
     "main": {
@@ -54,7 +46,7 @@
     }
   },
   "order": [
-    "custom_hero_banner_XQn7XC",
+    "custom_page_header_LJKnxn",
     "main",
     "custom_faqs_CeGtap"
   ]

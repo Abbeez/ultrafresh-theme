@@ -17,41 +17,21 @@
         "padding_bottom": 36
       }
     },
-    "custom_hero_banner_VGFVnw": {
-      "type": "custom-hero-banner",
-      "name": "UF Simple Home Banner",
+    "custom_page_header_9T4V79": {
+      "type": "custom-page-header",
+      "name": "Custom Page Header",
       "settings": {
-        "banner_image": "shopify://shop_images/Ultrafresh_Contact_Us.png",
-        "background_color": "#f8f9fa",
-        "background_opacity": 0,
+        "text_alignment": "center",
+        "padding_top_desktop": 120,
+        "padding_bottom_desktop": 120,
+        "page_header_image": "shopify://shop_images/Contact_Us_at_UltraFresh.png",
+        "background_color": "#f8f3ed",
+        "background_opacity": 70,
         "text_color": "dark",
         "enable_text_shadow": false,
         "headline": "Let's Talk About Your Baby's Comfort",
         "subheadline": "Whether you have a question about our products or simply want to share a moment from your baby's journey, we're here to listen and offer our support. Because for us, every conversation is a chance to connect with love and care.",
-        "button_label": "See What Makes Us Different",
-        "button_url": "",
-        "show_secondary_content": false,
-        "secondary_padding_top": 42,
-        "secondary_padding_bottom": 24,
-        "secondary_heading": "Purposefully Made. Elegantly Designed.",
-        "secondary_subheading": "UltraFresh protects with care and performs with grace — a reflection of love in every detail",
-        "sec_btn1_label": "Pull Up Diapers",
-        "sec_btn1_url": "",
-        "sec_btn2_label": "Taped Up Diapers",
-        "sec_btn2_url": "",
-        "sec_btn3_label": "Size Guide",
-        "sec_btn3_url": ""
-      }
-    },
-    "custom_page_header_4ekbct": {
-      "type": "custom-page-header",
-      "disabled": true,
-      "name": "Page Header",
-      "settings": {
-        "text_alignment": "center",
-        "headline": "Got a question? Let's talk.",
-        "subheadline": "We’re here to help with anything Ultrafresh — just send us a message.",
-        "button_label": "Explore Our Collection",
+        "button_label": "Shop Now",
         "button_url": ""
       }
     },
@@ -68,8 +48,7 @@
   },
   "order": [
     "main",
-    "custom_hero_banner_VGFVnw",
-    "custom_page_header_4ekbct",
+    "custom_page_header_9T4V79",
     "form"
   ]
 }

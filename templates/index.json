@@ -14,13 +14,12 @@
       "name": "Custom Page Header",
       "settings": {
         "text_alignment": "center",
-        "padding_top_desktop": 120,
-        "padding_bottom_desktop": 120,
-        "page_header_image": "shopify://shop_images/3_a68f7667-0344-4f4f-9b8c-3b44a0b90f53.png",
-        "background_color": "#f8f9fa",
-        "background_opacity": 0,
-        "text_color": "light",
-        "enable_text_shadow": true,
+        "padding_top_desktop": 130,
+        "padding_bottom_desktop": 220,
+        "background_color": "rgba(0,0,0,0)",
+        "background_opacity": 10,
+        "text_color": "dark",
+        "enable_text_shadow": false,
         "headline": "What does it mean to feel loved... even before you understand the word?",
         "subheadline": "A diaper so light and gentle, babies hardly feel them, but they always feel the love that comes with them. UltraFresh baby diapers are made to feel like love.",
         "button_label": "See What Makes Us Different",
@@ -83,19 +82,19 @@
         "custom_anchor_id": "love",
         "show_top_border": false,
         "show_bottom_border": false,
-        "background_color": "rgba(0,0,0,0)",
-        "section_image": "shopify://shop_images/5_c8200653-cc21-4a7e-9acb-a005c10a98bd.png",
-        "image_position": "right",
-        "image_border_radius": 0,
+        "background_color": "#f8f3ed",
+        "section_image": "shopify://shop_images/3_a68f7667-0344-4f4f-9b8c-3b44a0b90f53.png",
+        "image_position": "left",
+        "image_border_radius": 32,
         "overline": "Protection in Every Layer",
         "heading": "How does UltraFresh wrap your baby in comfort and care?",
-        "description": "<p>From ultra-soft top sheets to leak-locking cores, every layer of UltraFresh diapers is carefully designed to keep your baby dry, comfy, and cared for. They are hypoallergenic because love begins with protection.</p>",
+        "description": "<p>From ultra-soft top sheets to leak-locking cores, every layer of UltraFresh diapers is carefully designed to keep your baby dry, comfy, and cared for. They are hypoallergenic because love begins with protection.<br/><br/></p>",
         "content_image_alt": "Alt text",
         "content_image_max_width": 100,
         "button_label": "See What’s Inside UltraFresh Diapers",
         "button_url": "shopify://collections/all",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 60,
+        "padding_bottom": 30
       }
     },
     "custom_featured_tabs_CCeNxr": {
@@ -104,55 +103,69 @@
         "feature_tab_NQ7GC9": {
           "type": "feature_tab",
           "settings": {
-            "tab_title": "Feather Soft",
-            "content_title": "Feather Soft",
-            "content_description": "<p>Crafted with an enhanced fibre blend and high-GSM topsheet for luxurious comfort</p>"
+            "tab_title": "Luxurious Softness",
+            "tab_background_image": "shopify://shop_images/9_8fe06efa-0c6e-4291-b5ba-bf9fbd26dcf3.png",
+            "content_title": "Luxurious Softness",
+            "content_description": "<p>Made with a unique, enhanced material blend that's incredibly gentle against your baby's delicate skin.</p>"
           }
         },
         "feature_tab_PJ9fmP": {
           "type": "feature_tab",
           "settings": {
-            "tab_title": "Resealable Tab",
-            "content_title": "Resealable Tab",
-            "content_description": "<p>Easy-to-use resealable tabs for convenient adjustments</p>"
+            "tab_title": "Absorbency Core",
+            "tab_background_image": "shopify://shop_images/22.png",
+            "content_title": "Rapid Absorbency Core",
+            "content_description": "<p>Our advanced core quickly locks away wetness, keeping your little one dry and comfortable for longer.</p>"
           }
         },
         "feature_tab_MJW7Vk": {
           "type": "feature_tab",
           "settings": {
-            "tab_title": "Dermatologically Tested",
-            "content_title": "Dermatologically Tested",
-            "content_description": "<p>Tested by dermatologists to ensure safety for sensitive skin</p>"
+            "tab_title": "Breathable Design",
+            "tab_background_image": "shopify://shop_images/Layers_1.png",
+            "content_title": "Breathable Design",
+            "content_description": "<p>Features breathable materials to promote air circulation, helping to prevent rashes and discomfort.</p>"
+          }
+        },
+        "feature_tab_giqCF6": {
+          "type": "feature_tab",
+          "settings": {
+            "tab_title": "Secure & Gentle Fit",
+            "tab_background_image": "shopify://shop_images/assets_task_01k0yhvsvmfs4s7rjc2rf14xe6_1753372229_img_1.webp",
+            "content_title": "Secure & Gentle Fit",
+            "content_description": "<p>Designed with soft, stretchy sides and a resealable tab for a snug yet gentle fit that moves with your active baby.</p>"
           }
         }
       },
       "block_order": [
         "feature_tab_NQ7GC9",
         "feature_tab_PJ9fmP",
-        "feature_tab_MJW7Vk"
+        "feature_tab_MJW7Vk",
+        "feature_tab_giqCF6"
       ],
       "name": "Tabbed Features Section",
       "settings": {
         "custom_anchor_id": "tabbed-features",
-        "show_top_border": true,
-        "show_bottom_border": true,
-        "background_color": "rgba(0,0,0,0)",
-        "image_position": "right",
-        "image_border_radius": 0,
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "background_color": "#f8f3ed",
+        "image_position": "left",
+        "image_border_radius": 32,
         "default_background_image": "shopify://shop_images/6_71351bfd-06ed-4c5d-8021-b1e3dc30e19e.png",
         "image_fit": "cover",
-        "overline": "Premium Comfort",
-        "heading": "Our Training Pants Features",
-        "description": "<p>Made with diaper-like absorbency, feather soft materials and CloudTouch™ Softness for ultimate comfort, our training pants are perfect for potty training.</p>",
-        "padding_top": 0,
+        "overline": "Why Choose Ultrafresh?",
+        "heading": "Uncompromised Comfort & Care",
+        "description": "<p>At Ultrafresh, we know your baby's comfort is paramount. Our training pants are meticulously crafted to ensure ultimate protection and support for every stage of their journey. Here's why parents choose Ultrafresh:</p>",
+        "padding_top": 30,
         "padding_bottom": 0
       }
     },
     "custom_compare_cards_G77NkY": {
       "type": "custom-compare-cards",
+      "disabled": true,
       "name": "UF Compare Cards",
       "settings": {
-        "section_bg_color": "#ffffff",
+        "section_bg_color": "rgba(0,0,0,0)",
         "border_top_color": "rgba(0,0,0,0)",
         "border_bottom_color": "rgba(0,0,0,0)",
         "padding_top": 60,
@@ -168,6 +181,82 @@
         "right_bullets": "Bulky layers, especially when saturated, can feel heavy on the baby\nLower breathability, which may cause discomfort in warmer environments\nSome ventilation but not optimized for consistently hot climates\nGood absorbency, suitable for overnight use\nStylish design but leans more bold and playful than subtle or modern"
       }
     },
+    "custom_compare_table_dNQypC": {
+      "type": "custom-compare-table",
+      "blocks": {
+        "comparison_row_yTkQCR": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Integration with popular messaging apps",
+            "column_1_value": true,
+            "column_2_value": true
+          }
+        },
+        "comparison_row_wyAz6C": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Integration with popular messaging apps",
+            "column_1_value": true,
+            "column_2_value": true
+          }
+        },
+        "comparison_row_UzMYiC": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Integration with popular messaging apps",
+            "column_1_value": true,
+            "column_2_value": true
+          }
+        },
+        "comparison_row_KiX8rm": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Integration with popular messaging apps",
+            "column_1_value": true,
+            "column_2_value": true
+          }
+        },
+        "comparison_row_aQKGk7": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Integration with popular messaging apps",
+            "column_1_value": true,
+            "column_2_value": true
+          }
+        },
+        "comparison_row_n4cRfJ": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Integration with popular messaging apps",
+            "column_1_value": true,
+            "column_2_value": true
+          }
+        }
+      },
+      "block_order": [
+        "comparison_row_yTkQCR",
+        "comparison_row_wyAz6C",
+        "comparison_row_UzMYiC",
+        "comparison_row_KiX8rm",
+        "comparison_row_aQKGk7",
+        "comparison_row_n4cRfJ"
+      ],
+      "name": "Compare Section",
+      "settings": {
+        "custom_anchor_id": "flex-comparison",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "background_color": "rgba(0,0,0,0)",
+        "featured_border_radius": 20,
+        "heading": "Whelp vs Kustomer.",
+        "heading_alignment": "center",
+        "description": "Compare the features side by side and see why one is the top choice for businesses.",
+        "column_1_name": "UltraFresh",
+        "column_2_name": "Brand X",
+        "padding_top": 150,
+        "padding_bottom": 150
+      }
+    },
     "custom_text_image_FbNJTP": {
       "type": "custom-text-image",
       "name": "Even in the heat",
@@ -175,19 +264,20 @@
         "custom_anchor_id": "image-content",
         "show_top_border": false,
         "show_bottom_border": false,
-        "background_color": "rgba(0,0,0,0)",
+        "background_color": "#f8f3ed",
         "section_image": "shopify://shop_images/7_2051898e-945f-4fca-ad1f-ad0c3ffd6aa6.png",
         "image_position": "left",
-        "image_border_radius": 0,
+        "image_border_radius": 32,
         "overline": "Made for the Tropics",
         "heading": "Cool, dry, and comfy even in the heat",
         "description": "<p>UltraFresh tape diapers and pull-up diapers are made for tropical climates. With breathable layers, ultra-thin absorbent cores, and a soft, non-sticky outer cover, they keep your baby feeling fresh and comfortable all day.</p>",
+        "content_image": "shopify://shop_images/Ultrafresh_Diapers_5.png",
         "content_image_alt": "Alt text",
         "content_image_max_width": 320,
         "button_label": "See Why It’s Perfect for Tropical Heat",
-        "button_url": "shopify://collections/all",
+        "button_url": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 30
       }
     },
     "custom_size_list_48cye6": {
@@ -249,17 +339,17 @@
         "custom_anchor_id": "sizes-list",
         "show_top_border": false,
         "show_bottom_border": false,
-        "background_color": "rgba(0,0,0,0)",
+        "background_color": "#f8f3ed",
         "section_image": "shopify://shop_images/5_bcb2c4c4-995c-48bc-8730-e2863673db2d.png",
         "image_position": "right",
-        "image_border_radius": 0,
-        "overline": "Diaper Size Chart",
-        "heading": "Find Your Perfect Size",
-        "description": "<p>Use our diaper size guide to find the right fit for your baby. From newborn to toddler, you’ll get accurate measurements and comfy fits for every stage of growth.</p>",
+        "image_border_radius": 32,
+        "overline": "Find Your Perfect Fit",
+        "heading": "A Perfect Fit for Every Chapter",
+        "description": "<p>Every little milestone is a chapter in your baby's unique story. Our guide helps you find the right diaper fit, so every moment is about pure comfort and new discoveries.</p>",
         "button_text": "View Size Guide",
         "button_url": "",
         "show_button": true,
-        "padding_top": 0,
+        "padding_top": 30,
         "padding_bottom": 0
       }
     },
@@ -321,17 +411,6 @@
         "padding_bottom": 80
       }
     },
-    "custom_partners_scroll_TytXX9": {
-      "type": "custom-partners-scroll",
-      "name": "Partners Autoscroll",
-      "settings": {
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "background_color": "#F5F0EA",
-        "main_text": "Find us at",
-        "animation_speed": 4
-      }
-    },
     "custom_journey_kWNpYT": {
       "type": "custom-journey",
       "name": "UF Journey",
@@ -339,7 +418,7 @@
         "padding_top": 60,
         "padding_bottom": 100,
         "show_heading": true,
-        "heading": "More than a Diaper, <span>Love, made visible</span>",
+        "heading": "More than a Diaper, Love, made visible",
         "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
         "row1_image_1": "shopify://shop_images/491455768_18499522900009539_4830294737759522855_n..jpg",
         "row1_image_2": "shopify://shop_images/499554100_17892379431247420_1720371743213103977_n..jpg",
@@ -362,6 +441,17 @@
         "row2_image_9": "shopify://shop_images/IMG_2873.jpg",
         "row2_image_10": "shopify://shop_images/IMG_20250731_080033_924.jpg"
       }
+    },
+    "custom_partners_scroll_TytXX9": {
+      "type": "custom-partners-scroll",
+      "name": "Partners Autoscroll",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "background_color": "#f5f0ea",
+        "main_text": "Find us at",
+        "animation_speed": 2
+      }
     }
   },
   "order": [
@@ -371,12 +461,13 @@
     "custom_text_image_qxeTjH",
     "custom_featured_tabs_CCeNxr",
     "custom_compare_cards_G77NkY",
+    "custom_compare_table_dNQypC",
     "custom_text_image_FbNJTP",
     "custom_size_list_48cye6",
     "custom_text_image_G9Tn9j",
     "custom_talktous_Cm3Wpw",
     "custom_calltoaction_4UnEqf",
-    "custom_partners_scroll_TytXX9",
-    "custom_journey_kWNpYT"
+    "custom_journey_kWNpYT",
+    "custom_partners_scroll_TytXX9"
   ]
 }
