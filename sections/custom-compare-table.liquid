@@ -1,0 +1,313 @@
+{% schema %}
+{
+  "name": "Flex Comparison",
+  "tag": "section",
+  "class": "flex-comparison-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "custom_anchor_id",
+      "label": "Custom Section ID (for Smooth Scroll)",
+      "default": "flex-comparison"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_top_border",
+      "label": "Show Top Border",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bottom_border",
+      "label": "Show Bottom Border",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#FDFCF9"
+    },
+    {
+      "type": "range",
+      "id": "featured_border_radius",
+      "label": "Featured Column Border Radius (px)",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "default": 15
+    },
+
+    /* Content */
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "Whelp vs Kustomer."
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Compare the features of Whelp and Kustomer with our comprehensive comparison page and see why Whelp is the top choice for businesses."
+    },
+
+    /* Column Headers */
+    {
+      "type": "text",
+      "id": "column_1_name",
+      "label": "Column 1 Name (Featured)",
+      "default": "Whelp"
+    },
+    {
+      "type": "text",
+      "id": "column_2_name",
+      "label": "Column 2 Name",
+      "default": "Kustomer"
+    },
+
+    /* Spacing */
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Padding Top (px)",
+      "default": 80
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Padding Bottom (px)",
+      "default": 80
+    }
+  ],
+  "blocks": [
+    {
+      "type": "comparison_row",
+      "name": "Comparison Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature_name",
+          "label": "Feature Name",
+          "default": "Integration with popular messaging apps"
+        },
+        {
+          "type": "checkbox",
+          "id": "column_1_value",
+          "label": "Column 1 Has Feature",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "column_2_value",
+          "label": "Column 2 Has Feature",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Flex Comparison",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Integration with popular messaging apps",
+            "column_1_value": true,
+            "column_2_value": true
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Multi-language support",
+            "column_1_value": true,
+            "column_2_value": true
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "On-Premises deployment",
+            "column_1_value": true,
+            "column_2_value": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% assign top_border_style = '' %}
+{% if section.settings.show_top_border %}
+  {% assign top_border_style = 'border-top: 1px solid var(--custom-borderbg)' %}
+{% endif %}
+
+{% assign bottom_border_style = '' %}
+{% if section.settings.show_bottom_border %}
+  {% assign bottom_border_style = 'border-bottom: 1px solid var(--custom-borderbg)' %}
+{% endif %}
+
+<div
+  {% if section.settings.custom_anchor_id %}
+    id="{{ section.settings.custom_anchor_id | escape }}"
+  {% endif %}
+  class="flex-comparison-section"
+  style="
+    {{ top_border_style }}; {{ bottom_border_style }};
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background-color: {{ section.settings.background_color }};
+  "
+>
+  <div class="page-width">
+    <!-- Header Section -->
+    <div class="flex-comparison__header flex-comparison__header--align-{{ section.settings.heading_alignment }}">
+      <div class="flex-comparison__header-inner">
+        <h2 class="h1 font-cursive flex-comparison__heading">{{ section.settings.heading }}</h2>
+        {% if section.settings.description != blank %}
+          <div class="flex-comparison__description">{{ section.settings.description }}</div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Comparison Layout -->
+    <div class="flex-comparison__container">
+      
+      <!-- Left: Feature Names Column (40%) -->
+      <div class="flex-comparison__features-column">
+        <div class="flex-comp-header flex-comparison__features-header">Features</div>
+        {% for block in section.blocks %}
+          <div class="flex-comparison__feature-row {% cycle 'row-odd', 'row-even' %}" {{ block.shopify_attributes }}>
+            {{ block.settings.feature_name }}
+          </div>
+        {% endfor %}
+        <div class="flex-comparison__feature-row" style="visibility:hidden;">Dummy Feature</div>
+      </div>
+
+      <!-- Center: Featured Column (30%) -->
+      <div class="flex-comparison__featured-column" style="border-radius: {{ section.settings.featured_border_radius }}px;">
+        <div class="flex-comp-header flex-comparison__featured-header">
+          {{ section.settings.column_1_name }}
+        </div>
+        {% for block in section.blocks %}
+          <div class="flex-comparison__featured-row {% cycle 'row-odd', 'row-even' %}" {{ block.shopify_attributes }}>
+            {% if block.settings.column_1_value %}
+              ✔
+            {% else %}
+              ✖
+            {% endif %}
+          </div>
+        {% endfor %}
+        <div class="flex-comparison__featured-row" style="visibility:hidden;">✔</div>
+      </div>
+
+      <!-- Right: Competitor Column (30%) -->
+      <div class="flex-comparison__competitor-column">
+        <div class="flex-comp-header flex-comparison__competitor-header">
+          {{ section.settings.column_2_name }}
+        </div>
+        {% for block in section.blocks %}
+          <div class="flex-comparison__competitor-row {% cycle 'row-odd', 'row-even' %}" {{ block.shopify_attributes }}>
+            {% if block.settings.column_2_value %}
+              ✔
+            {% else %}
+              ✖
+            {% endif %}
+          </div>
+        {% endfor %}
+        <div class="flex-comparison__competitor-row" style="visibility:hidden;">✖</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+.flex-comparison-section {
+  width: 100%;
+  font-family: inherit;
+}
+
+/* Header */
+.flex-comparison__header { margin-bottom: 1.5rem; }
+.flex-comparison__header-inner { width: 100%; max-width: 100%; }
+.flex-comparison__header--align-left .flex-comparison__header-inner { text-align: left; }
+.flex-comparison__header--align-center .flex-comparison__header-inner { text-align: center; }
+.flex-comparison__header--align-right .flex-comparison__header-inner { text-align: right; }
+
+.flex-comparison__heading {
+  color: var(--custom-dark, #000);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.flex-comparison__description {
+  color: var(--custom-dark, #000);
+  opacity: 0.8;
+  font-size: 1.1em;
+  line-height: 1.5;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Layout 40-30-30 */
+.flex-comparison__container {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+.flex-comparison__features-column { width: 40%; }
+.flex-comparison__featured-column { 
+  width: 30%; 
+  border: 2px solid var(--custom-dark);
+  border-radius: {{ section.settings.featured_border_radius }}px;
+  overflow: hidden;
+  background: #fff;
+}
+.flex-comparison__competitor-column { width: 30%; }
+
+/* Headers */
+.flex-comp-header {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  min-height: 50px;
+  line-height: 1.4;
+}
+.flex-comparison__features-header { visibility: hidden; }
+.flex-comparison__featured-header { background: #f8f9fa; border-bottom: 1px solid #e9ecef; }
+.flex-comparison__competitor-header { color: var(--custom-dark, #000); }
+
+/* Rows */
+.flex-comparison__feature-row,
+.flex-comparison__featured-row,
+.flex-comparison__competitor-row {
+  padding: 1rem;
+  text-align: center;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-comparison__feature-row { justify-content: flex-start; }
+
+/* Alternating rows */
+.row-odd { background-color: rgba(0,0,0,0.03); }
+.row-even { background-color: transparent; }
+</style>

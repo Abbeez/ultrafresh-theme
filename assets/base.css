@@ -3757,6 +3757,10 @@ ul.list-menu.list-menu--inline .header-menu {
   font-size: 105%;
 } */
 
+.flex-comp-header {
+  padding: 2.5rem 1rem !important;
+}
+
 /* Product PAge */
 @media only screen and (min-width: 900px) {
   .product--small

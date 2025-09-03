@@ -45,11 +45,7 @@
 }
 {% endschema %}
 
-{% comment %}
-Use the working metaobject code provided by user
-{% endcomment %}
 {% assign partners_list = shop.metaobjects.partners.values | default: empty %}
-{% assign partners_url = shop.metaobjects.partners.values %}
 
 <div 
   class="partners-autoscroll"
@@ -97,39 +93,45 @@ Use the working metaobject code provided by user
 
   <div class="partners-autoscroll__content page-width">
     <div class="partners-autoscroll__text">
-      <span class="partners-autoscroll__main-text">{{ section.settings.main_text }}</span>
-      <div class="partners-autoscroll__partner-container">
-        {% if partners_list.count > 0 %}
-          {% assign partner_index = 0 %}
-          {% for partner in partners_list %}
-            {% unless metaobject.system.handle == partner.system.handle %}
-              <span class="partners-autoscroll__partner-name{% if partner_index == 0 %} partners-autoscroll__partner-name--active{% endif %}" 
-                    data-partner-index="{{ partner_index }}">
-                {{ partner.name }}
-              </span>
-              {% assign partner_index = partner_index | plus: 1 %}
-            {% endunless %}
-          {% endfor %}
-        {% else %}
-          <!-- Fallback partners for testing -->
-          <span class="partners-autoscroll__partner-name partners-autoscroll__partner-name--active" 
-                data-partner-index="0">
-            Walmart
-          </span>
-          <span class="partners-autoscroll__partner-name" 
-                data-partner-index="1">
-            Target  
-          </span>
-          <span class="partners-autoscroll__partner-name" 
-                data-partner-index="2">
-            Amazon
-          </span>
-        {% endif %}
+      <div class="partners-autoscroll__inline-text">
+        <span class="partners-autoscroll__main-text">{{ section.settings.main_text }}</span>
+        <div class="partners-autoscroll__partner-container">
+          {% if partners_list.count > 0 %}
+            {% assign partner_index = 0 %}
+            {% for partner in partners_list %}
+              {% unless metaobject.system.handle == partner.system.handle %}
+                <a href="{{ partner.system.url | default: '#' }}" 
+                   class="partners-autoscroll__partner-name{% if partner_index == 0 %} partners-autoscroll__partner-name--active{% endif %}" 
+                   data-partner-index="{{ partner_index }}">
+                  {{ partner.name }}
+                </a>
+                {% assign partner_index = partner_index | plus: 1 %}
+              {% endunless %}
+            {% endfor %}
+          {% else %}
+            <!-- Fallback partners for testing with real links -->
+            <a href="https://www.walmart.com" 
+               class="partners-autoscroll__partner-name partners-autoscroll__partner-name--active" 
+               data-partner-index="0"
+               target="_blank">
+              Walmart
+            </a>
+            <a href="https://www.target.com" 
+               class="partners-autoscroll__partner-name" 
+               data-partner-index="1"
+               target="_blank">
+              Target  
+            </a>
+            <a href="https://www.amazon.com" 
+               class="partners-autoscroll__partner-name" 
+               data-partner-index="2"
+               target="_blank">
+              Amazon
+            </a>
+          {% endif %}
+        </div>
       </div>
     </div>
-    {% if section.settings.subtitle != blank %}
-      <div class="partners-autoscroll__subtitle">{{ section.settings.subtitle }}</div>
-    {% endif %}
   </div>
 </div>
 
@@ -221,10 +223,11 @@ Use the working metaobject code provided by user
 }
 
 .partners-autoscroll__inline-text {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
 }
 
 .partners-autoscroll__main-text {
@@ -232,16 +235,18 @@ Use the working metaobject code provided by user
   color: var(--custom-dark, #384148);
   font-weight: 400;
   line-height: 1.3;
+  flex-shrink: 0;
 }
 
 .partners-autoscroll__partner-container {
   position: relative;
-  height: 1.5em;
-  min-width: 200px;
+  height: 3.5rem;
+  width: 250px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .partners-autoscroll__partner-name {
@@ -250,27 +255,38 @@ Use the working metaobject code provided by user
   top: 0;
   font-size: 1.2em;
   font-weight: 700;
-  line-height: 1.5;
   transform: translateY(100%);
   opacity: 0;
   transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   white-space: nowrap;
   background: linear-gradient(90deg, #5db431, #139cdd);
- -webkit-text-fill-color: transparent;
- background-clip: text;
-color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10;
 }
 
 .partners-autoscroll__partner-name--active {
   transform: translateY(0%);
   opacity: 1;
+  pointer-events: auto;
 }
 
-.partners-autoscroll__subtitle {
-  font-size: 1em;
-  color: var(--custom-dark, #384148);
-  opacity: 0.8;
-  font-weight: 400;
+.partners-autoscroll__partner-name:not(.partners-autoscroll__partner-name--active) {
+  pointer-events: none;
+}
+
+{% comment %} .partners-autoscroll__partner-name:hover {
+  transform: translateY(0%) scale(1.05);
+} {% endcomment %}
+
+.partners-autoscroll__partner-name:focus {
+  outline: 2px solid #5db431;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 /* Responsive */
@@ -280,11 +296,11 @@ color: transparent;
   }
   
   .partners-autoscroll__main-text {
-    font-size: 1.1em;
+    font-size: 110%;
   }
   
   .partners-autoscroll__partner-name {
-    font-size: 1.1em;
+    font-size: 110%;
   }
   
   .partners-autoscroll__partner-container {
@@ -303,11 +319,11 @@ color: transparent;
   }
   
   .partners-autoscroll__main-text {
-    font-size: 1em;
+    font-size: 100%;
   }
   
   .partners-autoscroll__partner-name {
-    font-size: 1em;
+    font-size: 100%;
   }
   
   .partners-autoscroll__partner-container {
@@ -333,7 +349,11 @@ color: transparent;
   }
   
   .partners-autoscroll__partner-name {
-    font-size: 0.9em;
+    font-size: 90%;
+  }
+  
+  .partners-autoscroll__main-text {
+    font-size: 90%;
   }
   
   .partners-autoscroll__partner-container {
