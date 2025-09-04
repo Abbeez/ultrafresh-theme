@@ -9,32 +9,22 @@
  */
 {
   "sections": {
-    "custom_page_header_dkUBL8": {
+    "custom_page_header_bVecad": {
       "type": "custom-page-header",
-      "name": "Page Header",
+      "name": "Custom Page Header",
       "settings": {
-        "header_image": "{{ metaobject.photo.value }}",
-        "headline": "Learn More About {{ metaobject.name.value }}",
+        "text_alignment": "center",
+        "padding_top_desktop": 30,
+        "padding_bottom_desktop": 30,
+        "page_header_image": "{{ metaobject.photo.value }}",
+        "background_color": "#f8f3ed",
+        "background_opacity": 70,
+        "text_color": "dark",
+        "enable_text_shadow": true,
+        "headline": "{{ metaobject.name.value }}",
         "subheadline": "",
-        "button_label": "Explore Our Collection",
-        "button_url": "",
-        "text_alignment": "center"
-      }
-    },
-    "custom_text_image_KxCtda": {
-      "type": "custom-text-image",
-      "disabled": true,
-      "name": "Image and Content Column",
-      "settings": {
-        "custom_anchor_id": "image-content",
-        "section_image": "{{ metaobject.photo.value }}",
-        "image_position": "right",
-        "padding_top": 120,
-        "padding_bottom": 120,
-        "heading": "{{ metaobject.name.value }}",
-        "description": "{{ metaobject.about | metafield_tag }}<p><strong>Location: </strong>{{ metaobject.location | metafield_tag }}</p>",
-        "button_label": "Visit {{ metaobject.name.value }}",
-        "button_url": "{{ metaobject.cta.value }}"
+        "button_label": "Shop Now",
+        "button_url": ""
       }
     },
     "rich_text_kEArRf": {
@@ -42,6 +32,7 @@
       "blocks": {
         "heading_FG8d6i": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "{{ metaobject.name.value }}",
             "heading_size": "h1"
@@ -83,7 +74,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 80,
+        "padding_top": 32,
         "padding_bottom": 80
       }
     },
@@ -111,8 +102,7 @@
     }
   },
   "order": [
-    "custom_page_header_dkUBL8",
-    "custom_text_image_KxCtda",
+    "custom_page_header_bVecad",
     "rich_text_kEArRf",
     "custom_partnerwall_YbKigJ",
     "custom_partners_Te3HY7"

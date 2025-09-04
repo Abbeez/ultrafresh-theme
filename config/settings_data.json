@@ -257,7 +257,7 @@
           "background_gradient": "linear-gradient(270deg, rgba(NaN, NaN, NaN, 1), rgba(NaN, NaN, NaN, 1) 100%)",
           "text": "#242833",
           "button": "#242833",
-          "button_label": "#242833",
+          "button_label": "#ffffff",
           "secondary_button_label": "#242833",
           "shadow": "#242833"
         }

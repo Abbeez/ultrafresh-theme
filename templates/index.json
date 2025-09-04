@@ -14,8 +14,8 @@
       "name": "Custom Page Header",
       "settings": {
         "text_alignment": "center",
-        "padding_top_desktop": 130,
-        "padding_bottom_desktop": 220,
+        "padding_top_desktop": 90,
+        "padding_bottom_desktop": 60,
         "background_color": "rgba(0,0,0,0)",
         "background_opacity": 10,
         "text_color": "dark",
@@ -82,7 +82,7 @@
         "custom_anchor_id": "love",
         "show_top_border": false,
         "show_bottom_border": false,
-        "background_color": "#f8f3ed",
+        "background_color": "rgba(0,0,0,0)",
         "section_image": "shopify://shop_images/3_a68f7667-0344-4f4f-9b8c-3b44a0b90f53.png",
         "image_position": "left",
         "image_border_radius": 32,
@@ -187,49 +187,81 @@
         "comparison_row_yTkQCR": {
           "type": "comparison_row",
           "settings": {
-            "feature_name": "Integration with popular messaging apps",
+            "feature_name": "Ultra-thin, comfy for all-day wear",
             "column_1_value": true,
-            "column_2_value": true
+            "column_2_value": false,
+            "column_1_text": "",
+            "column_2_text": "Bulky, feels heavy on baby"
           }
         },
         "comparison_row_wyAz6C": {
           "type": "comparison_row",
           "settings": {
-            "feature_name": "Integration with popular messaging apps",
+            "feature_name": "Built for hot & humid weather",
             "column_1_value": true,
-            "column_2_value": true
+            "column_2_value": false,
+            "column_1_text": "",
+            "column_2_text": "Low breathability, traps heat"
           }
         },
         "comparison_row_UzMYiC": {
           "type": "comparison_row",
           "settings": {
-            "feature_name": "Integration with popular messaging apps",
+            "feature_name": "Stays cool & dry in heat",
             "column_1_value": true,
-            "column_2_value": true
+            "column_2_value": false,
+            "column_1_text": "",
+            "column_2_text": "Limited airflow in heat"
           }
         },
         "comparison_row_KiX8rm": {
           "type": "comparison_row",
           "settings": {
-            "feature_name": "Integration with popular messaging apps",
+            "feature_name": "Strong absorbency, no leaks",
             "column_1_value": true,
-            "column_2_value": true
+            "column_2_value": false,
+            "column_1_text": "",
+            "column_2_text": "Good only for overnight use"
           }
         },
         "comparison_row_aQKGk7": {
           "type": "comparison_row",
           "settings": {
-            "feature_name": "Integration with popular messaging apps",
+            "feature_name": "Sleek, modern design parents love",
             "column_1_value": true,
-            "column_2_value": true
+            "column_2_value": false,
+            "column_1_text": "",
+            "column_2_text": "Bold, less modern design"
           }
         },
         "comparison_row_n4cRfJ": {
           "type": "comparison_row",
           "settings": {
-            "feature_name": "Integration with popular messaging apps",
+            "feature_name": "Light and flexible fit",
             "column_1_value": true,
-            "column_2_value": true
+            "column_2_value": false,
+            "column_1_text": "",
+            "column_2_text": "Heavy layers when wet"
+          }
+        },
+        "comparison_row_zXUJ3g": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Breathable for all climates",
+            "column_1_value": true,
+            "column_2_value": false,
+            "column_1_text": "",
+            "column_2_text": "Can cause discomfort in heat"
+          }
+        },
+        "comparison_row_XcUGVd": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Gentle on baby’s skin",
+            "column_1_value": true,
+            "column_2_value": true,
+            "column_1_text": "",
+            "column_2_text": "Not ideal for humid weather"
           }
         }
       },
@@ -239,7 +271,9 @@
         "comparison_row_UzMYiC",
         "comparison_row_KiX8rm",
         "comparison_row_aQKGk7",
-        "comparison_row_n4cRfJ"
+        "comparison_row_n4cRfJ",
+        "comparison_row_zXUJ3g",
+        "comparison_row_XcUGVd"
       ],
       "name": "Compare Section",
       "settings": {
@@ -248,9 +282,11 @@
         "show_bottom_border": false,
         "background_color": "rgba(0,0,0,0)",
         "featured_border_radius": 20,
-        "heading": "Whelp vs Kustomer.",
+        "heading": "How UltraFresh stands apart",
         "heading_alignment": "center",
-        "description": "Compare the features side by side and see why one is the top choice for businesses.",
+        "description": "UltraFresh tape diapers and pull-up diapers are thoughtfully made for growing babies. Every detail is designed for what your little one needs most: comfort that feels like air, protection that feels like love.",
+        "header_max_width": 960,
+        "spacing_before_cards": 84,
         "column_1_name": "UltraFresh",
         "column_2_name": "Brand X",
         "padding_top": 150,

@@ -17,29 +17,21 @@
         "padding_bottom": 28
       }
     },
-    "custom_hero_banner_Ek4qjC": {
-      "type": "custom-hero-banner",
-      "name": "UF Simple Home Banner",
+    "custom_page_header_7dMcMy": {
+      "type": "custom-page-header",
+      "name": "Custom Page Header",
       "settings": {
-        "background_color": "#f8f3ed",
+        "text_alignment": "center",
+        "padding_top_desktop": 120,
+        "padding_bottom_desktop": 0,
+        "background_color": "rgba(0,0,0,0)",
         "background_opacity": 0,
         "text_color": "dark",
         "enable_text_shadow": false,
         "headline": "Find the Perfect Diaper Size for Your Little One",
         "subheadline": "Every baby grows at their own beautiful pace, and finding the right diaper size ensures gentle comfort at every stage. Our comprehensive size guide helps you choose the perfect fit for your baby's sensitive skin, from newborn diapers to toddler protection. Because the right size means better comfort and fewer worries",
-        "button_label": "Check the sizes",
-        "button_url": "#sizeguide",
-        "show_secondary_content": false,
-        "secondary_padding_top": 42,
-        "secondary_padding_bottom": 24,
-        "secondary_heading": "Purposefully Made. Elegantly Designed.",
-        "secondary_subheading": "UltraFresh protects with care and performs with grace — a reflection of love in every detail",
-        "sec_btn1_label": "Pull Up Diapers",
-        "sec_btn1_url": "",
-        "sec_btn2_label": "Taped Up Diapers",
-        "sec_btn2_url": "",
-        "sec_btn3_label": "Size Guide",
-        "sec_btn3_url": ""
+        "button_label": "Shop Now",
+        "button_url": ""
       }
     },
     "custom_table_compare_pXRAeh": {
@@ -111,7 +103,7 @@
       "name": "Product Comparison Table",
       "settings": {
         "section_id": "comparison-table",
-        "background_color": "#f8f3ed",
+        "background_color": "rgba(0,0,0,0)",
         "background_position": "center",
         "background_size": "cover",
         "background_opacity": 100,
@@ -183,7 +175,7 @@
       ],
       "name": "2 Column Size Guide",
       "settings": {
-        "background_color": "#f5f3f0",
+        "background_color": "rgba(0,0,0,0)",
         "background_position": "center",
         "background_size": "cover",
         "background_opacity": 100,
@@ -205,35 +197,27 @@
       "name": "Frequently Asked Question",
       "settings": {
         "padding_top": 64,
-        "padding_bottom": 64,
+        "padding_bottom": 120,
         "heading": "Frequently Asked Questions",
         "description": "We’ve gathered answers to the questions parents ask most, to help make your diapering journey a little easier. If you need more support, we’re always here for you and your little one."
       }
     },
-    "custom_hero_banner_eewYxB": {
-      "type": "custom-hero-banner",
-      "name": "UF Simple Home Banner",
+    "custom_page_header_HrBPDx": {
+      "type": "custom-page-header",
+      "name": "Custom Page Header",
       "settings": {
-        "banner_image": "shopify://shop_images/Untitled_design_4.png",
-        "background_color": "#d4a574",
+        "text_alignment": "center",
+        "padding_top_desktop": 60,
+        "padding_bottom_desktop": 100,
+        "page_header_image": "shopify://shop_images/8_5da2f09d-3037-4525-8d54-3f1bb08345ec.png",
+        "background_color": "#7e4b15",
         "background_opacity": 75,
         "text_color": "light",
         "enable_text_shadow": false,
-        "headline": "What does it mean to feel loved...even before you understand the word?",
-        "subheadline": "A diaper so soft, so light, they hardly feel it – but always feel our love.",
-        "button_label": "Explore UltraFresh",
-        "button_url": "shopify://collections/all",
-        "show_secondary_content": false,
-        "secondary_padding_top": 42,
-        "secondary_padding_bottom": 24,
-        "secondary_heading": "Purposefully Made. Elegantly Designed.",
-        "secondary_subheading": "UltraFresh protects with care and performs with grace — a reflection of love in every detail",
-        "sec_btn1_label": "Pull Up Diapers",
-        "sec_btn1_url": "",
-        "sec_btn2_label": "Taped Up Diapers",
-        "sec_btn2_url": "",
-        "sec_btn3_label": "Size Guide",
-        "sec_btn3_url": ""
+        "headline": "Find the Perfect Diaper Size for Your Little One",
+        "subheadline": "Every baby grows at their own beautiful pace, and finding the right diaper size ensures gentle comfort at every stage. Our comprehensive size guide helps you choose the perfect fit for your baby's sensitive skin, from newborn diapers to toddler protection. Because the right size means better comfort and fewer worries",
+        "button_label": "Try UltraFresh",
+        "button_url": "shopify://collections/all"
       }
     },
     "custom_journey_CTfHdB": {
@@ -264,11 +248,11 @@
   },
   "order": [
     "main",
-    "custom_hero_banner_Ek4qjC",
+    "custom_page_header_7dMcMy",
     "custom_table_compare_pXRAeh",
     "custom_column_tabs_9GpWFM",
     "custom_faqs_77VB4U",
-    "custom_hero_banner_eewYxB",
+    "custom_page_header_HrBPDx",
     "custom_journey_CTfHdB"
   ]
 }
