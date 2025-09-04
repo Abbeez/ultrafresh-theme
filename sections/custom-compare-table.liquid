@@ -35,7 +35,7 @@
       "min": 0,
       "max": 30,
       "step": 1,
-      "default": 15
+      "default": 20
     },
 
     /* Content */
@@ -62,6 +62,24 @@
       "label": "Description",
       "default": "Compare the features of Whelp and Kustomer with our comprehensive comparison page and see why Whelp is the top choice for businesses."
     },
+    {
+      "type": "range",
+      "id": "header_max_width",
+      "label": "Header/Description Max Width (px)",
+      "min": 400,
+      "max": 1400,
+      "step": 20,
+      "default": 960
+    },
+    {
+      "type": "range",
+      "id": "spacing_before_cards",
+      "label": "Spacing Before Cards (px)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 32
+    },
 
     /* Column Headers */
     {
@@ -77,7 +95,7 @@
       "default": "Kustomer"
     },
 
-    /* Spacing */
+    /* Section spacing */
     {
       "type": "number",
       "id": "padding_top",
@@ -113,6 +131,16 @@
           "id": "column_2_value",
           "label": "Column 2 Has Feature",
           "default": true
+        },
+        {
+          "type": "text",
+          "id": "column_1_text",
+          "label": "Column 1 Custom Text (optional)"
+        },
+        {
+          "type": "text",
+          "id": "column_2_text",
+          "label": "Column 2 Custom Text (optional)"
         }
       ]
     }
@@ -175,9 +203,9 @@
   "
 >
   <div class="page-width">
-    <!-- Header Section -->
+    <!-- Header -->
     <div class="flex-comparison__header flex-comparison__header--align-{{ section.settings.heading_alignment }}">
-      <div class="flex-comparison__header-inner">
+      <div class="flex-comparison__header-inner" style="max-width: {{ section.settings.header_max_width }}px;">
         <h2 class="h1 font-cursive flex-comparison__heading">{{ section.settings.heading }}</h2>
         {% if section.settings.description != blank %}
           <div class="flex-comparison__description">{{ section.settings.description }}</div>
@@ -185,10 +213,10 @@
       </div>
     </div>
 
-    <!-- Comparison Layout -->
-    <div class="flex-comparison__container">
-      
-      <!-- Left: Feature Names Column (40%) -->
+    <!-- Grid -->
+    <div class="flex-comparison__container" style="margin-top: {{ section.settings.spacing_before_cards }}px;">
+
+      <!-- Features (40%) -->
       <div class="flex-comparison__features-column">
         <div class="flex-comp-header flex-comparison__features-header">Features</div>
         {% for block in section.blocks %}
@@ -196,37 +224,38 @@
             {{ block.settings.feature_name }}
           </div>
         {% endfor %}
+        <!-- dummy to keep heights aligned -->
         <div class="flex-comparison__feature-row" style="visibility:hidden;">Dummy Feature</div>
       </div>
 
-      <!-- Center: Featured Column (30%) -->
+      <!-- Featured (30%) -->
       <div class="flex-comparison__featured-column" style="border-radius: {{ section.settings.featured_border_radius }}px;">
         <div class="flex-comp-header flex-comparison__featured-header">
           {{ section.settings.column_1_name }}
         </div>
         {% for block in section.blocks %}
           <div class="flex-comparison__featured-row {% cycle 'row-odd', 'row-even' %}" {{ block.shopify_attributes }}>
-            {% if block.settings.column_1_value %}
-              ✔
+            {% if block.settings.column_1_text and block.settings.column_1_text != '' %}
+              {{ block.settings.column_1_text }}
             {% else %}
-              ✖
+              {% if block.settings.column_1_value %}✔{% else %}✖{% endif %}
             {% endif %}
           </div>
         {% endfor %}
         <div class="flex-comparison__featured-row" style="visibility:hidden;">✔</div>
       </div>
 
-      <!-- Right: Competitor Column (30%) -->
+      <!-- Competitor (30%) -->
       <div class="flex-comparison__competitor-column">
         <div class="flex-comp-header flex-comparison__competitor-header">
           {{ section.settings.column_2_name }}
         </div>
         {% for block in section.blocks %}
           <div class="flex-comparison__competitor-row {% cycle 'row-odd', 'row-even' %}" {{ block.shopify_attributes }}>
-            {% if block.settings.column_2_value %}
-              ✔
+            {% if block.settings.column_2_text and block.settings.column_2_text != '' %}
+              {{ block.settings.column_2_text }}
             {% else %}
-              ✖
+              {% if block.settings.column_2_value %}✔{% else %}✖{% endif %}
             {% endif %}
           </div>
         {% endfor %}
@@ -238,58 +267,25 @@
 </div>
 
 <style>
-.flex-comparison-section {
-  width: 100%;
-  font-family: inherit;
-}
+.flex-comparison-section { width: 100%; font-family: inherit; }
 
 /* Header */
 .flex-comparison__header { margin-bottom: 1.5rem; }
-.flex-comparison__header-inner { width: 100%; max-width: 100%; }
-.flex-comparison__header--align-left .flex-comparison__header-inner { text-align: left; }
-.flex-comparison__header--align-center .flex-comparison__header-inner { text-align: center; }
-.flex-comparison__header--align-right .flex-comparison__header-inner { text-align: right; }
-
-.flex-comparison__heading {
-  color: var(--custom-dark, #000);
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
-  font-weight: 400;
-}
-.flex-comparison__description {
-  color: var(--custom-dark, #000);
-  opacity: 0.8;
-  font-size: 1.1em;
-  line-height: 1.5;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
+.flex-comparison__header-inner { width: 100%; }
+.flex-comparison__header--align-left .flex-comparison__header-inner { text-align: left; margin-left: 0; margin-right: auto; }
+.flex-comparison__header--align-center .flex-comparison__header-inner { text-align: center; margin-left: auto; margin-right: auto; }
+.flex-comparison__header--align-right .flex-comparison__header-inner { text-align: right; margin-left: auto; margin-right: 0; }
+.flex-comparison__heading { color: var(--custom-dark, #000); margin-bottom: 0.5rem; line-height: 1.2; font-weight: 400; }
+.flex-comparison__description { color: var(--custom-dark, #000); opacity: .8; line-height: 1.5; margin-left: auto; margin-right: auto; }
 
 /* Layout 40-30-30 */
-.flex-comparison__container {
-  display: flex;
-  width: 100%;
-  gap: 1rem;
-}
+.flex-comparison__container { display: flex; width: 100%; gap: 1rem; }
 .flex-comparison__features-column { width: 40%; }
-.flex-comparison__featured-column { 
-  width: 30%; 
-  border: 2px solid var(--custom-dark);
-  border-radius: {{ section.settings.featured_border_radius }}px;
-  overflow: hidden;
-  background: #fff;
-}
+.flex-comparison__featured-column { width: 30%; border: 2px solid var(--custom-dark); overflow: hidden; background: #fff; }
 .flex-comparison__competitor-column { width: 30%; }
 
 /* Headers */
-.flex-comp-header {
-  padding: 1rem;
-  text-align: center;
-  font-weight: 700;
-  min-height: 50px;
-  line-height: 1.4;
-}
+.flex-comp-header { padding: 1rem; text-align: center; font-weight: 700; min-height: 50px; line-height: 1.4; }
 .flex-comparison__features-header { visibility: hidden; }
 .flex-comparison__featured-header { background: #f8f9fa; border-bottom: 1px solid #e9ecef; }
 .flex-comparison__competitor-header { color: var(--custom-dark, #000); }
@@ -299,15 +295,23 @@
 .flex-comparison__featured-row,
 .flex-comparison__competitor-row {
   padding: 1rem;
-  text-align: center;
   min-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
-.flex-comparison__feature-row { justify-content: flex-start; }
+.flex-comparison__feature-row { justify-content: flex-start; text-align: left; }
 
 /* Alternating rows */
 .row-odd { background-color: rgba(0,0,0,0.03); }
 .row-even { background-color: transparent; }
+
+/* Responsive */
+@media (max-width: 749px) {
+  .flex-comparison__container { flex-direction: column; }
+  .flex-comparison__features-column,
+  .flex-comparison__featured-column,
+  .flex-comparison__competitor-column { width: 100%; }
+}
 </style>
