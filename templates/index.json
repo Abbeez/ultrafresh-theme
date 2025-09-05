@@ -15,7 +15,7 @@
       "settings": {
         "text_alignment": "center",
         "padding_top_desktop": 90,
-        "padding_bottom_desktop": 60,
+        "padding_bottom_desktop": 90,
         "background_color": "rgba(0,0,0,0)",
         "background_opacity": 10,
         "text_color": "dark",
@@ -93,7 +93,7 @@
         "content_image_max_width": 100,
         "button_label": "See What’s Inside UltraFresh Diapers",
         "button_url": "shopify://collections/all",
-        "padding_top": 60,
+        "padding_top": 0,
         "padding_bottom": 30
       }
     },
@@ -307,7 +307,6 @@
         "overline": "Made for the Tropics",
         "heading": "Cool, dry, and comfy even in the heat",
         "description": "<p>UltraFresh tape diapers and pull-up diapers are made for tropical climates. With breathable layers, ultra-thin absorbent cores, and a soft, non-sticky outer cover, they keep your baby feeling fresh and comfortable all day.</p>",
-        "content_image": "shopify://shop_images/Ultrafresh_Diapers_5.png",
         "content_image_alt": "Alt text",
         "content_image_max_width": 320,
         "button_label": "See Why It’s Perfect for Tropical Heat",
