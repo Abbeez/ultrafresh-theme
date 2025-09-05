@@ -162,7 +162,6 @@
     },
     "custom_compare_cards_G77NkY": {
       "type": "custom-compare-cards",
-      "disabled": true,
       "name": "UF Compare Cards",
       "settings": {
         "section_bg_color": "rgba(0,0,0,0)",
@@ -275,6 +274,7 @@
         "comparison_row_zXUJ3g",
         "comparison_row_XcUGVd"
       ],
+      "disabled": true,
       "name": "Compare Section",
       "settings": {
         "custom_anchor_id": "flex-comparison",
