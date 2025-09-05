@@ -341,16 +341,21 @@
 
 /* Sizes List */
 .sizes__list-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  {% comment %} grid-template-columns: 1fr 1fr; {% endcomment %}
   gap: 1.2rem 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .sizes__list-item {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  flex-grow:1;
+  width:45%;
+  font-size:90%;
 }
 
 .sizes__list-dot {
@@ -423,6 +428,14 @@
   .sizes__list-wrapper {
     justify-items: center;
   }
+
+  .sizes__list-item {
+  text-align: center;
+  justify-content: center;
+  border: 1px solid #e0e0e0;
+  padding: 0.8rem 1rem;
+  border-radius:8px;
+}
 }
 @media (max-width: 749px) {
   .sizes__text-inner { padding: 7vw 5rem; }

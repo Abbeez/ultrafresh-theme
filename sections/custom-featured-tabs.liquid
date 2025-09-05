@@ -305,7 +305,6 @@
   justify-content: stretch;
   align-items: stretch;
   transition: padding 0.2s, background-color 0.2s;
-  font-family: inherit;
 }
 
 .tabbed__text-col {
@@ -320,7 +319,7 @@
   width: 100%;
   max-width: 100%;
   margin: 0;
-  padding: 2rem 1rem;
+  padding: 7vw 1.5rem;
   box-sizing: border-box;
   text-align: center;
 }
@@ -392,13 +391,14 @@
 /* Tab navigation - Mobile First */
 .tabbed__tabs-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1.6rem;
 }
 
 .tabbed__tab {
-  width: 100%;
+  width: 48%;
+  flex-grow:1 !important;
   background: transparent;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -408,6 +408,7 @@
   color: var(--custom-dark);
   transition: all 0.3s ease;
   outline: none;
+  font-size:90%;
 }
 
 .tabbed__tab:hover,
@@ -435,8 +436,8 @@
   transition: all 0.4s ease;
   border-radius: 12px;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  {% comment %} background: rgba(255, 255, 255, 0.95); {% endcomment %}
+  {% comment %} backdrop-filter: blur(10px); {% endcomment %}
   text-align: center;
 }
 
@@ -466,22 +467,30 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.tabbed__content-details {
+{% comment %} .tabbed__content-details {
   flex: 1;
-  text-align: center;
-}
+  text-align: left !important;
+} {% endcomment %}
 
 .tabbed__content-title {
-  color: var(--custom-dark);
+  color: var(--custom-light);
   margin-bottom: 0.5rem;
   margin-top: 0;
   line-height: 1.3;
 }
 
 .tabbed__content-desc {
-  color: var(--custom-dark);
+  color: var(--custom-light);
   opacity: 0.9;
   line-height: 1.5;
+}
+
+.tabbed__text-col{
+  order:2;
+}
+
+.tabbed__image-col{
+  order:1;
 }
 
 /* Tablet Styles - 768px and up */
@@ -492,13 +501,13 @@
   }
   
   .tabbed__image-col {
-    min-height: 450px;
+    min-height: 500px;
     max-height: 600px;
   }
   
   .tabbed__tabs-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
   }
   
@@ -590,15 +599,15 @@
   }
   
   .tabbed__tab {
-    width: auto;
+    width: calc(48% - 0.75rem);
     min-width: 140px;
-    flex: 1;
     border: none;
     border-bottom: 1px solid #e0e0e0;
     border-radius: 0;
     padding: 1.2rem 0;
     text-align: left;
     background: transparent;
+    flex-grow:1;
   }
   
   .tabbed__tab:hover,
@@ -642,6 +651,8 @@
     height: 70px;
     padding: 1.2rem;
   }
+
+  
 }
 
 /* Large Desktop - 1200px and up */
