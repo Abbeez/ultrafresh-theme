@@ -108,10 +108,13 @@
         "collapsible_tab_kf9h9P",
         "share"
       ],
+      "custom_css": [
+        ".product-form__buttons button {min-height: calc(5.5rem + var(--buttons-border-width) * 2);}"
+      ],
       "settings": {
         "enable_sticky_info": false,
         "color_scheme": "scheme-cfce202b-b4a2-463a-bfb9-87a3ed179eda",
-        "media_size": "small",
+        "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "cover",
         "gallery_layout": "thumbnail_slider",
@@ -185,7 +188,11 @@
         "image_fit": "cover",
         "overline": "Diaper Features",
         "heading": "Designed for Their World of Wonder",
-        "description": "<p>Featuring our thinnest 2mm design, feather-soft hypoallergenic materials and CloudTouch™ technology, UltraFresh diapers deliver gentle care for busy toddlers. Our ultra-thin design keeps your child comfortably protected through every run, jump, and moment of exploration.<br/><br/><br/></p>",
+        "description": "<p>Featuring our thinnest 2mm design, feather-soft hypoallergenic materials and CloudTouch™ technology, UltraFresh diapers deliver gentle care for busy toddlers. Our ultra-thin design keeps your child comfortably protected through every run, jump, and moment of exploration.</p>",
+        "button_1_text": "",
+        "button_1_url": "",
+        "button_2_text": "",
+        "button_2_url": "",
         "padding_top": 0,
         "padding_bottom": 30
       }

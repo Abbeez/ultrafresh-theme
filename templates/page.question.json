@@ -19,7 +19,7 @@
         "background_color": "rgba(0,0,0,0)",
         "background_opacity": 0,
         "text_color": "dark",
-        "enable_text_shadow": true,
+        "enable_text_shadow": false,
         "headline": "Questions Parents Ask Most About Our Diapers",
         "subheadline": "Caring for your baby comes with many questions. UltraFresh understands what you are going through. Find the answers here to our most asked FAQs about baby diapers and training pants.",
         "button_label": "Shop Now",

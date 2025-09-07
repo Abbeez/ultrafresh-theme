@@ -9,10 +9,13 @@
  */
 {
   "sections": {
-    "custom_hero_banner_dnnCci": {
-      "type": "custom-hero-banner",
-      "name": "UF Simple Home Banner",
+    "custom_page_header_iYNFJR": {
+      "type": "custom-page-header",
+      "name": "Custom Page Header",
       "settings": {
+        "text_alignment": "center",
+        "padding_top_desktop": 120,
+        "padding_bottom_desktop": 60,
         "background_color": "rgba(0,0,0,0)",
         "background_opacity": 0,
         "text_color": "dark",
@@ -20,18 +23,7 @@
         "headline": "Every Mom Has a Story. Every Baby Has a Journey.",
         "subheadline": "Behind every cuddle, every giggle, and every milestone is a parent searching for comfort and care. These are the real stories of families who found love, trust, and peace of mind with Ultrafresh.",
         "button_label": "Explore Our Stories & Journeys",
-        "button_url": "#secstories",
-        "show_secondary_content": false,
-        "secondary_padding_top": 42,
-        "secondary_padding_bottom": 24,
-        "secondary_heading": "Purposefully Made. Elegantly Designed.",
-        "secondary_subheading": "UltraFresh protects with care and performs with grace — a reflection of love in every detail",
-        "sec_btn1_label": "Pull Up Diapers",
-        "sec_btn1_url": "",
-        "sec_btn2_label": "Taped Up Diapers",
-        "sec_btn2_url": "",
-        "sec_btn3_label": "Size Guide",
-        "sec_btn3_url": ""
+        "button_url": "#"
       }
     },
     "custom_journey_rxXRiD": {
@@ -93,6 +85,7 @@
       "disabled": true,
       "name": "UF Page Header",
       "settings": {
+        "text_alignment": "center",
         "padding_top_desktop": 120,
         "padding_bottom_desktop": 120,
         "background_color": "#f8f9fa",
@@ -107,7 +100,7 @@
     }
   },
   "order": [
-    "custom_hero_banner_dnnCci",
+    "custom_page_header_iYNFJR",
     "custom_journey_rxXRiD",
     "main",
     "custom_stories_REP74K",

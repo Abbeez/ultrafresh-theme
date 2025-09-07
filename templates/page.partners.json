@@ -17,23 +17,6 @@
         "padding_bottom": 28
       }
     },
-    "custom_page_header_dPYRhm": {
-      "type": "custom-page-header",
-      "name": "Custom Page Header",
-      "settings": {
-        "text_alignment": "center",
-        "padding_top_desktop": 120,
-        "padding_bottom_desktop": 120,
-        "background_color": "rgba(0,0,0,0)",
-        "background_opacity": 80,
-        "text_color": "dark",
-        "enable_text_shadow": false,
-        "headline": "UltraFresh {{ page.title }}",
-        "subheadline": "A compelling subheadline that describes your product or service.",
-        "button_label": "Shop Now",
-        "button_url": ""
-      }
-    },
     "custom_partnerwall_dKAy6b": {
       "type": "custom-partnerwall",
       "name": "UF Partner Wall",
@@ -103,7 +86,6 @@
   },
   "order": [
     "main",
-    "custom_page_header_dPYRhm",
     "custom_partnerwall_dKAy6b",
     "17538456182dd6dfff",
     "custom_multi_images_DHq7jp"
