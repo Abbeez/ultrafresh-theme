@@ -22,11 +22,11 @@
       "name": "Custom Page Header",
       "settings": {
         "text_alignment": "center",
-        "padding_top_desktop": 120,
-        "padding_bottom_desktop": 0,
-        "background_color": "rgba(0,0,0,0)",
+        "padding_top_desktop": 100,
+        "padding_bottom_desktop": 60,
+        "background_color": "#7e4b15",
         "background_opacity": 0,
-        "text_color": "dark",
+        "text_color": "light",
         "enable_text_shadow": false,
         "headline": "Find the Perfect Diaper Size for Your Little One",
         "subheadline": "Every baby grows at their own beautiful pace, and finding the right diaper size ensures gentle comfort at every stage. Our comprehensive size guide helps you choose the perfect fit for your baby's sensitive skin, from newborn diapers to toddler protection. Because the right size means better comfort and fewer worries",
@@ -119,6 +119,79 @@
         "row_text_color": "#333333"
       }
     },
+    "custom_size_list_V7cWji": {
+      "type": "custom-size-list",
+      "blocks": {
+        "size_item_FpF8Dh": {
+          "type": "size_item",
+          "settings": {
+            "size_text": "Small:4-9 kg",
+            "dot_color": "#d4a574"
+          }
+        },
+        "size_item_QBWkcy": {
+          "type": "size_item",
+          "settings": {
+            "size_text": "XL: 12-17 kg",
+            "dot_color": "#d4a574"
+          }
+        },
+        "size_item_H9Mmzj": {
+          "type": "size_item",
+          "settings": {
+            "size_text": "Medium: 6-11 kg",
+            "dot_color": "#d4a574"
+          }
+        },
+        "size_item_peqNLG": {
+          "type": "size_item",
+          "settings": {
+            "size_text": "XXL: 15kg and up",
+            "dot_color": "#d4a574"
+          }
+        },
+        "size_item_XqdVXW": {
+          "type": "size_item",
+          "settings": {
+            "size_text": "Large: 9-14 kg",
+            "dot_color": "#d4a574"
+          }
+        },
+        "size_item_rYiQjM": {
+          "type": "size_item",
+          "settings": {
+            "size_text": "XXXL: 18kg and up",
+            "dot_color": "#d4a574"
+          }
+        }
+      },
+      "block_order": [
+        "size_item_FpF8Dh",
+        "size_item_QBWkcy",
+        "size_item_H9Mmzj",
+        "size_item_peqNLG",
+        "size_item_XqdVXW",
+        "size_item_rYiQjM"
+      ],
+      "name": "Sizes List Section",
+      "settings": {
+        "custom_anchor_id": "sizes-list",
+        "show_top_border": true,
+        "show_bottom_border": true,
+        "background_color": "#f2e9db",
+        "section_image": "shopify://shop_images/5_bcb2c4c4-995c-48bc-8730-e2863673db2d.png",
+        "image_position": "left",
+        "image_border_radius": 0,
+        "overline": "For Every Chapter",
+        "heading": "A gentle fit, growing with every stage",
+        "description": "<p>From tiny cradles to first steps, UltraFresh adapts to softness and ease. Each milestone feels natural, cared for, and wrapped in tenderness.</p>",
+        "button_text": "View Size Guide",
+        "button_url": "",
+        "show_button": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "custom_column_tabs_9GpWFM": {
       "type": "custom-column-tabs",
       "blocks": {
@@ -173,9 +246,10 @@
         "size_item_UDkiJb",
         "size_item_Rn4Ght"
       ],
+      "disabled": true,
       "name": "2 Column Size Guide",
       "settings": {
-        "background_color": "rgba(0,0,0,0)",
+        "background_color": "#f2e9db",
         "background_position": "center",
         "background_size": "cover",
         "background_opacity": 100,
@@ -219,40 +293,15 @@
         "button_label": "Try UltraFresh",
         "button_url": "shopify://collections/all"
       }
-    },
-    "custom_journey_CTfHdB": {
-      "type": "custom-journey",
-      "name": "UF Journey",
-      "settings": {
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "show_heading": true,
-        "heading": "More than a Diaper, Love, made visible",
-        "subheading": "Simple. True. This is your signature whisper to close the journey with meaning.",
-        "row1_image_1": "shopify://shop_images/Ultrafresh_Mother_Care_36938374-0a01-4d3b-9afa-de6cccaf4123.png",
-        "row1_image_2": "shopify://shop_images/image0_1.jpg",
-        "row1_image_3": "shopify://shop_images/image0.jpg",
-        "row1_image_4": "shopify://shop_images/IMG_20250422_113458.jpg",
-        "row1_image_5": "shopify://shop_images/IMG_2873.jpg",
-        "row1_image_6": "shopify://shop_images/IMG_20250731_080033_924.jpg",
-        "row1_image_7": "shopify://shop_images/IMG-fa55bd22513dc2570f6e614e8e398a47-V.jpg",
-        "row2_image_1": "shopify://shop_images/1746444247741.jpg",
-        "row2_image_2": "shopify://shop_images/Screenshot_2025-07-25-19-31-28-534_com.instagram.android-edit.jpg",
-        "row2_image_3": "shopify://shop_images/Screenshot_2025-07-25-19-30-56-669_com.instagram.android-edit.jpg",
-        "row2_image_4": "shopify://shop_images/sabine2.jpg",
-        "row2_image_5": "shopify://shop_images/image1.jpg",
-        "row2_image_6": "shopify://shop_images/jokamiyama.jpg",
-        "row2_image_7": "shopify://shop_images/Comfy_in_heat.png"
-      }
     }
   },
   "order": [
     "main",
     "custom_page_header_7dMcMy",
     "custom_table_compare_pXRAeh",
+    "custom_size_list_V7cWji",
     "custom_column_tabs_9GpWFM",
     "custom_faqs_77VB4U",
-    "custom_page_header_HrBPDx",
-    "custom_journey_CTfHdB"
+    "custom_page_header_HrBPDx"
   ]
 }
