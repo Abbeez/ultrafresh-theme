@@ -240,7 +240,7 @@
   {% endif %}
   <div class="comparison-table-container">
     {% if section.settings.table_heading != blank %}
-      <h2 class="comparison-table__heading">{{ section.settings.table_heading }}</h2>
+      <h2 class="h2 font-cursive comparison-table__heading">{{ section.settings.table_heading }}</h2>
     {% endif %}
     
     <div class="comparison-table-wrapper">
@@ -300,7 +300,7 @@
 .comparison-table-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 7vw 1.5rem;
   position: relative;
   z-index: 1;
 }
@@ -352,11 +352,13 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .comparison-table-container {
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
-  
+}
+
+@media (max-width: 768px) {
   .comparison-table__heading {
     margin-bottom: 1.5rem;
   }
