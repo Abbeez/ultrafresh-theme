@@ -17,15 +17,20 @@
         "padding_bottom": 28
       }
     },
-    "custom_page_header_NicEci": {
+    "custom_page_header_dPYRhm": {
       "type": "custom-page-header",
-      "disabled": true,
-      "name": "Page Header",
+      "name": "Custom Page Header",
       "settings": {
-        "text_alignment": "left",
+        "text_alignment": "center",
+        "padding_top_desktop": 120,
+        "padding_bottom_desktop": 120,
+        "background_color": "rgba(0,0,0,0)",
+        "background_opacity": 80,
+        "text_color": "dark",
+        "enable_text_shadow": false,
         "headline": "UltraFresh {{ page.title }}",
-        "subheadline": "Simple. True. This is your signature whisper to close the journey with meaning.",
-        "button_label": "",
+        "subheadline": "A compelling subheadline that describes your product or service.",
+        "button_label": "Shop Now",
         "button_url": ""
       }
     },
@@ -37,28 +42,6 @@
         "partner_subheading": "Ultrafresh distributors are more than just suppliers—they're partners in nurturing every baby’s unique journey.",
         "padding_top": 60,
         "padding_bottom": 60
-      }
-    },
-    "custom_text_image_L8UkaF": {
-      "type": "custom-text-image",
-      "disabled": true,
-      "name": "UF Text Image Split",
-      "settings": {
-        "custom_anchor_id": "image-content",
-        "show_top_border": true,
-        "show_bottom_border": true,
-        "background_color": "#f8f3ed",
-        "section_image": "shopify://shop_images/Messenger_creation_e86b402c-45f2-472e-8d8e-ec215c763d77.jpg",
-        "image_position": "left",
-        "overline": "Premium Comfort",
-        "heading": "To Our Future Partner,",
-        "description": "<p>We built <strong>Ultrafresh</strong> on a simple but powerful belief that every family deserves access to products made with <strong>care, honesty, and heart</strong>. From day one, our mission has always gone beyond selling. It’s about building something meaningful, something that touches lives. But we’ve never believed in doing it alone.</p><p>Behind every <strong>pack delivered</strong>, every <strong>shelf stocked</strong>, and every <strong>doorstep reached</strong>, there are real people  <strong>partners like you</strong>  who help make it all possible. Whether you’re a <strong>retailer</strong>, <strong>distributor</strong>, or <strong>service provider</strong>, your role is more than transactional  it’s transformational.</p><p>We’re not just looking for business relationships. We’re looking for people who believe in the same values we do: <strong>gentle care</strong>, <strong>genuine connections</strong>, and <strong>long-term growth</strong>. We’re building a community, a family of partners who take pride in what they bring to the table and who want to grow <strong>with us</strong>, not just alongside us.</p><p>If you're someone who believes in <strong>purpose-driven work</strong>, who values <strong>integrity over shortcuts</strong>, and who wants to be part of a brand that puts <strong>people before profits</strong>, then we’d love to welcome you into our circle.</p><p>Together, let’s reach more homes, create more smiles, and grow something truly special one gentle step at a time.</p><p><strong>Let’s make care visible. Let’s partner up.</strong></p>",
-        "content_image_alt": "Alt text",
-        "content_image_max_width": 800,
-        "button_label": "Be Our Partner",
-        "button_url": "shopify://pages/get-in-touch",
-        "padding_top": 20,
-        "padding_bottom": 0
       }
     },
     "17538456182dd6dfff": {
@@ -103,6 +86,9 @@
         "fade_duration": 5,
         "image_position": "left",
         "image_fit": "cover",
+        "image_border_radius": 0,
+        "image_min_height": 650,
+        "image_max_height": 650,
         "overline": "With Love From UltraFresh",
         "heading": "Why does every layer feel like Love?",
         "description": "<p>We built <strong>Ultrafresh</strong> on a simple but powerful belief that every family deserves access to products made with <strong>care, honesty, and heart</strong>. From day one, our mission has always gone beyond selling. It’s about building something meaningful, something that touches lives. But we’ve never believed in doing it alone.</p><p>Behind every <strong>pack delivered</strong>, every <strong>shelf stocked</strong>, and every <strong>doorstep reached</strong>, there are real people  <strong>partners like you</strong>  who help make it all possible. Whether you’re a <strong>retailer</strong>, <strong>distributor</strong>, or <strong>service provider</strong>, your role is more than transactional  it’s transformational.</p><p>We’re not just looking for business relationships. We’re looking for people who believe in the same values we do: <strong>gentle care</strong>, <strong>genuine connections</strong>, and <strong>long-term growth</strong>. We’re building a community, a family of partners who take pride in what they bring to the table and who want to grow <strong>with us</strong>, not just alongside us.</p><p>If you're someone who believes in <strong>purpose-driven work</strong>, who values <strong>integrity over shortcuts</strong>, and who wants to be part of a brand that puts <strong>people before profits</strong>, then we’d love to welcome you into our circle.</p><p>Together, let’s reach more homes, create more smiles, and grow something truly special one gentle step at a time.</p><p><strong>Let’s make care visible. Let’s partner up.</strong></p>",
@@ -117,9 +103,8 @@
   },
   "order": [
     "main",
-    "custom_page_header_NicEci",
+    "custom_page_header_dPYRhm",
     "custom_partnerwall_dKAy6b",
-    "custom_text_image_L8UkaF",
     "17538456182dd6dfff",
     "custom_multi_images_DHq7jp"
   ]

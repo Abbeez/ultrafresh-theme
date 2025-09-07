@@ -83,7 +83,7 @@
         "show_top_border": false,
         "show_bottom_border": false,
         "background_color": "rgba(0,0,0,0)",
-        "section_image": "shopify://shop_images/3_a68f7667-0344-4f4f-9b8c-3b44a0b90f53.png",
+        "section_image": "shopify://shop_images/What_does_it_mean_to_feel_loved_-_UltraFresh.png",
         "image_position": "left",
         "image_border_radius": 32,
         "overline": "Protection in Every Layer",
@@ -104,7 +104,7 @@
           "type": "feature_tab",
           "settings": {
             "tab_title": "Luxurious Softness",
-            "tab_background_image": "shopify://shop_images/Comfortable_Happy.png",
+            "tab_background_image": "shopify://shop_images/Luxurious_Softness.png",
             "content_title": "Luxurious Softness",
             "content_description": "<p>Made with a unique, enhanced material blend that's incredibly gentle against your baby's delicate skin.</p>"
           }
@@ -446,6 +446,26 @@
         "padding_bottom": 80
       }
     },
+    "custom_reviews_yATXJk": {
+      "type": "custom-reviews",
+      "name": "Scoped Review Slider",
+      "settings": {
+        "heading": "Happy Parents",
+        "heading_image_width": 80,
+        "heading_image_alt": "Decorative icon"
+      }
+    },
+    "custom_partners_scroll_TytXX9": {
+      "type": "custom-partners-scroll",
+      "name": "Partners Autoscroll",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "background_color": "#ecdac0",
+        "main_text": "Find us at",
+        "animation_speed": 2
+      }
+    },
     "custom_journey_kWNpYT": {
       "type": "custom-journey",
       "name": "UF Journey",
@@ -476,17 +496,6 @@
         "row2_image_9": "shopify://shop_images/IMG_2873.jpg",
         "row2_image_10": "shopify://shop_images/IMG_20250731_080033_924.jpg"
       }
-    },
-    "custom_partners_scroll_TytXX9": {
-      "type": "custom-partners-scroll",
-      "name": "Partners Autoscroll",
-      "settings": {
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "background_color": "#f5f0ea",
-        "main_text": "Find us at",
-        "animation_speed": 2
-      }
     }
   },
   "order": [
@@ -502,7 +511,8 @@
     "custom_text_image_G9Tn9j",
     "custom_talktous_Cm3Wpw",
     "custom_calltoaction_4UnEqf",
-    "custom_journey_kWNpYT",
-    "custom_partners_scroll_TytXX9"
+    "custom_reviews_yATXJk",
+    "custom_partners_scroll_TytXX9",
+    "custom_journey_kWNpYT"
   ]
 }
