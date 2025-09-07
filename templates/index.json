@@ -21,8 +21,8 @@
         "text_color": "dark",
         "enable_text_shadow": false,
         "headline": "What does it mean to feel loved... even before you understand the word?",
-        "subheadline": "A diaper so light and gentle, babies hardly feel them, but they always feel the love that comes with them. UltraFresh baby diapers are made to feel like love.",
-        "button_label": "See What Makes Us Different",
+        "subheadline": "With its whisper-thin design, UltraFresh delivers protection that feels like nothing while absorbing everything. From first giggles to deepest dreams, every moment speaks love.",
+        "button_label": "See Why We Care",
         "button_url": "shopify://collections/all"
       }
     },
@@ -87,11 +87,11 @@
         "image_position": "left",
         "image_border_radius": 32,
         "overline": "Protection in Every Layer",
-        "heading": "How does UltraFresh wrap your baby in comfort and care?",
-        "description": "<p>From ultra-soft top sheets to leak-locking cores, every layer of UltraFresh diapers is carefully designed to keep your baby dry, comfy, and cared for. They are hypoallergenic because love begins with protection.<br/><br/></p>",
+        "heading": "Wrapped in Love, Comfort, and Gentle Protection",
+        "description": "<p>Every embrace between mother and child is precious. That’s why UltraFresh is crafted to surround your little one in softness, security, and care—ensuring comfort that feels as natural as a mother’s hug.</p>",
         "content_image_alt": "Alt text",
         "content_image_max_width": 100,
-        "button_label": "See What’s Inside UltraFresh Diapers",
+        "button_label": "See How We Do It",
         "button_url": "shopify://collections/all",
         "padding_top": 0,
         "padding_bottom": 30
@@ -104,7 +104,7 @@
           "type": "feature_tab",
           "settings": {
             "tab_title": "Luxurious Softness",
-            "tab_background_image": "shopify://shop_images/9_8fe06efa-0c6e-4291-b5ba-bf9fbd26dcf3.png",
+            "tab_background_image": "shopify://shop_images/Comfortable_Happy.png",
             "content_title": "Luxurious Softness",
             "content_description": "<p>Made with a unique, enhanced material blend that's incredibly gentle against your baby's delicate skin.</p>"
           }
@@ -113,7 +113,7 @@
           "type": "feature_tab",
           "settings": {
             "tab_title": "Absorbency Core",
-            "tab_background_image": "shopify://shop_images/22.png",
+            "tab_background_image": "shopify://shop_images/9_8fe06efa-0c6e-4291-b5ba-bf9fbd26dcf3.png",
             "content_title": "Rapid Absorbency Core",
             "content_description": "<p>Our advanced core quickly locks away wetness, keeping your little one dry and comfortable for longer.</p>"
           }

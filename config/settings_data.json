@@ -148,6 +148,7 @@
         "blocks": {
           "image_fEG3UY": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "name": "customfont",
               "custom_font_weight": "none",
@@ -163,10 +164,29 @@
               "apply_p": false,
               "apply_custom": ".font-cursive, .product__title h1"
             }
+          },
+          "image_GXdMTU": {
+            "type": "image",
+            "settings": {
+              "name": "customfont",
+              "custom_font_weight": "none",
+              "custom_font_style": "none",
+              "custom_font_url": "https://cdn.shopify.com/s/files/1/0694/9542/3210/files/Ephesis-Regular.ttf?v=1757057267",
+              "apply_h1": false,
+              "apply_h2": false,
+              "apply_h3": false,
+              "apply_h4": false,
+              "apply_h5": false,
+              "apply_h6": false,
+              "apply_span": false,
+              "apply_p": false,
+              "apply_custom": ".font-cursive, .product__title h1"
+            }
           }
         },
         "block_order": [
-          "image_fEG3UY"
+          "image_fEG3UY",
+          "image_GXdMTU"
         ],
         "settings": {
           "enable": true
@@ -191,7 +211,7 @@
       },
       "13768625480086291342": {
         "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     },
