@@ -1463,7 +1463,12 @@
       {
         "type": "image_picker",
         "id": "page_background_image",
-        "label": "Page Background Image"
+        "label": "Desktop Background Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_page_background_image",
+        "label": "Mobile Background Image"
       }
     ]
   }

@@ -89,6 +89,32 @@
       "default": "<p>Made with diaper-like absorbency, feather soft materials and CloudTouch™ Softness for ultimate comfort, our training pants are perfect for potty training.</p>"
     },
 
+    /* Buttons */
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Button 1 Text"
+    },
+    {
+      "type": "url",
+      "id": "button_1_url",
+      "label": "Button 1 URL"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Button 2 Text"
+    },
+    {
+      "type": "url",
+      "id": "button_2_url",
+      "label": "Button 2 URL"
+    },
+
     /* Spacing */
     {
       "type": "number",
@@ -224,6 +250,31 @@
               {{ block.settings.tab_title }}
             </button>
           {% endfor %}
+        </div>
+      {% endif %}
+
+      {% comment %} Buttons Section {% endcomment %}
+      {% assign show_buttons = false %}
+      {% if section.settings.button_1_text != blank and section.settings.button_1_url != blank %}
+        {% assign show_buttons = true %}
+      {% endif %}
+      {% if section.settings.button_2_text != blank and section.settings.button_2_url != blank %}
+        {% assign show_buttons = true %}
+      {% endif %}
+
+      {% if show_buttons %}
+        <div class="tabbed__buttons-wrapper">
+          {% if section.settings.button_1_text != blank and section.settings.button_1_url != blank %}
+            <a href="{{ section.settings.button_1_url }}" class="tabbed__btn">
+              {{ section.settings.button_1_text }}
+            </a>
+          {% endif %}
+
+          {% if section.settings.button_2_text != blank and section.settings.button_2_url != blank %}
+            <a href="{{ section.settings.button_2_url }}" class="tabbed__btn">
+              {{ section.settings.button_2_text }}
+            </a>
+          {% endif %}
         </div>
       {% endif %}
     </div>
@@ -394,6 +445,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-bottom: 1.4rem;
 }
 
 .tabbed__tab {
@@ -418,6 +470,42 @@
   background-color: rgba(0, 0, 0, 0.02);
 }
 
+/* Buttons Styling */
+.tabbed__buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3.5rem;
+
+}
+
+.tabbed__btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--custom-dark);
+  color: var(--custom-light);
+  border: none;
+  padding: 1.2rem 2.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  min-width: 200px;
+  justify-content: center;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.tabbed__btn:last-child {
+  background: transparent;
+  color: var(--custom-secondary);
+  border: 1px solid var(--custom-secondary);
+}
+.tabbed__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
 /* Overlay content */
 .tabbed__overlay-content {
   position: absolute;
@@ -436,8 +524,6 @@
   transition: all 0.4s ease;
   border-radius: 12px;
   padding: 1rem;
-  {% comment %} background: rgba(255, 255, 255, 0.95); {% endcomment %}
-  {% comment %} backdrop-filter: blur(10px); {% endcomment %}
   text-align: center;
 }
 
@@ -466,11 +552,6 @@
   object-fit: contain;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
-{% comment %} .tabbed__content-details {
-  flex: 1;
-  text-align: left !important;
-} {% endcomment %}
 
 .tabbed__content-title {
   color: var(--custom-light);
@@ -513,6 +594,18 @@
   
   .tabbed__tab {
     padding: 1.2rem;
+  }
+
+  .tabbed__buttons-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .tabbed__btn {
+    flex: 0 0 auto;
+    min-width: 180px;
+    padding: 1.2rem 2.5rem;
   }
   
   .tabbed__overlay-content {
@@ -615,6 +708,10 @@
     background: transparent;
     border-color: var(--custom-secondary);
   }
+
+  .tabbed__buttons-wrapper {
+    justify-content: flex-start;
+  }
   
   .tabbed__overlay-content {
     position: absolute;
@@ -651,8 +748,6 @@
     height: 70px;
     padding: 1.2rem;
   }
-
-  
 }
 
 /* Large Desktop - 1200px and up */
@@ -707,7 +802,8 @@
 @media (prefers-reduced-motion: reduce) {
   .tabbed__bg-image,
   .tabbed__content-item,
-  .tabbed__tab {
+  .tabbed__tab,
+  .tabbed__btn {
     transition: none;
   }
 }

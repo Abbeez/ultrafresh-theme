@@ -110,7 +110,7 @@
     <div class="compare-cards__row">
       <!-- Left Card -->
       <div class="compare-cards__card compare-cards__card--side compare-cards__card--left">
-        <div class="h3 compare-cards__card-title">{{ section.settings.left_title }}</div>
+        <div class="h4 compare-cards__card-title">{{ section.settings.left_title }}</div>
         <ul class="compare-cards__list">
           {% assign left_bullets = section.settings.left_bullets | newline_to_br | split: '<br />' %}
           {% for item in left_bullets %}
@@ -120,15 +120,7 @@
       </div>
       <!-- Center Card -->
       <div class="compare-cards__card compare-cards__card--center">
-        {% comment %} {% if section.settings.center_logo != blank %}
-          <div class="compare-cards__logo">
-            <img
-              src="{{ section.settings.center_logo | image_url: width: 240 }}"
-              alt="{{ section.settings.center_title | escape }}"
-              width="140" height="60" loading="lazy">
-          </div>
-        {% endif %} {% endcomment %}
-        <div class="h3 compare-cards__card-title"><span>UltraFresh</span></div>
+        <div class="h3 compare-cards__card-title font-cursive"><span>UltraFresh</span></div>
         <ul class="compare-cards__list compare-cards__list--center">
           {% assign center_bullets = section.settings.center_bullets | newline_to_br | split: '<br />' %}
           {% for item in center_bullets %}
@@ -146,7 +138,7 @@
       </div>
       <!-- Right Card -->
       <div class="compare-cards__card compare-cards__card--side compare-cards__card--right">
-        <div class="h3 compare-cards__card-title">{{ section.settings.right_title }}</div>
+        <div class="h4 compare-cards__card-title">{{ section.settings.right_title }}</div>
         <ul class="compare-cards__list">
           {% assign right_bullets = section.settings.right_bullets | newline_to_br | split: '<br />' %}
           {% for item in right_bullets %}
@@ -171,7 +163,7 @@
 }
 .compare-cards__subheading {
   margin: 0 auto 0;
-  max-width: 660px;
+  max-width: 880px;
   line-height: 1.6;
   opacity: 0.92;
 }
@@ -183,19 +175,21 @@
   width: 100%;
 }
 .compare-cards__card {
-  background: #edeadd;
+  background: #F8F3ED;
   flex: 1 1 0%;
-  padding: 2.5rem 1.7rem;
+  padding: 3rem 4rem; /* Reduced from 2.5rem 1.7rem */
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: none;
   border-radius: 0;
   min-width: 0;
+  border-radius:4px;
+  border:1px solid #cecece;
 }
 .compare-cards__card--center {
   background: var(--custom-light);
-  border: 2px solid var(--custom-secondary);
+  border: 1px solid var(--custom-secondary);
   box-shadow: 0 0 0 3px rgba(206,164,120,0.09);
   position: relative;
   z-index: 2;
@@ -215,10 +209,11 @@
   padding: 0;
   margin: 0;
   width: 100%;
+  font-size: 0.9em; /* Added 90% font size */
 }
 .compare-cards__list li {
   border-bottom: 1px solid #dad8ce;
-  padding: 1.1em 1em;
+  padding: 1rem 1rem;
   margin: 0;
   text-align: left;
 }
@@ -235,6 +230,10 @@
   align-items: center;
   margin-right: 0.2em;
   flex-shrink: 0;
+}
+.compare-cards__icon svg {
+  width: 20px; /* Further reduced from 22px */
+  height: 20px; /* Further reduced from 22px */
 }
 @media (max-width: 900px) {
   .compare-cards__row {

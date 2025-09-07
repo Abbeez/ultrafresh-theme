@@ -35,7 +35,7 @@
             <div class="swiper-slide uf-review-card">
               <div class="uf-review-card-inner">
                 {% if review.review_title != blank %}
-                  <h3 class="uf-review-title">{{ review.review_title }}</h3>
+                  <h3 class="h4 uf-review-title">{{ review.review_title }}</h3>
                 {% endif %}
 
                 {% if review.review_comment != blank %}
@@ -161,7 +161,7 @@
 }
 .uf-review-card:last-child::after { display: none; }
 
-.uf-review-title { font-weight: 700; margin: 0; }
+.uf-review-title { margin: 0; }
 .uf-review-comment { margin: 0; opacity: 0.9; max-width: 46ch; }
 
 .uf-review-meta {

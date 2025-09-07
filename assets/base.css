@@ -317,7 +317,7 @@ h1,
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
-    font-size: calc(var(--font-heading-scale) * 7.2rem);
+    font-size: calc(var(--font-heading-scale) * 7.3rem);
   }
 }
 
@@ -329,7 +329,7 @@ h2,
 @media only screen and (min-width: 750px) {
   h2,
   .h2 {
-    font-size: calc(var(--font-heading-scale) * 6rem);
+    font-size: calc(var(--font-heading-scale) * 6.5rem);
   }
 }
 
@@ -341,7 +341,7 @@ h3,
 @media only screen and (min-width: 750px) {
   h3,
   .h3 {
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
+    font-size: calc(var(--font-heading-scale) * 2.8rem);
   }
 }
 
@@ -349,7 +349,7 @@ h4,
 .h4 {
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
-  font-size: calc(var(--font-heading-scale) * 1.5rem);
+  font-size: calc(var(--font-heading-scale) * 2rem);
 }
 
 h5,
@@ -3762,7 +3762,7 @@ ul.list-menu.list-menu--inline .header-menu {
 }
 
 /* Product PAge */
-@media only screen and (min-width: 900px) {
+/* @media only screen and (min-width: 900px) {
   .product--small
     .thumbnail-list.slider--tablet-up
     li.thumbnail-list__item.slider__slide {
@@ -3773,7 +3773,7 @@ ul.list-menu.list-menu--inline .header-menu {
     position: absolute;
     top: 0;
     transform: rotate(90deg);
-    width: 602px; /* manage width of small image */
+    width: 602px; 
     left: 80px;
     transform-origin: left top;
     height: 100px;
@@ -3787,9 +3787,9 @@ ul.list-menu.list-menu--inline .header-menu {
     transform: rotate(-90deg);
     width: calc(
       16.8% - 0.8rem
-    ); /* decrease percentage and it will increase items */
+    ); 
   }
-}
+} */
 /* end product page */
 
 @media screen and (min-width: 990px) {
