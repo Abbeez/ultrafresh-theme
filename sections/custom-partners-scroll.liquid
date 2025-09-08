@@ -94,14 +94,14 @@
   <div class="partners-autoscroll__content page-width">
     <div class="partners-autoscroll__text">
       <div class="partners-autoscroll__inline-text">
-        <span class="partners-autoscroll__main-text">{{ section.settings.main_text }}</span>
+        <div class="partners-autoscroll__main-text">{{ section.settings.main_text }}</div>
         <div class="partners-autoscroll__partner-container">
           {% if partners_list.count > 0 %}
             {% assign partner_index = 0 %}
             {% for partner in partners_list %}
               {% unless metaobject.system.handle == partner.system.handle %}
                 <a href="{{ partner.system.url | default: '#' }}" 
-                   class="partners-autoscroll__partner-name{% if partner_index == 0 %} partners-autoscroll__partner-name--active{% endif %}" 
+                   class="h3 font-cursive partners-autoscroll__partner-name{% if partner_index == 0 %} partners-autoscroll__partner-name--active{% endif %}" 
                    data-partner-index="{{ partner_index }}">
                   {{ partner.name }}
                 </a>
@@ -224,7 +224,7 @@
 
 .partners-autoscroll__inline-text {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 0.5rem;
     justify-content: center;
@@ -241,20 +241,18 @@
 .partners-autoscroll__partner-container {
   position: relative;
   height: 3.5rem;
-  width: 250px;
+  width: 400px;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  overflow: hidden;
+  {% comment %} overflow: hidden; {% endcomment %}
   flex-shrink: 0;
 }
 
 .partners-autoscroll__partner-name {
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%) !important;
   top: 0;
-  font-size: 1.2em;
-  {% comment %} font-weight: 700; {% endcomment %}
+  {% comment %} font-size: 1.2em; {% endcomment %}
   transform: translateY(100%);
   opacity: 0;
   transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -268,7 +266,6 @@
   cursor: pointer;
   pointer-events: auto;
   z-index: 10;
-  text-decoration:underline;
 }
 
 .partners-autoscroll__partner-name--active {
