@@ -18,7 +18,7 @@
         "button_label": "Experience the Care",
         "button_url": "shopify://collections/all",
         "text_alignment": "center",
-        "padding_top": "8",
+        "padding_top": "10",
         "padding_bottom": "10",
         "page_header_image": "shopify://shop_images/Ultrafresh_Diaper_Philippines.webp",
         "background_color": "#242833",
