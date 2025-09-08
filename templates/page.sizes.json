@@ -21,17 +21,15 @@
       "type": "custom-page-header",
       "name": "Custom Page Header",
       "settings": {
-        "text_alignment": "center",
-        "padding_top_desktop": 15,
-        "padding_bottom_desktop": 5,
-        "background_color": "#7e4b15",
-        "background_opacity": 0,
-        "text_color": "light",
-        "enable_text_shadow": false,
         "headline": "Find the Perfect Diaper Size for Your Little One",
         "subheadline": "Every baby grows at their own beautiful pace, and finding the right diaper size ensures gentle comfort at every stage. Our comprehensive size guide helps you choose the perfect fit for your baby's sensitive skin, from newborn diapers to toddler protection. Because the right size means better comfort and fewer worries",
         "button_label": "Shop Now",
-        "button_url": ""
+        "button_url": "",
+        "text_alignment": "center",
+        "background_color": "#7e4b15",
+        "background_opacity": 0,
+        "text_color": "light",
+        "enable_text_shadow": false
       }
     },
     "custom_table_compare_pXRAeh": {
@@ -280,18 +278,16 @@
       "type": "custom-page-header",
       "name": "Custom Page Header",
       "settings": {
+        "headline": "Find the Perfect Diaper Size for Your Little One",
+        "subheadline": "Every baby grows at their own beautiful pace, and finding the right diaper size ensures gentle comfort at every stage. Our comprehensive size guide helps you choose the perfect fit for your baby's sensitive skin, from newborn diapers to toddler protection. Because the right size means better comfort and fewer worries",
+        "button_label": "Try UltraFresh",
+        "button_url": "shopify://collections/all",
         "text_alignment": "center",
-        "padding_top_desktop": 60,
-        "padding_bottom_desktop": 100,
         "page_header_image": "shopify://shop_images/8_5da2f09d-3037-4525-8d54-3f1bb08345ec.png",
         "background_color": "#7e4b15",
         "background_opacity": 75,
         "text_color": "light",
-        "enable_text_shadow": false,
-        "headline": "Find the Perfect Diaper Size for Your Little One",
-        "subheadline": "Every baby grows at their own beautiful pace, and finding the right diaper size ensures gentle comfort at every stage. Our comprehensive size guide helps you choose the perfect fit for your baby's sensitive skin, from newborn diapers to toddler protection. Because the right size means better comfort and fewer worries",
-        "button_label": "Try UltraFresh",
-        "button_url": "shopify://collections/all"
+        "enable_text_shadow": false
       }
     }
   },

@@ -13,22 +13,18 @@
       "type": "custom-page-header",
       "name": "Custom Page Header",
       "settings": {
-        "text_alignment": "center",
-        "padding_top_desktop": 10,
-        "padding_bottom_desktop": 12,
-        "padding_top_tablet": 8,
-        "padding_bottom_tablet": 8,
-        "padding_top_mobile": 6,
-        "padding_bottom_mobile": 6,
-        "page_header_image": "shopify://shop_images/Ultrafresh_Diaper_Philippines.webp",
-        "background_color": "#ffffff",
-        "background_opacity": 0,
-        "text_color": "light",
-        "enable_text_shadow": true,
         "headline": "What does it mean to feel loved... even before you understand the word?",
         "subheadline": "It’s in every smile, sigh, and dream. UltraFresh surrounds little ones with softness that embraces, protects, and whispers love in every moment.",
         "button_label": "Experience the Care",
-        "button_url": "shopify://collections/all"
+        "button_url": "shopify://collections/all",
+        "text_alignment": "center",
+        "padding_top": "8",
+        "padding_bottom": "10",
+        "page_header_image": "shopify://shop_images/Ultrafresh_Diaper_Philippines.webp",
+        "background_color": "#242833",
+        "background_opacity": 15,
+        "text_color": "light",
+        "enable_text_shadow": true
       }
     },
     "custom_hero_banner_G6Bycn": {

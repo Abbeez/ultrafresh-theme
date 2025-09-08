@@ -13,17 +13,15 @@
       "type": "custom-page-header",
       "name": "Custom Page Header",
       "settings": {
-        "text_alignment": "center",
-        "padding_top_desktop": 15,
-        "padding_bottom_desktop": 5,
-        "background_color": "rgba(0,0,0,0)",
-        "background_opacity": 0,
-        "text_color": "dark",
-        "enable_text_shadow": false,
         "headline": "Questions Parents Ask Most About Our Diapers",
         "subheadline": "Caring for your baby comes with many questions. UltraFresh understands what you are going through. Find the answers here to our most asked FAQs about baby diapers and training pants.",
         "button_label": "Shop Now",
-        "button_url": ""
+        "button_url": "",
+        "text_alignment": "center",
+        "background_color": "rgba(0,0,0,0)",
+        "background_opacity": 0,
+        "text_color": "dark",
+        "enable_text_shadow": false
       }
     },
     "main": {

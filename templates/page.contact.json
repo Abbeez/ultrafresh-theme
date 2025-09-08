@@ -21,21 +21,15 @@
       "type": "custom-page-header",
       "name": "Custom Page Header",
       "settings": {
-        "text_alignment": "center",
-        "padding_top_desktop": 8,
-        "padding_bottom_desktop": 5,
-        "padding_top_tablet": 8,
-        "padding_bottom_tablet": 8,
-        "padding_top_mobile": 6,
-        "padding_bottom_mobile": 6,
-        "background_color": "rgba(0,0,0,0)",
-        "background_opacity": 70,
-        "text_color": "dark",
-        "enable_text_shadow": false,
         "headline": "Let's Talk About Your Baby's Comfort",
         "subheadline": "Whether you have a question about our products or simply want to share a moment from your baby's journey, we're here to listen and offer our support. Because for us, every conversation is a chance to connect with love and care.",
         "button_label": "Shop Now",
-        "button_url": ""
+        "button_url": "",
+        "text_alignment": "center",
+        "background_color": "rgba(0,0,0,0)",
+        "background_opacity": 70,
+        "text_color": "dark",
+        "enable_text_shadow": false
       }
     },
     "form": {

@@ -13,17 +13,17 @@
       "type": "custom-page-header",
       "name": "Custom Page Header",
       "settings": {
-        "text_alignment": "center",
-        "padding_top_desktop": 15,
-        "padding_bottom_desktop": 15,
-        "background_color": "rgba(0,0,0,0)",
-        "background_opacity": 0,
-        "text_color": "dark",
-        "enable_text_shadow": false,
         "headline": "Every Mom Has a Story. Every Baby Has a Journey.",
         "subheadline": "Behind every cuddle, every giggle, and every milestone is a parent searching for comfort and care. These are the real stories of families who found love, trust, and peace of mind with Ultrafresh.",
         "button_label": "Explore Our Stories & Journeys",
-        "button_url": "#secstories"
+        "button_url": "#secstories",
+        "text_alignment": "center",
+        "padding_top": "4",
+        "padding_bottom": "4",
+        "background_color": "rgba(0,0,0,0)",
+        "background_opacity": 0,
+        "text_color": "dark",
+        "enable_text_shadow": false
       }
     },
     "custom_journey_rxXRiD": {
@@ -85,17 +85,17 @@
       "disabled": true,
       "name": "UF Page Header",
       "settings": {
-        "text_alignment": "center",
-        "padding_top_desktop": 120,
-        "padding_bottom_desktop": 120,
-        "background_color": "#f8f9fa",
-        "background_opacity": 0,
-        "text_color": "light",
-        "enable_text_shadow": true,
         "headline": "Because Every Baby Deserves Gentle Care",
         "subheadline": "Ultrafresh isn’t just about diapers. It’s about helping moms and dads create little moments of joy, discovery, and connection with their child.",
         "button_label": "Explore Our Stories",
-        "button_url": "shopify://collections/all"
+        "button_url": "shopify://collections/all",
+        "text_alignment": "center",
+        "padding_top": "10",
+        "padding_bottom": "10",
+        "background_color": "#f8f9fa",
+        "background_opacity": 0,
+        "text_color": "light",
+        "enable_text_shadow": true
       }
     }
   },
