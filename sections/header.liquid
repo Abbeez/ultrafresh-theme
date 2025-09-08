@@ -76,6 +76,7 @@
   }
 {% comment %} Transparent Header {% endcomment %}
  {% if template == 'index' %}
+
 {% if section.settings.enable_transparent-header %}
     .header-wrapper{
       background: transparent !important;
@@ -97,6 +98,7 @@
   color: {{ section.settings.color-transparent }} !important;
     }
     {% endif %}
+
   {% endif %}
 {% comment %} end Transparent Header {% endcomment %}
 </style>

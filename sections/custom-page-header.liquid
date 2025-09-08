@@ -274,4 +274,13 @@
   background: var(--custom-secondary);
   color: var(--custom-light);
 }
+
+{% comment %} {% if template == 'index' %} {% endcomment %}
+    @media only screen and (max-width: 600px) {
+      .custom-page-header{
+      padding-top: 20% !important;
+      padding-bottom: 15% !important;
+    }
+  }
+{% comment %} {% endif %} {% endcomment %}
 </style>
