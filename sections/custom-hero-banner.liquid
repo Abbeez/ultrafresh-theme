@@ -190,7 +190,7 @@ Fix: Do not assign a comparison. Store the object, then compare in conditionals.
 >
   <div class="uf-simple-banner__center">
     <div class="uf-simple-banner__inner">
-      <h1 class="h0 uf-simple-banner__headline font-cursive">{{ section.settings.headline }}</h1>
+      <h1 class="h1 uf-simple-banner__headline font-cursive">{{ section.settings.headline }}</h1>
       <div class="uf-simple-banner__subheadline">{{ section.settings.subheadline }}</div>
       {% if section.settings.button_label != blank and section.settings.button_url != blank %}
         <a href="{{ section.settings.button_url }}" class="uf-simple-banner__btn">
@@ -475,9 +475,6 @@ Fix: Do not assign a comparison. Store the object, then compare in conditionals.
   }
 
   /* Headline font-size clamp for mobile - max 3rem */
-  .uf-simple-banner__headline {
-    font-size: clamp(1.3rem, 7vw, 3rem) !important;
-  }
 }
 
 @media (max-width: 749px) {

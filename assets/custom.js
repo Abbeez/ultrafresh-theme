@@ -16,3 +16,47 @@ document.addEventListener("DOMContentLoaded", function () {
       title.innerHTML = html;
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Function to handle smooth scrolling with offset
+  function smoothScrollToAnchor(targetId, offset = -100) {
+    const targetElement = document.getElementById(targetId);
+    if (!targetElement) return false;
+
+    const targetPosition =
+      targetElement.getBoundingClientRect().top + window.pageYOffset + offset;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    });
+
+    return true;
+  }
+
+  // Handle all anchor link clicks
+  document.addEventListener("click", function (e) {
+    const link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+
+    const href = link.getAttribute("href");
+    const targetId = href.substring(1); // Remove the #
+
+    // Only prevent default if target exists
+    if (document.getElementById(targetId)) {
+      e.preventDefault();
+      smoothScrollToAnchor(targetId, -100);
+
+      // Update URL without jumping
+      history.pushState(null, null, href);
+    }
+  });
+
+  // Handle direct URL access (e.g., yoursite.com#section3)
+  if (window.location.hash) {
+    setTimeout(() => {
+      const targetId = window.location.hash.substring(1);
+      smoothScrollToAnchor(targetId, -150);
+    }, 100);
+  }
+});
