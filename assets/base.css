@@ -3730,26 +3730,27 @@ details[open] > .header__menu-item {
 
 .scrolled-past-header {
   background: transparent;
-}
+} */
 
-.scrolled-past-header header {
-  background: var(--custom-bg);
+/* .scrolled-past-header header, */
+.scrolled-past-header .header-wrapper {
+  background: var(--custom-bg) !important;
   transition: background 300ms ease-in-out;
-  border-bottom: 1px solid var(--custom-dark);
+  /* border-bottom: 1px solid #cecece; */
 }
 
 .scrolled-past-header .header__menu-item {
-  color: var(--custom-dark);
+  color: var(--custom-dark) !important;
   transition: color 300ms ease-in-out;
 }
 
 .scrolled-past-header .header__icon {
-  color: var(--custom-dark);
+  color: var(--custom-dark) !important;
   transition: color 300ms ease-in-out;
 }
 
-.cart-count-bubble {
-  color: var(--custom-dark);
+/* .cart-count-bubble {
+  color: var(--custom-dark) !important;
 } */
 
 /* ul.list-menu.list-menu--inline .header-menu,
