@@ -4,6 +4,34 @@
   "settings": [
     {
       "type": "header",
+      "content": "Main Content"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Your Amazing Headline Here"
+    },
+    {
+      "type": "textarea",
+      "id": "subheadline",
+      "label": "Subheadline",
+      "default": "A compelling subheadline that describes your product or service."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link"
+    },
+
+    {
+      "type": "header",
       "content": "Layout Settings"
     },
     {
@@ -17,22 +45,24 @@
       ],
       "default": "center"
     },
+
     {
       "type": "header",
       "content": "Spacing Settings"
     },
     {
-      "type": "number",
-      "id": "padding_top_desktop",
-      "label": "Padding Top - Desktop (px)",
-      "default": 120
+      "type": "text",
+      "id": "padding_top",
+      "label": "Padding Top (%)",
+      "default": "10"
     },
     {
-      "type": "number",
-      "id": "padding_bottom_desktop",
-      "label": "Padding Bottom - Desktop (px)",
-      "default": 120
+      "type": "text",
+      "id": "padding_bottom",
+      "label": "Padding Bottom (%)",
+      "default": "10"
     },
+
     {
       "type": "header",
       "content": "Background Settings"
@@ -59,6 +89,7 @@
       "default": 0,
       "info": "Overlay opacity when using background image"
     },
+
     {
       "type": "header",
       "content": "Text Settings"
@@ -79,33 +110,6 @@
       "label": "Enable Text Shadow",
       "default": true,
       "info": "Adds shadow to text for better readability over images"
-    },
-    {
-      "type": "header",
-      "content": "Main Content"
-    },
-    {
-      "type": "text",
-      "id": "headline",
-      "label": "Headline",
-      "default": "Your Amazing Headline Here"
-    },
-    {
-      "type": "textarea",
-      "id": "subheadline",
-      "label": "Subheadline",
-      "default": "A compelling subheadline that describes your product or service."
-    },
-    {
-      "type": "text",
-      "id": "button_label",
-      "label": "Button Label",
-      "default": "Shop Now"
-    },
-    {
-      "type": "url",
-      "id": "button_url",
-      "label": "Button Link"
     }
   ],
   "presets": [
@@ -119,12 +123,11 @@
 {% assign has_page_header_image = section.settings.page_header_image %}
 {% assign bg_opacity = section.settings.background_opacity | divided_by: 100.0 %}
 
-<div class="custom-page-header custom-page-header--{{ section.settings.text_color }} custom-page-header--align-{{ section.settings.text_alignment }} {% if section.settings.enable_text_shadow %}custom-page-header--text-shadow{% endif %}"
+<div 
+  class="custom-page-header custom-page-header--{{ section.settings.text_color }} custom-page-header--align-{{ section.settings.text_alignment }} {% if section.settings.enable_text_shadow %}custom-page-header--text-shadow{% endif %}"
   style="
-    padding-top: {{ section.settings.padding_top_desktop | default: 120 }}px;
-    padding-bottom: {{ section.settings.padding_bottom_desktop | default: 120 }}px;
-    --desktop-padding-top: {{ section.settings.padding_top_desktop | default: 120 }}px;
-    --desktop-padding-bottom: {{ section.settings.padding_bottom_desktop | default: 120 }}px;
+    padding-top: {{ section.settings.padding_top | default: 10 }}%;
+    padding-bottom: {{ section.settings.padding_bottom | default: 10 }}%;
     {% if section.settings.background_color != blank %}
       background-color: {{ section.settings.background_color }};
     {% endif %}
@@ -199,13 +202,11 @@
   margin-left: 0;
   margin-right: auto;
 }
-
 .custom-page-header--align-center .custom-page-header__content {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
-
 .custom-page-header--align-right .custom-page-header__content {
   text-align: right;
   margin-left: auto;
@@ -214,15 +215,13 @@
 
 .custom-page-header__headline {
   margin-bottom: 1.5rem;
-  margin-top:0;
+  margin-top: 0;
   color: var(--custom-light);
   word-break: break-word;
 }
-
 .custom-page-header--text-shadow .custom-page-header__headline {
   text-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
 }
-
 .custom-page-header--dark .custom-page-header__headline {
   color: var(--custom-dark);
 }
@@ -233,11 +232,9 @@
   color: var(--custom-light);
   word-break: break-word;
 }
-
 .custom-page-header--text-shadow .custom-page-header__subheadline {
   text-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
 }
-
 .custom-page-header--dark .custom-page-header__subheadline {
   color: var(--custom-dark);
 }
@@ -257,12 +254,10 @@
   border-radius: 0;
   transition: all 0.3s ease;
 }
-
 .custom-page-header__btn-arrow {
   margin-left: 0.8em;
   line-height: 1;
 }
-
 .custom-page-header__btn:hover,
 .custom-page-header__btn:focus {
   background: var(--custom-secondary);
@@ -270,67 +265,13 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
-
 .custom-page-header--dark .custom-page-header__btn {
   background: var(--custom-dark);
   color: var(--custom-light);
 }
-
 .custom-page-header--dark .custom-page-header__btn:hover,
 .custom-page-header--dark .custom-page-header__btn:focus {
   background: var(--custom-secondary);
   color: var(--custom-light);
-}
-
-/* Mobile Responsive with dynamic padding */
-@media (max-width: 990px) {
-  .custom-page-header {
-    background-attachment: scroll;
-    padding-top: {{ section.settings.padding_top_tablet | default: 100 }}px;
-    padding-bottom: {{ section.settings.padding_bottom_tablet | default: 100 }}px;
-    min-height: 50vh;
-  }
-
-  .custom-page-header__content {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    max-width: 95vw;
-  }
-
-  .custom-page-header__headline {
-    margin-bottom: 1.2rem;
-  }
-
-  .custom-page-header__subheadline {
-    margin-bottom: 1.8rem;
-  }
-}
-
-@media (max-width: 749px) {
-  .custom-page-header {
-    padding-top: {{ section.settings.padding_top_mobile | default: 80 }}px;
-    padding-bottom: {{ section.settings.padding_bottom_mobile | default: 80 }}px;
-  }
-
-  .custom-page-header__content {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .custom-page-header__btn {
-    padding: 1rem 2rem;
-    min-width: 180px;
-  }
-}
-
-@media (max-width: 479px) {
-  .custom-page-header__content {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
-  .custom-page-header__btn {
-    min-width: 160px;
-  }
 }
 </style>
