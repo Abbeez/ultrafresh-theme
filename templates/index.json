@@ -14,16 +14,17 @@
       "name": "Custom Page Header",
       "settings": {
         "text_alignment": "center",
-        "padding_top_desktop": 90,
-        "padding_bottom_desktop": 90,
-        "background_color": "rgba(0,0,0,0)",
-        "background_opacity": 10,
-        "text_color": "dark",
-        "enable_text_shadow": false,
+        "padding_top_desktop": 150,
+        "padding_bottom_desktop": 180,
+        "page_header_image": "shopify://shop_images/Ultrafresh_Diaper_Philippines.webp",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "text_color": "light",
+        "enable_text_shadow": true,
         "headline": "What does it mean to feel loved... even before you understand the word?",
         "subheadline": "It’s in every smile, sigh, and dream. UltraFresh surrounds little ones with softness that embraces, protects, and whispers love in every moment.",
         "button_label": "Experience the Care",
-        "button_url": "shopify://collections/all"
+        "button_url": "#love"
       }
     },
     "custom_hero_banner_G6Bycn": {
@@ -31,7 +32,7 @@
       "disabled": true,
       "name": "Hero Banner",
       "settings": {
-        "banner_image": "shopify://shop_images/3_a68f7667-0344-4f4f-9b8c-3b44a0b90f53.png",
+        "banner_image": "shopify://shop_images/Ultrafresh_Diaper_Philippines.webp",
         "background_color": "#121212",
         "background_opacity": 10,
         "text_color": "light",
@@ -40,7 +41,7 @@
         "subheadline": "A diaper so light and gentle, babies hardly feel them, but they always feel the love that comes with them. UltraFresh baby diapers are made to feel like love.",
         "button_label": "See What Makes Us Different",
         "button_url": "#testimonials",
-        "show_secondary_content": false,
+        "show_secondary_content": true,
         "secondary_padding_top": 350,
         "secondary_padding_bottom": 24,
         "secondary_heading": "Purposefully Made. Elegantly Designed.",
@@ -93,7 +94,7 @@
         "content_image_max_width": 100,
         "button_label": "Check our stories",
         "button_url": "shopify://collections/all",
-        "padding_top": 0,
+        "padding_top": 60,
         "padding_bottom": 30
       }
     },
