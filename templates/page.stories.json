@@ -14,8 +14,8 @@
       "name": "Custom Page Header",
       "settings": {
         "text_alignment": "center",
-        "padding_top_desktop": 120,
-        "padding_bottom_desktop": 60,
+        "padding_top_desktop": 15,
+        "padding_bottom_desktop": 15,
         "background_color": "rgba(0,0,0,0)",
         "background_opacity": 0,
         "text_color": "dark",
