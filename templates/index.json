@@ -454,7 +454,7 @@
       "type": "custom-reviews",
       "name": "Scoped Review Slider",
       "settings": {
-        "heading": "<span>Stories</span> of comfort, told with love",
+        "heading": "Stories of comfort, told with love",
         "heading_image_width": 80,
         "heading_image_alt": "Decorative icon"
       }
@@ -466,7 +466,7 @@
         "padding_top": 80,
         "padding_bottom": 80,
         "background_color": "#ecdac0",
-        "main_text": "Find us at",
+        "main_text": "Find Us",
         "animation_speed": 2
       }
     },
