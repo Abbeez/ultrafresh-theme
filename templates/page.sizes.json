@@ -26,10 +26,97 @@
         "button_label": "Shop Now",
         "button_url": "",
         "text_alignment": "center",
+        "padding_top": "10",
+        "padding_bottom": "10",
         "background_color": "#7e4b15",
         "background_opacity": 0,
         "text_color": "light",
         "enable_text_shadow": false
+      }
+    },
+    "custom_size_guide_FwD3Pg": {
+      "type": "custom-size-guide",
+      "blocks": {
+        "row_XByRMQ": {
+          "type": "row",
+          "settings": {
+            "size": "N (Newborn)",
+            "range": "2 – 9lbs"
+          }
+        },
+        "row_DfTTHm": {
+          "type": "row",
+          "settings": {
+            "size": "1 (Newborn)",
+            "range": "6 – 11lbs"
+          }
+        },
+        "row_QE8cVg": {
+          "type": "row",
+          "settings": {
+            "size": "2",
+            "range": "9 – 18lbs"
+          }
+        },
+        "row_EYFLGy": {
+          "type": "row",
+          "settings": {
+            "size": "3",
+            "range": "13 – 24lbs"
+          }
+        },
+        "row_4Hxx7f": {
+          "type": "row",
+          "settings": {
+            "size": "4",
+            "range": "22 – 33lbs"
+          }
+        },
+        "row_P6AqYH": {
+          "type": "row",
+          "settings": {
+            "size": "5",
+            "range": "28 – 39lbs"
+          }
+        },
+        "row_LHMpYG": {
+          "type": "row",
+          "settings": {
+            "size": "6",
+            "range": "33 – 44lbs"
+          }
+        },
+        "row_hUNUY6": {
+          "type": "row",
+          "settings": {
+            "size": "7",
+            "range": "37lbs+"
+          }
+        }
+      },
+      "block_order": [
+        "row_XByRMQ",
+        "row_DfTTHm",
+        "row_QE8cVg",
+        "row_EYFLGy",
+        "row_4Hxx7f",
+        "row_P6AqYH",
+        "row_LHMpYG",
+        "row_hUNUY6"
+      ],
+      "disabled": true,
+      "name": "UltraFresh • Size Chart (2-column)",
+      "settings": {
+        "title": "Diaper Size Chart",
+        "subtitle": "Choose a diaper size based on your little one's weight.",
+        "description": "UltraFresh diapers are made for tropical comfort and dermatologist-tested gentle on sensitive skin.",
+        "button_label": "Learn More",
+        "button_link": "",
+        "col_1_title": "Size",
+        "col_2_title": "Weight Range (lbs)",
+        "tip": "Tip: If you’re between sizes, try the smaller size first.",
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "custom_table_compare_pXRAeh": {
@@ -283,6 +370,8 @@
         "button_label": "Try UltraFresh",
         "button_url": "shopify://collections/all",
         "text_alignment": "center",
+        "padding_top": "10",
+        "padding_bottom": "10",
         "page_header_image": "shopify://shop_images/8_5da2f09d-3037-4525-8d54-3f1bb08345ec.png",
         "background_color": "#7e4b15",
         "background_opacity": 75,
@@ -294,6 +383,7 @@
   "order": [
     "main",
     "custom_page_header_7dMcMy",
+    "custom_size_guide_FwD3Pg",
     "custom_table_compare_pXRAeh",
     "custom_size_list_V7cWji",
     "custom_column_tabs_9GpWFM",

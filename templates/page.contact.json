@@ -26,6 +26,8 @@
         "button_label": "Shop Now",
         "button_url": "",
         "text_alignment": "center",
+        "padding_top": "10",
+        "padding_bottom": "2",
         "background_color": "rgba(0,0,0,0)",
         "background_opacity": 70,
         "text_color": "dark",
