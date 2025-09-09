@@ -14,8 +14,11 @@
   }
 {%- endstyle -%}
 
-<div class="customer activate section-{{ section.id }}-padding">
-  <h1>
+<div class="customer activate section-{{ section.id }}-padding" style="
+  {% if settings.page_background_image != blank %}
+    background-image: url('{{ settings.page_background_image | image_url: width: 1800 }}');
+  {% endif %}">
+  <h1 class="h2 font-cursive">
     {{ 'customer.activate_account.title' | t }}
   </h1>
   <p>

@@ -14,11 +14,11 @@
   }
 {%- endstyle -%}
 <div id="customer-section" style="
-  {% if settings.site_background_image != blank %}
-    background-image: linear-gradient(to bottom, rgba(132, 86, 60, 0.72) 0%, rgba(132, 86, 60, 0.77) 100%), url('{{ settings.site_background_image | image_url: width: 1800 }}');
+  {% if settings.page_background_image != blank %}
+    background-image: url('{{ settings.page_background_image | image_url: width: 1800 }}');
   {% endif %}">
   <div class="customer register section-{{ section.id }}-padding">
-    <h1>
+    <h1 class="h2 font-cursive">
       {{ 'customer.register.title' | t }}
     </h1>
     {%- form 'create_customer', novalidate: 'novalidate' -%}

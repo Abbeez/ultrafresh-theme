@@ -14,18 +14,18 @@
   }
 {%- endstyle -%}
 <div id="customer-section" style="
-  {% if settings.site_background_image != blank %}
-    background-image: linear-gradient(to bottom, rgba(132, 86, 60, 0.72) 0%, rgba(132, 86, 60, 0.77) 100%), url('{{ settings.site_background_image | image_url: width: 1800 }}');
+  {% if settings.page_background_image != blank %}
+    background-image: url('{{ settings.page_background_image | image_url: width: 1800 }}');
   {% endif %}">
   <div class="customer order section-{{ section.id }}-padding">
     <div>
-      <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
+      <h1 class="h2 font-cursive customer__title">{{ 'customer.account.title' | t }}</h1>
       <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a>
     </div>
 
     <div>
       <div>
-        <h2>{{ 'customer.order.title' | t: name: order.name }}</h2>
+        <h2 class="h3" style="font-size:2.5rem;">{{ 'customer.order.title' | t: name: order.name }}</h2>
         {%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}
         <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
         {%- if order.cancelled -%}
@@ -323,7 +323,7 @@
       </div>
       <div class="order-addresses">
         <div>
-          <h2>{{ 'customer.order.billing_address' | t }}</h2>
+          <h2 class="h3 font-cursive">{{ 'customer.order.billing_address' | t }}</h2>
           <p>
             <strong>{{ 'customer.order.payment_status' | t }}:</strong>
             {{ order.financial_status_label }}
@@ -331,7 +331,7 @@
           {{ order.billing_address | format_address }}
         </div>
         <div>
-          <h2>{{ 'customer.order.shipping_address' | t }}</h2>
+          <h2 class="h3 font-cursive">{{ 'customer.order.shipping_address' | t }}</h2>
           <p>
             <strong>{{ 'customer.order.fulfillment_status' | t }}:</strong>
             {{ order.fulfillment_status_label }}

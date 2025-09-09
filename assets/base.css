@@ -3836,18 +3836,14 @@ nav.header__inline-menu li header-menu span {
   color: var(--custom-secondary) !important;
 } */
 
-div#customer-section {
+div#customer-section,
+.container-notfound {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding-top: 7%;
-  padding-bottom: 5%;
 }
 
-div#customer-section > div {
-  /* padding-top: 15%; */
-}
-
+/*
 div#customer-section > div h1,
 div#customer-section > div h2,
 div#customer-section > div span,
@@ -3900,7 +3896,7 @@ div#customer-section .addresses .input-label {
 div#customer-section input::placeholder,
 div#customer-section select {
   color: var(--custom-dark) !important;
-}
+} */
 
 .uf-location {
   text-decoration: none;

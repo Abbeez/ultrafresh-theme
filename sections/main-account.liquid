@@ -14,12 +14,12 @@
   }
 {%- endstyle -%}
 <div id="customer-section" style="
-  {% if settings.site_background_image != blank %}
-    background-image: linear-gradient(to bottom, rgba(132, 86, 60, 0.72) 0%, rgba(132, 86, 60, 0.77) 100%), url('{{ settings.site_background_image | image_url: width: 1800 }}');
+  {% if settings.page_background_image != blank %}
+    background-image: url('{{ settings.page_background_image | image_url: width: 1800 }}');
   {% endif %}">
   <div class="customer account section-{{ section.id }}-padding">
     <div>
-      <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
+      <h1 class="h2 font-cursive customer__title">{{ 'customer.account.title' | t }}</h1>
       <a href="{{ routes.account_logout_url }}">
         <span class="svg-wrapper">
           {{- 'icon-account.svg' | inline_asset_content -}}
@@ -30,7 +30,7 @@
 
     <div>
       <div>
-        <h2>{{ 'customer.orders.title' | t }}</h2>
+        <h2 class="h3 font-cursive">{{ 'customer.orders.title' | t }}</h2>
 
         {% paginate customer.orders by 20 %}
           {%- if customer.orders.size > 0 -%}
@@ -142,7 +142,7 @@
       </div>
 
       <div>
-        <h2>{{ 'customer.account.details' | t }}</h2>
+        <h2 class="h3 font-cursive">{{ 'customer.account.details' | t }}</h2>
 
         {{ customer.default_address | format_address }}
 
