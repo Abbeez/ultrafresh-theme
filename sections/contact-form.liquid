@@ -12,6 +12,10 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  select#ContactForm-inquiry-type {
+    height: 60px;
+}
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
@@ -111,6 +115,20 @@
           placeholder="{{ 'templates.contact.form.phone' | t }}"
         >
         <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+      </div>
+      <div class="field">
+        <select
+          id="ContactForm-inquiry-type"
+          class="field__input"
+          name="contact[Inquiry Type]"
+        >
+          <option value="">Select inquiry type...</option>
+          <option value="General" {% if form['Inquiry Type'] == 'General' %}selected{% endif %}>General</option>
+          <option value="Distributor" {% if form['Inquiry Type'] == 'Distributor' %}selected{% endif %}>Distributor</option>
+          <option value="Orders" {% if form['Inquiry Type'] == 'Orders' %}selected{% endif %}>Orders</option>
+          <option value="Others" {% if form['Inquiry Type'] == 'Others' %}selected{% endif %}>Others</option>
+        </select>
+        <label style="" class="field__label" for="ContactForm-inquiry-type">Inquiry Type</label>
       </div>
       <div class="field">
         <textarea
