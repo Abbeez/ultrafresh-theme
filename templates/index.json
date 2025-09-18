@@ -104,37 +104,45 @@
         "feature_tab_NQ7GC9": {
           "type": "feature_tab",
           "settings": {
-            "tab_title": "Luxurious Softness",
+            "tab_title": "Ultra-thin technology",
             "tab_background_image": "shopify://shop_images/Luxurious_Softness.png",
-            "content_title": "Luxurious Softness",
+            "content_title": "Ultra-thin technology",
             "content_description": "<p>Made with a unique, enhanced material blend that's incredibly gentle against your baby's delicate skin.</p>"
           }
         },
         "feature_tab_PJ9fmP": {
           "type": "feature_tab",
           "settings": {
-            "tab_title": "Absorbency Core",
+            "tab_title": "Tropical Ready",
             "tab_background_image": "shopify://shop_images/9_8fe06efa-0c6e-4291-b5ba-bf9fbd26dcf3.png",
-            "content_title": "Rapid Absorbency Core",
+            "content_title": "Tropical Ready",
             "content_description": "<p>Our advanced core quickly locks away wetness, keeping your little one dry and comfortable for longer.</p>"
           }
         },
         "feature_tab_MJW7Vk": {
           "type": "feature_tab",
           "settings": {
-            "tab_title": "Breathable Design",
+            "tab_title": "No sag. No bulge",
             "tab_background_image": "shopify://shop_images/Gemini_Generated_Image_hcksnphcksnphcks.png",
-            "content_title": "Breathable Design",
+            "content_title": "No sag. No bulge",
             "content_description": "<p>Features breathable materials to promote air circulation, helping to prevent rashes and discomfort.</p>"
           }
         },
         "feature_tab_giqCF6": {
           "type": "feature_tab",
           "settings": {
-            "tab_title": "Secure & Gentle Fit",
+            "tab_title": "Cotton- soft comfort",
             "tab_background_image": "shopify://shop_images/assets_task_01k0yhvsvmfs4s7rjc2rf14xe6_1753372229_img_1.webp",
-            "content_title": "Secure & Gentle Fit",
+            "content_title": "Cotton- soft comfort",
             "content_description": "<p>Designed with soft, stretchy sides and a resealable tab for a snug yet gentle fit that moves with your active baby.</p>"
+          }
+        },
+        "feature_tab_U9ENmL": {
+          "type": "feature_tab",
+          "settings": {
+            "tab_title": "Featherlight and Flexible",
+            "content_title": "Featherlight and Flexible",
+            "content_description": "<p>Crafted with an enhanced fibre blend and high-GSM topsheet for luxurious comfort</p>"
           }
         }
       },
@@ -142,7 +150,8 @@
         "feature_tab_NQ7GC9",
         "feature_tab_PJ9fmP",
         "feature_tab_MJW7Vk",
-        "feature_tab_giqCF6"
+        "feature_tab_giqCF6",
+        "feature_tab_U9ENmL"
       ],
       "name": "Tabbed Features Section",
       "settings": {
