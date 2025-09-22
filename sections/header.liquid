@@ -84,21 +84,25 @@
     width: 100% !important;
     top: 0px;
   }
+
   {% endif %}
 
   {% if section.settings.color-transparent %}
 @media only screen and (min-width: 600px) {
     .list-menu__item, details[open]>.header__submenu {
-  color: {{ section.settings.color-transparent }} !important;
-      background: transparent;
+      color: {{ section.settings.color-transparent }};
+      {% comment %} background: transparent; {% endcomment %}
+       background:#222 !important;
     }
-  
+    
 }
+
   .header__icon.link,.header__active-menu-item,.disclosure__button,.header__heading-link .h2{
       color: {{ section.settings.color-transparent }};
     }
     {% endif %}
 
+    
   {% endif %}
 {% comment %} end Transparent Header {% endcomment %}
 </style>
