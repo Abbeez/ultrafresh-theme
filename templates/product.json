@@ -14,17 +14,17 @@
       "disabled": true,
       "name": "UF Page Header",
       "settings": {
-        "text_alignment": "center",
-        "padding_top_desktop": 120,
-        "padding_bottom_desktop": 120,
-        "background_color": "#f8f9fa",
-        "background_opacity": 0,
-        "text_color": "light",
-        "enable_text_shadow": true,
         "headline": "Ultra-thin, featherlight  and flexible,designed for tropical comfort. no sag no bulge",
         "subheadline": "",
         "button_label": "Explore Our Collection",
-        "button_url": ""
+        "button_url": "",
+        "text_alignment": "center",
+        "padding_top": "10",
+        "padding_bottom": "10",
+        "background_color": "#f8f9fa",
+        "background_opacity": 0,
+        "text_color": "light",
+        "enable_text_shadow": true
       }
     },
     "main": {
@@ -64,7 +64,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": false,
+            "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
         },
@@ -113,7 +113,7 @@
       ],
       "settings": {
         "enable_sticky_info": false,
-        "color_scheme": "scheme-cfce202b-b4a2-463a-bfb9-87a3ed179eda",
+        "color_scheme": "scheme-cedf5ed3-5404-4a76-9771-bfeadd55a67b",
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "cover",
@@ -122,7 +122,7 @@
         "media_position": "left",
         "image_zoom": "lightbox",
         "hide_variants": false,
-        "enable_video_looping": false,
+        "enable_video_looping": true,
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -180,11 +180,11 @@
       "name": "Tabbed Features Section",
       "settings": {
         "custom_anchor_id": "tabbed-features",
-        "show_top_border": false,
+        "show_top_border": true,
         "show_bottom_border": false,
-        "background_color": "#f8f3ed",
+        "background_color": "rgba(0,0,0,0)",
         "image_position": "left",
-        "image_border_radius": 32,
+        "image_border_radius": 0,
         "image_fit": "cover",
         "overline": "Diaper Features",
         "heading": "Designed for Their World of Wonder",
@@ -193,8 +193,8 @@
         "button_1_url": "",
         "button_2_text": "",
         "button_2_url": "",
-        "padding_top": 0,
-        "padding_bottom": 30
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "custom_featured_grid_M8CEGE": {
@@ -202,18 +202,18 @@
       "name": "Features Grid Section",
       "settings": {
         "custom_anchor_id": "features-grid",
-        "show_top_border": false,
-        "show_bottom_border": false,
-        "background_color": "#f8f3ed",
+        "show_top_border": true,
+        "show_bottom_border": true,
+        "background_color": "#f2e9db",
         "section_image": "shopify://shop_images/12_bb00b155-60ff-46ca-8b2f-36a7517debbe.png",
         "image_position": "left",
-        "image_border_radius": 32,
+        "image_border_radius": 0,
         "overline": "Available Sizes",
         "heading": "Perfect Fit for Every Precious Moment",
         "description": "<p>Every baby grows differently. Our diaper size guide helps you find the right fit at every stage, from newborn to toddler.</p>",
         "default_dot_color": "#d4a574",
-        "padding_top": 30,
-        "padding_bottom": 0
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "related-products": {
@@ -250,12 +250,12 @@
       "name": "UF Text Image Split",
       "settings": {
         "custom_anchor_id": "image-content",
-        "show_top_border": false,
-        "show_bottom_border": false,
-        "background_color": "#f8f3ed",
+        "show_top_border": true,
+        "show_bottom_border": true,
+        "background_color": "#f2e9db",
         "section_image": "shopify://shop_images/header1.png",
         "image_position": "right",
-        "image_border_radius": 32,
+        "image_border_radius": 0,
         "overline": "About UltraFresh",
         "heading": "Quality Without Compromise, Love Without Limits",
         "description": "<p><strong>Ultrafresh Inc.</strong> was born from a simple Filipino promise: every baby deserves the gentlest care, and every parent deserves peace of mind they can afford. Our flagship <strong>Ultrafresh Diapers</strong> aren't just products – they're a parent's quiet confidence at 3 AM, a baby's freedom to explore, and a family's trust in comfort that never compromises on quality or value.<br/><br/></p>",
@@ -264,8 +264,8 @@
         "content_image_max_width": 100,
         "button_label": "Let's compare Taped and Pull-up",
         "button_url": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "custom_journey_rEnW4j": {

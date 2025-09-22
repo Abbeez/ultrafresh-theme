@@ -86,7 +86,7 @@
         "background_color": "rgba(0,0,0,0)",
         "section_image": "shopify://shop_images/What_does_it_mean_to_feel_loved_-_UltraFresh.png",
         "image_position": "left",
-        "image_border_radius": 32,
+        "image_border_radius": 0,
         "overline": "Gentle in Every Layer",
         "heading": "Closeness that stays, comfort that lasts",
         "description": "<p>As soft as a mother’s embrace, each layer is crafted to breathe, soothe, and cradle. Day after day, your child is wrapped in tenderness that never fades.</p>",
@@ -95,7 +95,7 @@
         "button_label": "Check our stories",
         "button_url": "shopify://collections/all",
         "padding_top": 60,
-        "padding_bottom": 30
+        "padding_bottom": 60
       }
     },
     "custom_featured_tabs_CCeNxr": {
@@ -156,11 +156,11 @@
       "name": "Tabbed Features Section",
       "settings": {
         "custom_anchor_id": "tabbed-features",
-        "show_top_border": false,
-        "show_bottom_border": false,
-        "background_color": "rgba(0,0,0,0)",
+        "show_top_border": true,
+        "show_bottom_border": true,
+        "background_color": "#f2e9db",
         "image_position": "left",
-        "image_border_radius": 32,
+        "image_border_radius": 0,
         "default_background_image": "shopify://shop_images/6_71351bfd-06ed-4c5d-8021-b1e3dc30e19e.png",
         "image_fit": "cover",
         "overline": "Thoughtful by Design",
@@ -170,8 +170,8 @@
         "button_1_url": "",
         "button_2_text": "",
         "button_2_url": "",
-        "padding_top": 30,
-        "padding_bottom": 30
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "custom_compare_cards_G77NkY": {
@@ -307,28 +307,6 @@
         "padding_bottom": 150
       }
     },
-    "custom_text_image_FbNJTP": {
-      "type": "custom-text-image",
-      "name": "Even in the heat",
-      "settings": {
-        "custom_anchor_id": "image-content",
-        "show_top_border": false,
-        "show_bottom_border": false,
-        "background_color": "#f8f3ed",
-        "section_image": "shopify://shop_images/7_2051898e-945f-4fca-ad1f-ad0c3ffd6aa6.png",
-        "image_position": "left",
-        "image_border_radius": 32,
-        "overline": "Made for the Tropics",
-        "heading": "Freshness that lingers, even in the heat",
-        "description": "<p>Breathable layers welcome air while keeping dampness away. Through every day and restless play, your child stays cool, light, and beautifully cared for.</p>",
-        "content_image_alt": "Alt text",
-        "content_image_max_width": 320,
-        "button_label": "See Why It’s Perfect for Tropical Heat",
-        "button_url": "",
-        "padding_top": 0,
-        "padding_bottom": 30
-      }
-    },
     "custom_size_list_48cye6": {
       "type": "custom-size-list",
       "blocks": {
@@ -386,20 +364,20 @@
       "name": "Sizes List Section",
       "settings": {
         "custom_anchor_id": "sizes-list",
-        "show_top_border": false,
-        "show_bottom_border": false,
-        "background_color": "#f8f3ed",
+        "show_top_border": true,
+        "show_bottom_border": true,
+        "background_color": "#f2e9db",
         "section_image": "shopify://shop_images/5_bcb2c4c4-995c-48bc-8730-e2863673db2d.png",
         "image_position": "right",
-        "image_border_radius": 32,
+        "image_border_radius": 0,
         "overline": "For Every Chapter",
         "heading": "A gentle fit, growing with every stage",
         "description": "<p>From tiny cradles to first steps, UltraFresh adapts to softness and ease. Each milestone feels natural, cared for, and wrapped in tenderness.</p>",
         "button_text": "See the size guide",
         "button_url": "shopify://pages/size-guide",
         "show_button": true,
-        "padding_top": 30,
-        "padding_bottom": 0
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "custom_text_image_G9Tn9j": {
@@ -469,6 +447,28 @@
         "heading_image_alt": "Decorative icon"
       }
     },
+    "custom_text_image_FbNJTP": {
+      "type": "custom-text-image",
+      "name": "Even in the heat",
+      "settings": {
+        "custom_anchor_id": "image-content",
+        "show_top_border": true,
+        "show_bottom_border": true,
+        "background_color": "#f2e9db",
+        "section_image": "shopify://shop_images/7_2051898e-945f-4fca-ad1f-ad0c3ffd6aa6.png",
+        "image_position": "left",
+        "image_border_radius": 0,
+        "overline": "Made for the Tropics",
+        "heading": "Freshness that lingers, even in the heat",
+        "description": "<p>Breathable layers welcome air while keeping dampness away. Through every day and restless play, your child stays cool, light, and beautifully cared for.</p>",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 320,
+        "button_label": "See Why It’s Perfect for Tropical Heat",
+        "button_url": "shopify://collections/all",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "custom_partners_scroll_TytXX9": {
       "type": "custom-partners-scroll",
       "name": "Partners Autoscroll",
@@ -520,12 +520,12 @@
     "custom_featured_tabs_CCeNxr",
     "custom_compare_cards_G77NkY",
     "custom_compare_table_dNQypC",
-    "custom_text_image_FbNJTP",
     "custom_size_list_48cye6",
     "custom_text_image_G9Tn9j",
     "custom_talktous_Cm3Wpw",
     "custom_calltoaction_4UnEqf",
     "custom_reviews_yATXJk",
+    "custom_text_image_FbNJTP",
     "custom_partners_scroll_TytXX9",
     "custom_journey_kWNpYT"
   ]

@@ -35,122 +35,195 @@
         "enable_text_shadow": false
       }
     },
-    "custom_multi_images_Ma9NAT": {
-      "type": "custom-multi-images",
+    "custom_text_image_9xdiJh": {
+      "type": "custom-text-image",
       "disabled": true,
-      "name": "2 Column Multi-Images",
+      "name": "Image and Content Column",
       "settings": {
-        "custom_anchor_id": "multi-images-content",
-        "show_top_border": false,
+        "custom_anchor_id": "image-content",
+        "show_top_border": true,
         "show_bottom_border": false,
-        "background_color": "rgba(0,0,0,0)",
-        "section_image_1": "shopify://shop_images/Layers_1.png",
-        "section_image_2": "shopify://shop_images/23.png",
-        "section_image_3": "shopify://shop_images/25.png",
-        "section_image_4": "shopify://shop_images/20_5d54b361-5ef0-49b2-83d6-540e96fd217f.png",
-        "fade_duration": 4,
-        "image_position": "right",
-        "image_fit": "cover",
-        "image_border_radius": 32,
-        "image_min_height": 650,
-        "image_max_height": 650,
-        "overline": "Secure in Every Embrace",
-        "heading": "Trusted Protection That Never Lets Go",
-        "description": "<p>Some moments call for the ultimate in secure comfort. Whether it's a long night's sleep or an afternoon of tummy time, our UltraFresh Taped Diapers provide the dependable protection that lets you focus on what matters most those precious moments together.</p>",
+        "background_color": "#f8f3ed",
+        "section_image": "shopify://shop_images/Ultra_thin_technology.png",
+        "image_position": "left",
+        "image_border_radius": 0,
+        "overline": "Ultra-Thin Technology",
+        "heading": "Light as a feather barely felt, freedom in every move.",
+        "description": "",
         "content_image_alt": "Alt text",
         "content_image_max_width": 800,
-        "button_label": "Try UltraFresh Taped",
-        "button_url": "shopify://products/ultrafresh-ultra-thin-tape-diaper",
-        "padding_top": 0,
-        "padding_bottom": 30
+        "button_label": "See What's Inside",
+        "button_url": "",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
-    "custom_multi_images_MXjAmB": {
-      "type": "custom-multi-images",
+    "custom_text_image_xGzGL4": {
+      "type": "custom-text-image",
       "disabled": true,
-      "name": "2 Column Multi-Images",
+      "name": "Image and Content Column",
       "settings": {
-        "custom_anchor_id": "multi-images-content",
-        "show_top_border": false,
+        "custom_anchor_id": "image-content",
+        "show_top_border": true,
         "show_bottom_border": false,
         "background_color": "rgba(0,0,0,0)",
-        "section_image_1": "shopify://shop_images/26.png",
-        "section_image_2": "shopify://shop_images/21_140a3286-6f41-46f5-8534-df5bb73b348e.png",
-        "section_image_3": "shopify://shop_images/22.png",
-        "section_image_4": "shopify://shop_images/24.png",
-        "fade_duration": 3,
-        "image_position": "left",
-        "image_fit": "cover",
-        "image_border_radius": 32,
-        "image_min_height": 650,
-        "image_max_height": 650,
-        "overline": "Growing Up, One Step at a Time",
-        "heading": "Where Independence Begins",
-        "description": "<p>The journey from baby to big kid is filled with proud moments and little accidents and that's perfectly okay. Our UltraFresh Training Pants are designed for this beautiful transition, giving your toddler the confidence to explore their independence while giving you the peace of mind that comes with superior protection.</p>",
+        "section_image": "shopify://shop_images/Tropical_Ready_18542619-c454-45ff-8abd-08ddcd88e0ff.png",
+        "image_position": "right",
+        "image_border_radius": 0,
+        "overline": "Tropical Ready",
+        "heading": "Breathable comfort. Designed for warm, humid days.",
+        "description": "",
         "content_image_alt": "Alt text",
         "content_image_max_width": 800,
-        "button_label": "Try UltraFresh Pull Up",
-        "button_url": "shopify://products/ultrafresh-ultra-thin-pull-up-diaper-large-30s",
-        "padding_top": 30,
-        "padding_bottom": 30
+        "button_label": "See What's Inside",
+        "button_url": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "custom_text_image_mcghCN": {
+      "type": "custom-text-image",
+      "disabled": true,
+      "name": "Image and Content Column",
+      "settings": {
+        "custom_anchor_id": "image-content",
+        "show_top_border": true,
+        "show_bottom_border": false,
+        "background_color": "#848f92",
+        "section_image": "shopify://shop_images/No_Sag.png",
+        "image_position": "left",
+        "image_border_radius": 0,
+        "overline": "No Sag. No Bulge",
+        "heading": "Moves with your baby. A natural fit no limits.",
+        "description": "",
+        "content_image_alt": "Alt text",
+        "content_image_max_width": 800,
+        "button_label": "See What's Inside",
+        "button_url": "",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "custom_featured_tabs_HxkCjw": {
       "type": "custom-featured-tabs",
       "blocks": {
-        "feature_tab_AkLhHB": {
-          "type": "feature_tab",
-          "settings": {
-            "tab_title": "FeatherCare™ Touch",
-            "tab_icon": "shopify://shop_images/19.png",
-            "tab_background_image": "shopify://shop_images/7_2051898e-945f-4fca-ad1f-ad0c3ffd6aa6.png",
-            "content_title": "FeatherCare™ Touch",
-            "content_description": "<p>Feather-light softness that feels like a gentle hug. This silky finish ensures your baby stays comfortable with every move, every cuddle, every smile.</p>"
-          }
-        },
         "feature_tab_y9rkjr": {
           "type": "feature_tab",
           "settings": {
-            "tab_title": "VelvaCloud™ Layer",
-            "tab_icon": "shopify://shop_images/15.png",
-            "tab_background_image": "shopify://shop_images/6_96015c69-643a-48b2-a090-3984c3e2d1a2.png",
-            "content_title": "VelvaCloud™ Layer",
-            "content_description": "<p>Breathable, airy comfort designed to keep your little one feeling fresh. Our advanced <br/>VelvaCloud™ Layer technology lets skin breathe naturally, reducing irritation and keeping their world carefree</p>"
+            "tab_title": "Tropical Ready",
+            "tab_background_image": "shopify://shop_images/Tropical_Ready_18542619-c454-45ff-8abd-08ddcd88e0ff.png",
+            "content_title": "Tropical Ready",
+            "content_description": "<p>Breathable comfort. Designed for warm, humid days.</p>"
+          }
+        },
+        "feature_tab_AkLhHB": {
+          "type": "feature_tab",
+          "settings": {
+            "tab_title": "Ultra-Thin Technology",
+            "tab_background_image": "shopify://shop_images/Ultra-thin.png",
+            "content_title": "Ultra-Thin Technology",
+            "content_description": "<p>Light as a feather barely felt, freedom in every move.</p>"
           }
         },
         "feature_tab_RLExx9": {
           "type": "feature_tab",
           "settings": {
-            "tab_title": "BreezeThin™ Shell",
-            "tab_icon": "shopify://shop_images/17.png",
-            "tab_background_image": "shopify://shop_images/5_bcb2c4c4-995c-48bc-8730-e2863673db2d.png",
-            "content_title": "BreezeThin™ Shell",
-            "content_description": "<p>Ultra-thin yet secure, this innovative shell keeps moisture away while letting your baby move freely. No bulk. No fuss. Just pure, lasting comfort.</p>"
+            "tab_title": "No Sag. No Bulge",
+            "tab_background_image": "shopify://shop_images/No_Sag.png",
+            "content_title": "No Sag. No Bulge",
+            "content_description": "<p>Moves with your baby. A natural fit no limits.</p>"
           }
         },
         "feature_tab_pdBkjV": {
           "type": "feature_tab",
           "settings": {
-            "tab_title": "FeatherFlex™ Core",
-            "tab_icon": "shopify://shop_images/16.png",
-            "content_title": "FeatherFlex™ Core",
-            "content_description": "<p>Powerful absorbency in a slim, flexible core. FeatherFlex™ locks away wetness quickly, keeping your baby dry and happy day or night.</p>"
+            "tab_title": "More Than a Diaper",
+            "tab_background_image": "shopify://shop_images/More_than_diaper.png",
+            "content_title": "More Than a Diaper",
+            "content_description": "<p>It's tenderness made practical. Love Made Visible</p>"
           }
         }
       },
       "block_order": [
-        "feature_tab_AkLhHB",
         "feature_tab_y9rkjr",
+        "feature_tab_AkLhHB",
         "feature_tab_RLExx9",
         "feature_tab_pdBkjV"
       ],
       "name": "Tabbed Features Section",
       "settings": {
         "custom_anchor_id": "tabbed-features",
+        "show_top_border": true,
+        "show_bottom_border": true,
+        "background_color": "#f2e9db",
+        "image_position": "left",
+        "image_border_radius": 0,
+        "image_fit": "cover",
+        "overline": "Love Made Visible in every detail.",
+        "heading": "Because comfort and care should never be invisible",
+        "description": "<p>UltraFresh is made with love in every detail, designed to bring comfort and care you can truly see and feel. Each piece is thoughtfully created to keep little ones happy, free, and protected through every moment of growth and discovery.</p>",
+        "button_1_text": "Taped",
+        "button_1_url": "shopify://products/ultrafresh-ultra-thin-tape-diaper",
+        "button_2_text": "Pull Up",
+        "button_2_url": "shopify://products/ultrafresh-ultra-thin-pull-up-diaper-large-30s",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "custom_featured_tabs_qGhxGn": {
+      "type": "custom-featured-tabs",
+      "blocks": {
+        "feature_tab_NmWMJJ": {
+          "type": "feature_tab",
+          "settings": {
+            "tab_title": "Tropical Ready",
+            "tab_background_image": "shopify://shop_images/Tropical_Ready_18542619-c454-45ff-8abd-08ddcd88e0ff.png",
+            "content_title": "Tropical Ready",
+            "content_description": "<p>Breathable comfort. Designed for warm, humid days.</p>"
+          }
+        },
+        "feature_tab_wpHcGV": {
+          "type": "feature_tab",
+          "settings": {
+            "tab_title": "Ultra-Thin Technology",
+            "tab_background_image": "shopify://shop_images/Ultra-thin.png",
+            "content_title": "Ultra-Thin Technology",
+            "content_description": "<p>Light as a feather barely felt, freedom in every move.</p>"
+          }
+        },
+        "feature_tab_Ap74Bz": {
+          "type": "feature_tab",
+          "settings": {
+            "tab_title": "No Sag. No Bulge",
+            "tab_background_image": "shopify://shop_images/No_Sag.png",
+            "content_title": "No Sag. No Bulge",
+            "content_description": "<p>Moves with your baby. A natural fit no limits.</p>"
+          }
+        },
+        "feature_tab_VCzfAm": {
+          "type": "feature_tab",
+          "settings": {
+            "tab_title": "More Than a Diaper",
+            "tab_background_image": "shopify://shop_images/More_than_diaper.png",
+            "content_title": "More Than a Diaper",
+            "content_description": "<p>It's tenderness made practical. Love Made Visible</p>"
+          }
+        }
+      },
+      "block_order": [
+        "feature_tab_NmWMJJ",
+        "feature_tab_wpHcGV",
+        "feature_tab_Ap74Bz",
+        "feature_tab_VCzfAm"
+      ],
+      "disabled": true,
+      "name": "Tabbed Features Section",
+      "settings": {
+        "custom_anchor_id": "tabbed-features",
         "show_top_border": false,
         "show_bottom_border": false,
         "background_color": "rgba(0,0,0,0)",
-        "image_position": "right",
+        "image_position": "left",
         "image_border_radius": 32,
         "image_fit": "cover",
         "overline": "UltraFresh Features",
@@ -191,56 +264,6 @@
         "padding_bottom": 36
       }
     },
-    "custom_feature_slider_GDeDfe": {
-      "type": "custom-feature-slider",
-      "blocks": {
-        "tab_dcLjLE": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "VelvaCloud™ Layer",
-            "tab_image": "shopify://shop_images/VelvaCloud_Layer_265cff8d-a67d-44bc-8f22-82847a62ba7d.png",
-            "tab_description": "<h3><strong>Whispers of softness — a gentle hug for every move.</strong></h3><p>The VelvaCloud™ Layer is our signature top sheet, specially designed to feel like a gentle embrace against your baby’s skin. It draws moisture away in seconds and allows air to flow freely, helping keep your baby dry, comfortable, and rash-free.</p>"
-          }
-        },
-        "tab_GaaQhH": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "BreezeThin™ Shell",
-            "tab_image": "shopify://shop_images/BreezeThin_Shell.png",
-            "tab_description": "<h3><strong>No bulk. No heat. Just breathable comfort made for the tropics.</strong></h3><p>Designed for warm, active days, the BreezeThin™ Shell is our ultra-light, airy outer layer that keeps your baby feeling cool and comfy. It’s thin without compromising protection — reducing heat and humidity build-up while allowing your little one to move freely, even in tropical weather.</p>"
-          }
-        },
-        "tab_m6LJ8M": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "FeatherFlex™ Core",
-            "tab_image": "shopify://shop_images/FeatherCare_Touch.png",
-            "tab_description": "<h3><strong>Moves with them. Protects with ease. Ultra-light, ultra-absorbent.</strong></h3><p>The FeatherFlex™ Core is the heart of every UltraFresh diaper — slim, flexible, and powerfully absorbent. It locks in wetness fast without adding bulk, so your baby can stay dry and comfortable no matter how much they roll, crawl, or play. Designed to keep up with every move, it offers worry-free protection day and night.</p>"
-          }
-        },
-        "tab_DBJWLd": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "FeatherCare™ Touch",
-            "tab_image": "shopify://shop_images/FeatherFlex_Core.png",
-            "tab_description": "<h3><strong>So light they won’t notice. So loved they’ll always know.</strong></h3><p>Every diaper begins with a touch — and FeatherCare™ makes sure it’s the softest one yet. This gentle, skin-friendly finish is what gives UltraFresh diapers their signature feel. Delicately smooth and whisper-light, it cares for your baby’s skin from the moment you put it on, reminding them they’re loved in every little way.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "tab_dcLjLE",
-        "tab_GaaQhH",
-        "tab_m6LJ8M",
-        "tab_DBJWLd"
-      ],
-      "disabled": true,
-      "name": "Feature Slider",
-      "settings": {
-        "heading": "UltraFresh Diaper Key Features",
-        "pad_top": 96,
-        "pad_bottom": 92
-      }
-    },
     "custom_journey_MtQzqx": {
       "type": "custom-journey",
       "name": "UF Journey",
@@ -266,11 +289,12 @@
   "order": [
     "banner",
     "custom_page_header_9YhyDe",
-    "custom_multi_images_Ma9NAT",
-    "custom_multi_images_MXjAmB",
+    "custom_text_image_9xdiJh",
+    "custom_text_image_xGzGL4",
+    "custom_text_image_mcghCN",
     "custom_featured_tabs_HxkCjw",
+    "custom_featured_tabs_qGhxGn",
     "product-grid",
-    "custom_feature_slider_GDeDfe",
     "custom_journey_MtQzqx"
   ]
 }
