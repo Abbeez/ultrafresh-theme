@@ -116,6 +116,15 @@
             "content_description": "<p>Breathable comfort. Designed for warm, humid days.</p>"
           }
         },
+        "feature_tab_9EgtMT": {
+          "type": "feature_tab",
+          "settings": {
+            "tab_title": "Cotton-Soft Comfort",
+            "tab_background_image": "shopify://shop_images/cotton.png",
+            "content_title": "Gentle on delicate skin.",
+            "content_description": "<p>Crafted with an enhanced fibre blend and high-GSM topsheet for luxurious comfort</p>"
+          }
+        },
         "feature_tab_AkLhHB": {
           "type": "feature_tab",
           "settings": {
@@ -134,6 +143,15 @@
             "content_description": "<p>Moves with your baby. A natural fit no limits.</p>"
           }
         },
+        "feature_tab_9CPTPr": {
+          "type": "feature_tab",
+          "settings": {
+            "tab_title": "Love Made Visible in every detail",
+            "tab_background_image": "shopify://shop_images/Love_made_visible.png",
+            "content_title": "Love Made Visible in every detail",
+            "content_description": "<p>Because comfort and care should never be invisible</p>"
+          }
+        },
         "feature_tab_pdBkjV": {
           "type": "feature_tab",
           "settings": {
@@ -146,8 +164,10 @@
       },
       "block_order": [
         "feature_tab_y9rkjr",
+        "feature_tab_9EgtMT",
         "feature_tab_AkLhHB",
         "feature_tab_RLExx9",
+        "feature_tab_9CPTPr",
         "feature_tab_pdBkjV"
       ],
       "name": "Tabbed Features Section",
@@ -159,8 +179,8 @@
         "image_position": "left",
         "image_border_radius": 0,
         "image_fit": "cover",
-        "overline": "Love Made Visible in every detail.",
-        "heading": "Because comfort and care should never be invisible",
+        "overline": "UltraFresh Features",
+        "heading": "Designed for Their World of Wonder",
         "description": "<p>UltraFresh is made with love in every detail, designed to bring comfort and care you can truly see and feel. Each piece is thoughtfully created to keep little ones happy, free, and protected through every moment of growth and discovery.</p>",
         "button_1_text": "Taped",
         "button_1_url": "shopify://products/ultrafresh-ultra-thin-tape-diaper",
