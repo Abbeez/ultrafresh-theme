@@ -3739,6 +3739,10 @@ details[open] > .header__menu-item {
   /* border-bottom: 1px solid #cecece; */
 }
 
+.scrolled-past-header details[open] > .header__submenu {
+  background: var(--custom-bg);
+}
+
 .scrolled-past-header .header__menu-item {
   color: var(--custom-dark) !important;
   transition: color 300ms ease-in-out;
@@ -3748,15 +3752,6 @@ details[open] > .header__menu-item {
   color: var(--custom-dark) !important;
   transition: color 300ms ease-in-out;
 }
-
-/* .cart-count-bubble {
-  color: var(--custom-dark) !important;
-} */
-
-/* ul.list-menu.list-menu--inline .header-menu,
-ul.list-menu.list-menu--inline .header-menu {
-  font-size: 105%;
-} */
 
 .flex-comp-header {
   padding: 2.5rem 1rem !important;
@@ -3816,10 +3811,6 @@ nav.header__inline-menu li a,
 nav.header__inline-menu li header-menu span {
   font-family: var(--font-heading-family);
 }
- {
-  font-weight: 500;
-  font-family: var(--font-heading-family);
-}
 
 /* End Header */
 
@@ -3842,61 +3833,6 @@ div#customer-section,
   background-position: center;
   background-attachment: fixed;
 }
-
-/*
-div#customer-section > div h1,
-div#customer-section > div h2,
-div#customer-section > div span,
-div#customer-section > div a,
-div#customer-section > div p {
-  color: var(--custom-light);
-}
-
-div#customer-section > div button {
-  background: var(--custom-primary);
-  color: var(--custom-dark);
-}
-
-div#customer-section > div button:hover {
-  transform: scale(1.05);
-  transition: all 300ms ease-in-out;
-}
-
-div#customer-section > div button::after {
-  box-shadow: var(--custom-primary);
-}
-
-div#customer-section table.order-history {
-  background: var(--custom-bg);
-  border-radius: 3px;
-}
-
-div#customer-section tbody tr > td:first-child a,
-div#customer-section tbody tr > td:nth-child(3) span {
-  background: var(--custom-secondary);
-}
-
-div#customer-section table.order-details {
-  background: var(--custom-light);
-  border-radius: 3px;
-}
-
-div#customer-section .order-addresses strong {
-  color: var(--custom-secondary);
-}
-
-div#customer-section .fulfillment {
-  background: var(--custom-secondary);
-}
-
-div#customer-section .addresses .input-label {
-  color: var(--custom-light) !important;
-}
-
-div#customer-section input::placeholder,
-div#customer-section select {
-  color: var(--custom-dark) !important;
-} */
 
 .uf-location {
   text-decoration: none;
