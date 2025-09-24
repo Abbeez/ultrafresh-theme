@@ -124,6 +124,7 @@
         >
           <option value="">Select inquiry type...</option>
           <option value="General" {% if form['Inquiry Type'] == 'General' %}selected{% endif %}>General</option>
+          <option value="Affiliates" {% if form['Inquiry Type'] == 'Affiliates' %}selected{% endif %}>Affiliates</option>
           <option value="Distributor" {% if form['Inquiry Type'] == 'Distributor' %}selected{% endif %}>Distributor</option>
           <option value="Orders" {% if form['Inquiry Type'] == 'Orders' %}selected{% endif %}>Orders</option>
           <option value="Others" {% if form['Inquiry Type'] == 'Others' %}selected{% endif %}>Others</option>
