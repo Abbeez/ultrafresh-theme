@@ -311,7 +311,7 @@
     </script>
   </head>
 
-  <body  style="
+  <body style="
   {% if settings.page_background_image != blank %}
     background-image: url('{{ settings.page_background_image | image_url: width: 1800 }}');
   {% endif %}" class="main-body{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
